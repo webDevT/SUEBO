@@ -5,7 +5,7 @@
 
 # build / generated
 /app/temp
-/docs
+
 
 # misc
 .DS_Store
