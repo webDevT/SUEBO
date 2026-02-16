@@ -1,0 +1,39 @@
+@use "vars" as *;
+@use "header";
+
+// Reset / Normalize (complements libs.min.css with normalize.css)
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $color-dark-navy;
+	font-family: $font-body;
+	font-size: $body-base-font-size;
+	line-height: $body-base-line-height;
+	font-weight: $body-base-font-weight;
+	color: $color-text-main;
+}
+
+.container {
+	width: 1320px;
+	max-width: 93vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+@include bp-mobile {
+	.container {
+		max-width: 90vw;
+	}
+
+}
+	
+
+

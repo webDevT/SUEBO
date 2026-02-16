@@ -1,0 +1,120 @@
+@use "vars" as *;
+
+// Base (desktop)
+.header {
+	font-family: $font-heading;
+}
+
+.preheader {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.preheader__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.preheader__contacts {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.preheader__contact {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	color: $color-text-main;
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 1.25;
+	transition: color 0.2s;
+	font-weight: $weight-medium;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.preheader__logo {
+	display: block;
+    width: 312px;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+// Tablet
+@include bp-tablet {
+    .preheader {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .preheader__logo {
+        width: 350px;
+    }
+    
+}
+
+// Mobile
+@include bp-mobile {
+    .preheader {
+        .container {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+	.preheader__inner {
+        flex-direction: column-reverse;
+    }
+	.preheader {
+		padding-top: 0;
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+	.preheader__contacts {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		justify-content: flex-start;
+		max-width: 100%;
+		gap: 34px;
+	}
+	.preheader__logo {
+		max-width: 100%;
+		width: 100%;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		background-color: $color-gunmetal;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		img {
+			max-width: 100%;
+			width: 350px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.preheader__inner {
+		gap: 0;
+	}
+	
+}
+
+@include bp-mobile-sm {
+	.preheader__contact {
+		gap: 5px;
+		font-size: 14px;
+	}
+	.preheader__contacts {
+		gap: 18px;
+	}
+}

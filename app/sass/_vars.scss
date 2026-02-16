@@ -1,0 +1,146 @@
+// =====================
+// Colors – Dark Scheme
+// =====================
+
+// Base palette
+$color-dark-navy:    #0B1120; // Background
+$color-gunmetal:     #161F32; // Cards, menu
+$color-off-white:    #F1F5F9; // Main text
+$color-steel:        #94A3B8; // Secondary text
+$color-teal-suebo:   #78ABAD; // Icons, buttons, charts
+$color-electric-blue:#38BDF8; // Active state, links
+
+// Shortcuts
+$color-bg:           $color-dark-navy;
+$color-text-main:    $color-off-white;
+$color-text-muted:   $color-steel;
+$color-accent:       $color-electric-blue;
+$color-accent-soft:  $color-teal-suebo;
+
+
+// =====================
+// Typography – Families
+// =====================
+
+$font-heading: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  sans-serif;
+$font-body:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  sans-serif;
+$font-manrope: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  sans-serif;
+
+// Weights
+$weight-regular:  400;
+$weight-medium:   500;
+$weight-semibold: 600;
+$weight-bold:     700;
+
+
+// =====================
+// Headings – Poppins
+// =====================
+
+// Display / Hero
+$display-font-family:  $font-heading;
+$display-font-weight:  $weight-bold;     // 700
+$display-font-size:    64px;
+$display-line-height:  76px;             // 120%
+
+// H1 (Main)
+$h1-font-family:       $font-heading;
+$h1-font-weight:       $weight-semibold;  // 600
+$h1-font-size:         56px;
+$h1-line-height:       64px;             // 114%
+
+// H2 (Section)
+$h2-font-family:       $font-heading;
+$h2-font-weight:       $weight-semibold;  // 600
+$h2-font-size:         48px;
+$h2-line-height:       56px;             // 116%
+
+// H3 (Card Title)
+$h3-font-family:       $font-heading;
+$h3-font-weight:       $weight-medium;   // 500
+$h3-font-size:         32px;
+$h3-line-height:       40px;             // 125%
+
+// H4 (Small)
+$h4-font-family:       $font-heading;
+$h4-font-weight:       $weight-medium;   // 500
+$h4-font-size:         24px;
+$h4-line-height:       32px;             // 133%
+
+
+// =====================
+// Body – Inter
+// =====================
+
+// Body Large
+$body-lg-font-family:  $font-body;
+$body-lg-font-weight:  $weight-bold;     // 700
+$body-lg-font-size:    20px;
+$body-lg-line-height:  32px;             // 160%
+
+// Body Base
+$body-base-font-family: $font-body;
+$body-base-font-weight: $weight-regular; // 400
+$body-base-font-size:   16px;
+$body-base-line-height: 26px;            // 160%
+
+// Body Small
+$body-sm-font-family:   $font-body;
+$body-sm-font-weight:   $weight-regular; // 400
+$body-sm-font-size:     14px;
+$body-sm-line-height:   22px;            // 157%
+
+
+// =====================
+// Elements – Buttons / Numbers
+// =====================
+
+// Button / Nav (Poppins)
+$btn-font-family:      $font-heading;
+$btn-font-weight:      $weight-medium;   // 500
+$btn-font-size:        16px;
+$btn-line-height:      26px;             // 160%
+
+// Price / Numbers (Poppins)
+$price-font-family:    $font-heading;
+$price-font-weight:    $weight-semibold; // 600
+$price-font-size:      48px;
+$price-line-height:    1;                // 100%
+
+
+// =====================
+// Breakpoints (desktop-first)
+// Layouts: 1920, 768, 375
+// =====================
+
+$bp-tablet:  768px;   // tablet (768 layout)
+$bp-desktop: 1280px;  // wide desktop (up to 1920 layout)
+$bp-mobile-sm: 370px;  // small mobile
+
+// For max-width: styles apply below this width
+$bp-tablet-max:  1279px;  // max-width: tablet (768–1279) + mobile
+$bp-mobile-max:  767px;   // max-width: mobile only (375 layout)
+$bp-mobile-sm-max: 369px;  // max-width: small mobile (340 layout)
+
+// Mixins (desktop-first: base styles = desktop, then override down)
+@mixin bp-tablet {
+  @media (max-width: $bp-tablet-max) {
+    @content;
+  }
+}
+
+@mixin bp-mobile {
+  @media (max-width: $bp-mobile-max) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-sm {
+  @media (max-width: $bp-mobile-sm-max) {
+    @content;
+  }
+}
+
