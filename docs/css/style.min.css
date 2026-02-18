@@ -1238,8 +1238,8 @@
     display: block;
   }
   .btn {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .header-nav__mobile-row,
   .header-nav__utils {
@@ -1387,10 +1387,14 @@ body {
   z-index: 9;
 }
 
-.hero__bg {
+.hero__bg-wrapper {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__bg-wrapper img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1444,8 +1448,98 @@ body {
   margin-bottom: 50px;
 }
 
+@media (max-width: 1280px) {
+  .hero__content {
+    width: 100%;
+  }
+  .hero__bg-wrapper {
+    width: 100vw;
+    position: static;
+  }
+  .hero__bg-wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .hero {
+    padding-top: 0;
+  }
+  .hero__content {
+    padding-top: 38px;
+    text-align: center;
+    width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .save-title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero__title {
+    margin-top: 40px;
+  }
+  .hero__title {
+    font-size: 57px;
+    margin-bottom: 30px;
+  }
+  .hero__title span {
+    display: block;
+  }
+  .hero__description {
+    font-size: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  .hero {
+    padding-bottom: 52px;
+  }
+}
 @media (max-width: 767px) {
   .container {
     max-width: 90vw;
+  }
+  .hero__bg-wrapper {
+    height: 65vw;
+  }
+  .hero__bg-wrapper {
+    width: 100vw;
+  }
+  .hero__bg-wrapper img {
+    height: 86.41vw;
+    margin-top: -11.026vw;
+    position: relative;
+    -o-object-position: right;
+       object-position: right;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__content {
+    padding-top: 0;
+  }
+  .save-title {
+    font-size: 16px;
+  }
+  .save-title span {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .hero__title {
+    margin-top: 28px;
+    font-size: 38px;
+    margin-bottom: 32px;
+  }
+  .hero__description {
+    font-size: 17px;
+  }
+}
+@media (max-width: 390px) {
+  .hero__title {
+    font-size: 36px;
   }
 }

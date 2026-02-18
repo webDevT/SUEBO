@@ -4,10 +4,14 @@
 	
 	<!-- start hero section -->
 	<section class="hero">
+
+		<div class="hero__bg-wrapper">
 		<picture>
+			<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/hero-mobile.png">
 			<source srcset="img/hero-image.webp" type="image/webp">
-			<img src="img/hero-image.png" alt="hero" class="hero__bg">
+			<img src="img/hero-image.png" alt="hero" class="hero__bg" fetchpriority="high">
 		</picture>
+		</div>
 		<div class="container">
 			
 
