@@ -1,0 +1,80 @@
+// =====================
+// Self-hosted fonts (Fontsource) – підключення через CSS, без Google Fonts
+// Шляхи відносно збереженого CSS (app/css/ → ../fonts/)
+// =====================
+
+// Inter: 400, 700 (woff2 перший; woff fallback — уникає OTS-помилок при подвійному стисканні сервером)
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/inter-latin-400-normal.woff2') format('woff2'), url('../fonts/inter-latin-400-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/inter-latin-700-normal.woff2') format('woff2'), url('../fonts/inter-latin-700-normal.woff') format('woff');
+}
+
+// Manrope: 400, 500, 600, 700
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/manrope-latin-400-normal.woff2') format('woff2'), url('../fonts/manrope-latin-400-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/manrope-latin-500-normal.woff2') format('woff2'), url('../fonts/manrope-latin-500-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/manrope-latin-600-normal.woff2') format('woff2'), url('../fonts/manrope-latin-600-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/manrope-latin-700-normal.woff2') format('woff2'), url('../fonts/manrope-latin-700-normal.woff') format('woff');
+}
+
+// Poppins: 400, 500, 600, 700
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/poppins-latin-400-normal.woff2') format('woff2'), url('../fonts/poppins-latin-400-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('../fonts/poppins-latin-500-normal.woff2') format('woff2'), url('../fonts/poppins-latin-500-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../fonts/poppins-latin-600-normal.woff2') format('woff2'), url('../fonts/poppins-latin-600-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/poppins-latin-700-normal.woff2') format('woff2'), url('../fonts/poppins-latin-700-normal.woff') format('woff');
+}

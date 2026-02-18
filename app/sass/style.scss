@@ -1,3 +1,4 @@
+@use "fonts";
 @use "vars" as *;
 @use "buttons";
 @use "header";
@@ -120,7 +121,7 @@ body {
 		width: 100%;
 	}
 	.hero__bg-wrapper {
-		width: 100vw;
+		width: 100%;
 		position: static;
 		img {
 			width: 100%;

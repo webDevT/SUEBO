@@ -14,6 +14,9 @@
   "author": "Karina Desiatnyk",
   "license": "ISC",
   "devDependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/manrope": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
     "del": "^5.1.0",
     "gulp": "^5.0.1",
     "gulp-autoprefixer": "^7.0.0",

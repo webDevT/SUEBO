@@ -1,5 +1,7 @@
 // Import required modules
 const gulp = require('gulp');
+const fs = require('fs');
+const path = require('path');
 const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -68,12 +70,57 @@ const compileJS = () => {
         .pipe(gulp.dest('app/js'));
 };
 
-// Copy static assets
+// Copy font files from @fontsource to app/fonts (fs.copyFileSync; woff2 + woff для fallback)
+const copyFonts = (done) => {
+    const fontFiles = [
+        'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2',
+        'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff',
+        'node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2',
+        'node_modules/@fontsource/inter/files/inter-latin-700-normal.woff',
+        'node_modules/@fontsource/manrope/files/manrope-latin-400-normal.woff2',
+        'node_modules/@fontsource/manrope/files/manrope-latin-400-normal.woff',
+        'node_modules/@fontsource/manrope/files/manrope-latin-500-normal.woff2',
+        'node_modules/@fontsource/manrope/files/manrope-latin-500-normal.woff',
+        'node_modules/@fontsource/manrope/files/manrope-latin-600-normal.woff2',
+        'node_modules/@fontsource/manrope/files/manrope-latin-600-normal.woff',
+        'node_modules/@fontsource/manrope/files/manrope-latin-700-normal.woff2',
+        'node_modules/@fontsource/manrope/files/manrope-latin-700-normal.woff',
+        'node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2',
+        'node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff',
+        'node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2',
+        'node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff',
+        'node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2',
+        'node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff',
+        'node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2',
+        'node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff'
+    ];
+    const outDir = path.join(__dirname, 'app', 'fonts');
+    if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    fontFiles.forEach((file) => {
+        const src = path.join(__dirname, file);
+        const name = path.basename(file);
+        const dest = path.join(outDir, name);
+        if (fs.existsSync(src)) fs.copyFileSync(src, dest);
+    });
+    done();
+};
+
+// Копіювання шрифтів app/fonts → app/temp/fonts тільки через fs (Gulp потоки ламають бінарники)
+const copyFontsToTemp = (done) => {
+    const srcDir = path.join(__dirname, 'app', 'fonts');
+    const destDir = path.join(__dirname, 'app', 'temp', 'fonts');
+    if (!fs.existsSync(srcDir)) { done(); return; }
+    if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+    fs.readdirSync(srcDir).forEach((name) => {
+        fs.copyFileSync(path.join(srcDir, name), path.join(destDir, name));
+    });
+    done();
+};
+
+// Copy static assets (без шрифтів — вони копіюються copyFontsToTemp через fs)
 const copyAssets = () => {
-    const copyFiles = gulp.src(['app/css/**/*', 'app/js/**/*', 'app/fonts/**/*'], { base: 'app' })
+    return gulp.src(['app/css/**/*', 'app/js/**/*'], { base: 'app' })
         .pipe(gulp.dest('app/temp/'));
-    
-    return copyFiles;
 };
 
 // Copy images separately without processing
@@ -126,7 +173,8 @@ const watch = () => {
     gulp.watch('app/src/*.html', processHTML);
     gulp.watch('app/includes/**/*.html', processHTML);
     gulp.watch('app/js/*.js', processJS);
-    gulp.watch(['app/css/**/*', 'app/js/**/*', 'app/fonts/**/*'], copyAssets);
+    gulp.watch(['app/css/**/*', 'app/js/**/*'], copyAssets);
+    gulp.watch('app/fonts/**/*', copyFontsToTemp);
     gulp.watch('app/img/**/*', copyImages);
 };
 
@@ -145,27 +193,35 @@ const exportBuild = () => {
     const buildJs = gulp.src('app/js/**/*.js')
         .pipe(gulp.dest('docs/js'));
 
-    const buildFonts = gulp.src('app/fonts/**/*.*')
-        .pipe(gulp.dest('docs/fonts'));
+    // Шрифти тільки через fs (Gulp ламає бінарники)
+    const buildFonts = () => {
+        const srcDir = path.join(__dirname, 'app', 'fonts');
+        const destDir = path.join(__dirname, 'docs', 'fonts');
+        if (!fs.existsSync(srcDir)) return Promise.resolve();
+        if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+        fs.readdirSync(srcDir).forEach((name) => {
+            fs.copyFileSync(path.join(srcDir, name), path.join(destDir, name));
+        });
+        return Promise.resolve();
+    };
 
-    // Copy images
     const buildImg = copyImagesProd();
-
-    // Copy .htaccess file
     const buildHtaccess = gulp.src('.htaccess', { allowEmpty: true })
         .pipe(gulp.dest('docs'));
 
-    return Promise.all([buildHtml, buildCss, buildJs, buildFonts, buildImg, buildHtaccess]);
+    return Promise.all([buildHtml, buildCss, buildJs, buildFonts(), buildImg, buildHtaccess]);
 };
 
 // Build task (конвертує PNG/JPG/JPEG → WebP, потім копіює все в docs)
-const build = gulp.series(clean, convertImages, exportBuild);
+const build = gulp.series(clean, convertImages, copyFonts, exportBuild);
 
 // Development task
 const dev = gulp.series(
     cleanTemp,
     compileCSS,
     compileSass,
+    copyFonts,
+    copyFontsToTemp,
     compileJS,
     copyAssets,
     copyImages,
@@ -181,6 +237,8 @@ exports.css = compileCSS;
 exports.js = compileJS;
 exports.html = processHTML;
 exports.script = processJS;
+exports.copyFonts = copyFonts;
+exports.copyFontsToTemp = copyFontsToTemp;
 exports.copyAssets = copyAssets;
 exports.convertImages = convertImages;
 exports.copyImages = copyImages;

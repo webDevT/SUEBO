@@ -27,12 +27,11 @@
 	<meta name="theme-color" content="#0B1120">
 	<meta name="color-scheme" content="dark">
 
-	<!-- LCP: preload hero image (WebP) with high priority for faster FCP/LCP -->
-	<link rel="preload" as="image" href="img/hero-image.webp" type="image/webp" fetchpriority="high">
 
-	<!-- Fonts -->
+	<!-- LCP: preload hero тільки на desktop (≥1280px), щоб не preload на tablet де показується hero-mobile -->
+	<link rel="preload" as="image" href="img/hero-image.webp" type="image/webp" fetchpriority="high" media="(min-width: 1280px)">
 
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
