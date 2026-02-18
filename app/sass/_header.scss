@@ -3,6 +3,9 @@
 // Base (desktop)
 .header {
 	font-family: $font-heading;
+	position: relative;
+	z-index: 999;
+	background-color: $color-dark-navy;
 }
 
 .preheader {
@@ -43,6 +46,7 @@
 
 .preheader__logo {
 	display: block;
+	outline: none;
 	img {
 		display: block;
 		width: 100%;
@@ -998,11 +1002,14 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	}
 	.header-nav__mobile-row,
 	.header-nav__utils {
-		margin-bottom: 32px;
+		margin-bottom: 16px;
 	}
 	.header-mobile-panel {
 		margin-top: 0;
 	} 
+	.header-menu {
+		padding-top: 4px;
+	}
 	
 	
 	

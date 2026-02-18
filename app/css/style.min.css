@@ -95,6 +95,9 @@
 
 .header {
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  position: relative;
+  z-index: 999;
+  background-color: #0B1120;
 }
 
 .preheader {
@@ -152,6 +155,7 @@
 
 .preheader__logo {
   display: block;
+  outline: none;
 }
 .preheader__logo img {
   display: block;
@@ -1239,10 +1243,13 @@
   }
   .header-nav__mobile-row,
   .header-nav__utils {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .header-mobile-panel {
     margin-top: 0;
+  }
+  .header-menu {
+    padding-top: 4px;
   }
 }
 @media (min-width: 1280px) {
@@ -1361,7 +1368,6 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #F1F5F9;
-  min-height: 2000px;
 }
 
 .container {
@@ -1369,6 +1375,73 @@ body {
   max-width: 93vw;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero {
+  padding-top: 9.375vw;
+  padding-bottom: 10.417vw;
+  position: relative;
+}
+.hero .container {
+  position: relative;
+  z-index: 9;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.save-title {
+  font-size: 18px;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  color: #78ABAD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.save-title span {
+  color: #F59E0B;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.hero__content {
+  width: 594px;
+  max-width: 100%;
+}
+
+.hero__title {
+  font-size: 64px;
+  line-height: 120%;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin-bottom: 0;
+  margin-bottom: 50px;
+}
+.hero__title span {
+  text-transform: uppercase;
+  color: #78ABAD;
+}
+
+.hero__description {
+  font-size: 22px;
+  line-height: 140%;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 767px) {

@@ -5,7 +5,7 @@ const path = require('path');
 function copyFile(src, dest) {
     try {
         fs.copyFileSync(src, dest);
-        console.log(`Copied: ${src} -> ${dest}`);
+        console.log(`Copied: ${path.relative('app/img', src)} -> docs/img`);
     } catch (error) {
         console.error(`Error copying ${src}:`, error.message);
     }
@@ -18,23 +18,30 @@ function ensureDir(dir) {
     }
 }
 
-// Копіюємо зображення для продакшн
+// Рекурсивне копіювання всіх файлів (включно з піддиректоріями)
+function copyRecursive(srcDir, destDir) {
+    if (!fs.existsSync(srcDir)) return;
+
+    const entries = fs.readdirSync(srcDir, { withFileTypes: true });
+    for (const entry of entries) {
+        const srcPath = path.join(srcDir, entry.name);
+        const destPath = path.join(destDir, entry.name);
+
+        if (entry.isDirectory()) {
+            ensureDir(destPath);
+            copyRecursive(srcPath, destPath);
+        } else {
+            ensureDir(destDir);
+            copyFile(srcPath, destPath);
+        }
+    }
+}
+
+// Копіюємо зображення для продакшн (включно з WebP, створеними при збірці)
 const srcDir = 'app/img';
 const destDir = 'docs/img';
 
 ensureDir(destDir);
-
-// Читаємо всі файли в srcDir
-const files = fs.readdirSync(srcDir);
-
-files.forEach(file => {
-    const srcPath = path.join(srcDir, file);
-    const destPath = path.join(destDir, file);
-    
-    // Перевіряємо, чи це файл (не директорія)
-    if (fs.statSync(srcPath).isFile()) {
-        copyFile(srcPath, destPath);
-    }
-});
+copyRecursive(srcDir, destDir);
 
 console.log('Production images copying completed!');

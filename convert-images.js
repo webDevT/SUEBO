@@ -1,37 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Configuration
-const inputDir = 'app/img';
-const outputDir = 'app/img';
+// Configuration (можна передати при виклику як модуль)
 const quality = 80; // WebP quality (0-100)
-
-// Check if cwebp is available
-function checkCwebp() {
-    try {
-        execSync('cwebp -version', { stdio: 'ignore' });
-        return true;
-    } catch (error) {
-        console.log('❌ cwebp not found. Please install WebP tools:');
-        console.log('   Windows: Download from https://developers.google.com/speed/webp/download');
-        console.log('   macOS: brew install webp');
-        console.log('   Linux: sudo apt-get install webp');
-        return false;
-    }
-}
-
-// Convert single image to WebP
-function convertToWebP(inputPath, outputPath, quality = 80) {
-    try {
-        const command = `cwebp -q ${quality} "${inputPath}" -o "${outputPath}"`;
-        execSync(command, { stdio: 'pipe' });
-        return true;
-    } catch (error) {
-        console.error(`❌ Failed to convert ${inputPath}:`, error.message);
-        return false;
-    }
-}
 
 // Get file size in KB
 function getFileSize(filePath) {
@@ -43,89 +14,125 @@ function getFileSize(filePath) {
     }
 }
 
-// Main conversion function
-function convertImages() {
-    console.log('🚀 Starting image conversion to WebP...\n');
+// Recursively get all image files in directory
+function getImageFiles(dir, baseDir = dir, files = []) {
+    if (!fs.existsSync(dir)) {
+        console.log(`❌ Directory not found: ${dir}`);
+        return files;
+    }
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        const relativePath = path.relative(baseDir, fullPath);
+        if (entry.isDirectory()) {
+            getImageFiles(fullPath, baseDir, files);
+        } else if (entry.isFile()) {
+            const ext = path.extname(entry.name).toLowerCase();
+            if (['.png', '.jpg', '.jpeg'].includes(ext)) {
+                files.push({ fullPath, relativePath, name: entry.name, ext });
+            }
+        }
+    }
+    return files;
+}
 
-    if (!checkCwebp()) {
+async function convertImages(inputDir = 'app/img', outputDir = inputDir) {
+    console.log('🚀 Starting image conversion to WebP (using sharp)...\n');
+
+    let sharp;
+    try {
+        sharp = require('sharp');
+    } catch (error) {
+        console.log('❌ Package "sharp" not found. Install it with:');
+        console.log('   npm install --save-dev sharp');
+        console.log('');
+        process.exit(1);
+    }
+
+    const imageFiles = getImageFiles(inputDir);
+    if (imageFiles.length === 0) {
+        console.log('📁 No PNG/JPG/JPEG files found in app/img');
         return;
     }
 
-    const imageExtensions = ['.png', '.jpg', '.jpeg'];
     const convertedFiles = [];
     let totalOriginalSize = 0;
     let totalWebPSize = 0;
 
-    // Read all files in the input directory
-    const files = fs.readdirSync(inputDir);
+    for (const { fullPath, relativePath, name, ext } of imageFiles) {
+        const webpFile = path.basename(name, ext) + '.webp';
+        const webpPath = path.join(outputDir, path.dirname(relativePath), webpFile);
 
-    for (const file of files) {
-        const filePath = path.join(inputDir, file);
-        const ext = path.extname(file).toLowerCase();
+        // Ensure output directory exists
+        const webpDir = path.dirname(webpPath);
+        if (!fs.existsSync(webpDir)) {
+            fs.mkdirSync(webpDir, { recursive: true });
+        }
 
-        // Check if it's an image file
-        if (imageExtensions.includes(ext)) {
-            const webpFile = path.basename(file, ext) + '.webp';
-            const webpPath = path.join(outputDir, webpFile);
+        if (fs.existsSync(webpPath)) {
+            console.log(`⏭️  Skipping ${name} (WebP already exists)`);
+            continue;
+        }
 
-            // Skip if WebP already exists
-            if (fs.existsSync(webpPath)) {
-                console.log(`⏭️  Skipping ${file} (WebP already exists)`);
-                continue;
-            }
+        console.log(`🔄 Converting ${name}...`);
 
-            console.log(`🔄 Converting ${file}...`);
+        const originalSize = getFileSize(fullPath);
+        totalOriginalSize += originalSize;
 
-            const originalSize = getFileSize(filePath);
-            totalOriginalSize += originalSize;
+        try {
+            await sharp(fullPath)
+                .webp({ quality })
+                .toFile(webpPath);
 
-            if (convertToWebP(filePath, webpPath, quality)) {
-                const webpSize = getFileSize(webpPath);
-                totalWebPSize += webpSize;
-                const savings = originalSize - webpSize;
-                const savingsPercent = Math.round((savings / originalSize) * 100);
+            const webpSize = getFileSize(webpPath);
+            totalWebPSize += webpSize;
+            const savings = originalSize - webpSize;
+            const savingsPercent = originalSize > 0 ? Math.round((savings / originalSize) * 100) : 0;
 
-                console.log(`✅ ${file} → ${webpFile}`);
-                console.log(`   Size: ${originalSize}KB → ${webpSize}KB (${savingsPercent}% saved)`);
-                
-                convertedFiles.push({
-                    original: file,
-                    webp: webpFile,
-                    originalSize,
-                    webpSize,
-                    savings,
-                    savingsPercent
-                });
-            }
+            console.log(`✅ ${name} → ${webpFile}`);
+            console.log(`   Size: ${originalSize}KB → ${webpSize}KB (${savingsPercent}% saved)`);
+
+            convertedFiles.push({
+                original: name,
+                webp: webpFile,
+                relativeDir: path.dirname(relativePath),
+                originalSize,
+                webpSize,
+                savings,
+                savingsPercent
+            });
+        } catch (error) {
+            console.error(`❌ Failed to convert ${name}:`, error.message);
         }
     }
 
     // Summary
-    console.log('\n📊 Conversion Summary:');
-    console.log(`   Files converted: ${convertedFiles.length}`);
-    console.log(`   Total original size: ${totalOriginalSize.toFixed(2)}KB`);
-    console.log(`   Total WebP size: ${totalWebPSize.toFixed(2)}KB`);
-    console.log(`   Total savings: ${(totalOriginalSize - totalWebPSize).toFixed(2)}KB`);
-    console.log(`   Average savings: ${Math.round(((totalOriginalSize - totalWebPSize) / totalOriginalSize) * 100)}%`);
-
-    // Generate HTML update suggestions
     if (convertedFiles.length > 0) {
-        console.log('\n📝 HTML Update Suggestions:');
-        console.log('Add these <picture> elements to your HTML:');
-        console.log('');
+        const totalSaved = totalOriginalSize - totalWebPSize;
+        const avgPercent = totalOriginalSize > 0 ? Math.round((totalSaved / totalOriginalSize) * 100) : 0;
+        console.log('\n📊 Conversion Summary:');
+        console.log(`   Files converted: ${convertedFiles.length}`);
+        console.log(`   Total original size: ${totalOriginalSize.toFixed(2)}KB`);
+        console.log(`   Total WebP size: ${totalWebPSize.toFixed(2)}KB`);
+        console.log(`   Total savings: ${totalSaved.toFixed(2)}KB (${avgPercent}%)`);
 
-        convertedFiles.forEach(file => {
-            console.log(`<!-- ${file.original} (${file.savingsPercent}% smaller) -->`);
-            console.log(`<picture>`);
-            console.log(`  <source srcset="img/${file.webp}" type="image/webp">`);
-            console.log(`  <img src="img/${file.original}" alt="...">`);
-            console.log(`</picture>`);
-            console.log('');
+        console.log('\n📝 HTML: use <picture> for WebP + fallback');
+        convertedFiles.forEach((file) => {
+            const imgPath = file.relativeDir ? `img/${file.relativeDir}/${file.webp}` : `img/${file.webp}`;
+            const imgOrig = file.relativeDir ? `img/${file.relativeDir}/${file.original}` : `img/${file.original}`;
+            console.log(`   <source srcset="${imgPath}" type="image/webp"> + <img src="${imgOrig}" alt="...">`);
         });
     }
 
-    console.log('🎉 Conversion complete!');
+    console.log('\n🎉 Conversion complete!');
 }
 
-// Run the conversion
-convertImages();
+// Запуск при виклику напряму
+if (require.main === module) {
+    convertImages().catch((err) => {
+        console.error('❌ Error:', err.message);
+        process.exit(1);
+    });
+}
+
+module.exports = { convertImages };

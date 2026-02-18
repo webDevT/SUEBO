@@ -41,7 +41,6 @@ body {
 	line-height: $body-base-line-height;
 	font-weight: $body-base-font-weight;
 	color: $color-text-main;
-	min-height: 2000px;
 }
 
 .container {
@@ -50,6 +49,67 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+//start hero style
+.hero {
+	padding-top: 9.375vw;
+	padding-bottom: 10.417vw;
+	position: relative;
+	.container {
+		position: relative;
+		z-index: 9;
+	}
+}
+.hero__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.save-title {
+	font-size: 18px;
+	font-family: $font-manrope;
+	font-weight: $weight-semibold;
+	color: $color-teal-suebo;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	span {
+		color: $color-btn-yellow;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+}
+.hero__content {
+	width: 594px;
+	max-width: 100%;
+}
+.hero__title {
+	font-size: $display-font-size;
+	line-height: 120%;
+	font-family: $display-font-family;
+	font-weight: $display-font-weight;
+	color: $color-text-main;
+	margin-bottom: 0;
+	margin-bottom: 50px;
+	span {
+		text-transform: uppercase;
+		color: $color-teal-suebo;
+	}
+}
+.hero__description {
+	font-size: 22px;
+	line-height: 140%;
+	font-family: $font-heading;
+	margin-bottom: 50px;
+}
+//end hero style
+
+
 @include bp-mobile {
 	.container {
 		max-width: 90vw;

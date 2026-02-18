@@ -88,13 +88,18 @@ const copyImages = () => {
     return Promise.resolve();
 };
 
+// Convert PNG/JPG/JPEG to WebP before production build
+const convertImages = () => {
+    const { convertImages: runConvert } = require('./convert-images.js');
+    return runConvert('app/img', 'app/img');
+};
+
 // Copy images for production build
 const copyImagesProd = () => {
     const { execSync } = require('child_process');
     try {
-        // Змінюємо шлях для продакшн збирання
         execSync('node copy-images-prod.js', { stdio: 'inherit' });
-        console.log('Images copied to docs successfully without gulp processing');
+        console.log('Images copied to docs successfully');
     } catch (error) {
         console.error('Error copying images to docs:', error.message);
     }
@@ -153,8 +158,8 @@ const exportBuild = () => {
     return Promise.all([buildHtml, buildCss, buildJs, buildFonts, buildImg, buildHtaccess]);
 };
 
-// Build task
-const build = gulp.series(clean, exportBuild);
+// Build task (конвертує PNG/JPG/JPEG → WebP, потім копіює все в docs)
+const build = gulp.series(clean, convertImages, exportBuild);
 
 // Development task
 const dev = gulp.series(
@@ -177,6 +182,7 @@ exports.js = compileJS;
 exports.html = processHTML;
 exports.script = processJS;
 exports.copyAssets = copyAssets;
+exports.convertImages = convertImages;
 exports.copyImages = copyImages;
 exports.serve = serve;
 exports.watch = watch;
