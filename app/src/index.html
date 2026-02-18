@@ -7,9 +7,12 @@
 
 		<div class="hero__bg-wrapper">
 		<picture>
+			<!-- Tablet: WebP first, then PNG fallback -->
+			<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/hero-mobile.webp" type="image/webp">
 			<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/hero-mobile.png">
+			<!-- Desktop: WebP first, then PNG fallback -->
 			<source srcset="img/hero-image.webp" type="image/webp">
-			<img src="img/hero-image.png" alt="hero" class="hero__bg" fetchpriority="high">
+			<img src="img/hero-image.png" alt="hero" class="hero__bg" width="1920" height="1080" fetchpriority="high" decoding="async">
 		</picture>
 		</div>
 		<div class="container">
