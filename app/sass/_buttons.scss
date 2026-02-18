@@ -1,0 +1,102 @@
+// =====================
+// Buttons – shared base + variants (green, white, yellow, round)
+// =====================
+
+@use "vars" as *;
+
+// Base: common styles for all buttons/links that look like buttons
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8.4px 25px;
+	min-width: 200px;
+	font-family: $btn-font-family;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height;
+	text-decoration: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+	appearance: none;
+	background: transparent;
+
+	&:focus-visible {
+		outline: 2px solid $color-electric-blue;
+		outline-offset: 2px;
+	}
+}
+
+// Green (teal) – primary CTA
+.btn--green {
+	background-color: $color-teal-suebo;
+	color: $color-dark-navy;
+
+
+	&:hover {
+		background-color: $color-off-white;
+		box-shadow: 0px 0px 22px #16C1E9;
+	}
+}
+
+
+
+// White – outline/ghost
+.btn--white {
+	color: $color-dark-navy;
+	border-color: $color-text-main;
+	background: $color-off-white;
+
+	&:hover {
+		box-shadow: 0px 0px 22px #16C1E9;
+	}
+}
+
+// Yellow
+.btn--yellow {
+	background-color: $color-btn-yellow;
+	color: $color-dark-navy;
+
+	&:hover {
+		box-shadow: 0px 0px 22px #F59E0B;
+	}
+}
+
+// Transparent
+.btn--transparent {
+	background-color: transparent;
+	color: $color-teal-suebo;
+	border: 1px solid $color-teal-suebo;
+	&:hover {
+		color: $color-electric-blue;
+		border-color: $color-electric-blue;
+		box-shadow: 0px 0px 12px #38BDF8;
+	}
+}
+
+.btn--transparent-white {
+	background-color: transparent;
+	color: $color-off-white;
+	border: 1px solid $color-off-white;
+	&:hover {
+		color: $color-electric-blue;
+		border-color: $color-electric-blue;
+	}
+}
+
+
+// Round – icon-only (e.g. close)
+.btn--round {
+	padding: 0;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border-color: rgba(255, 255, 255, 0.3);
+	color: $color-text-main;
+
+	&:hover {
+		border-color: $color-text-main;
+		background-color: rgba(255, 255, 255, 0.06);
+	}
+}

@@ -9,6 +9,7 @@ $color-off-white:    #F1F5F9; // Main text
 $color-steel:        #94A3B8; // Secondary text
 $color-teal-suebo:   #78ABAD; // Icons, buttons, charts
 $color-electric-blue:#38BDF8; // Active state, links
+$color-btn-yellow:   #F59E0B;  // Yellow button variant
 
 // Shortcuts
 $color-bg:           $color-dark-navy;
@@ -118,14 +119,22 @@ $price-line-height:    1;                // 100%
 
 $bp-tablet:  768px;   // tablet (768 layout)
 $bp-desktop: 1280px;  // wide desktop (up to 1920 layout)
+$bp-1330:    1365px;  // optional breakpoint
 $bp-mobile-sm: 370px;  // small mobile
 
-// For max-width: styles apply below this width
-$bp-tablet-max:  1279px;  // max-width: tablet (768–1279) + mobile
+// For max-width: styles apply below this width (1280 = no gap with $bp-desktop)
+$bp-tablet-max:  1280px;  // max-width: tablet (768–1280) + mobile
 $bp-mobile-max:  767px;   // max-width: mobile only (375 layout)
 $bp-mobile-sm-max: 369px;  // max-width: small mobile (340 layout)
 
 // Mixins (desktop-first: base styles = desktop, then override down)
+
+@mixin bp-1330 {
+  @media (max-width: $bp-1330) {
+    @content;
+  }
+}
+
 @mixin bp-tablet {
   @media (max-width: $bp-tablet-max) {
     @content;
@@ -143,4 +152,6 @@ $bp-mobile-sm-max: 369px;  // max-width: small mobile (340 layout)
     @content;
   }
 }
+
+
 
