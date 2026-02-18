@@ -1015,7 +1015,12 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	
 }
 
-
+@include bp-mobile-sm {
+	.header-nav__utils .btn {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
 @media (min-width: $bp-desktop) {
 	.header-nav__mobile-row {
 		display: none;

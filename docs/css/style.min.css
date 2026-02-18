@@ -1252,6 +1252,12 @@
     padding-top: 4px;
   }
 }
+@media (max-width: 369px) {
+  .header-nav__utils .btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 @media (min-width: 1280px) {
   .header-nav__mobile-row {
     display: none;
@@ -1541,5 +1547,10 @@ body {
 @media (max-width: 390px) {
   .hero__title {
     font-size: 36px;
+  }
+}
+@media (max-width: 369px) {
+  .save-title {
+    font-size: 14px;
   }
 }

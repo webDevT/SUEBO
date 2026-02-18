@@ -211,3 +211,8 @@ body {
 	}
 }
 
+@include bp-mobile-sm {
+	.save-title {
+		font-size: 14px;
+	}
+}
