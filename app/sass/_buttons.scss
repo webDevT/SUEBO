@@ -9,7 +9,7 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 8.4px 25px;
+	padding: 9.2px 25px;
 	min-width: 200px;
 	font-family: $btn-font-family;
 	font-size: $btn-font-size;
@@ -32,11 +32,13 @@
 .btn--green {
 	background-color: $color-teal-suebo;
 	color: $color-dark-navy;
+	border: 1px solid $color-teal-suebo;
 
 
 	&:hover {
 		background-color: $color-off-white;
 		box-shadow: 0px 0px 22px #16C1E9;
+		border-color: $color-electric-blue;
 	}
 }
 
@@ -45,7 +47,7 @@
 // White – outline/ghost
 .btn--white {
 	color: $color-dark-navy;
-	border-color: $color-text-main;
+	border: 1px solid $color-off-white;
 	background: $color-off-white;
 
 	&:hover {
@@ -57,6 +59,7 @@
 .btn--yellow {
 	background-color: $color-btn-yellow;
 	color: $color-dark-navy;
+	border: 1px solid $color-btn-yellow;
 
 	&:hover {
 		box-shadow: 0px 0px 22px #F59E0B;
