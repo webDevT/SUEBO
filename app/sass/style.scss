@@ -18,6 +18,10 @@ html, body {
 .section-header {
 	text-align: center;
 	margin-bottom: 60px;
+	width: 1100px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .h2 {
 	font-size: $h2-font-size;
@@ -41,7 +45,24 @@ html, body {
 .body-sm-font {
 	font-size: 14px;
 }
-// Skip link (accessibility: visible on focus for keyboard/screen readers)
+.section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.description {
+	color: $color-steel;
+	font-size: 20px;
+	margin-top: 50px;
+}
+.price-number-title {
+	font-size: $price-font-size;
+	line-height: $price-line-height;
+	font-family: $price-font-family;
+	font-weight: $price-font-weight;
+	color: $color-text-main;
+	color: $color-teal-suebo;
+}
+
 .skip-link {
 	position: absolute;
 	top: -100px;
@@ -147,13 +168,44 @@ body {
 
 //end hero style
 
+
+.ellipse-glow {
+	position: relative;
+	overflow: hidden;
+	background: $color-gunmetal;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		background: #16C1E9;
+		opacity: 0.45;
+		filter: blur(350px);
+		transform: translate(-50%, -50%) translateZ(0);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 500px;
+		height: 500px;
+		border-radius: 50%;
+		background: #16C1E9;
+		opacity: 0.45;
+		filter: blur(350px);
+		transform: translate(50%, 50%) translateZ(0);
+	}
+}
+
 //start clients style
 .clients {
 	padding-top: 100px;
 	padding-bottom: 67px;
 	background-color: $color-gunmetal;
-	position: relative;
-	overflow: hidden;
 	.container {
 		position: relative;
 		z-index: 9;
@@ -171,34 +223,6 @@ body {
 		max-height: 100%;
 		width: 100%;
 	}
-}
-
-
-.clients::after {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 500px;
-	height: 500px;
-	border-radius: 50%;
-	background: #16C1E9;
-	opacity: 0.45;
-	filter: blur(350px);
-	transform: translate(50%, 50%) translateZ(0); 
-}
-.clients::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 500px;
-	height: 500px;
-	border-radius: 50%;
-	background: #16C1E9;
-	opacity: 0.45;
-	filter: blur(350px);
-	transform: translate(-50%, -50%) translateZ(0); // центр еліпса в лівому верхньому куті
 }  
 
 
@@ -226,7 +250,34 @@ body {
 }
 //end clients style
 
+//start intro style
+.intro__item {
+	text-align: center;
+}
+.intro__content {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 60px;
+	padding-top: 12px;
+}
+.intro__item {
+	width: 25%;
+}
+//end intro style
+
 @include bp-tablet {
+	.h2 {
+		font-size: 44px;
+	}
+	.description {
+		font-size: 18px;
+		margin-top: 24px;
+	}
+	.section {
+		padding-top: 52px;
+		padding-bottom: 52px;
+	}
 	.hero__content {
 		width: 100%;
 	}
@@ -276,6 +327,10 @@ body {
 	}
 	.section-header {
 		margin-bottom: 44px;
+		width: 1100px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.h3 {
 		font-size: 44px;
@@ -293,9 +348,29 @@ body {
 			padding-left: 3.5vw;
 			padding-right: 3.5vw;
 		}
-	}
-	
+	}	
 	//end clients styles
+	.intro__item {
+		max-width: 48%;
+		width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 44px;
+	}
+	.intro__content {
+		flex-wrap: wrap;
+		gap: 20px;
+		padding-top: 0;
+	}
+	.ellipse-glow::before,
+	.ellipse-glow::after {
+		width: 250px;
+		height: 250px;
+		filter: blur(71px);
+	}
+	//start intro styles
+
+	//end intro styles
 }
 @include bp-mobile {
 	.container {
@@ -352,13 +427,21 @@ body {
 	.clients__track {
 		gap: 16px;
 	}
-	
-	.clients::before,
-	.clients::after {
-		width: 250px;
-		height: 250px;
-		filter: blur(71px);
+	.intro__item {
+		width: 100%;
+		max-width: 100%;
+		p {
+			margin-bottom: 0;
+		}
 	}
+	.intro__content {
+		gap: 0;
+	}
+	.intro__item:first-child {
+		margin-top: 0;
+	}
+	
+	
 }
 
 @include bp-390 {
