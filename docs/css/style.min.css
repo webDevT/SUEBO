@@ -1721,6 +1721,18 @@ html, body {
   line-height: 130%;
 }
 
+.h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  color: #F1F5F9;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+
 .body-sm-font {
   font-size: 14px;
 }
@@ -1736,6 +1748,7 @@ html, body {
   margin-top: 50px;
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 400;
+  line-height: 140%;
 }
 
 .price-number-title {
@@ -2105,6 +2118,103 @@ body {
   background-repeat: no-repeat;
 }
 
+.text-image .container {
+  position: relative;
+}
+.text-image .section-header {
+  margin-bottom: 30px;
+}
+.text-image .description {
+  margin-top: 20px;
+}
+.text-image p {
+  margin-top: 0;
+}
+
+.text-image__item {
+  width: 50%;
+}
+
+.section-header--left {
+  text-align: left;
+}
+
+.ilustration-wrapper {
+  width: 650px;
+  height: 620px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.adv-item {
+  margin-bottom: 25px;
+  width: 450px;
+  max-width: 100%;
+}
+.adv-item p {
+  color: #94A3B8;
+}
+
+.ilustration-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 60px;
+  background-image: url("../img/dna.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 183px;
+}
+
+.ilustration-item {
+  border-radius: 10px;
+}
+
+.ilustration-item-1 {
+  width: 450px;
+  height: 545px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.ilustration-item-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 445px;
+  height: 263px;
+  border: 10px solid #0B1120;
+  border-radius: 10px;
+}
+.ilustration-item-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.text-image .section-header {
+  position: relative;
+  z-index: 9;
+}
+
+@media (max-width: 1420px) {
+  .ilustration-wrapper {
+    background-size: 130px;
+    background-position: top 0px left 55px;
+  }
+}
 @media (max-width: 1280px) {
   .h2 {
     font-size: 44px;
@@ -2224,6 +2334,52 @@ body {
   .card-title {
     font-size: 24px;
   }
+  .ilustration-wrapper {
+    position: relative;
+    width: 350px;
+    min-width: 350px;
+    height: 335px;
+  }
+  .adv-item {
+    width: 100%;
+  }
+  .ilustration-item-1 {
+    width: 243px;
+    height: 295px;
+  }
+  .ilustration-item-wrapper {
+    width: 240px;
+    height: 143px;
+    border-width: 5px;
+  }
+  .ilustration-wrapper {
+    background-size: 95px;
+    background-position: top 0px left 0px;
+  }
+  .text-image__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .text-image .section-header {
+    width: 560px;
+    margin-left: 0;
+    padding-right: 20px;
+  }
+  .text-image .section-header .save-title {
+    margin-left: 0;
+    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .adv-list {
+    margin-top: 28px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -2299,14 +2455,53 @@ body {
     padding-bottom: 152px;
     background-size: 1038px;
   }
+  .text-image__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ilustration-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-image {
+    text-align: center;
+  }
+  .text-image .section-header {
+    width: 100%;
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .text-image .section-header .save-title {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .ilustration-wrapper {
+    margin-top: 0;
+  }
 }
 @media (max-width: 390px) {
   .hero__title {
     font-size: 36px;
   }
+  .ilustration-wrapper {
+    width: 320px;
+    min-width: 320px;
+  }
+  .ilustration-wrapper {
+    background-size: 18vw;
+  }
 }
 @media (max-width: 369px) {
   .save-title {
     font-size: 14px;
+  }
+  .ilustration-wrapper {
+    width: 290px;
+    min-width: 290px;
   }
 }

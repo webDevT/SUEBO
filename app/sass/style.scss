@@ -43,6 +43,17 @@ html, body {
 	margin-top: 0;
 	line-height: 130%;
 }
+.h4 {
+	font-size: $h4-font-size;
+	line-height: $h4-line-height;
+	font-family: $h4-font-family;
+	font-weight: $h4-font-weight;
+	color: $color-text-main;
+	margin-bottom: 0;
+	margin-top: 0;
+	line-height: 130%;
+	margin-bottom: 16px;
+}
 .body-sm-font {
 	font-size: 14px;
 }
@@ -56,6 +67,7 @@ html, body {
 	margin-top: 50px;
 	font-family: $font-heading;
 	font-weight: 400;
+	line-height: 140%;
 }
 .price-number-title {
 	font-size: $price-font-size;
@@ -355,7 +367,90 @@ color: $color-btn-yellow;
 	background-repeat: no-repeat;
 }
 //end target style
+.text-image {
+	.container {
+		position: relative;
+	}
+	.section-header {
+		margin-bottom: 30px;
+	}
+	.description {
+		margin-top: 20px;
+	}
+	p {
+		margin-top: 0;
+	}
+	
+}
+.text-image__item {
+	width: 50%;
+}
+.section-header--left {
+	text-align: left;
+}
+.ilustration-wrapper {
+	width: 650px;
+	height: 620px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.adv-item {
+	margin-bottom: 25px;
+	width: 450px;
+	max-width: 100%;
+	p {
+		color: $color-steel;
+	}
+}
+.ilustration-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	margin-top: 60px;
+	background-image: url('../img/dna.svg');
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 183px;
 
+
+
+
+}
+.ilustration-item {
+	border-radius: 10px;
+}
+.ilustration-item-1 {
+	width: 450px;
+	height: 545px;
+	object-fit: cover;
+	object-position: center;
+}
+.ilustration-item-wrapper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 445px;
+	height: 263px;
+	border: 10px solid $color-dark-navy;
+	border-radius: 10px;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+.text-image .section-header {
+	position: relative;
+	z-index: 9;
+}
+@include bp-1420 {
+	.ilustration-wrapper {
+		background-size: 130px;
+		background-position: top 0px left 55px;
+	}
+}
 @include bp-tablet {
 	.h2 {
 		font-size: 44px;
@@ -474,6 +569,46 @@ color: $color-btn-yellow;
 	.card-title {
 		font-size: 24px;
 	}
+	.ilustration-wrapper {
+		position: relative;
+		width: 350px;
+		min-width: 350px;
+		height: 335px;
+	}
+	.adv-item {
+		width: 100%;
+	}
+	.ilustration-item-1 {
+		width: 243px;
+		height: 295px;
+	}
+	.ilustration-item-wrapper {
+		width: 240px;
+		height: 143px;
+		border-width: 5px;
+	}
+	.ilustration-wrapper {
+		background-size: 95px;
+		background-position: top 0px left 0px;
+	}
+	.text-image__item {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.text-image .section-header {
+		width: 560px;
+		margin-left: 0;
+		padding-right: 20px;
+		.save-title {
+			margin-left: 0;
+			text-align: left;
+			justify-content: flex-start;
+		}
+	}
+	.adv-list {
+		margin-top: 28px;
+	}
 
 }
 @include bp-mobile {
@@ -551,6 +686,29 @@ color: $color-btn-yellow;
 		padding-bottom: 152px;
 		background-size: 1038px;
 	}
+	.text-image__item {
+		flex-direction: column;
+	}
+	.ilustration-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.text-image {
+		text-align: center;
+	}
+	.text-image .section-header {
+		width: 100%;
+		padding-right: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.text-image .section-header .save-title {
+		text-align: center;
+		justify-content: center;
+	}
+	.ilustration-wrapper {
+		margin-top: 0;
+	}
 	
 	
 }
@@ -559,10 +717,21 @@ color: $color-btn-yellow;
 	.hero__title {
 		font-size: 36px;
 	}
+	.ilustration-wrapper {
+		width: 320px;
+		min-width: 320px;
+	}
+	.ilustration-wrapper {
+		background-size: 18vw;
+	}
 }
 
 @include bp-mobile-sm {
 	.save-title {
 		font-size: 14px;
+	}
+	.ilustration-wrapper {
+		width: 290px;
+		min-width: 290px;
 	}
 }

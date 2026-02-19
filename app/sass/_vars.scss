@@ -120,6 +120,7 @@ $price-line-height:    1;                // 100%
 $bp-tablet:  768px;   // tablet (768 layout)
 $bp-desktop: 1280px;  // wide desktop (up to 1920 layout)
 $bp-1330:    1365px;  // optional breakpoint
+$bp-1420:    1420px;  // 1420 breakpoint
 $bp-mobile-sm: 370px;  // small mobile
 $bp-390:       390px;  // 390 layout
 
@@ -133,6 +134,12 @@ $bp-390-max:     390px;   // max-width: 390 and below
 
 @mixin bp-1330 {
   @media (max-width: $bp-1330) {
+    @content;
+  }
+}
+
+@mixin bp-1420 {
+  @media (max-width: $bp-1420) {
     @content;
   }
 }
