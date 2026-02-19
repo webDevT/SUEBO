@@ -18,7 +18,7 @@ html, body {
 .section-header {
 	text-align: center;
 	margin-bottom: 60px;
-	width: 1100px;
+	width: 1000px;
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -53,6 +53,8 @@ html, body {
 	color: $color-steel;
 	font-size: 20px;
 	margin-top: 50px;
+	font-family: $font-heading;
+	font-weight: 400;
 }
 .price-number-title {
 	font-size: $price-font-size;
@@ -97,7 +99,82 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	align-items: stretch;
+}
+.col-4 {
+	width: calc(33.333% - 20px);
+	display: flex;
+}
+//start card style
+.card {
+	text-align: center;
+	background: rgba($color-dark-navy, 0.8);
+	border-radius: 10px;
+	padding: 30px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	width: 100%;
+	border: 1px solid #354662;
+	transition: all 0.3s ease;
+}
+.card-description {
+	font-weight: 500;
+}
+.card__icon {
+	width: 80px;
+	height: 80px;
+	background: $color-teal-suebo;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+	svg {
+		width: 40px;
+		height: 40px;
+		fill: $color-dark-navy;
+	}
+}
+.card-title {
+	font-size: 30px;
+	font-weight: 500;
+	color: $color-teal-suebo;
+	margin-bottom: 20px;
+	font-family: $font-heading;
+	line-height: 1.25;
+	
+}
+.card:hover {
+	background: $color-accent;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 6px rgba(56, 189, 248, 0.9);
+	svg {
+		fill: $color-accent;
+	}
+	.card__icon {
+		background: $color-dark-navy;
+	}
+	.card-title {
+		color: $color-off-white;
+	}
+	.card-description {
+		color: $color-dark-navy;
+	}
+}
 
+
+
+
+
+//end card style
 
 //start hero style
 .hero {
@@ -266,6 +343,15 @@ body {
 }
 //end intro style
 
+//start target style
+.target{
+	background-image: url(../img/target.webp);
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+//end target style
+
 @include bp-tablet {
 	.h2 {
 		font-size: 44px;
@@ -368,9 +454,23 @@ body {
 		height: 250px;
 		filter: blur(71px);
 	}
-	//start intro styles
+	//start card styles
+	.card {
+		padding: 28px 20px;
+	}
+	.card__icon {
+		width: 64px;
+		height: 64px;
+		margin-bottom: 32px;
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+	.card-title {
+		font-size: 24px;
+	}
 
-	//end intro styles
 }
 @include bp-mobile {
 	.container {
@@ -439,6 +539,13 @@ body {
 	}
 	.intro__item:first-child {
 		margin-top: 0;
+	}
+	.col-4 {
+		width: 100%;
+	}
+	.target {
+		padding-bottom: 152px;
+		background-size: 1038px;
 	}
 	
 	
