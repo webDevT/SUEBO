@@ -3,6 +3,7 @@
 @use "buttons";
 @use "header";
 @use "footer";
+@use "usp";
 
 // Reset / Normalize (complements libs.min.css with normalize.css)
 html {
@@ -218,6 +219,9 @@ body {
 .save-title--center {
 	text-align: center;
 	justify-content: center;
+}
+.save-title--yellow {
+color: $color-btn-yellow;
 }
 .hero__content {
 	width: 594px;
