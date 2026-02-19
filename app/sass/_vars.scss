@@ -123,12 +123,14 @@ $bp-1330:    1365px;  // optional breakpoint
 $bp-1420:    1420px;  // 1420 breakpoint
 $bp-mobile-sm: 370px;  // small mobile
 $bp-390:       390px;  // 390 layout
+$bp-430:       430px;  // 430 layout
 
 // For max-width: styles apply below this width (1280 = no gap with $bp-desktop)
 $bp-tablet-max:  1280px;  // max-width: tablet (768–1280) + mobile
 $bp-mobile-max:  767px;   // max-width: mobile only (375 layout)
 $bp-mobile-sm-max: 369px;  // max-width: small mobile (340 layout)
 $bp-390-max:     390px;   // max-width: 390 and below
+$bp-430-max:     430px;   // max-width: 430 and below
 
 // Mixins (desktop-first: base styles = desktop, then override down)
 
@@ -164,6 +166,12 @@ $bp-390-max:     390px;   // max-width: 390 and below
 
 @mixin bp-390 {
   @media (max-width: $bp-390-max) {
+    @content;
+  }
+}
+
+@mixin bp-430 {
+  @media (max-width: $bp-430-max) {
     @content;
   }
 }
