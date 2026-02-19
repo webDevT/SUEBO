@@ -21,11 +21,12 @@ html, body {
 }
 .h2 {
 	font-size: $h2-font-size;
-	line-height: $h2-line-height;
+	line-height: 1.2;
 	font-family: $h2-font-family;
 	font-weight: $h2-font-weight;
 	color: $color-text-main;
 	margin-bottom: 0;
+	margin-top: 0;
 }
 .h3 {
 	font-size: $h3-font-size;
@@ -146,6 +147,48 @@ body {
 
 //end hero style
 
+//start clients style
+.clients {
+	padding-top: 100px;
+	padding-bottom: 67px;
+	background-color: $color-gunmetal;
+}
+.clients__item {
+	background: #fff;
+	border-radius: 10px;
+	width: 200px;
+	min-width: 200px;
+	height: 98px;
+	padding: 14px 20px;
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		width: 100%;
+	}
+}
+.clients__marquee {
+	overflow: hidden;
+}
+.clients__track {
+	display: flex;
+	gap: 24px;
+	width: max-content;
+	animation: clients-marquee 40s linear infinite;
+}
+.clients__track:hover {
+	animation-play-state: paused;
+}
+@keyframes clients-marquee {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+.clients__list {
+	display: flex;
+	gap: 24px;
+	flex-shrink: 0;
+}
+//end clients style
+
 @include bp-tablet {
 	.hero__content {
 		width: 100%;
@@ -200,9 +243,21 @@ body {
 	.h3 {
 		font-size: 44px;
 	}
-	
 
-	
+	//start clients styles 
+	.clients {
+		padding-top: 52px;
+		padding-bottom: 52px;
+		.container {
+			width: 100%;
+			max-width: 100%;
+		}
+		.section-header {
+			padding-left: 3.5vw;
+			padding-right: 3.5vw;
+		}
+	}
+	//end clients styles
 }
 @include bp-mobile {
 	.container {
@@ -247,6 +302,17 @@ body {
 	}
 	.section-header {
 		margin-bottom: 40px;
+	}
+	.h2 {
+		font-size: 32px;
+	}
+	.clients__item {
+		width: 167px;
+		min-width: 167px;
+		height: 80px;
+	}
+	.clients__track {
+		gap: 16px;
 	}
 
 }
