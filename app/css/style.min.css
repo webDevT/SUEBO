@@ -1780,6 +1780,12 @@ body {
   padding-top: 100px;
   padding-bottom: 67px;
   background-color: #161F32;
+  position: relative;
+  overflow: hidden;
+}
+.clients .container {
+  position: relative;
+  z-index: 9;
 }
 
 .clients__item {
@@ -1794,6 +1800,38 @@ body {
   max-width: 100%;
   max-height: 100%;
   width: 100%;
+}
+
+.clients::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #16C1E9;
+  opacity: 0.45;
+  -webkit-filter: blur(350px);
+          filter: blur(350px);
+  -webkit-transform: translate(50%, 50%) translateZ(0);
+          transform: translate(50%, 50%) translateZ(0);
+}
+
+.clients::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #16C1E9;
+  opacity: 0.45;
+  -webkit-filter: blur(350px);
+          filter: blur(350px);
+  -webkit-transform: translate(-50%, -50%) translateZ(0);
+          transform: translate(-50%, -50%) translateZ(0);
 }
 
 .clients__marquee {
@@ -1970,6 +2008,13 @@ body {
   }
   .clients__track {
     gap: 16px;
+  }
+  .clients::before,
+  .clients::after {
+    width: 250px;
+    height: 250px;
+    -webkit-filter: blur(71px);
+            filter: blur(71px);
   }
 }
 @media (max-width: 390px) {

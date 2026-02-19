@@ -152,6 +152,12 @@ body {
 	padding-top: 100px;
 	padding-bottom: 67px;
 	background-color: $color-gunmetal;
+	position: relative;
+	overflow: hidden;
+	.container {
+		position: relative;
+		z-index: 9;
+	}
 }
 .clients__item {
 	background: #fff;
@@ -166,6 +172,37 @@ body {
 		width: 100%;
 	}
 }
+
+
+.clients::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: #16C1E9;
+	opacity: 0.45;
+	filter: blur(350px);
+	transform: translate(50%, 50%) translateZ(0); 
+}
+.clients::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: #16C1E9;
+	opacity: 0.45;
+	filter: blur(350px);
+	transform: translate(-50%, -50%) translateZ(0); // центр еліпса в лівому верхньому куті
+}  
+
+
+
 .clients__marquee {
 	overflow: hidden;
 }
@@ -257,6 +294,7 @@ body {
 			padding-right: 3.5vw;
 		}
 	}
+	
 	//end clients styles
 }
 @include bp-mobile {
@@ -314,7 +352,13 @@ body {
 	.clients__track {
 		gap: 16px;
 	}
-
+	
+	.clients::before,
+	.clients::after {
+		width: 250px;
+		height: 250px;
+		filter: blur(71px);
+	}
 }
 
 @include bp-390 {
