@@ -1,9 +1,7 @@
 // =====================
-// Self-hosted fonts (Fontsource) – підключення через CSS, без Google Fonts
-// Шляхи відносно збереженого CSS (app/css/ → ../fonts/)
+// Self-hosted fonts (Fontsource)
 // =====================
 
-// Inter: 400, 700 (woff2 перший; woff fallback — уникає OTS-помилок при подвійному стисканні сервером)
 @font-face {
 	font-family: 'Inter';
 	font-style: normal;

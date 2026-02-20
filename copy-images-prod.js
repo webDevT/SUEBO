@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Функція для копіювання файлів
 function copyFile(src, dest) {
     try {
         fs.copyFileSync(src, dest);
@@ -11,14 +10,12 @@ function copyFile(src, dest) {
     }
 }
 
-// Функція для створення директорії
 function ensureDir(dir) {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
 }
 
-// Рекурсивне копіювання всіх файлів (включно з піддиректоріями)
 function copyRecursive(srcDir, destDir) {
     if (!fs.existsSync(srcDir)) return;
 
@@ -37,7 +34,6 @@ function copyRecursive(srcDir, destDir) {
     }
 }
 
-// Копіюємо зображення для продакшн (включно з WebP, створеними при збірці)
 const srcDir = 'app/img';
 const destDir = 'docs/img';
 

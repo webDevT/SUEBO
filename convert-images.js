@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Configuration (можна передати при виклику як модуль)
 const quality = 80; // WebP quality (0-100)
 
 // Get file size in KB
@@ -127,7 +126,6 @@ async function convertImages(inputDir = 'app/img', outputDir = inputDir) {
     console.log('\n🎉 Conversion complete!');
 }
 
-// Запуск при виклику напряму
 if (require.main === module) {
     convertImages().catch((err) => {
         console.error('❌ Error:', err.message);

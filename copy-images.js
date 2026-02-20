@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Функція для копіювання файлів
 function copyFile(src, dest) {
     try {
         fs.copyFileSync(src, dest);
@@ -11,27 +10,23 @@ function copyFile(src, dest) {
     }
 }
 
-// Функція для створення директорії
 function ensureDir(dir) {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
 }
 
-// Копіюємо зображення
 const srcDir = 'app/img';
 const destDir = 'app/temp/img';
 
 ensureDir(destDir);
 
-// Читаємо всі файли в srcDir
 const files = fs.readdirSync(srcDir);
 
 files.forEach(file => {
     const srcPath = path.join(srcDir, file);
     const destPath = path.join(destDir, file);
-    
-    // Перевіряємо, чи це файл (не директорія)
+
     if (fs.statSync(srcPath).isFile()) {
         copyFile(srcPath, destPath);
     }

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-	// Поточний рік у футері
 	const yearEl = document.getElementById('year');
 	if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	// In panel: click on dropdown link toggles mega (accordion), does not navigate
+	// In panel: click on dropdown link toggles mega (accordion), only one open at a time
 	if (mobilePanel) {
 		mobilePanel.addEventListener('click', (e) => {
 			const link = e.target.closest('.header-nav__item--dropdown .header-nav__link');
@@ -52,12 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			e.preventDefault();
 			const li = link.closest('.header-nav__item--dropdown');
 			if (!li) return;
+			// Close all other dropdowns (accordion: only one open)
+			navList.querySelectorAll('.header-nav__item--dropdown').forEach((other) => {
+				if (other !== li) {
+					other.classList.remove('is-open');
+					const otherBtn = other.querySelector('.header-nav__link');
+					if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+				}
+			});
 			const isOpen = li.classList.toggle('is-open');
 			link.setAttribute('aria-expanded', isOpen);
 		});
 	}
 
-	// Модальне вікно (опціонально)
 	const modal = document.querySelector('.modal-window');
 	if (modal) {
 		const closeBtn = modal.querySelector('.modal-window__content-close button');

@@ -70,7 +70,6 @@ const compileJS = () => {
         .pipe(gulp.dest('app/js'));
 };
 
-// Copy font files from @fontsource to app/fonts (fs.copyFileSync; woff2 + woff для fallback)
 const copyFonts = (done) => {
     const fontFiles = [
         'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2',
@@ -105,7 +104,6 @@ const copyFonts = (done) => {
     done();
 };
 
-// Копіювання шрифтів app/fonts → app/temp/fonts тільки через fs (Gulp потоки ламають бінарники)
 const copyFontsToTemp = (done) => {
     const srcDir = path.join(__dirname, 'app', 'fonts');
     const destDir = path.join(__dirname, 'app', 'temp', 'fonts');
@@ -117,7 +115,6 @@ const copyFontsToTemp = (done) => {
     done();
 };
 
-// Copy static assets (без шрифтів — вони копіюються copyFontsToTemp через fs)
 const copyAssets = () => {
     return gulp.src(['app/css/**/*', 'app/js/**/*'], { base: 'app' })
         .pipe(gulp.dest('app/temp/'));
@@ -193,7 +190,6 @@ const exportBuild = () => {
     const buildJs = gulp.src('app/js/**/*.js')
         .pipe(gulp.dest('docs/js'));
 
-    // Шрифти тільки через fs (Gulp ламає бінарники)
     const buildFonts = () => {
         const srcDir = path.join(__dirname, 'app', 'fonts');
         const destDir = path.join(__dirname, 'docs', 'fonts');
@@ -212,7 +208,6 @@ const exportBuild = () => {
     return Promise.all([buildHtml, buildCss, buildJs, buildFonts(), buildImg, buildHtaccess]);
 };
 
-// Build task (конвертує PNG/JPG/JPEG → WebP, потім копіює все в docs)
 const build = gulp.series(clean, convertImages, copyFonts, exportBuild);
 
 // Development task
