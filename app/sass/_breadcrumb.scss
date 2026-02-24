@@ -1,0 +1,53 @@
+@use "vars" as *;
+
+.breadcrumb {
+	margin-bottom: 20px;
+}
+
+.breadcrumb__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 1.4;
+	color: $color-steel;
+	font-family: $font-heading;
+	font-weight: $weight-medium;
+}
+
+.breadcrumb__item {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+
+	&:not(:last-child)::after {
+		content: url("../img/arrow-right.svg");
+		color: $color-text-muted;
+		font-weight: $weight-regular;
+		pointer-events: none;
+	}
+	&:last-child::after {
+		content: url("../img/arrow-down.svg");
+		pointer-events: none;
+		top: -2px;
+		position: relative;
+	}
+}
+
+.breadcrumb__link {
+	color: $color-text-muted;
+	text-decoration: none;
+	transition: color 0.2s;
+
+	&:hover {
+		color: $color-accent;
+	}
+}
+
+.breadcrumb__item--current {
+	color: $color-text-main;
+	font-weight: $weight-medium;
+}

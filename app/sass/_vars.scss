@@ -121,6 +121,11 @@ $bp-tablet:  768px;   // tablet (768 layout)
 $bp-desktop: 1280px;  // wide desktop (up to 1920 layout)
 $bp-1330:    1365px;  // optional breakpoint
 $bp-1420:    1420px;  // 1420 breakpoint
+$bp-1800:    1800px;  // 1800 breakpoint
+$bp-1700:    1700px;  // 1700 breakpoint
+$bp-1600:    1600px;  // 1600 breakpoint
+$bp-1500:    1500px;  // 1500 breakpoint
+$bp-1400:    1400px;  // 1400 breakpoint
 $bp-mobile-sm: 370px;  // small mobile
 $bp-390:       390px;  // 390 layout
 $bp-430:       430px;  // 430 layout
@@ -142,6 +147,36 @@ $bp-430-max:     430px;   // max-width: 430 and below
 
 @mixin bp-1420 {
   @media (max-width: $bp-1420) {
+    @content;
+  }
+}
+
+@mixin bp-1800 {
+  @media (max-width: $bp-1800) {
+    @content;
+  }
+}
+
+@mixin bp-1700 {
+  @media (max-width: $bp-1700) {
+    @content;
+  }
+}
+
+@mixin bp-1600 {
+  @media (max-width: $bp-1600) {
+    @content;
+  }
+}
+
+@mixin bp-1500 {
+  @media (max-width: $bp-1500) {
+    @content;
+  }
+}
+
+@mixin bp-1400 {
+  @media (max-width: $bp-1400) {
     @content;
   }
 }
