@@ -240,7 +240,6 @@ body {
 	text-align: left;
 	gap: 15px;
 	min-width: 0;
-	margin-top: 24px;
 	padding-right: 16px;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -289,10 +288,13 @@ body {
 }
 .map {
 	overflow: hidden;
+	iframe {
+		width: 100%;
+		height: 754px;
+		border: none;
+	}
 }
-.map__image {
-	width: 100%;
-}
+
 //end card style
 
 //start hero style
@@ -765,10 +767,24 @@ color: $color-btn-yellow;
 	display: none;
 }
 
-//start contact style
-
-//end contact style
-
+//start page style
+.hero--third {
+	padding-top: 65px;
+	padding-bottom: 75px;
+	background-image: url('../img/dna-blue.svg');
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 183px;
+}
+//end page style
+.contact-section {
+	&.ellipse-glow {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -798,7 +814,9 @@ color: $color-btn-yellow;
 		right: -25vw;
 	}
 }
-
+.map__btn {
+	display: none;
+}
 @include bp-tablet {
 	.sercive-ilustration-wrapper .services-diagram--desktop {
 		display: none;
@@ -922,6 +940,17 @@ color: $color-btn-yellow;
 	}
 	.h3 {
 		font-size: 44px;
+	}
+
+	// contact section: first 4 columns 2 per row, last one full width
+	.contact-section .row {
+		.col-4,
+		.col-6 {
+			width: calc(50% - 10px);
+		}
+		.col-6:last-child {
+			width: 100%;
+		}
 	}
 
 	//start clients styles 
@@ -1059,7 +1088,7 @@ color: $color-btn-yellow;
 	}
 	.hero--secondary .hero__bg-wrapper {
 		width: 100%;
-		height: 38vw;
+		height: 49.479vw;
 		overflow: hidden;
 		img {
 			width: 135%;
@@ -1072,7 +1101,7 @@ color: $color-btn-yellow;
 		
 	}
 	.breadcrumb {
-		margin-top: 20px;
+		margin-top: 36px;
 	}
 	.map__image {
 		width: 100%;
@@ -1112,11 +1141,81 @@ color: $color-btn-yellow;
 		white-space: nowrap;
 	}
 	.hero--secondary {
-		padding-bottom: 30px;
+		padding-bottom: 52px;
 		.hero__content {
 			padding-top: 0;
 		}
 	}
+	.hero--secondary .hero__title {
+		font-size: 48px;
+		margin-top: 32px;
+		margin-bottom: 32px;
+		br {
+			display: none;
+		}
+	}
+	.hero--secondary .hero__description {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.contact-section {
+		&.ellipse-glow {
+			&::before,
+			&::after {
+				display: block;
+			}
+		}
+	}
+	.contact-section {
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+		&.ellipse-glow {
+			&::after {
+				bottom: 50%;
+			}
+		}
+	}
+	.card.card--horizontal .card__content a {
+		display: block;
+	}
+	.contact-section .col-6:last-child .card.card--horizontal {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		.card__content {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding-right: 30px;
+		}
+		.card-title {
+			width: 220px;
+			text-align: left;
+			margin: 0;
+		}
+		.card__icon  {
+			margin-bottom: 0;
+		}
+	}
+	.map {
+		iframe {
+			height: 687px;
+		}
+	}
+	.map__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background: $color-gunmetal;
+		margin-top: -10px;
+	} 
+	
 
 }
 @include bp-mobile {
@@ -1191,6 +1290,10 @@ color: $color-btn-yellow;
 	.col-6 {
 		width: 100%;
 	}
+	.contact-section .row .col-4,
+	.contact-section .row .col-6 {
+		width: 100%;
+	}
 	.target {
 		padding-bottom: 152px;
 		background-size: 1038px;
@@ -1226,10 +1329,11 @@ color: $color-btn-yellow;
 	}
 	.breadcrumb__list {
 		margin-top: 15px;
+		justify-content: center;
 	}
 	.hero--secondary .hero__title {
-		font-size: 38px;
-		margin-top: 28px;
+		font-size: 36px;
+		margin-top: 32px;
 		margin-bottom: 32px;
 	}
 	.hero--secondary .hero__description {
@@ -1248,15 +1352,7 @@ color: $color-btn-yellow;
 		margin-top: 0;
 		gap: 0;
 	}
-	.hero--secondary {
-		padding-bottom: 0;
-	}
-	
-	
-	
-	
-}
-@include bp-mobile {
+
 	.sercive-ilustration-wrapper .services-diagram--desktop,
 	.sercive-ilustration-wrapper .services-diagram--tablet {
 		display: none;
@@ -1313,11 +1409,42 @@ color: $color-btn-yellow;
 	}
 	.hero--secondary .hero__title {
 		margin-bottom: 15px;
-		margin-top: 35px;
+		br {
+			display: block;
+		}
 	}
-	.hero--secondary .hero__description {
-		font-size: 16px;
-		margin-bottom: 30px;
+
+	.hero--secondary .hero__bg-wrapper {
+		height: 66.667vw;
+		img {
+			margin-top: 0;
+			height: 100%;
+		}
+	}
+	.contact-section .col-6:last-child .card.card--horizontal {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		.card__content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			padding-right: 0px;
+		}
+		.card-title {
+			width: auto;
+			text-align: center;
+			margin: 32px;
+		}
+		.card__icon  {
+			margin-bottom: 0;
+		}
+		.card-contact-row {
+			font-size: 14px;
+		}
 	}
 }
 

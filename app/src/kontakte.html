@@ -4,7 +4,20 @@
 	
 	<!-- start hero section -->
 	<section class="hero hero--secondary ellipse-glow">
+		<div class="hero__bg-wrapper">
 
+
+			<picture>
+				
+				<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/contact-baner.webp" type="image/webp">
+				<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/contact-baner.png">
+				
+				<source srcset="img/contact-baner.webp" type="image/webp">
+				<img src="img/contact-baner.png" alt="hero" class="hero__bg" width="1920" height="1080" fetchpriority="high" decoding="async">
+			</picture>
+	
+	
+			</div>
 		
 		<div class="container">
 
@@ -34,25 +47,12 @@
 		</div>
 		</div>
 
-		<div class="hero__bg-wrapper">
-
-
-			<picture>
-				
-				<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/contact-baner.webp" type="image/webp">
-				<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/contact-baner.png">
-				
-				<source srcset="img/contact-baner.webp" type="image/webp">
-				<img src="img/contact-baner.png" alt="hero" class="hero__bg" width="1920" height="1080" fetchpriority="high" decoding="async">
-			</picture>
-	
-	
-			</div>
+		
 	</section>
 	<!-- end hero section -->
 
 	<!-- start contact section -->
-	<section class="contact-section section">
+	<section class="contact-section section ellipse-glow">
 		<div class="container">
 			<div class="section-header">
 				
@@ -144,10 +144,7 @@
 								
 						</div>
 					</div>
-					</div>
-
-
-					<div class="row">
+					
 <div class="col-6">
 						<div class="card card--secondary card--horizontal">
 							<div class="card__icon card__icon--contact">
@@ -193,7 +190,7 @@
 
 							<div class="card__content">
 								<div class="card-title">
-									Datenschutz & Rechtliches
+									Fachspezifische Anfragen
 							</div>
 	
 							<div class="card-contact-list">
@@ -253,10 +250,15 @@
 
 	<!-- start map section -->
 	<section class="map">
-		<picture>
-			<source srcset="img/map.webp" type="image/webp">
-			<img src="img/map.png" alt="map" class="map__image" loading="lazy">
-		</picture>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4190.12868583232!2d8.449118239997564!3d47.18743769763013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479000efc1c0c55d%3A0x5e3a4acb525b742a!2sSinserstrasse%2067%2C%206330%20Cham%2C%20Switzerland!5e1!3m2!1sen!2sua!4v1771933874151!5m2!1sen!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+		<div class="map__btn">
+			<a href="https://www.google.com/maps/dir/?api=1&destination=Sinserstrasse+67,+6330+Cham,+Switzerland" class="btn btn--transparent-white">
+				<span>
+					Auf Google Maps anzeigen
+				</span>
+			</a>
+		</div>
 	</section>
 	<!-- end map section -->
 
