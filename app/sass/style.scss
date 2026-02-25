@@ -775,6 +775,9 @@ color: $color-btn-yellow;
 	background-repeat: no-repeat;
 	background-position: top 1vw right 15vw;
 	background-size: 183px;
+	.hero__content {
+		width: 100%;
+	}
 }
 //end page style
 .contact-section {
@@ -794,9 +797,7 @@ color: $color-btn-yellow;
 	margin-bottom: 38px;
 	line-height: 140%;
 }
-.semi-bold {
-	font-weight: 600;
-}
+
 .text-white {
 	color: $color-off-white;
 }
@@ -815,6 +816,17 @@ color: $color-btn-yellow;
 		word-wrap: break-word;
 		word-break: break-word;
 	}
+}
+.semi-bold {
+	font-weight: 600;
+}
+.text-20 {
+	font-size: 20px;
+}
+.text-title {
+	font-size: 32px;
+	font-family: $font-heading;
+	font-family: 500;
 }
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {

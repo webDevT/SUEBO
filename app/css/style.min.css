@@ -2930,6 +2930,9 @@ body {
   background-position: top 1vw right 15vw;
   background-size: 183px;
 }
+.hero--third .hero__content {
+  width: 100%;
+}
 
 .contact-section.ellipse-glow::before, .contact-section.ellipse-glow::after {
   display: none;
@@ -2944,10 +2947,6 @@ body {
 .page-content__contact-item {
   margin-bottom: 38px;
   line-height: 140%;
-}
-
-.semi-bold {
-  font-weight: 600;
 }
 
 .text-white {
@@ -2970,6 +2969,20 @@ body {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-title {
+  font-size: 32px;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 500;
 }
 
 @media (max-width: 1800px) {
