@@ -4,7 +4,7 @@
 .header {
 	font-family: $font-heading;
 	position: relative;
-	z-index: 999;
+	z-index: 9999;
 	background-color: $color-dark-navy;
 }
 
@@ -134,8 +134,9 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(0px);
-	transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
-	z-index: 100;
+	transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+	transition-delay: 0.15s; 
+	z-index: 9999;
 	overflow: hidden;
 }
 .header-mega::before {
@@ -165,7 +166,15 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	line-height: 1.25;
 	color: $color-text-main;
 	letter-spacing: 0.02em;
+}
 
+.header-mega__title-link {
+	color: inherit;
+	text-decoration: none;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
 }
 
 .header-mega__desc {
@@ -1164,10 +1173,12 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	.header-nav__item--dropdown:hover .header-nav__chevron {
 		transform: rotate(180deg);
 	}
-	.header-nav__item--dropdown:hover .header-mega {
+	.header-nav__item--dropdown:hover .header-mega,
+	.header-mega:hover {
 		opacity: 1;
 		visibility: visible;
 		transform: translateY(0);
+		transition-delay: 0.15s; // затримка перед появою
 	}
 	.header-mega__services > li > a:hover svg {
 		fill: $color-accent;
