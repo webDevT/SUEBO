@@ -771,9 +771,9 @@ color: $color-btn-yellow;
 .hero--third {
 	padding-top: 65px;
 	padding-bottom: 75px;
-	background-image: url('../img/dna-blue.svg');
+	background-image: url('../img/dna-1.svg');
 	background-repeat: no-repeat;
-	background-position: top right;
+	background-position: top 1vw right 15vw;
 	background-size: 183px;
 }
 //end page style
@@ -783,6 +783,37 @@ color: $color-btn-yellow;
 		&::after {
 			display: none;
 		}
+	}
+}
+.page-content__contact {
+	font-size: 20px;
+	color: $color-steel;
+	margin-bottom: 48px;
+}
+.page-content__contact-item {
+	margin-bottom: 38px;
+	line-height: 140%;
+}
+.semi-bold {
+	font-weight: 600;
+}
+.text-white {
+	color: $color-off-white;
+}
+.color-muted {
+	color: $color-steel;
+}
+.page-content__wrapper-item {
+	font-weight: 400;
+	margin-bottom: 30px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	a {
+		color: $color-accent;
+		text-decoration: underline;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
 	}
 }
 @include bp-1800 {
@@ -1215,6 +1246,24 @@ color: $color-btn-yellow;
 		background: $color-gunmetal;
 		margin-top: -10px;
 	} 
+	.breadcrumb {
+		display: flex;
+		justify-content: center;
+	}
+	.hero--third {
+		padding-top: 52px;
+		padding-bottom: 52px;
+		background-image: none;
+		.breadcrumb {
+			margin-top: 0px;
+		}
+		.breadcrumb__list {
+			margin-bottom: 0px;
+		}
+		.hero__content {
+			padding-top: 12px;
+		}
+	}
 	
 
 }
@@ -1446,6 +1495,13 @@ color: $color-btn-yellow;
 			font-size: 14px;
 		}
 	}
+	.hero--third .h2 {
+		font-size: 36px;
+	}
+	.page-content__contact-item {
+		margin-bottom: 30px;
+	}
+	
 }
 
 @include bp-430 {
