@@ -3371,6 +3371,8 @@ body {
   .hero__bg-wrapper {
     width: 100%;
     position: static;
+    aspect-ratio: 16/9;
+    overflow: hidden;
   }
   .hero__bg-wrapper img {
     width: 100%;
@@ -3602,11 +3604,15 @@ body {
   .hero--secondary .hero__bg-wrapper {
     width: 100%;
     height: 49.479vw;
+    aspect-ratio: 1920/1080;
     overflow: hidden;
   }
   .hero--secondary .hero__bg-wrapper img {
     width: 135%;
+    height: 100%;
     margin-left: -35%;
+    -o-object-fit: cover;
+       object-fit: cover;
     -o-object-position: bottom;
        object-position: bottom;
   }
@@ -4117,10 +4123,13 @@ body {
   }
   .hero--secondary .hero__bg-wrapper {
     height: 66.667vw;
+    aspect-ratio: 1920/1080;
   }
   .hero--secondary .hero__bg-wrapper img {
     margin-top: 0;
     height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .contact-section .col-6:last-child .card.card--horizontal {
     -webkit-box-orient: vertical;
