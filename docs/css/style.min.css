@@ -1330,6 +1330,25 @@
             justify-content: flex-end;
     padding-top: 20px;
   }
+  .banner-section .banner-image {
+    height: 47.266vw;
+    -o-object-position: right center;
+       object-position: right center;
+  }
+  .banner-section .banner-content .buttons-wrapper {
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner-section .banner-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner-section .banner-content .description {
+    text-align: center;
+  }
 }
 @media (max-width: 767px) {
   .preheader .container {
@@ -2118,11 +2137,47 @@ body {
           align-items: stretch;
 }
 
+.col-3 {
+  width: calc(25% - 20px);
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1280px) {
+  .col-3 {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 767px) {
+  .col-3 {
+    width: 100%;
+  }
+}
+
 .col-4 {
   width: calc(33.333% - 20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.col-5 {
+  width: calc(41.667% - 20px);
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1280px) {
+  .col-5 {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 767px) {
+  .col-5 {
+    width: 100%;
+  }
 }
 
 .col-6 {
@@ -2131,6 +2186,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.col-7 {
+  width: calc(58.333% - 20px);
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1280px) {
+  .col-7 {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .col-7 {
+    width: 100%;
+  }
 }
 
 .card {
@@ -3193,6 +3266,40 @@ body {
   color: #78ABAD;
 }
 
+.banner-content {
+  text-align: center;
+}
+
+.color--teal {
+  color: #78ABAD;
+}
+
+.h2.color--teal {
+  color: #78ABAD;
+}
+
+.banner-section--2 .banner-content {
+  text-align: center;
+  text-align: left;
+}
+.banner-section--2 .banner-content .description {
+  text-align: left;
+  color: #F1F5F9;
+  margin-bottom: 30px;
+}
+.banner-section--2 .banner-content .buttons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+  margin-top: 44px;
+}
+
+.banner-section--2::after,
+.banner-section--2::before {
+  display: none;
+}
+
 @media (max-width: 1800px) {
   .hero--secondary .hero__bg-wrapper {
     right: -10vw;
@@ -3870,6 +3977,21 @@ body {
   .banner-image {
     height: 363px;
   }
+  .banner-section--2 {
+    text-align: center;
+  }
+  .banner-section--2 .banner-content {
+    padding-top: 30px;
+  }
+  .banner-section--2 .banner-content .description {
+    text-align: center;
+  }
+  .banner-section--2 .h2 {
+    text-align: center;
+  }
+  .banner-section--2 .banner-content .buttons-wrapper {
+    gap: 20px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -4210,6 +4332,50 @@ body {
   .banner-image {
     height: 257px;
     margin-bottom: 15px;
+  }
+  .banner-section--2 {
+    text-align: center;
+  }
+  .banner-section--2 .banner-content {
+    padding-top: 50px;
+  }
+  .banner-section--2 .banner-content .description {
+    text-align: center;
+  }
+  .banner-section--2 .h2 {
+    text-align: center;
+  }
+  .banner-section--2 .banner-content .buttons-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 36px;
+  }
+  .banner-section--2::after,
+  .banner-section--2::before {
+    display: block;
+  }
+  .banner-section--2::after {
+    bottom: auto;
+    top: 40%;
+    -webkit-transform: translateY(0%) translateX(50%);
+        -ms-transform: translateY(0%) translateX(50%);
+            transform: translateY(0%) translateX(50%);
+  }
+  .banner-section--2::before {
+    bottom: auto;
+    top: 40%;
+    left: 0;
+    -webkit-transform: translateY(0%) translateX(-50%);
+        -ms-transform: translateY(0%) translateX(-50%);
+            transform: translateY(0%) translateX(-50%);
+  }
+  .banner-section--2 .banner-image {
+    height: 63.077vw;
   }
 }
 @media (max-width: 430px) {

@@ -598,10 +598,23 @@
 <main id="main-content">
 	
 	<!-- start hero section -->
-	<section class="hero--third ellipse-glow">
-		<div class="container">
+	<section class="hero hero--secondary ellipse-glow">
+		<div class="hero__bg-wrapper">
 
-			
+
+			<picture>
+				
+				<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/unternehmen-banner.webp" type="image/webp">
+				<source media="(min-width: 768px) and (max-width: 1279px)" srcset="img/unternehmen-banner.png">
+				
+				<source srcset="img/unternehmen-banner.webp" type="image/webp">
+				<img src="img/unternehmen-banner.png" alt="hero" class="hero__bg" width="1920" height="1080" fetchpriority="high" decoding="async">
+			</picture>
+	
+	
+			</div>
+		
+		<div class="container">
 
 			<!-- start breadcrumb -->
 			<nav class="breadcrumb" aria-label="Breadcrumb">
@@ -609,132 +622,335 @@
 					<li class="breadcrumb__item">
 						<a class="breadcrumb__link" href="index.html">Startseite</a>
 					</li>
-					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Impressum</li>
+					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Unternehmen</li>
 				</ul>
 			</nav>
 			<!-- end breadcrumb -->
 
 			<div class="hero__content">
-				<h1 class="h2 ">
-					Impressum
-				</h1>
+				<h1 class="hero__title">
+					Mehr als nur IT. Wir sind Ihr Partner.
+			</h1>
+
+			<div class="hero__description">
+				SUEBO steht für Schweizer Qualität, absolute Verlässlichkeit und eine Sicherheitskultur, die den Menschen in den Mittelpunkt stellt.
 			</div>
+
+			<a href="unternehmen-profil.html" class="btn btn--white">
+				Über SUEBO Informatik AG
+			</a>
+
+		
+			
 		</div>
+		</div>
+
+		
 	</section>
 	<!-- end hero section -->
 
-	<!-- start page content -->
-	<section class="page-content section">
-		<div class="container">
-			
-			<div class="page-content__contact">
 
-				<div class="page-content__contact-item">
-					Anbieterkennzeichnung:
-				</div>
-
-				<div class="page-content__contact-item">
-					<div class="semi-bold text-white">SUEBO Informatik AG</div>
-					<div>Sinserstrasse 67</div>
-					<div>CH-6330 Cham</div>
-				</div>
-
-				<div class="page-content__contact-item">
-					<span class="text-white">Kontakt:</span> info (at) suebo.ch
-				</div>
-
-			</div>
-
-			<div class="page-content__wrapper">
-
-				<div class="page-content__wrapper-item">
-					<div class="color-muted">Vertretungsberechtigte Personen:</div>
-
-					<ul class="page-content__wrapper-list">
-						<li>
-							<span class="semi-bold text-white">Verwaltungsrat:</span>
-							 Michael Kurmann
-						</li>
-
-						<li>
-							<span class="semi-bold text-white">Zeichnungsberechtigte:</span>
-							Michael Kurmann
-						</li>
-
-					</ul>
-
-				</div>
-
-				<div class="page-content__wrapper-item">
-
-					<div><span class="semi-bold">Handelsregisteramt:</span> Zug</div>
-					<div><span class="semi-bold">UID:</span> CH-170.3.022.492-7</div>
-					<div><span class="semi-bold">MwSt-Nummer:</span> CHE-104.928.048</div>
-
-				</div>
-
-				<div class="page-content__wrapper-item">
-					Einer Nutzung unserer im Rahmen der Impressumspflicht bekanntgegebenen Kontaktdaten zu Werbezwecken wird hiermit ausdrücklich widersprochen. Wir behalten uns für den Fall unverlangt zugesandter Werbe- oder Informationsmaterialien - unabhängig vom verwendeten Medium - ausdrücklich rechtliche Schritte vor.
-Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a> finden.
-				</div>
-
-				<div class="page-content__wrapper-item">
-					Wir sind nicht zur Teilnahme daran verpflichtet und nicht bereit an einem eventuellen Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
-Mit der Nutzung dieser Webseite, anerkennen Sie unsere Haftungsbeschränkungen und Nutzungsbedingungen. Sie finden diese unter diesem  <a href="https://suebo.ch/tos.html">Link</a> finden.
-				</div>
-
-
-			</div>
-
-		</div>
-	</section>
-	<!-- end page content -->
-
-		<!-- start usp section -->
-	<section class="usp section">
+	<!-- start text section -->
+	<section class="text-section section ellipse-glow">
 		<div class="container">
 
 			<div class="section-header">
-				<div class="save-title save-title--center save-title--yellow">
-					Special Offer
-				</div>
-
-				<h2 class="h2">
-					Wissen Sie, wo Sie stehen?
-				</h2>
-
-				<div class="description">
-					Quick-Check Informationssicherheit. Schnell, kostengünstig und effizient.
-				</div>
-
-
+				<h2 class="h3 h3--2">
+					Unsere Mission: Sicherheit schaffen
+				</h2>			
 			</div>
 
-			<div class="usp__content">
-
-				<div class="usp__title">
-					<div class="usp__title-prefix">Ab</div>
-					 
-					CHF 3'500
+			<div class="row">
+				<div class="col-6">
+					<div class="text-section__item description">
+						In einer komplexen digitalen Welt suchen Unternehmen nach Orientierung. Technik allein reicht nicht mehr aus – es braucht Vertrauen und strategischen Weitblick.
+					</div>
 				</div>
+				<div class="col-6">
+					<div class="text-section__item--2 description color-white semi-bold">
+						Wir verbinden technische Exzellenz mit menschlicher Nähe. Als unabhängiger Partner begleiten wir Sie auf Augenhöhe – ehrlich, direkt und transparent.
+					</div>
+				</div>
+	</div>
 
-				<a href="" class="btn btn--yellow">
-					Jetzt Quick-Check buchen
-				</a>	
-			</div>
+
 		</div>
 	</section>
-	<!-- end usp section -->
+	<!-- end text section -->
+
+	<!-- start contact section -->
+	<section class="contact-section section">
+		<div class="container">
+			<div class="section-header">
+				
+				<h2 class="h3">
+					Unsere Kompetenzen im Überblick
+
+				</h2>
+			</div>
+
+				<div class="row">
+
+					<div class="col-3">
+						<a href="unternehmen-profil.html" class="card card--secondary card--link">
+							<div class="card__icon card__icon--contact">
+								
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40C0 17.9086 17.9086 0 40 0ZM28.7955 43.4339C28.8583 43.6679 28.9667 43.8871 29.1145 44.0791C29.2622 44.2711 29.4464 44.432 29.6565 44.5527C29.8666 44.6734 30.0984 44.7514 30.3387 44.7823C30.5789 44.8132 30.823 44.7964 31.0567 44.7328L40.7511 42.1155C41.2186 41.984 41.6154 41.6734 41.8553 41.2511C42.0951 40.8288 42.1587 40.3289 42.0321 39.86C41.9055 39.3911 41.599 38.9911 41.1792 38.7469C40.7594 38.5026 40.2602 38.4339 39.79 38.5556L30.0955 41.1728C29.8616 41.2359 29.6425 41.3444 29.4506 41.4921C29.2586 41.6399 29.0977 41.824 28.977 42.034C28.8563 42.244 28.7781 42.4757 28.747 42.7159C28.7158 42.9561 28.7323 43.2001 28.7955 43.4339ZM38.427 49.1813L32.42 50.8028V63.6353H38.427V49.1813ZM56.1217 18.1406L50.1148 13.7755V63.6348H56.1217V18.1406ZM28.7322 63.6353V49.3906C28.7323 48.9853 28.8659 48.5913 29.1123 48.2695C29.3587 47.9477 29.7042 47.716 30.0955 47.6102L39.79 44.993C40.0634 44.9192 40.35 44.9093 40.6278 44.9642C40.9056 45.019 41.167 45.1371 41.3918 45.3093C41.6166 45.4815 41.7987 45.7031 41.924 45.957C42.0493 46.2109 42.1144 46.4903 42.1144 46.7734V63.635H46.4269V13.2397L23.8769 25.3473V63.6353H28.7322ZM14.1828 63.6353H20.1892V41.0045L14.1828 43.8511V63.6353ZM65.8172 43.8511L59.8097 41.0045V63.6353H65.8172V43.8511Z" />
+									</svg>
+									
+									
+									
+							</div>
+
+							<div class="card-title">
+								Über SUEBO Informatik AG
+							</div>
+
+							<div class="card-description">
+								Wer wir sind und wofür wir stehen. Unsere Geschichte, unsere Vision und unsere DNA als Schweizer Sicherheitsunternehmen.
+							</div>
+
+							<span class="card-link">Zum Unternehmensprofil</span>
+						</a>
+					</div>
+
+					<div class="col-3">
+						<a href="unternehmen-team.html" class="card card--secondary card--link">
+							<div class="card__icon card__icon--contact">
+
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M40 0C32.0888 0 24.3552 2.34596 17.7772 6.74121C11.1992 11.1365 6.07234 17.3836 3.04484 24.6927C0.0173318 32.0017 -0.774802 40.0444 0.768606 47.8036C2.31202 55.5628 6.12164 62.6902 11.7157 68.2843C17.3098 73.8784 24.4372 77.688 32.1964 79.2314C39.9556 80.7748 47.9983 79.9827 55.3073 76.9552C62.6164 73.9277 68.8635 68.8008 73.2588 62.2228C77.654 55.6448 80 47.9112 80 40C79.9871 29.3953 75.7687 19.2286 68.27 11.73C60.7714 4.23134 50.6047 0.0129176 40 0ZM64.8 34.7867C64.79 36.5606 64.0783 38.2585 62.8204 39.5093C61.5625 40.7601 59.8606 41.4623 58.0867 41.4623C56.3127 41.4623 54.6109 40.7601 53.353 39.5093C52.095 38.2585 51.3833 36.5606 51.3733 34.7867C51.3833 33.0127 52.095 31.3149 53.353 30.064C54.6109 28.8132 56.3127 28.1111 58.0867 28.1111C59.8606 28.1111 61.5625 28.8132 62.8204 30.064C64.0783 31.3149 64.79 33.0127 64.8 34.7867ZM39.9867 25.4933C41.2371 25.4932 42.4704 25.7843 43.5888 26.3436C44.7072 26.9028 45.68 27.7148 46.4301 28.7152C47.1802 29.7157 47.6871 30.877 47.9105 32.1073C48.1339 33.3376 48.0678 34.6031 47.7173 35.8034C47.3668 37.0037 46.7416 38.1058 45.8912 39.0226C45.0409 39.9394 43.9887 40.6455 42.8181 41.085C41.6475 41.5246 40.3906 41.6855 39.147 41.555C37.9034 41.4246 36.7072 41.0063 35.6533 40.3333C34.1926 39.3915 33.0752 38.0029 32.4678 36.3744C31.8604 34.7459 31.7954 32.9648 32.2826 31.2964C32.7698 29.628 33.783 28.1617 35.1713 27.1159C36.5596 26.0702 38.2486 25.5011 39.9867 25.4933ZM28.6267 34.7867C28.3333 43.6667 15.48 43.6667 15.2001 34.7867C15.2131 33.0147 15.9261 31.3197 17.1836 30.0713C18.4412 28.8229 20.1414 28.1223 21.9134 28.1223C23.6854 28.1223 25.3855 28.8229 26.6431 30.0713C27.9007 31.3197 28.6137 33.0147 28.6267 34.7867ZM23.36 51.92H12.4267C11.7859 51.9184 11.1716 51.6641 10.7172 51.2122C10.2629 50.7603 10.0051 50.1474 10 49.5067V47.0533C9.99839 45.8325 10.3814 44.6421 11.0946 43.6512C11.8079 42.6603 12.8151 41.9193 13.9733 41.5333L15.5867 41C15.9262 41.3392 16.2917 41.6513 16.68 41.9333C17.9307 42.8522 19.4016 43.4249 20.9444 43.5935C22.4872 43.762 24.0471 43.5205 25.4667 42.8933C24.0864 44.5198 23.3343 46.5868 23.3467 48.72V51.76C23.3445 51.8137 23.349 51.8674 23.36 51.92ZM54.48 51.76C54.4822 51.8137 54.4777 51.8674 54.4667 51.92C54.4254 52.6202 54.1179 53.2782 53.6073 53.7591C53.0966 54.2399 52.4214 54.5074 51.72 54.5067H28.24C27.5394 54.5092 26.8646 54.2419 26.3557 53.7603C25.8468 53.2787 25.5428 52.6197 25.5067 51.92C25.4956 51.8674 25.4912 51.8137 25.4933 51.76V48.72C25.5017 47.1619 26.0294 45.6512 26.993 44.4268C27.9565 43.2024 29.3009 42.3344 30.8133 41.96L33.2 41.16C35.0731 42.8171 37.4883 43.7308 39.9892 43.7283C42.4901 43.7259 44.9035 42.8075 46.7733 41.1467L49.1867 41.96C50.691 42.3453 52.0257 43.2171 52.9831 44.4397C53.9405 45.6623 54.4667 47.1672 54.48 48.72V51.76ZM67.5733 51.92H56.6133V48.72C56.6243 46.5894 55.8776 44.5243 54.5067 42.8933C56.156 43.6202 57.9877 43.8271 59.7576 43.4864C61.5276 43.1458 63.1516 42.2738 64.4133 40.9867L66.0267 41.52C67.1847 41.9106 68.191 42.6546 68.9038 43.6473C69.6166 44.6399 70 45.8312 70 47.0533V49.5067C69.9949 50.1474 69.7372 50.7603 69.2828 51.2122C68.8284 51.6641 68.2141 51.9184 67.5733 51.92Z" />
+									</svg>
+									
+
+									
+									
+							</div>
+
+							<div class="card-title">
+								Management & Team
+							</div>
+
+							<div class="card-description">
+								Lernen Sie die Köpfe hinter SUEBO kennen. Zertifizierte Experten mit Leidenschaft für Ihre Sicherheit.
+							</div>
+
+							<span class="card-link">Zum Team</span>
+						</a>
+					</div>
+
+					<div class="col-3">
+						<a href="unternehmen-karriere.html" class="card card--secondary card--link">
+							<div class="card__icon card__icon--contact">
+								
+
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M37.0667 40.9333H29.3867C28.9623 40.9333 28.5554 41.1019 28.2553 41.402C27.9552 41.702 27.7867 42.109 27.7867 42.5333C27.7867 42.9577 27.9552 43.3646 28.2553 43.6647C28.5554 43.9648 28.9623 44.1333 29.3867 44.1333H37.0667C37.491 44.1333 37.898 43.9648 38.198 43.6647C38.4981 43.3646 38.6667 42.9577 38.6667 42.5333C38.6667 42.109 38.4981 41.702 38.198 41.402C37.898 41.1019 37.491 40.9333 37.0667 40.9333Z" />
+									<path d="M47.8933 34.0533C47.895 33.8428 47.8547 33.634 47.7749 33.4391C47.695 33.2443 47.5772 33.0672 47.4283 32.9183C47.2794 32.7694 47.1024 32.6516 46.9076 32.5718C46.7127 32.492 46.5039 32.4517 46.2933 32.4533H29.3867C29.1761 32.4517 28.9673 32.492 28.7725 32.5718C28.5776 32.6516 28.4006 32.7694 28.2517 32.9183C28.1028 33.0672 27.985 33.2443 27.9052 33.4391C27.8253 33.634 27.7851 33.8428 27.7867 34.0533C27.788 34.4773 27.9569 34.8835 28.2567 35.1833C28.5565 35.4831 28.9627 35.6521 29.3867 35.6533H46.2933C46.7173 35.6521 47.1235 35.4831 47.4233 35.1833C47.7231 34.8835 47.8921 34.4773 47.8933 34.0533Z" />
+									<path d="M29.3867 27.1467H46.2933C46.5035 27.1467 46.7115 27.1053 46.9056 27.0249C47.0998 26.9445 47.2761 26.8266 47.4247 26.678C47.5733 26.5295 47.6911 26.3531 47.7715 26.159C47.852 25.9648 47.8933 25.7568 47.8933 25.5467C47.8933 25.3365 47.852 25.1285 47.7715 24.9344C47.6911 24.7402 47.5733 24.5639 47.4247 24.4153C47.2761 24.2667 47.0998 24.1489 46.9056 24.0685C46.7115 23.988 46.5035 23.9467 46.2933 23.9467H29.3867C29.1766 23.9467 28.9685 23.988 28.7744 24.0685C28.5803 24.1489 28.4039 24.2667 28.2553 24.4153C28.1067 24.5639 27.9889 24.7402 27.9085 24.9344C27.8281 25.1285 27.7867 25.3365 27.7867 25.5467C27.7867 25.7568 27.8281 25.9648 27.9085 26.159C27.9889 26.3531 28.1067 26.5295 28.2553 26.678C28.4039 26.8266 28.5803 26.9445 28.7744 27.0249C28.9685 27.1053 29.1766 27.1467 29.3867 27.1467Z" fill="#78ABAD"/>
+									<path d="M40 0C32.0888 0 24.3552 2.34596 17.7772 6.74121C11.1992 11.1365 6.07234 17.3836 3.04484 24.6927C0.0173318 32.0017 -0.774802 40.0444 0.768606 47.8036C2.31202 55.5628 6.12164 62.6902 11.7157 68.2843C17.3098 73.8784 24.4372 77.688 32.1964 79.2314C39.9556 80.7748 47.9983 79.9827 55.3073 76.9552C62.6164 73.9277 68.8635 68.8008 73.2588 62.2228C77.654 55.6448 80 47.9112 80 40C79.9962 29.3925 75.7807 19.2206 68.28 11.72C60.7794 4.21934 50.6075 0.00383782 40 0ZM39.4133 57.3867C38.9507 58.4032 38.6364 59.4808 38.48 60.5867H27.7067C25.5924 60.5855 23.565 59.7451 22.07 58.25C20.5749 56.755 19.7345 54.7276 19.7333 52.6133V23.9733C19.7345 21.859 20.5749 19.8317 22.07 18.3366C23.565 16.8416 25.5924 16.0012 27.7067 16H47.9733C50.0876 16.0012 52.115 16.8416 53.61 18.3366C55.1051 19.8317 55.9455 21.859 55.9467 23.9733V38.9333C55.0507 38.0562 53.9512 37.4148 52.7467 37.0667C50.9478 36.5329 49.0178 36.6561 47.3014 37.4141C45.5849 38.1721 44.1939 39.5156 43.3766 41.2046C42.5593 42.8936 42.3691 44.8181 42.8399 46.6345C43.3107 48.4508 44.4118 50.0406 45.9467 51.12C43.0517 52.3028 40.7157 54.5435 39.4133 57.3867ZM56.0267 44.6667C56.0267 45.7584 55.7029 46.8256 55.0964 47.7334C54.4898 48.6412 53.6277 49.3487 52.6191 49.7665C51.6104 50.1843 50.5006 50.2936 49.4298 50.0806C48.359 49.8676 47.3754 49.3419 46.6034 48.5699C45.8315 47.7979 45.3057 46.8143 45.0927 45.7436C44.8798 44.6728 44.9891 43.5629 45.4069 42.5542C45.8247 41.5456 46.5322 40.6835 47.4399 40.077C48.3477 39.4704 49.4149 39.1467 50.5067 39.1467C51.9698 39.1496 53.3721 39.7321 54.4067 40.7667C55.4412 41.8012 56.0238 43.2036 56.0267 44.6667ZM58.6667 64H42.3467C41.9227 63.9988 41.5165 63.8298 41.2167 63.53C40.9169 63.2302 40.7479 62.824 40.7467 62.4C40.7467 59.8115 41.775 57.329 43.6053 55.4986C45.4357 53.6683 47.9182 52.64 50.5067 52.64C53.0952 52.64 55.5777 53.6683 57.408 55.4986C59.2384 57.329 60.2667 59.8115 60.2667 62.4C60.2654 62.824 60.0965 63.2302 59.7967 63.53C59.4969 63.8298 59.0906 63.9988 58.6667 64Z" />
+									</svg>
+									
+									
+			
+							</div>
+
+							<div class="card-title">
+								Karriere & Offene Stellen
+							</div>
+
+							<div class="card-description">
+								Wollen Sie etwas bewegen? Entdecken Sie offene Stellen und werden Sie Teil unserer Erfolgsgeschichte.
+							</div>
+
+							<span class="card-link">Zu den Stellenangeboten</span>
+						</a>
+					</div>
+
+					<div class="col-3">
+						<a href="unternehmen-referenzen.html" class="card card--secondary card--link">
+							<div class="card__icon card__icon--contact">
+
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M36.3438 31.3031L35.8469 34.1906C35.8127 34.3887 35.8347 34.5923 35.9104 34.7785C35.9861 34.9646 36.1125 35.1258 36.2752 35.2438C36.4379 35.3618 36.6304 35.4317 36.8309 35.4458C37.0314 35.4599 37.2318 35.4175 37.4094 35.3234L40.0031 33.9594L42.5969 35.3234C42.7745 35.4175 42.9749 35.4599 43.1753 35.4458C43.3758 35.4317 43.5683 35.3618 43.731 35.2438C43.8937 35.1258 44.0201 34.9646 44.0958 34.7785C44.1715 34.5923 44.1936 34.3887 44.1594 34.1906L43.6625 31.3031L45.7609 29.2578C45.9045 29.1172 46.0058 28.9391 46.0533 28.7438C46.1008 28.5486 46.0926 28.3439 46.0296 28.153C45.9666 27.9622 45.8514 27.7928 45.6971 27.6641C45.5427 27.5354 45.3553 27.4526 45.1562 27.425L42.2578 27.0031L40.9641 24.375C40.8753 24.1951 40.738 24.0436 40.5676 23.9377C40.3972 23.8318 40.2006 23.7756 40 23.7756C39.7994 23.7756 39.6028 23.8318 39.4324 23.9377C39.262 24.0436 39.1247 24.1951 39.0359 24.375L37.7391 27.0016L34.8438 27.425C34.6455 27.454 34.4592 27.5379 34.3061 27.6672C34.1529 27.7965 34.039 27.966 33.977 28.1566C33.9151 28.3472 33.9077 28.5513 33.9557 28.7459C34.0036 28.9405 34.105 29.1178 34.2484 29.2578L36.3438 31.3031Z" />
+									<path d="M40 0C17.9094 0 0 17.9094 0 40C0 62.0906 17.9094 80 40 80C62.0906 80 80 62.0906 80 40C80 17.9094 62.0906 0 40 0ZM27.2812 19.1781C27.2813 18.2772 27.6391 17.4132 28.2762 16.7762C28.9132 16.1391 29.7772 15.7812 30.6781 15.7812H49.3219C50.2228 15.7812 51.0868 16.1391 51.7238 16.7762C52.3609 17.4132 52.7188 18.2772 52.7188 19.1781V35.1156C52.7188 38.4888 51.3787 41.7239 48.9935 44.1091C46.6083 46.4944 43.3732 47.8344 40 47.8344C36.6268 47.8344 33.3917 46.4944 31.0065 44.1091C28.6213 41.7239 27.2812 38.4888 27.2812 35.1156V19.1781ZM17.875 26.3375C17.875 25.4486 18.2281 24.5961 18.8566 23.9676C19.4852 23.339 20.3377 22.9859 21.2266 22.9859H25.7188V35.1125C25.7155 38.0284 26.6102 40.8745 28.2812 43.2641C25.2532 42.2647 22.6175 40.3358 20.7492 37.7519C18.8809 35.1679 17.8751 32.0605 17.875 28.8719V26.3375ZM52.7188 62.4234C52.7198 62.6583 52.6745 62.8911 52.5855 63.1084C52.4966 63.3258 52.3656 63.5235 52.2002 63.6902C52.0348 63.857 51.8381 63.9895 51.6214 64.0801C51.4048 64.1708 51.1724 64.2179 50.9375 64.2188H29.0625C28.8276 64.2188 28.5951 64.1725 28.3781 64.0825C28.1611 63.9926 27.964 63.8608 27.798 63.6946C27.632 63.5285 27.5004 63.3313 27.4106 63.1142C27.3209 62.8972 27.2748 62.6646 27.275 62.4297C27.2771 60.6232 27.9966 58.8914 29.2753 57.6154C30.554 56.3393 32.2872 55.6233 34.0938 55.625H37.5844V49.1875C39.183 49.4625 40.8169 49.4625 42.4156 49.1875V55.625H45.9062C46.8009 55.625 47.6867 55.8012 48.5133 56.1436C49.3398 56.4859 50.0908 56.9877 50.7234 57.6203C51.356 58.2529 51.8578 59.0039 52.2002 59.8305C52.5425 60.657 52.7188 61.5429 52.7188 62.4375V62.4234ZM62.125 28.8656C62.1262 32.0553 61.121 35.1641 59.2526 37.7494C57.3842 40.3346 54.7478 42.2644 51.7188 43.2641C53.3892 40.8743 54.2834 38.0282 54.2797 35.1125V22.9859H58.7719C59.6608 22.9859 60.5132 23.339 61.1418 23.9676C61.7703 24.5961 62.1234 25.4486 62.1234 26.3375L62.125 28.8656Z" />
+									</svg>
+									
+
+									
+			
+							</div>
+
+							<div class="card-title">
+								Kunden & Referenzen
+							</div>
+
+							<div class="card-description">
+								Erfolgsgeschichten unserer Kunden. Sehen Sie, wie wir Unternehmen und Verwaltungen sicherer gemacht haben.
+							</div>
+
+							<span class="card-link">Zu den Referenzen</span>
+						</a>
+					</div>
+
+					
+					</div>
+			</div>	
+		</div>
+	</section>
+	<!-- end contact section -->
+
+<!-- start text-image section -->
+<section class="text-image section ellipse-glow text-image--2">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-6">
+<!-- start illustration item -->
+<div class="ilustration-wrapper">
+	<picture>
+		<source srcset="/img/c1.webp" type="image/webp">
+		<img src="/img/c1.png" alt="illustration" width="650" height="620" loading="lazy" class="ilustration-item ilustration-item-1">
+	</picture>
+
+	<div class="ilustration-item-wrapper">
+		<picture>
+			<source srcset="/img/c2.webp" type="image/webp">
+			<img src="/img/c2.png" alt="illustration" width="650" height="620" loading="lazy" class="ilustration-item ilustration-item-2">
+		</picture>
+	</div>
+</div>
+<!-- end illustration item -->
+			</div>
+
+			<div class="col-6">
+				<div class="text-image__item">
+
+					<div class="section-header section-header--left">
+						<div class="save-title">
+							SCHWEIZER PRÄZISION
+						</div>
+						<h2 class="h2">
+							Warum SUEBO?
+						</h2>
+						<div class="description">
+							Wir verbinden strategische Weitsicht mit operativer Exzellenz.
+						</div>
+					</div>
+		
+		<div class="adv-list">
+		
+						<div class="adv-item">
+							<div class="adv-item__title-row">
+								<div class="adv-item__number">01.</div>
+								<div class="h4 adv-item__heading">Objektivität & Unabhängigkeit</div>
+							</div>
+							<div class="adv-item__content">
+								<p>
+									Wir sind herstellerneutral. Wir beraten Sie professionell, ehrlich und ausschliesslich in Ihrem Interesse.
+								</p>
+							</div>
+						</div>
+		
+						<div class="adv-item">
+							<div class="adv-item__title-row">
+								<div class="adv-item__number">02.</div>
+								<div class="h4 adv-item__heading">Transparenz & Klarheit</div>
+							</div>
+							<div class="adv-item__content">
+								<p>
+									Wir schaffen Fakten. Unsere Analysen zeigen Ihnen schonungslos den IST-Zustand und den konkreten Weg zum SOLL-Zustand.
+								</p>
+							</div>
+						</div>
+		
+						<div class="adv-item">
+							<div class="adv-item__title-row">
+								<div class="adv-item__number">03.</div>
+								<div class="h4 adv-item__heading">Wirtschaftlichkeit</div>
+							</div>
+							<div class="adv-item__content">
+								<p>
+									Sicherheit muss bezahlbar sein. Wir identifizieren "Quick-Wins" – Massnahmen mit geringem Aufwand, aber grossem Mehrwert.
+								</p>
+							</div>
+						</div>
+
+						<div class="adv-item">
+							<div class="adv-item__title-row">
+								<div class="adv-item__number">04.</div>
+								<div class="h4 adv-item__heading">Schweizer Qualität</div>
+							</div>
+							<div class="adv-item__content">
+								<p>
+									Verlässlichkeit, Präzision und absolute Diskretion sind die unverhandelbare Basis unserer Zusammenarbeit.
+								</p>
+							</div>
+						</div>
+		
+					</div>			
+					
+				</div>
+			</div>
+
+		</div>
+		
+
+	
+
+			
+		
 
 
+	</div>
+</section>
+<!-- end text-image section -->
 
 
+<!-- start baner section -->
+<!-- start baner section -->
+<section class="banner-section section banner-section--2 ellipse-glow">
+
+	<picture>
+		<source srcset="img/Suebo_banner.webp" type="image/webp">
+		<img src="img/Suebo_banner.png" alt="" class="banner-image" loading="lazy">
+	</picture>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-7">
+
+				<div class="banner-content">
+					<h2 class="h2 color--teal">
+					Werden Sie Teil der Lösung
+				</h2>
+				<div class="description">
+					Suchen Sie einen Partner für Ihr Projekt oder eine neue berufliche Herausforderung?
+				</div>
+
+				<div class="buttons-wrapper">
+					<a href="" class="btn btn--transparent-white">Jetzt Bewirb Dich</a>
+					<a href="" class="btn btn--white">Mehr Erfahren</a>
+				</div>	
+
+				</div>
+				
+
+			</div>
+			<div class="col-5">
+				
+			</div>
+		</div>
 
 
-
-
+	</div>
+</section>
+<!-- end end section -->
+<!-- end baner section -->
 
 </main>
+
 
 	
 	<!-- start footer -->
@@ -889,3 +1105,4 @@ Mit der Nutzung dieser Webseite, anerkennen Sie unsere Haftungsbeschränkungen u
 	<script src="/js/main.js"></script>
 </body>
 </html>
+

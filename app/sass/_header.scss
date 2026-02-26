@@ -702,7 +702,6 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 
 
 
-
 @include bp-1330 {
 	.header-nav__utils {
 		gap: 20px;
@@ -993,6 +992,23 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 		justify-content: flex-end;
 		padding-top: 20px;
 	}
+	.banner-section .banner-image {
+		height: 47.266vw;
+		object-position: right center;
+	}
+	.banner-section .banner-content .buttons-wrapper {
+		gap: 20px;
+		justify-content: center;
+	}
+	.banner-section .banner-content {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		.description {
+			text-align: center;
+		}
+	}
+	
 		
 
     
