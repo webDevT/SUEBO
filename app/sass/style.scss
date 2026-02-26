@@ -1081,6 +1081,19 @@ color: $color-btn-yellow;
 		border-color: $color-dark-navy;
 	}
 }
+.blue-path {
+	fill: $color-dark-navy;
+	
+}
+.card:hover {
+	.blue-path {
+		fill: $color-accent;
+	}
+	
+}
+.text-image--2 .ilustration-item-wrapper--2 {
+	left: 212px;
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -1656,6 +1669,17 @@ color: $color-btn-yellow;
 			gap: 20px;
 		}
 	}
+	.text-image--2 .ilustration-item-wrapper--2 {
+		right: -1vw;
+	}
+	.row-2 {
+		.col-6 {
+			width: calc(50% - 10px);
+		}
+	}
+	.contact-section .row.row-2 .col-6:last-child {
+		width: calc(50% - 10px);
+	}
 	
 	
 
@@ -1994,6 +2018,16 @@ color: $color-btn-yellow;
 .banner-section--2 .banner-image {
 	height: 63.077vw;
 }
+.text-image--2 .ilustration-item-wrapper--2 {
+	right: -4vw;
+}
+.contact-section .row.row-2 .col-6:last-child {
+	width: 100%;
+
+}
+.contact-section .row.row-2 .col-6 .card-title {
+	font-size: 22px;
+}
 }
 
 
@@ -2025,6 +2059,7 @@ color: $color-btn-yellow;
 			text-align: left;
 		}
 	}
+	
 }
 
 @include bp-390 {

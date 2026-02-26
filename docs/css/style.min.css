@@ -3313,6 +3313,18 @@ body {
   border-color: #0B1120;
 }
 
+.blue-path {
+  fill: #0B1120;
+}
+
+.card:hover .blue-path {
+  fill: #38BDF8;
+}
+
+.text-image--2 .ilustration-item-wrapper--2 {
+  left: 212px;
+}
+
 @media (max-width: 1800px) {
   .hero--secondary .hero__bg-wrapper {
     right: -10vw;
@@ -4005,6 +4017,15 @@ body {
   .banner-section--2 .banner-content .buttons-wrapper {
     gap: 20px;
   }
+  .text-image--2 .ilustration-item-wrapper--2 {
+    right: -1vw;
+  }
+  .row-2 .col-6 {
+    width: calc(50% - 10px);
+  }
+  .contact-section .row.row-2 .col-6:last-child {
+    width: calc(50% - 10px);
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -4389,6 +4410,15 @@ body {
   }
   .banner-section--2 .banner-image {
     height: 63.077vw;
+  }
+  .text-image--2 .ilustration-item-wrapper--2 {
+    right: -4vw;
+  }
+  .contact-section .row.row-2 .col-6:last-child {
+    width: 100%;
+  }
+  .contact-section .row.row-2 .col-6 .card-title {
+    font-size: 22px;
   }
 }
 @media (max-width: 430px) {
