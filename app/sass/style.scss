@@ -464,7 +464,7 @@ color: $color-btn-yellow;
 	top: 0;
 	transform: translate(0);
 	opacity: 1;
-	z-index: 999;
+	z-index: 1;
 }
 
 .ellipse-glow.hero--secondary::after {
@@ -474,6 +474,7 @@ color: $color-btn-yellow;
 	bottom: 0;
 	transform: translateY(25%);
 	opacity: 1;
+	z-index: 0;
 }
 //end hero style
 
@@ -1069,7 +1070,17 @@ color: $color-btn-yellow;
 .banner-section--2::before {
 	display: none;
 }
-
+.pt-0 {
+	padding-top: 0;
+}
+.color-suebo {
+	color: $color-teal-suebo;
+}	
+.text-image--3 {
+	.ilustration-item-wrapper {
+		border-color: $color-dark-navy;
+	}
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -2005,6 +2016,14 @@ color: $color-btn-yellow;
 	.services__item-content-description {
 		padding-left: 2px;
 		padding-right: 2px;
+	}
+	.text-image--3 {
+		.adv-item__title-row {
+			justify-content: flex-start;
+		}
+		.adv-item p {
+			text-align: left;
+		}
 	}
 }
 
