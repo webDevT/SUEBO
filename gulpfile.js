@@ -53,16 +53,6 @@ const processHTML = () => {
         .pipe(gulp.dest('app/temp/'));
 };
 
-// HTML in subfolders (e.g. app/src/unternehmen/*.html → app/temp/unternehmen/)
-const processHTMLSubdirs = () => {
-    return gulp.src('app/src/*/*.html', { base: 'app/src' })
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: 'app/'
-        }))
-        .pipe(gulp.dest('app/temp/'));
-};
-
 // JavaScript processing
 const processJS = () => {
     return gulp.src('app/js/*.js')
@@ -178,8 +168,7 @@ const serve = () => {
 const watch = () => {
     gulp.watch('app/sass/**/*.scss', compileSass);
     gulp.watch('app/src/*.html', processHTML);
-    gulp.watch('app/src/*/*.html', processHTMLSubdirs);
-    gulp.watch('app/includes/**/*.html', gulp.parallel(processHTML, processHTMLSubdirs));
+    gulp.watch('app/includes/**/*.html', processHTML);
     gulp.watch('app/js/*.js', processJS);
     gulp.watch(['app/css/**/*', 'app/js/**/*'], copyAssets);
     gulp.watch('app/fonts/**/*', copyFontsToTemp);
@@ -232,7 +221,6 @@ const dev = gulp.series(
     copyAssets,
     copyImages,
     processHTML,
-    processHTMLSubdirs,
     gulp.parallel(serve, watch)
 );
 
@@ -243,7 +231,6 @@ exports.sass = compileSass;
 exports.css = compileCSS;
 exports.js = compileJS;
 exports.html = processHTML;
-exports.htmlSubdirs = processHTMLSubdirs;
 exports.script = processJS;
 exports.copyFonts = copyFonts;
 exports.copyFontsToTemp = copyFontsToTemp;
