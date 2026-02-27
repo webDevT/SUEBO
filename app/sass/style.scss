@@ -1211,6 +1211,14 @@ color: $color-btn-yellow;
 	margin-bottom: 50px;
 	text-align: left;
 }
+.schema-figure {
+	margin: 0;
+	.schema-image {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+}
 .pl-20 {
 	padding-left: 20px;
 	margin-left: 0;
@@ -1234,6 +1242,9 @@ color: $color-btn-yellow;
 }
 .text-wrap {
 	text-align: left;
+}
+.mt-0 {
+	margin-top: 0;
 }
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
@@ -1847,6 +1858,9 @@ color: $color-btn-yellow;
 	.button-wrapper--2 {
 		justify-content: center;
 	}
+	.row-rev {
+		flex-direction: column-reverse;
+	}
 
 	
 	
@@ -2201,6 +2215,12 @@ color: $color-btn-yellow;
 }
 .adv-list {
 	margin-top: 0;
+}
+.button-wrapper--2 {
+	flex-direction: column;
+}
+.text-wrapper {
+	margin-bottom: 0;
 }
 }
 .text-image--2 {
