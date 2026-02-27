@@ -3487,6 +3487,10 @@ body {
   font-weight: 400;
 }
 
+.text-wrap {
+  text-align: left;
+}
+
 @media (max-width: 1800px) {
   .hero--secondary .hero__bg-wrapper {
     right: -10vw;
@@ -4213,6 +4217,11 @@ body {
   }
   .text-image--2 .ilustration-wrapper--un picture {
     width: 100%;
+  }
+  .button-wrapper--2 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 767px) {

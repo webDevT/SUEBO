@@ -1232,6 +1232,9 @@ color: $color-btn-yellow;
 	font-style: normal;
 	font-weight: 400;
 }
+.text-wrap {
+	text-align: left;
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -1840,6 +1843,9 @@ color: $color-btn-yellow;
 		picture {
 			width: 100%;
 		}
+	}
+	.button-wrapper--2 {
+		justify-content: center;
 	}
 
 	
