@@ -3480,6 +3480,13 @@ body {
   height: auto;
 }
 
+.text-muted {
+  color: #94A3B8;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
 @media (max-width: 1800px) {
   .hero--secondary .hero__bg-wrapper {
     right: -10vw;

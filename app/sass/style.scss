@@ -1226,6 +1226,12 @@ color: $color-btn-yellow;
 		height: auto;
 	}
 }
+.text-muted {
+	color: $color-steel;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
