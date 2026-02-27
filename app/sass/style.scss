@@ -1246,6 +1246,9 @@ color: $color-btn-yellow;
 .mt-0 {
 	margin-top: 0;
 }
+.text-uppercase {
+	text-transform: uppercase;
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
