@@ -894,6 +894,92 @@ color: $color-btn-yellow;
 		}
 	}
 }
+
+// Slider section: only for .slider-section (e.g. Cyber Security Lösungen cards)
+.slider-section {
+	.slider-section__slider {
+		position: relative;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.slider-section__slide {
+		padding: 0 10px;
+		height: 100%;
+		> a.card {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.slick-list {
+		overflow: hidden;
+		margin-bottom: 24px;
+	}
+	.slick-track {
+		display: flex;
+		align-items: stretch;
+	}
+	.slick-slide {
+		height: auto;
+		> div {
+			height: 100%;
+		}
+	}
+	.slider-section__dots {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		ul.slick-dots {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: block;
+		}
+		button {
+			width: 10px;
+			height: 10px;
+			padding: 0;
+			border: none;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.35);
+			text-indent: -9999px;
+			cursor: pointer;
+			transition: background 0.2s;
+			&:hover {
+				background: rgba(255, 255, 255, 0.6);
+			}
+		}
+		li.slick-active button {
+			background: #fff;
+		}
+	}
+
+	// Mobile: no slider, cards stacked one under another
+	@include bp-mobile {
+		.slider-section__slider:not(.slick-initialized) {
+			display: block;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.slider-section__slider:not(.slick-initialized) .slider-section__slide {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 20px;
+		}
+		.slider-section:has(.slider-section__slider:not(.slick-initialized)) .slider-section__dots {
+			display: none;
+		}
+	}
+}
 .page-content__contact {
 	font-size: 20px;
 	color: $color-steel;
@@ -947,6 +1033,12 @@ color: $color-btn-yellow;
 	padding-left: 32px;
 	padding-right: 32px;
 	border-left: 6px solid $color-teal-suebo;
+	p {
+		font-size: 16px;
+		color: $color-steel;
+		font-weight: 400;
+		font-style: normal;
+	}
 } 
 .text-section {
 	padding-bottom: 0;
@@ -1093,6 +1185,38 @@ color: $color-btn-yellow;
 }
 .text-image--2 .ilustration-item-wrapper--2 {
 	left: 212px;
+}
+.btn--icon {
+	gap: 16px;
+	svg {
+		width: 21px;
+		fill: $color-off-white;
+	}
+}
+.btn--icon:hover {
+	svg {
+		fill: $color-accent;
+	}
+}
+.button-wrapper--2 {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+.text-italic {
+	font-style: italic;
+}
+.text-wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: left;
+}
+.pl-20 {
+	padding-left: 20px;
+	margin-left: 0;
+}
+.text-image--2 .ilustration-item-wrapper-3 {
+	
 }
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
@@ -1680,6 +1804,20 @@ color: $color-btn-yellow;
 	.contact-section .row.row-2 .col-6:last-child {
 		width: calc(50% - 10px);
 	}
+	.text-image--2 {
+		display: flex;
+	}
+	.text-image--2 .adv-item--2 {
+		text-align: left;
+		flex-direction: row !important;
+		margin-bottom: 24px;
+		.adv-item__number {
+			top: 10px;
+		}
+		
+		
+	}
+
 	
 	
 
@@ -2028,8 +2166,23 @@ color: $color-btn-yellow;
 .contact-section .row.row-2 .col-6 .card-title {
 	font-size: 22px;
 }
+.text-image--2 .adv-item--2 {
+	margin-bottom: 24px;
 }
-
+.adv-list {
+	margin-top: 0;
+}
+}
+.text-image--2 {
+	.adv-item--2 {
+		display: flex;
+	}
+	
+	.adv-item__number {
+		top: 4px;
+	}
+	
+}
 
 @include bp-430 {
 	.service-content {

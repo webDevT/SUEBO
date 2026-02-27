@@ -2,6 +2,37 @@ document.addEventListener('DOMContentLoaded', () => {
 	const yearEl = document.getElementById('year');
 	if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+	// Slider section: init only above mobile (≤767); on tablet 2 slides, desktop 4; on mobile no slider, cards stacked
+	const sliderEl = document.querySelector('.slider-section .slider-section__slider');
+	const MOBILE_MAX = 767;
+	function initSliderSection() {
+		if (!sliderEl || typeof window.$ === 'undefined' || !window.$.fn.slick) return;
+		const $slider = window.$(sliderEl);
+		if (window.innerWidth <= MOBILE_MAX) {
+			if ($slider.hasClass('slick-initialized')) $slider.slick('unslick');
+			return;
+		}
+		if ($slider.hasClass('slick-initialized')) return;
+		$slider.slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: true,
+			appendDots: '.slider-section__dots',
+			arrows: false,
+			infinite: true,
+			responsive: [
+				{ breakpoint: 1281, settings: { slidesToShow: 2, slidesToScroll: 1 } }
+			]
+		});
+	}
+	if (sliderEl) {
+		initSliderSection();
+		window.addEventListener('resize', function onSliderResize() {
+			clearTimeout(window._sliderResizeTimer);
+			window._sliderResizeTimer = setTimeout(initSliderSection, 100);
+		});
+	}
+
 	// Mobile/tablet: one menu — move list into panel when open, back when close
 	const menuBtn = document.getElementById('menu-btn');
 	const menuClose = document.getElementById('menu-close');
