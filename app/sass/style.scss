@@ -1218,6 +1218,14 @@ color: $color-btn-yellow;
 .text-image--2 .ilustration-item-wrapper-3 {
 	
 }
+.text-image--2 .ilustration-wrapper--un {
+	background-position: top 43px right;
+	height: auto;
+	img {
+		width: 95%;
+		height: auto;
+	}
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -1816,6 +1824,16 @@ color: $color-btn-yellow;
 		}
 		
 		
+	}
+	.text-image--2 .ilustration-wrapper--un {
+		height: auto;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+		picture {
+			width: 100%;
+		}
 	}
 
 	

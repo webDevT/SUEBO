@@ -3471,6 +3471,15 @@ body {
   margin-left: 0;
 }
 
+.text-image--2 .ilustration-wrapper--un {
+  background-position: top 43px right;
+  height: auto;
+}
+.text-image--2 .ilustration-wrapper--un img {
+  width: 95%;
+  height: auto;
+}
+
 @media (max-width: 1800px) {
   .hero--secondary .hero__bg-wrapper {
     right: -10vw;
@@ -4187,6 +4196,16 @@ body {
   }
   .text-image--2 .adv-item--2 .adv-item__number {
     top: 10px;
+  }
+  .text-image--2 .ilustration-wrapper--un {
+    height: auto;
+    width: 100%;
+  }
+  .text-image--2 .ilustration-wrapper--un img {
+    width: 100%;
+  }
+  .text-image--2 .ilustration-wrapper--un picture {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
