@@ -310,6 +310,100 @@ body {
 		margin-bottom: 0;
 	}
 }
+
+// Vacancy cards (Karriere / Offene Stellen)
+.vacancy-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.vacancy-card {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 24px;
+	border: 1px solid rgba(241, 245, 249, 0.2);
+	border-radius: 10px;
+	padding: 28px 32px;
+	transition: border-color 0.3s ease;
+	@include bp-mobile {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 20px;
+	}
+}
+.vacancy-card__content {
+	flex: 1;
+	min-width: 0;
+}
+.vacancy-card__title {
+	font-family: $font-heading;
+	font-weight: $weight-medium;
+	font-size: 30px;
+	line-height: 1.3;
+	color: $color-off-white;
+	margin: 0 0 12px 0;
+}
+.vacancy-card__meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px 24px;
+	margin-bottom: 32px;
+}
+.vacancy-card__meta-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	line-height: 1.4;
+	color: $color-steel;
+}
+.vacancy-card__meta-icon {
+	flex-shrink: 0;
+	color: $color-steel;
+}
+.vacancy-card__description {
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+}
+.vacancy-card__actions {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 32px;
+	flex-shrink: 0;
+	.btn {
+		width: 200px;
+	}
+	@include bp-mobile {
+		width: 100%;
+		align-items: stretch;
+	}
+}
+.vacancy-card__btn {
+	min-width: 180px;
+	@include bp-mobile {
+		min-width: 0;
+		width: 100%;
+		justify-content: center;
+	}
+}
+.vacancy-card__meta span {
+	color: $color-teal-suebo;
+}
+.vacancy-card__btn--outline {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+.vacancy-card__pdf-icon {
+	flex-shrink: 0;
+}
+
 .card-contact-row {
 	display: flex;
 	justify-content: space-between;
@@ -1313,6 +1407,147 @@ color: $color-btn-yellow;
 	margin-top: 30px;
 	width: 95%;
 }
+.offenen-stellen .h2 {
+	text-align: center;
+}
+.partner-title {
+	text-align: center;
+	font-size: 30px;
+	font-family: $font-heading;
+	font-weight: 500;
+}
+.best-strategie {
+	.clients__item {
+		background: transparent;
+		border: 1px solid rgba($color-off-white, 0.3);
+	}
+}
+
+// Lokale Werte – logo slider (one slide, white card, circular arrows)
+.lokale-werte__slider-col {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.lokale-werte__slider-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 100%;
+	max-width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.lokale-werte__arrow {
+	flex-shrink: 0;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s, color 0.2s, border-color 0.2s;
+	img {
+		max-width: 100%;
+	}
+}
+.lokale-werte__dots {
+	flex-basis: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 16px;
+	ul.slick-dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			button {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				border: none;
+				padding: 0;
+				font-size: 0;
+				background: rgba($color-off-white, 0.4);
+				cursor: pointer;
+				transition: background 0.2s ease;
+				&:hover {
+					background: rgba($color-off-white, 0.6);
+				}
+			}
+			&.slick-active button {
+				background: $color-off-white;
+			}
+		}
+	}
+}
+
+.lokale-werte__slider {
+	width: 100%;
+	max-width: 420px;
+	.slick-list,
+	.slick-track {
+		display: flex;
+		align-items: center;
+	}
+	.slick-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 8px;
+	}
+}
+.lokale-werte__card {
+	background: $color-off-white;
+	border-radius: 12px;
+	padding: 32px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 210px;
+	width: 100%;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: inherit;
+	transition: box-shadow 0.2s ease, opacity 0.2s ease;
+	&:hover {
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+		opacity: 0.95;
+	}
+	&:focus-visible {
+		outline: 2px solid $color-electric-blue;
+		outline-offset: 2px;
+	}
+	img {
+		max-width: 90%;
+		max-height: 114px;
+		width: 90%;
+		height: auto;
+		object-fit: contain;
+	}
+}
+@include bp-tablet {
+	.lokale-werte__slider-wrap {
+		max-width: 100%;
+	}
+}
+@include bp-mobile {
+	.lokale-werte__arrow {
+		display: none;
+	}
+}
+.lokale-werte__dots {
+	display: none;
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -1928,6 +2163,33 @@ color: $color-btn-yellow;
 	.row-rev {
 		flex-direction: column-reverse;
 	}
+	.vacancy-card {
+		flex-direction: column;
+		text-align: center;
+	}
+	.vacancy-card__actions {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.vacancy-card__meta {
+		justify-content: center;
+	}
+	.vacancy-card__title {
+		font-size: 24px;
+	}
+	.offenen-stellen .h2 {
+		text-align: center;
+	}
+	.section.lokale-werte {
+		text-align: center;
+		.section-header {
+			text-align: center;
+		}
+		.col-6 {
+			width: 100%;
+		}
+	}
+	
 
 	
 	
@@ -2292,6 +2554,26 @@ color: $color-btn-yellow;
 .text-wrapper {
 	margin-bottom: 0;
 }
+.vacancy-card__actions {
+	flex-direction: column;
+	align-items: center;
+}
+.lokale-werte__slider {
+	max-width: 100%;
+}
+.lokale-werte__arrow {
+	display: none !important;
+
+}
+.lokale-werte__card {
+	min-height: 155px;
+}
+.lokale-werte__dots {
+	margin-top: 0;
+}
+.lokale-werte__dots {
+	display: flex;
+}
 }
 .text-image--2 {
 	.adv-item--2 {
@@ -2301,6 +2583,8 @@ color: $color-btn-yellow;
 	.adv-item__number {
 		top: 4px;
 	}
+	
+
 	
 }
 

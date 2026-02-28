@@ -33,6 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	// Lokale Werte: logo slider (one slide, custom arrows, dots)
+	const lokaleSliderEl = document.querySelector('.lokale-werte__slider');
+	if (lokaleSliderEl && typeof window.$ !== 'undefined' && window.$.fn.slick) {
+		const $lokale = window.$(lokaleSliderEl);
+		if (!$lokale.hasClass('slick-initialized')) {
+			$lokale.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true,
+				appendDots: '.lokale-werte__dots',
+				arrows: true,
+				prevArrow: window.$(lokaleSliderEl).siblings('.lokale-werte__prev'),
+				nextArrow: window.$(lokaleSliderEl).siblings('.lokale-werte__next'),
+				infinite: true
+			});
+		}
+	}
+
 	// Mobile/tablet: one menu — move list into panel when open, back when close
 	const menuBtn = document.getElementById('menu-btn');
 	const menuClose = document.getElementById('menu-close');
