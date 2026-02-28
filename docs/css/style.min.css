@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -3489,6 +3490,69 @@ body {
   height: auto;
 }
 
+.text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__card {
+  margin-top: 0;
+}
+.text-image--datenschutz-vorteile .card--datenschutz {
+  width: 95%;
+}
+@media (min-width: 1281px) {
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__left-col,
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__right-col,
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__card-col {
+    width: 100%;
+    min-width: 0;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__left-col {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__right-col {
+    grid-column: 2;
+    grid-row: 1/-1;
+    align-self: start;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__card-col {
+    grid-column: 1;
+    grid-row: 2;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 1280px) {
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__left-col {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__right-col {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .text-image--datenschutz-vorteile .text-image--datenschutz-vorteile__card-col {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
 .text-muted {
   color: #94A3B8;
   font-size: 16px;
@@ -3506,6 +3570,18 @@ body {
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card.card--horizontal.card--datenschutz {
+  margin-top: 30px;
+  width: 95%;
 }
 
 @media (max-width: 1800px) {
@@ -4277,6 +4353,10 @@ body {
     margin-top: 28px;
     font-size: 38px;
     margin-bottom: 32px;
+    -ms-hyphens: auto;
+        hyphens: auto;
+    hyphenate-character: "‐";
+    overflow-wrap: break-word;
   }
   .hero__description {
     font-size: 17px;

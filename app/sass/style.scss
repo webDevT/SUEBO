@@ -1234,6 +1234,63 @@ color: $color-btn-yellow;
 		height: auto;
 	}
 }
+
+// Only for Datenschutz-Vorteile section: desktop = left (ill + card) | right (text); tablet/mobile = ill → text → card (bottom)
+.text-image--datenschutz-vorteile {
+	.text-image--datenschutz-vorteile__card {
+		margin-top: 0;
+	}
+.card--datenschutz {
+	width: 95%;
+}
+	// Desktop: grid so illustration + card stack in left column, text in right column
+	@media (min-width: 1281px) {
+		
+		.text-image--datenschutz-vorteile__row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto;
+			gap: 20px;
+		}
+		.text-image--datenschutz-vorteile__left-col,
+		.text-image--datenschutz-vorteile__right-col,
+		.text-image--datenschutz-vorteile__card-col {
+			width: 100%;
+			min-width: 0;
+		}
+		.text-image--datenschutz-vorteile__left-col {
+			grid-column: 1;
+			grid-row: 1;
+		}
+		.text-image--datenschutz-vorteile__right-col {
+			grid-column: 2;
+			grid-row: 1 / -1;
+			align-self: start;
+		}
+		.text-image--datenschutz-vorteile__card-col {
+			grid-column: 1;
+			grid-row: 2;
+			padding-right: 5%;
+		}
+	}
+	// Tablet & mobile: flex column, card last (bottom of section)
+	@include bp-tablet {
+		.text-image--datenschutz-vorteile__row {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		.text-image--datenschutz-vorteile__left-col {
+			order: 1;
+		}
+		.text-image--datenschutz-vorteile__right-col {
+			order: 2;
+		}
+		.text-image--datenschutz-vorteile__card-col {
+			order: 3;
+		}
+	}
+}
 .text-muted {
 	color: $color-steel;
 	font-size: 16px;
@@ -1248,6 +1305,13 @@ color: $color-btn-yellow;
 }
 .text-uppercase {
 	text-transform: uppercase;
+}
+.flex-column {
+	flex-direction: column;
+}
+.card.card--horizontal.card--datenschutz {
+	margin-top: 30px;
+	width: 95%;
 }
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
@@ -1903,6 +1967,9 @@ color: $color-btn-yellow;
 		margin-top: 28px;
 		font-size: 38px;
 		margin-bottom: 32px;
+		hyphens: auto;
+		hyphenate-character: "\2010";
+		overflow-wrap: break-word;
 	}
 	.hero__description {
 		font-size: 17px;
