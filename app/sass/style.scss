@@ -1586,6 +1586,51 @@ color: $color-btn-yellow;
 .text-item:last-child {
 	border-bottom: none;
 }
+.error-page {
+	min-height: 47.76vw;
+	position: relative;
+	padding-top: 23.91vw;
+	.container {
+	width: 68.75vw;
+	text-align: center;
+	}
+}
+.error-image {
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.error-content {
+position: relative;
+z-index: 1;
+text-align: center;
+width: 33.49vw;
+padding-bottom: 50px;
+}
+.error-title {
+	font-size: 2.5vw;
+	line-height: 1.2;
+	margin-bottom: 0.5vw;
+	font-weight: 600;
+}
+.error-text {
+font-size: 1.04vw;
+margin-bottom: 2.08vw;
+color: $color-steel;
+}
+.error-value {
+	display: none;
+}
+.error-mobile {
+	display: none;
+}
+
+
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -2232,6 +2277,57 @@ color: $color-btn-yellow;
 			width: calc(50% - 20px);
 		}
 	}
+	.error-image {
+	display: none;
+	}
+	.error-mobile {
+	display: block;
+	width: 100%;
+	}
+	.error-page {
+		padding-top: 0;
+	}
+	.error-page .container {
+		width: 93vw;
+	}
+	.error-value {
+		display: block;
+		font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 350px;
+line-height: 1;
+
+background: linear-gradient(180deg, #67E2FF 0%, #000E18 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+position: relative;
+z-index: 1;
+opacity: 0.5;
+	}
+	.error-content {
+		width: 100%;
+		margin-top: -225px;
+		width: 700px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.error-title {
+		font-size: 48px;
+	}
+	.error-text {
+		font-size: 20px;
+	}
+
+
+
+
+
+
+
 	
 	
 	
@@ -2626,7 +2722,35 @@ color: $color-btn-yellow;
 	.col-6 {
 		width: 100%;
 	}
-} 
+}
+.error-content {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
+	padding-bottom: 50px;
+	margin-top: -114px;
+	}
+	.error-title {
+		font-size: 36px;
+		line-height: 1.2;
+		margin-bottom: 0.5vw;
+		font-weight: 600;
+		margin-top: -20px;
+	}
+	.error-text {
+	font-size: 17px;
+	margin-bottom: 2.08vw;
+	color: $color-steel;
+	margin-bottom: 32px;
+	margin-top: 10px;
+	} 
+	.error-value {
+		
+font-size: 170px;
+line-height: 1;
+	}
 }
 
 
