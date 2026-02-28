@@ -1019,6 +1019,27 @@ color: $color-btn-yellow;
 			height: 100%;
 		}
 	}
+
+	// When exactly 3 cards: stretch to full width only on desktop; on tablet Slick shows 2
+	&--three-cards {
+		@media (min-width: 1281px) {
+			.slick-list {
+				width: 100%;
+			}
+			.slick-track {
+				width: 100% !important;
+				display: flex;
+			}
+			.slick-slide {
+				flex: 1 1 0;
+				min-width: 0;
+				width: auto !important;
+				> div {
+					height: 100%;
+				}
+			}
+		}
+	}
 	.slider-section__dots {
 		display: flex;
 		justify-content: center;
@@ -1554,6 +1575,16 @@ color: $color-btn-yellow;
 }
 .lokale-werte__dots {
 	display: none;
+}
+.text-item {
+	border-bottom: 1px solid rgba($color-off-white, 1);
+	margin-bottom: 30px;
+	p {
+		margin-top: 0;
+	}
+}
+.text-item:last-child {
+	border-bottom: none;
 }
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
@@ -2196,6 +2227,13 @@ color: $color-btn-yellow;
 			width: 100%;
 		}
 	}
+	.text-item {
+		.col-6 {
+			width: calc(50% - 20px);
+		}
+	}
+	
+	
 	
 
 	
@@ -2584,6 +2622,11 @@ color: $color-btn-yellow;
 .text-30 {
 	font-size: 24px;
 }
+.text-item {
+	.col-6 {
+		width: 100%;
+	}
+} 
 }
 
 

@@ -2,9 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	const yearEl = document.getElementById('year');
 	if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-	// Slider section: init only above mobile (≤767); on tablet 2 slides, desktop 4; on mobile no slider, cards stacked
+	// Slider section: init only above mobile (≤767); if 3 slides — show 3 (fill width); else desktop 4, tablet 2; on mobile no slider, cards stacked
 	const sliderEl = document.querySelector('.slider-section .slider-section__slider');
 	const MOBILE_MAX = 767;
+
+	function updateSliderSectionDotsVisibility(sliderElement) {
+		const section = sliderElement?.closest('.slider-section');
+		if (!section || typeof window.$ === 'undefined') return;
+		const $slider = window.$(sliderElement);
+		if (!$slider.hasClass('slick-initialized')) return;
+		const slideCount = parseInt(section.dataset.slideCount, 10) || 0;
+		const slidesToShow = $slider.slick('slickGetOption', 'slidesToShow');
+		const dotsEl = section.querySelector('.slider-section__dots');
+		if (!dotsEl) return;
+		dotsEl.style.display = slideCount <= slidesToShow ? 'none' : '';
+	}
+
 	function initSliderSection() {
 		if (!sliderEl || typeof window.$ === 'undefined' || !window.$.fn.slick) return;
 		const $slider = window.$(sliderEl);
@@ -13,23 +26,40 @@ document.addEventListener('DOMContentLoaded', () => {
 			return;
 		}
 		if ($slider.hasClass('slick-initialized')) return;
+		const slideCount = sliderEl.querySelectorAll('.slider-section__slide').length;
+		const isThreeSlides = slideCount === 3;
+		const section = sliderEl.closest('.slider-section');
+		if (section) section.dataset.slideCount = String(slideCount);
 		$slider.slick({
-			slidesToShow: 4,
+			slidesToShow: isThreeSlides ? 3 : 4,
 			slidesToScroll: 1,
 			dots: true,
 			appendDots: '.slider-section__dots',
 			arrows: false,
-			infinite: true,
+			infinite: isThreeSlides ? false : true,
 			responsive: [
-				{ breakpoint: 1281, settings: { slidesToShow: 2, slidesToScroll: 1 } }
+				{
+					breakpoint: 1281,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				}
 			]
 		});
+		if (isThreeSlides) {
+			section?.classList.add('slider-section--three-cards');
+		}
+		updateSliderSectionDotsVisibility(sliderEl);
 	}
 	if (sliderEl) {
 		initSliderSection();
 		window.addEventListener('resize', function onSliderResize() {
 			clearTimeout(window._sliderResizeTimer);
-			window._sliderResizeTimer = setTimeout(initSliderSection, 100);
+			window._sliderResizeTimer = setTimeout(function () {
+				initSliderSection();
+				updateSliderSectionDotsVisibility(sliderEl);
+			}, 100);
 		});
 	}
 
