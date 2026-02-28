@@ -3925,6 +3925,15 @@ body {
      object-fit: contain;
 }
 
+.text-30 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
 @media (max-width: 1280px) {
   .lokale-werte__slider-wrap {
     max-width: 100%;
@@ -5151,6 +5160,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .text-30 {
+    font-size: 24px;
   }
 }
 .text-image--2 .adv-item--2 {

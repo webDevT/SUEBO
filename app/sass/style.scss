@@ -1535,6 +1535,13 @@ color: $color-btn-yellow;
 		object-fit: contain;
 	}
 }
+.text-30 {
+	font-size: 30px;
+	font-weight: 500;
+}
+.mt-30 {
+	margin-top: 30px;
+}
 @include bp-tablet {
 	.lokale-werte__slider-wrap {
 		max-width: 100%;
@@ -2574,7 +2581,14 @@ color: $color-btn-yellow;
 .lokale-werte__dots {
 	display: flex;
 }
+.text-30 {
+	font-size: 24px;
 }
+}
+
+
+
+
 .text-image--2 {
 	.adv-item--2 {
 		display: flex;
@@ -2616,6 +2630,7 @@ color: $color-btn-yellow;
 			text-align: left;
 		}
 	}
+	
 	
 }
 
