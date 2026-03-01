@@ -576,8 +576,8 @@
 			</ul>
 			</div>
 			<div class="header-nav__utils">
-				<a class="header-nav__btn btn btn--green" href="contact.html">Quick-Check</a>
-				<button type="button" class="header-nav__icon" aria-label="Suche">
+				<a class="header-nav__btn btn btn--green" href="kontakte.html">Quick-Check</a>
+				<button type="button" class="header-nav__icon js-search-open" aria-label="Suche">
 					
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M11.4994 11.4281C10.9675 11.96 10.2619 12.2525 9.50937 12.2525C8.75688 12.2525 8.05125 11.96 7.51937 11.4281C6.9875 10.8969 6.69563 10.1906 6.69563 9.43875C6.69563 8.68688 6.98812 7.98063 7.51937 7.44875C8.05125 6.91688 8.75688 6.62437 9.50937 6.62437C10.2619 6.62437 10.9675 6.91688 11.4994 7.44875C12.0312 7.98 12.3231 8.68688 12.3231 9.43875C12.3231 10.1906 12.0312 10.8969 11.4994 11.4281ZM20 10C20 15.5138 15.5138 20 10 20C4.48625 20 0 15.5138 0 10C0 4.48625 4.48625 0 10 0C15.5138 0 20 4.48563 20 10ZM14.4494 13.48L12.7956 11.8219C13.2981 11.1325 13.5731 10.3075 13.5731 9.43812C13.5731 8.3525 13.1506 7.33188 12.3831 6.56437C11.6156 5.79688 10.5956 5.37375 9.50937 5.37375C8.42313 5.37375 7.40313 5.79688 6.63563 6.56437C5.86813 7.33188 5.44563 8.3525 5.44563 9.43812C5.44563 10.5238 5.86875 11.5444 6.63563 12.3112C7.40313 13.0787 8.42313 13.5019 9.50937 13.5019C10.3875 13.5019 11.2213 13.2206 11.915 12.7081L13.5644 14.3619C13.6863 14.4844 13.8463 14.5456 14.0069 14.5456C14.1669 14.5456 14.3263 14.485 14.4481 14.3631C14.6925 14.1206 14.6925 13.7244 14.4494 13.48Z"/>
@@ -591,6 +591,20 @@
 	</div>
 </div>
 <!-- end header menu -->
+
+	<!-- Site search overlay (static client-side search) -->
+	<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Seiten durchsuchen" aria-hidden="true">
+		<div class="search-overlay__backdrop js-search-close"></div>
+		<div class="search-overlay__box">
+			<button type="button" class="search-overlay__close js-search-close" aria-label="Suche schliessen">
+				<!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> -->
+			</button>
+			<label class="search-overlay__label" for="search-input">Suchbegriff</label>
+			<input type="search" id="search-input" class="search-overlay__input" placeholder="Seite suchen…" autocomplete="off" aria-describedby="search-results-hint">
+			<p id="search-results-hint" class="search-overlay__hint" aria-live="polite"></p>
+			<ul class="search-overlay__results" id="search-results"></ul>
+		</div>
+	</div>
  
  </header>
 

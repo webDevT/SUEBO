@@ -43,6 +43,18 @@ const compileCSS = () => {
         .pipe(gulp.dest('app/css'));
 };
 
+// Generate search index for client-side site search
+const buildSearchIndex = (done) => {
+    const { execSync } = require('child_process');
+    try {
+        execSync('node build-search-index.js', { stdio: 'inherit', cwd: __dirname });
+    } catch (e) {
+        done(e);
+        return;
+    }
+    done();
+};
+
 // HTML processing with file includes
 const processHTML = () => {
     return gulp.src('app/src/*.html')
@@ -187,7 +199,7 @@ const exportBuild = () => {
     const buildCss = gulp.src('app/css/**/*.css')
         .pipe(gulp.dest('docs/css'));
 
-    const buildJs = gulp.src('app/js/**/*.js')
+    const buildJs = gulp.src(['app/js/**/*.js', 'app/js/**/*.json'])
         .pipe(gulp.dest('docs/js'));
 
     const buildFonts = () => {
@@ -208,11 +220,12 @@ const exportBuild = () => {
     return Promise.all([buildHtml, buildCss, buildJs, buildFonts(), buildImg, buildHtaccess]);
 };
 
-const build = gulp.series(clean, convertImages, copyFonts, exportBuild);
+const build = gulp.series(clean, buildSearchIndex, convertImages, copyFonts, exportBuild);
 
 // Development task
 const dev = gulp.series(
     cleanTemp,
+    buildSearchIndex,
     compileCSS,
     compileSass,
     copyFonts,
@@ -227,6 +240,7 @@ const dev = gulp.series(
 // Export tasks
 exports.clean = clean;
 exports.cleanTemp = cleanTemp;
+exports.buildSearchIndex = buildSearchIndex;
 exports.sass = compileSass;
 exports.css = compileCSS;
 exports.js = compileJS;

@@ -2,6 +2,97 @@ document.addEventListener('DOMContentLoaded', () => {
 	const yearEl = document.getElementById('year');
 	if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+	// Site search (static client-side)
+	const searchOverlay = document.getElementById('search-overlay');
+	const searchOpenBtn = document.querySelector('.js-search-open');
+	const searchCloseBtns = document.querySelectorAll('.js-search-close');
+	const searchInput = document.getElementById('search-input');
+	const searchResults = document.getElementById('search-results');
+	const searchHint = document.getElementById('search-results-hint');
+	let searchIndex = null;
+
+	function openSearch() {
+		if (!searchOverlay || !searchInput) return;
+		searchOverlay.setAttribute('aria-hidden', 'false');
+		searchInput.value = '';
+		searchInput.focus();
+		if (searchResults) searchResults.innerHTML = '';
+		if (searchHint) searchHint.textContent = '';
+		if (!searchIndex) {
+			fetch('js/search-index.json')
+				.then((r) => r.json())
+				.then((data) => {
+					searchIndex = data.pages || [];
+					runSearch();
+				})
+				.catch(() => {
+					if (searchHint) searchHint.textContent = 'Suchindex konnte nicht geladen werden.';
+				});
+		} else {
+			runSearch();
+		}
+	}
+
+	function closeSearch() {
+		if (searchOverlay) searchOverlay.setAttribute('aria-hidden', 'true');
+	}
+
+	function runSearch() {
+		const q = (searchInput && searchInput.value.trim()) || '';
+		if (!searchResults || !searchHint) return;
+		if (!searchIndex || searchIndex.length === 0) {
+			searchResults.innerHTML = '';
+			searchHint.textContent = '';
+			return;
+		}
+		const lower = q.toLowerCase();
+		const filtered = lower
+			? searchIndex.filter((p) => p.title && p.title.toLowerCase().includes(lower))
+			: searchIndex;
+		searchResults.innerHTML = filtered
+			.map(
+				(p) =>
+					`<li><a href="${encodeURI(p.url)}">${escapeHtml(p.title)}</a></li>`
+			)
+			.join('');
+		if (filtered.length === 0) {
+			searchHint.textContent = 'Keine Treffer.';
+		} else {
+			searchHint.textContent =
+				filtered.length === 1
+					? '1 Ergebnis'
+					: filtered.length + ' Ergebnisse';
+		}
+	}
+
+	function escapeHtml(s) {
+		const div = document.createElement('div');
+		div.textContent = s;
+		return div.innerHTML;
+	}
+
+	if (searchOpenBtn) {
+		searchOpenBtn.addEventListener('click', openSearch);
+	}
+	searchCloseBtns.forEach((btn) => btn.addEventListener('click', closeSearch));
+	if (searchOverlay) {
+		searchOverlay.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') closeSearch();
+		});
+	}
+	if (searchInput) {
+		searchInput.addEventListener('input', runSearch);
+		searchInput.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') closeSearch();
+		});
+	}
+	if (searchResults) {
+		searchResults.addEventListener('click', (e) => {
+			const a = e.target.closest('a');
+			if (a && a.getAttribute('href')) closeSearch();
+		});
+	}
+
 	// Slider section: init only above mobile (≤767); if 3 slides — show 3 (fill width); else desktop 4, tablet 2; on mobile no slider, cards stacked
 	const sliderEl = document.querySelector('.slider-section .slider-section__slider');
 	const MOBILE_MAX = 767;
