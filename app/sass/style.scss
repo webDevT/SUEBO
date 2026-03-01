@@ -10,6 +10,9 @@
 html {
 	box-sizing: border-box;
 }
+a {
+	cursor: pointer;
+}
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -850,7 +853,6 @@ color: $color-btn-yellow;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
-	margin-top: 60px;
 	background-image: url('../img/dna.svg');
 	background-repeat: no-repeat;
 	background-position: top left;
@@ -1240,7 +1242,7 @@ color: $color-btn-yellow;
 	background: rgba($color-dark-navy, 0.9);
 	width: 100%;
 	padding: 32px 20px;
-	border: 1px solid $color-gunmetal;
+	border: 1px solid $color-teal-suebo;
 	border-radius: 20px;
 }
 .fact-title {
@@ -1629,7 +1631,9 @@ color: $color-steel;
 .error-mobile {
 	display: none;
 }
-
+.text-image__item .h2 {
+	font-size: 40px;
+}
 
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
@@ -2763,6 +2767,9 @@ line-height: 1;
 	
 	.adv-item__number {
 		top: 4px;
+	}
+	.text-image__item .h2 {
+		font-size: 32px;
 	}
 	
 

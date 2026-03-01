@@ -2145,6 +2145,10 @@ html {
           box-sizing: border-box;
 }
 
+a {
+  cursor: pointer;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3229,7 +3233,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 60px;
   background-image: url("../img/dna.svg");
   background-repeat: no-repeat;
   background-position: top left;
@@ -3688,7 +3691,7 @@ body {
   background: rgba(11, 17, 32, 0.9);
   width: 100%;
   padding: 32px 20px;
-  border: 1px solid #161F32;
+  border: 1px solid #78ABAD;
   border-radius: 20px;
 }
 
@@ -4178,6 +4181,10 @@ body {
 
 .error-mobile {
   display: none;
+}
+
+.text-image__item .h2 {
+  font-size: 40px;
 }
 
 @media (max-width: 1800px) {
@@ -5481,6 +5488,9 @@ body {
 }
 .text-image--2 .adv-item__number {
   top: 4px;
+}
+.text-image--2 .text-image__item .h2 {
+  font-size: 32px;
 }
 
 @media (max-width: 430px) {
