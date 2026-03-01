@@ -848,7 +848,7 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	@media (min-width: $bp-tablet) {
 		.header-mobile-panel .header-nav__item--dropdown.is-open {
 			display: grid;
-			grid-template-columns: auto 1fr;
+			grid-template-columns: 1fr;
 			gap: 0 20px;
 			align-items: start;
 		}
@@ -860,13 +860,14 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 			grid-row: 1;
 		}
 		.header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
-			grid-column: 2;
-			grid-row: 1;
+			grid-column: 1 / -1;
+			grid-row: 2;
+			width: 100%;
 			margin-bottom: 0;
 		}
 		.header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__right {
 			grid-column: 1 / -1;
-			grid-row: 2;
+			grid-row: 3;
 		}
 	}
 	.header-mobile-panel .header-nav__link,
@@ -885,17 +886,21 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 		display: block;
 	}
 	.header-mega__title {
-		width: 100%;
-		order: 3;
-		margin-top: 10px;
+		width: calc(100% - 370px);
 		br {
 			display: none;
 		}
 	}
+	
 	.header-mega__left {
 		flex-wrap: wrap;
-		padding-bottom: 0;
-		margin-bottom: 0;
+		
+		//padding-bottom: 0;
+		//margin-bottom: 0;
+		
+	}
+	.header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
+		margin-bottom: 20px;
 	}
 	.header-mega__title-mobile {
 		display: block;
@@ -1037,6 +1042,10 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	.header-mega__services > li {
 		margin-left: 15px;
 	}
+	.header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
+		justify-content: space-between;
+		align-items: center;
+	}
 	
 		
 
@@ -1172,6 +1181,15 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 		padding-bottom: 0;
 		margin-bottom: 0px;
 	}
+	.header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
+		justify-content: flex-start;
+		margin-bottom: 0;
+	}
+	.header-mega__title {
+		width: 100%;
+		order: 3;
+		margin-top: 10px;
+	}
 		
 	
 	
@@ -1244,6 +1262,7 @@ $mega-offset-left: 100px; // align left edge with "Cybersecurity" (after "Starts
 	.header-nav__icon svg:hover {
 		fill: #fff;
 	}
+	
 	
 }
 

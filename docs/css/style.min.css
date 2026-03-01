@@ -1168,7 +1168,7 @@
 @media (max-width: 1280px) and (min-width: 768px) {
   .header-mobile-panel .header-nav__item--dropdown.is-open {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 0 20px;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -1182,13 +1182,14 @@
     grid-row: 1;
   }
   .header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1/-1;
+    grid-row: 2;
+    width: 100%;
     margin-bottom: 0;
   }
   .header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__right {
     grid-column: 1/-1;
-    grid-row: 2;
+    grid-row: 3;
   }
 }
 @media (max-width: 1280px) {
@@ -1203,11 +1204,7 @@
     display: block;
   }
   .header-mega__title {
-    width: 100%;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    margin-top: 10px;
+    width: calc(100% - 370px);
   }
   .header-mega__title br {
     display: none;
@@ -1215,8 +1212,9 @@
   .header-mega__left {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-bottom: 0;
-    margin-bottom: 0;
+  }
+  .header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
+    margin-bottom: 20px;
   }
   .header-mega__title-mobile {
     display: block;
@@ -1378,6 +1376,14 @@
   .header-mega__services > li {
     margin-left: 15px;
   }
+  .header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 @media (max-width: 767px) {
   .preheader .container {
@@ -1513,6 +1519,19 @@
   .header-mobile-panel .header-mega__left {
     padding-bottom: 0;
     margin-bottom: 0px;
+  }
+  .header-mobile-panel .header-nav__item--dropdown.is-open .header-mega__left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  .header-mega__title {
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 10px;
   }
 }
 @media (max-width: 369px) {
