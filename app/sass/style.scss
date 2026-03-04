@@ -210,6 +210,26 @@ body {
 		margin-bottom: 0;
 	}
 }
+.contact-section .card.card--secondary.card--active {
+	background: $color-accent;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 0px 6px rgba(56, 189, 248, 0.9);
+	.card__icon.card__icon--contact svg {
+		fill: $color-dark-navy;
+	}
+	.card-title {
+		color: $color-off-white;
+	}
+	.card-description {
+		color: $color-dark-navy;
+		span {
+			color: $color-off-white;
+		}
+	}
+	.card-link {
+		color: $color-off-white;
+	}
+}
 .card--link {
 	display: block;
 	color: inherit;
@@ -1634,7 +1654,9 @@ color: $color-steel;
 .text-image__item .h2 {
 	font-size: 40px;
 }
-
+.contact-section .card {
+	cursor: pointer;
+}
 @include bp-1800 {
 	.hero--secondary .hero__bg-wrapper {
 		right: -10vw;
@@ -2754,6 +2776,9 @@ opacity: 0.5;
 		
 font-size: 170px;
 line-height: 1;
+	}
+	.hero--third .h2--datenschutz {
+		font-size: 30px;
 	}
 }
 

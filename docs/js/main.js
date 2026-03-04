@@ -247,4 +247,35 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (e.key === 'Escape') hide();
 		});
 	}
+
+	// Kontakte: office cards switch map and directions link
+	const officeMap = document.getElementById('office-map');
+	const officeDirectionsLink = document.getElementById('office-directions-link');
+	const officeCards = document.querySelectorAll('.js-office-card');
+	if (officeMap && officeDirectionsLink && officeCards.length) {
+		function setActiveCard(card) {
+			officeCards.forEach((c) => c.classList.remove('card--active'));
+			card.classList.add('card--active');
+		}
+		function selectOffice(card) {
+			const src = card.getAttribute('data-map-src');
+			const href = card.getAttribute('data-directions-href');
+			if (src) officeMap.src = src;
+			if (href) officeDirectionsLink.href = href;
+			setActiveCard(card);
+		}
+		officeCards.forEach((card) => {
+			card.addEventListener('click', (e) => {
+				if (e.target.closest('a')) return;
+				e.preventDefault();
+				selectOffice(card);
+			});
+			card.addEventListener('keydown', (e) => {
+				if (e.key !== 'Enter' && e.key !== ' ') return;
+				if (e.target.closest('a')) return;
+				e.preventDefault();
+				selectOffice(card);
+			});
+		});
+	}
 });

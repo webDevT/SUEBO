@@ -2451,6 +2451,28 @@ body {
   margin-bottom: 0;
 }
 
+.contact-section .card.card--secondary.card--active {
+  background: #38BDF8;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 0px 6px rgba(56, 189, 248, 0.9);
+          box-shadow: 0px 0px 6px rgba(56, 189, 248, 0.9);
+}
+.contact-section .card.card--secondary.card--active .card__icon.card__icon--contact svg {
+  fill: #0B1120;
+}
+.contact-section .card.card--secondary.card--active .card-title {
+  color: #F1F5F9;
+}
+.contact-section .card.card--secondary.card--active .card-description {
+  color: #0B1120;
+}
+.contact-section .card.card--secondary.card--active .card-description span {
+  color: #F1F5F9;
+}
+.contact-section .card.card--secondary.card--active .card-link {
+  color: #F1F5F9;
+}
+
 .card--link {
   display: block;
   color: inherit;
@@ -4238,6 +4260,10 @@ body {
   font-size: 40px;
 }
 
+.contact-section .card {
+  cursor: pointer;
+}
+
 @media (max-width: 1800px) {
   .hero--secondary .hero__bg-wrapper {
     right: -10vw;
@@ -5530,6 +5556,9 @@ body {
   .error-value {
     font-size: 170px;
     line-height: 1;
+  }
+  .hero--third .h2--datenschutz {
+    font-size: 30px;
   }
 }
 .text-image--2 .adv-item--2 {
