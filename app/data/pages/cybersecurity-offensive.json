@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title": "Offensive Security",
+    "description": "Wir simulieren den Ernstfall. Technisch, menschlich und methodisch.",
+    "breadcrumbCurrent": "Offensive Security",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Beratungstermin vereinbaren"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Schwachstellen finden, bevor es Angreifer tun"
+      },
+      "columns": [
+        {
+          "content": "Moderne Cyberkriminelle greifen selten nur die Technik an. Sie suchen den Weg des geringsten Widerstands – und das ist oft der Mensch. Eine Firewall nützt wenig, wenn ein Mitarbeitender unabsichtlich Zugangsdaten auf einer Phishing-Seite eingibt. Viele Unternehmen wiegen sich in falscher Sicherheit, weil sie nur ihre Server patchen, aber den «Faktor Mensch» vernachlässigen. Wer seine Abwehr nicht aktiv testet, erfährt von Lücken oft erst, wenn Daten verschlüsselt oder gestohlen sind."
+        },
+        {
+          "content": "SUEBO verfolgt einen ganzheitlichen Ansatz der «Offensiven Sicherheit». Wir kombinieren technische Penetrationstests mit psychologischen Angriffssimulationen (Social Engineering). Wir brechen kontrolliert bei Ihnen ein – digital und kommunikativ –, um Ihnen genau zu zeigen, wo Ihre Türen offen stehen. Doch wir lassen Sie mit den Ergebnissen nicht allein: Mit gezielten Trainings und Awareness-Kampagnen schliessen wir die Lücken und machen Ihre Belegschaft zur starken «Human Firewall»."
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity.html",
+        "label": "Cybersecurity"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Prüfung & Sensibilisierung",
+    "cards": [
+      {
+        "href": "cybersecurity-penetrationtests.html",
+        "title": "Penetrationtests",
+        "description": "Der technische Härtetest. Unsere Ethical Hacker prüfen Ihre Netzwerke, Web-Applikationen und Systeme mit den Methoden echter Angreifer auf Sicherheitslücken.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-phishing-simulation.html",
+        "title": "Phishing-Simulation",
+        "description": "Der Test für den «Faktor Mensch». Wir versenden realistische Fake-Mails an Ihr Team, um zu messen, wie viele auf Anhänge klicken oder Daten preisgeben.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-security-awareness-trainings.html",
+        "title": "Awareness & Trainings",
+        "description": "Die nachhaltige Lösung. Basierend auf den Testergebnissen schulen wir Ihre Mitarbeitenden, um Sicherheitsrisiken im Alltag sicher zu erkennen und abzuwehren.",
+        "linkLabel": "Mehr Erfahren"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Ihr Mehrwert durch aktive Sicherheit",
+    "text003": "360-Grad-Sicht",
+    "text004": "Wir decken technische UND menschliche Einfallstore auf.",
+    "text005": "Realistische Szenarien",
+    "text006": "Keine Theorie – wir testen, was im echten Angriffsfall passieren würde.",
+    "text007": "Lerneffekt statt Fingerpointing",
+    "text008": "Phishing-Tests dienen nicht der Kontrolle, sondern als Basis für effektives Training.",
+    "text009": "Messbare Verbesserung",
+    "text010": "Sehen Sie schwarz auf weiss, wie die Klickrate bei Phishing sinkt und die Sicherheit der Systeme steigt."
+  }
+}

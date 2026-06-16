@@ -1,0 +1,76 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn</p>"
+      },
+      {
+        "content": "<p>Erreichen des geforderten Sicherheitsstands / der geforderten Zertifizierungen</p>"
+      },
+      {
+        "content": "<p>Einhaltung der gesetzlichen Vorgaben und Compliance</p>"
+      },
+      {
+        "content": "<p>Kostenreduktion durch wirtschaftliche Sicherheitsmassnahmen</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation</p>"
+      },
+      {
+        "content": "<p>Finden Sie gezielt Ihre grössten Schwachstellen und schliessen Sie diese nachhaltig</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Vulnerability Management Service (VMS)",
+    "description": "Automatisierung macht Informationssicherheit konsistent",
+    "breadcrumbCurrent": "Vulnerability Management Service (VMS)",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/19_SUEBO_Vulnerability_Management_Service.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung."
+      },
+      "columns": [
+        {
+          "content": "Jedes Unternehmen ist ein potenzielles Ziel von Cyberangriffen. Europa verzeichnete 2024 weltweit die meisten Cyberattacken. Weltweit richteten sich fast 72% aller professionellen Angriffe gegen Organisationen mit kritischen Infrastrukturen. 81% der Angriffe hätten durch zeitnahes Einspielen der notwendigen Patches oder Schliessen der bekannten Sicherheitslücken verhindert werden können."
+        },
+        {
+          "content": "«Am Ende geht es bei der Sicherheit nicht darum, alles sicher zu machen, sondern darum, das Risiko auf ein akzeptables Mass zu reduzieren.»<br><br><span class=\"text-muted\">Bruce Schneier, Sicherheitsexperte</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<h3 class=\"h4\">Was ist VMS?</h3>\n\t\t\t\t<p>\n\t\t\t\t\tMittels VMS stellen wir unseren Kunden kontinuierlich Sicherheitsbewertungen ihrer IT-Infrastrukturen, Anwendungen, Netzwerke oder Websysteme zur Verfügung. Im Gegensatz zu traditionellen Penetrationstests, die als einmalige Projekte durchgeführt werden, bietet VMS eine laufende Bewertung und Überwachung, um bekannte Sicherheitslücken kontinuierlich zu identifizieren und zu beheben.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tZusammenfassend ist VMS eine flexible und effektive Lösung für Unternehmen, die ihre Cybersicherheitsbemühungen verstärken und auf dem neuesten Stand der Bedrohungslandschaft bleiben möchten, indem sie kontinuierliche und umfassende Sicherheitsbewertungen durchführen.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"h4\">Hauptmerkmale unseres Vulnerability Management Service (VMS)</h3>\n\t\t\t\t<ol class=\"steps-list color-white\" style=\"list-style: decimal; padding-left: 1.5em; margin-top: 0\">\n\t\t\t\t\t<li><strong class=\"\">Kontinuierliche Sicherheitsprüfungen:</strong> VMS ermöglicht es Organisationen und Unternehmen, ihre Sicherheitsmassnahmen regelmässig zu überprüfen und zu aktualisieren, anstatt sich auf jährliche oder halbjährliche Tests zu verlassen. Intervall der Überprüfungen kann individuell beispielsweise pro System festgelegt werden.</li>\n\t\t\t\t\t<li><strong class=\"\">Kundenspezifische Berichterstattung:</strong> Mittels VMS bieten wir Ihnen automatisierte, detaillierte und spezifische Berichte, die es unseren Kunden ermöglichen, Sicherheitslücken leicht zu verstehen und Prioritäten für deren Behebung zu setzen. Des Weiteren ermöglicht die Erstellung massgeschneiderter Berichte, spezifische Zielgruppen – z.B. Systemverantwortliche, CISO oder das Management – gezielt mit den erforderlichen Informationen zu versorgen.</li>\n\t\t\t\t\t<li><strong class=\"\">Expertensupport:</strong> Ergänzend zu unserem automatisierten VMS bieten wir Ihnen Zugang zu unseren Sicherheitsexperten, welche Sie bei der Interpretation der Ergebnisse und der Empfehlung von Massnahmen unterstützen.</li>\n\t\t\t\t\t<li><strong class=\"\">Kosteneffizienz:</strong> Die Inanspruchnahme unserer VMS-Angebote erweist sich üblicherweise als wesentlich kosteneffizienter im Vergleich zur Erreichung einer identischen Abdeckung durch herkömmliche Penetrationstests.</li>\n\t\t\t\t</ol>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "losungen-services.html",
+        "label": "Lösungen & Services"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Warum VMS für Sie entscheidend ist"
+  }
+}

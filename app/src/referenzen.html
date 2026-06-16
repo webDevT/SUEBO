@@ -25,27 +25,23 @@
 			<nav class="breadcrumb" aria-label="Breadcrumb">
 				<ul class="breadcrumb__list">
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="index.html">Startseite</a>
+						<a class="breadcrumb__link" href="{{pages.referenzen.breadcrumbs.items.0.href}}">{{pages.referenzen.breadcrumbs.items.0.label}}</a>
 					</li>
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="./unternehmen.html">Unternehmen</a>
+						<a class="breadcrumb__link" href="{{pages.referenzen.breadcrumbs.items.1.href}}">{{pages.referenzen.breadcrumbs.items.1.label}}</a>
 					</li>
-					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Kunden & Referenzen</li>
+					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">{{pages.referenzen.hero.breadcrumbCurrent}}</li>
 				</ul>
 			</nav>
 			<!-- end breadcrumb -->
 
 			<div class="hero__content">
-				<h1 class="hero__title">
-					Starke Partner. Unabhängige Beratung
-				</h1>
+				<h1 class="hero__title">{{pages.referenzen.hero.title}}</h1>
 
-				<div class="hero__description">
-					Wir sind technologisch neutral. Wir empfehlen nur Lösungen, die wir selbst getestet haben und denen wir vertrauen.
-				</div>
+				<div class="hero__description">{{pages.referenzen.hero.description}}</div>
 
-				<a href="kontakte.html" class="btn btn--white">
-					Technologie-Beratung anfragen
+				<a href="{{pages.referenzen.hero.buttons.0.href}}" class="btn btn--white">
+					{{pages.referenzen.hero.buttons.0.label}}
 				</a>
 
 		
@@ -114,26 +110,16 @@
 	<div class="container">
 
 		<div class="section-header">
-			<h2 class="h2 text-center">
-				Best-of-Breed Strategie
-					</h2>
-					<div class="description">
-						Es gibt keine "Eine-Lösung-für-alles". Deshalb setzen wir auf ein Netzwerk aus spezialisierten Technologie-Partnern. Ob Firewall, Cloud oder Endpoint-Protection – wir picken die Rosinen für Sie heraus.
-					</div>
+			<h2 class="h2 text-center">{{pages.referenzen.pageText.text001}}</h2>
+					<div class="description">{{pages.referenzen.pageText.text002}}</div>
 					</div>
 
 		<div class="row">
 			<div class="col-6">
 				<div class="section-header section-header--left">
-					<div class="save-title">
-						LOKALE WERTE
-					</div>
-					<h2 class="h2">
-						Schweizer Exzellenz
-					</h2>
-					<div class="description">
-					Datensouveränität ist entscheidend. Für Datacenter-Dienstleistungen und sensitive Daten arbeiten wir ausschliesslich mit zertifizierten Schweizer Hostern zusammen.
-				</div>
+					<div class="save-title">{{pages.referenzen.pageText.text003}}</div>
+					<h2 class="h2">{{pages.referenzen.pageText.text004}}</h2>
+					<div class="description">{{pages.referenzen.pageText.text005}}</div>
 				</div>
 				
 			</div>
@@ -235,15 +221,15 @@
 
 				<div class="banner-content">
 					<h2 class="h2 color--teal">
-						Suchen Sie die passende Technologie?
+					{{pages.referenzen.bannerSections.0.title}}
 				</h2>
 				<div class="description">
-					Lassen Sie uns gemeinsam evaluieren, was Ihr Unternehmen wirklich braucht.
-				</div>
+				{{pages.referenzen.bannerSections.0.description}}
+			</div>
 
 				<div class="buttons-wrapper">
-					<a href="kontakte.html" class="btn btn--white">
-						Termin vereinbaren</a>
+					<a href="{{pages.referenzen.bannerSections.0.buttons.0.href}}" class="btn btn--white">
+						{{pages.referenzen.bannerSections.0.buttons.0.label}}</a>
 				</div>	
 
 				</div>

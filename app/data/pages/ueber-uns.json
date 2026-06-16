@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "title": "Schweizer Präzision für Ihre IT-Sicherheit",
+    "description": "SUEBO Informatik AG ist Ihr spezialisierter Partner für Cybersecurity, GEVER und strategisches IT-Consulting. Unabhängig, erfahren und persönlich.",
+    "breadcrumbCurrent": "Über SUEBO Informatik AG",
+    "buttons": [
+      {
+        "href": "#philosophie",
+        "label": "Mehr über uns erfahren"
+      }
+    ]
+  },
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "./unternehmen.html",
+        "label": "Unternehmen"
+      }
+    ]
+  },
+  "factSections": [
+    {
+      "title": "<span>S</span>wiss <span>U</span>nified <span>E</span>nterprise <span>B</span>usiness <span>O</span>perations",
+      "facts": [
+        {
+          "number": "13",
+          "title": "EXPERTEN",
+          "description": "in unserem Team"
+        },
+        {
+          "number": "3",
+          "title": "STANDORTE",
+          "description": "Zug, Bern, Solothurn"
+        },
+        {
+          "number": "100%",
+          "title": "SCHWEIZ",
+          "description": "Datenhaltung & Know-how"
+        }
+      ]
+    }
+  ],
+  "bannerSections": [
+    {
+      "title": "Lernen Sie uns persönlich kennen",
+      "description": "Ein Kaffee (oder ein virtuelles Meeting) ist der beste Start für eine sichere Zusammenarbeit.",
+      "buttons": [
+        {
+          "href": "kontakte.html",
+          "label": "Termin vereinbaren"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "SUEBO steht für operative Exzellenz ohne Kompromisse. Wir sind mehr als nur ein Dienstleister – wir verstehen uns nicht als externer Lieferant, sondern integrieren unsere Enterprise Operations nahtlos in Ihre Struktur. Ein Partner, der Ihre Sprache spricht und Ihre Werte teilt.",
+    "text002": "UNSERE PHILOSOPHIE",
+    "text003": "Werte, die Sicherheit schaffen",
+    "text004": "01.",
+    "text005": "Unabhängigkeit",
+    "text006": "Wir verkaufen keine Lizenzen um der Provision willen. Wir beraten neutral und suchen die beste Lösung für Ihre Situation.",
+    "text007": "02.",
+    "text008": "Security First",
+    "text009": "Sicherheit ist kein «Add-on», sondern das Fundament. Bei jedem Projekt denken wir Cybersecurity von Anfang an mit.",
+    "text010": "03.",
+    "text011": "Partnerschaft",
+    "text012": "Wir setzen auf langfristige Beziehungen statt auf schnelle Geschäfte. Ihr Erfolg ist unsere Referenz."
+  }
+}

@@ -10,6 +10,7 @@ const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
 const fileinclude = require('gulp-file-include');
 const { spawn } = require('child_process');
+const { Transform } = require('stream');
 
 // Clean tasks
 const clean = async () => {
@@ -55,6 +56,92 @@ const buildSearchIndex = (done) => {
     done();
 };
 
+const toCamelCase = (value) => {
+    return value.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+};
+
+const loadContentData = () => {
+    const dataPath = path.join(__dirname, 'app', 'data', 'site.json');
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    const blocksDir = path.join(__dirname, 'app', 'data', 'blocks');
+    const pagesDir = path.join(__dirname, 'app', 'data', 'pages');
+
+    data.blocks = {};
+    data.pages = {};
+
+    const loadJsonDirectory = (dir, target) => {
+        fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
+            const entryPath = path.join(dir, entry.name);
+            const key = toCamelCase(entry.isDirectory() ? entry.name : path.basename(entry.name, '.json'));
+
+            if (entry.isDirectory()) {
+                target[key] = target[key] || {};
+                loadJsonDirectory(entryPath, target[key]);
+                return;
+            }
+
+            if (entry.name.endsWith('.json')) {
+                target[key] = JSON.parse(fs.readFileSync(entryPath, 'utf8'));
+            }
+        });
+    };
+
+    if (fs.existsSync(blocksDir)) loadJsonDirectory(blocksDir, data.blocks);
+    if (fs.existsSync(pagesDir)) loadJsonDirectory(pagesDir, data.pages);
+
+    return data;
+};
+
+const getContentValue = (data, key, context) => {
+    const source = key.startsWith('this.')
+        ? context
+        : (context && Object.prototype.hasOwnProperty.call(context, key.split('.')[0]) ? context : data);
+    const normalizedKey = key.startsWith('this.') ? key.replace(/^this\./, '') : key;
+
+    return normalizedKey.split('.').reduce((value, part) => {
+        if (value && Object.prototype.hasOwnProperty.call(value, part)) {
+            return value[part];
+        }
+
+        throw new Error(`Missing content token: ${normalizedKey}`);
+    }, source);
+};
+
+const renderContentTemplate = (template, data, context = null) => {
+    const withLoops = template.replace(
+        /\{\{\#each\s+([a-zA-Z0-9_.-]+)\s*\}\}([\s\S]*?)\{\{\/each\}\}/g,
+        (match, key, innerTemplate) => {
+            const items = getContentValue(data, key, context);
+            if (!Array.isArray(items)) {
+                throw new Error(`Content token is not an array: ${key}`);
+            }
+
+            return items.map((item) => renderContentTemplate(innerTemplate, data, item)).join('');
+        }
+    );
+
+    return withLoops.replace(/\{\{\s*([a-zA-Z0-9_.-]+)\s*\}\}/g, (match, key) => {
+        return getContentValue(data, key, context);
+    });
+};
+
+const replaceContentTokens = () => {
+    return new Transform({
+        objectMode: true,
+        transform(file, encoding, callback) {
+            if (file.isBuffer()) {
+                const data = loadContentData();
+                const html = file.contents.toString(encoding);
+                const output = renderContentTemplate(html, data);
+
+                file.contents = Buffer.from(output);
+            }
+
+            callback(null, file);
+        }
+    });
+};
+
 // HTML processing with file includes
 const processHTML = () => {
     return gulp.src('app/src/*.html')
@@ -62,6 +149,7 @@ const processHTML = () => {
             prefix: '@@',
             basepath: 'app/'
         }))
+        .pipe(replaceContentTokens())
         .pipe(gulp.dest('app/temp/'));
 };
 
@@ -127,6 +215,41 @@ const copyFontsToTemp = (done) => {
     done();
 };
 
+const copyDirectory = (srcDir, destDir) => {
+    if (!fs.existsSync(srcDir)) return;
+
+    const entries = fs.readdirSync(srcDir, { withFileTypes: true });
+    if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+
+    entries.forEach((entry) => {
+        const srcPath = path.join(srcDir, entry.name);
+        const destPath = path.join(destDir, entry.name);
+
+        if (entry.isDirectory()) {
+            copyDirectory(srcPath, destPath);
+            return;
+        }
+
+        fs.copyFileSync(srcPath, destPath);
+    });
+};
+
+const copyStaticToTemp = () => {
+    copyDirectory(
+        path.join(__dirname, 'app', 'static'),
+        path.join(__dirname, 'app', 'temp')
+    );
+    return Promise.resolve();
+};
+
+const copyStatic = () => {
+    copyDirectory(
+        path.join(__dirname, 'app', 'static'),
+        path.join(__dirname, 'docs')
+    );
+    return Promise.resolve();
+};
+
 const copyAssets = () => {
     return gulp.src(['app/css/**/*', 'app/js/**/*'], { base: 'app' })
         .pipe(gulp.dest('app/temp/'));
@@ -181,10 +304,12 @@ const watch = () => {
     gulp.watch('app/sass/**/*.scss', compileSass);
     gulp.watch('app/src/*.html', processHTML);
     gulp.watch('app/includes/**/*.html', processHTML);
+    gulp.watch('app/data/**/*.json', processHTML);
     gulp.watch('app/js/*.js', processJS);
     gulp.watch(['app/css/**/*', 'app/js/**/*'], copyAssets);
     gulp.watch('app/fonts/**/*', copyFontsToTemp);
     gulp.watch('app/img/**/*', copyImages);
+    gulp.watch('app/static/**/*', copyStaticToTemp);
 };
 
 // Export task for production build with caching
@@ -194,6 +319,7 @@ const exportBuild = () => {
             prefix: '@@',
             basepath: 'app/'
         }))
+        .pipe(replaceContentTokens())
         .pipe(gulp.dest('docs'));
 
     const buildCss = gulp.src('app/css/**/*.css')
@@ -217,7 +343,7 @@ const exportBuild = () => {
     const buildHtaccess = gulp.src('.htaccess', { allowEmpty: true })
         .pipe(gulp.dest('docs'));
 
-    return Promise.all([buildHtml, buildCss, buildJs, buildFonts(), buildImg, buildHtaccess]);
+    return Promise.all([buildHtml, buildCss, buildJs, buildFonts(), buildImg, buildHtaccess, copyStatic()]);
 };
 
 const build = gulp.series(clean, buildSearchIndex, convertImages, copyFonts, exportBuild);
@@ -233,6 +359,7 @@ const dev = gulp.series(
     compileJS,
     copyAssets,
     copyImages,
+    copyStaticToTemp,
     processHTML,
     gulp.parallel(serve, watch)
 );
@@ -248,6 +375,8 @@ exports.html = processHTML;
 exports.script = processJS;
 exports.copyFonts = copyFonts;
 exports.copyFontsToTemp = copyFontsToTemp;
+exports.copyStatic = copyStatic;
+exports.copyStaticToTemp = copyStaticToTemp;
 exports.copyAssets = copyAssets;
 exports.convertImages = convertImages;
 exports.copyImages = copyImages;

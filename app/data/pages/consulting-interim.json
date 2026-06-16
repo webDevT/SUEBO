@@ -1,0 +1,87 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Zeitlich begrenzte Übernahme von Linien- oder Projektfunktionen</p>"
+      },
+      {
+        "content": "<p>Einsetzbar für verschiedenste Anforderungsprofile</p>"
+      },
+      {
+        "content": "<p>Innerhalb kurzer Zeit einsatzbereit</p>"
+      },
+      {
+        "content": "<p>Spezialisierte Unterstützung für kritische Themen</p>"
+      },
+      {
+        "content": "<p>Absolute Diskretion und höchste Vertraulichkeit ist garantiert</p>"
+      },
+      {
+        "content": "<p>Kann massgeblich zur Lösung festgefahrener Situationen eingesetzt werden</p>"
+      },
+      {
+        "content": "<p>Hilft kritische Lücken zu überbrücken und stellt Wissenstransfer sicher</p>"
+      },
+      {
+        "content": "<p>Flexibel auf individuelle Situation reagieren</p>"
+      },
+      {
+        "content": "<p>Erzielen in kurzer Zeit vorzeigbare Resultate</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Interim Management",
+    "description": "Ähnlich wie die Feuerwehr – sofort da, und geht, wenn die Arbeit erledigt ist",
+    "breadcrumbCurrent": "Interim Management",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/16_SUEBO_Interim Management.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Gezielt Lücken schliessen"
+      },
+      "columns": [
+        {
+          "content": "Der Bedarf an IT-Fachkräften in der Schweiz ist hoch – gleichzeitig fehlt es an qualifizierten Spezialisten. Viele Unternehmen und Behörden haben Mühe, offene Stellen zu besetzen oder Projekte mit der nötigen Expertise zu stemmen."
+        },
+        {
+          "content": "«Interim Management ist die Möglichkeit, ein Unternehmen wieder auf den richtigen Kurs zu bringen und es auf eine bessere Zukunft vorzubereiten.»<br><br><span class=\"text-muted\">Warren Edward Buffett, Grossinvestor, CEO Berkshire Hathaway</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\r\n\t\t\t\t\tDie Digitalisierung treibt den Bedarf an IT-Expertise weiter an, während erfahrene Fachkräfte vermehrt in den Ruhestand gehen. Die Lücke zwischen Nachfrage und verfügbaren Ressourcen bleibt eine zentrale Herausforderung.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<h3 class=\"h4\">Was ist das Problem?</h3>\r\n\t\t\t\t<p>\r\n\t\t\t\t\tDer Fachkräftemangel im IT-Bereich wird sich in den nächsten 5 bis 10 Jahren voraussichtlich halten oder sogar verschärfen. Ohne schnelle, flexible Lösungen geraten Projekte ins Stocken und strategische Ziele werden gefährdet.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<h3 class=\"h4\">Wie lösen wir das Problem?</h3>\r\n\t\t\t\t<p>\r\n\t\t\t\t\tEs gibt verschiedene Ansätze, um den Mangel an IT-Fachkräften zu adressieren – von Aus- und Weiterbildung über gezielte Rekrutierung bis hin zu neuen Arbeitsmodellen. Diese Massnahmen werden in der Schweiz und anderswo erfolgreich angewendet, brauchen aber Zeit für die Umsetzung. Genau diese Zeit fehlt vielen Organisationen, wenn ein kritisches Projekt ansteht oder eine Schlüsselposition kurzfristig vakant wird.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<p>\r\n\t\t\t\t\tInterim Management ist in genau diesen Fällen eine attraktive Option: für Unternehmen, die kurzfristig erfahrene Spezialisten oder Führungskräfte brauchen, oder die ein zeitkritisches Vorhaben umsetzen müssen, für das interne Ressourcen oder Kompetenzen nicht ausreichen. SUEBO vermittelt Ihnen passende Interim-Profis – schnell, unkompliziert und mit dem nötigen Know-how.\r\n\t\t\t\t</p>"
+        },
+        {
+          "content": "<h2 class=\"h4\">Vorteile vom Interim Management:</h2>\r\n\t\t\t\r\n\t\t\t<ul class=\"steps-list description color-white\" style=\"list-style: disc; padding-left: 1.5em;margin-top: 0\">\r\n\t\t\t\t<li><strong class=\"color-suebo\">Schnelle Verfügbarkeit:</strong> Unsere Interim-Manager sind schnell verfügbar und können in kurzer Zeit in die bestehende Organisation integriert werden.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Flexibilität:</strong> Unsere Interim-Manager sind sehr flexibel und können schnell auf Veränderungen im Unternehmen reagieren.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Spezialisierte Fähigkeiten:</strong> Unsere Interim-Manager bieten spezialisierte Fähigkeiten für Ihr Anforderungsprofil.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Unabhängigkeit:</strong> Unsere Interim-Manager sind unabhängig, neutral und objektiv.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Kostenersparnis:</strong> Interim-Management ist in vielen Fällen kosteneffizienter als eine Festanstellung.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Externe Perspektive:</strong> Unsere Interim-Manager bringen eine externe Perspektive in Ihr Unternehmen.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Branchenwissen:</strong> Unsere Interim-Manager kennen viele Organisationen und verfügen über spezifisches Wissen in Unternehmenskultur und -struktur.</li>\r\n\t\t\t\t<li><strong class=\"color-suebo\">Einsatznutzen:</strong> Unsere Interim-Manager bleiben für ihren vorgesehenen Einsatzzweck und werden nach Erfüllung der Aufgabe nicht zur dauerhaften Belastung für Ihre Organisation.</li>\r\n\t\t\t</ul>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "UNSERE LEISTUNGEN",
+    "text002": "Warum sich Interim Management lohnt"
+  }
+}

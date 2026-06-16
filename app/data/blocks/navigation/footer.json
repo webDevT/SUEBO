@@ -1,0 +1,30 @@
+{
+  "contact": {
+    "eyebrow": "Contact & Support",
+    "title": "Haben Sie Fragen oder benötigen Sie Unterstützung?",
+    "items": {
+      "central": "ZENTRALE",
+      "cyberSecurity": "CYBER SECURITY",
+      "consulting": "IT & BUSINESS CONSULTING",
+      "services": "LÖSUNGEN & SERVICES"
+    }
+  },
+  "direct": {
+    "title": "Direct Link",
+    "contactLabel": "Kontaktdaten"
+  },
+  "bottomLinks": [
+    {
+      "href": "impressum.html",
+      "label": "Impressum"
+    },
+    {
+      "href": "datenschutz.html",
+      "label": "Datenschutz"
+    },
+    {
+      "href": "rechtliches.html",
+      "label": "Rechtliches"
+    }
+  ]
+}

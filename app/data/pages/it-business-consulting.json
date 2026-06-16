@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "IT-Consulting: Architektur statt Flickwerk",
+    "description": "Wir verbinden strategische Weitsicht mit operativer Exzellenz. Von der IT-Strategie bis zur erfolgreichen Projektleitung.",
+    "breadcrumbCurrent": "IT & Business Consulting",
+    "buttons": [
+      {
+        "href": "",
+        "label": "Beratungstermin vereinbaren"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "IT-Projekte erfolgreich steuern – von Anfang an"
+      },
+      "columns": [
+        {
+          "content": "Verzögerte Termine, überschrittene Budgets und unklare Anforderungen kennen viele Organisationen. Oft fehlt eine vollständige Datenbasis oder die Governance-Strukturen sind unklar."
+        },
+        {
+          "content": "Wir agieren als Ihr Generalunternehmer für die IT. Mit bewährten Methoden (wie dem Bauplan-Effekt) bringen wir Struktur in Ihre Projekte und richten Ihre IT-Ressourcen konsequent auf die Unternehmensziele aus."
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Unsere Kompetenzen im Überblick",
+    "cards": [
+      {
+        "href": "consulting-strategie.html",
+        "title": "IT-Strategie",
+        "description": "Ausrichtung Ihrer IT an den Geschäftszielen. Wir entwickeln zukunftsfähige Roadmaps für Ihre digitale Transformation.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-portfolio.html",
+        "title": "IT-Portfolio Management",
+        "description": "Priorisierte Steuerung von Investitionen. Identifizieren Sie \"Quick-Wins\" und vermeiden Sie Redundanzen in Ihrer Systemlandschaft.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-projektleitung.html",
+        "title": "IT-Projektleitung",
+        "description": "Wir bringen gefährdete Projekte zurück auf Kurs (\"Sanierung\"). Professionelles Krisenmanagement und Führung komplexer IT-Vorhaben.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-interim.html",
+        "title": "Interim Management",
+        "description": "Überbrückung von personellen Engpässen. Wir übernehmen temporär Führungsaufgaben (CIO/CISO-Level) mit sofortiger Wirkung.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-beschaffung.html",
+        "title": "IT-Beschaffung",
+        "description": "Der Schlüssel zum Projekterfolg. Wir begleiten Sie neutral bei öffentlichen Ausschreibungen (Submissionsrecht) und Vertragsgestaltungen.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-gever.html",
+        "title": "GEVER & Digitalisierung",
+        "description": "Effiziente digitale Geschäftsverwaltung. Wir optimieren Ihre Prozesse für eine papierlose und rechtskonforme Verwaltung.",
+        "linkLabel": "Mehr Erfahren"
+      }
+    ]
+  },
+  "bannerSections": [
+    {
+      "title": "Warum sich Digitalisierung lohnt",
+      "description": "Zahlen lügen nicht. Das Potenzial für Ihr Unternehmen.",
+      "facts": [
+        {
+          "number": "+30%",
+          "title": "Effizienzsteigerung",
+          "description": "Durch automatisierte Workflows und die Eliminierung manueller Schritte."
+        },
+        {
+          "number": "-25%",
+          "title": "Effizienzsteigerung",
+          "description": "Weniger Papier, weniger Archivraum und schnellere Suchzeiten."
+        },
+        {
+          "number": "< 12 Mt.",
+          "title": "Return on Investment",
+          "description": "Die durchschnittliche Amortisationszeit für GEVER-Projekte."
+        }
+      ],
+      "buttons": [
+        {
+          "href": "kontakte.html",
+          "label": "Mein Sparpotenzial analysieren"
+        }
+      ],
+      "footnote": "* Beispielwerte basierend auf Durchschnittswerten vergleichbarer KMU-Projekte."
+    }
+  ]
+}

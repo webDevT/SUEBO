@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "GEVER & Digitalisierung",
+    "description": "Schluss mit Papierbergen. Wir gestalten Ihre Verwaltung effizient, digital und rechtskonform",
+    "breadcrumbCurrent": "GEVER & Digitalisierung",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Beratungstermin vereinbaren"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Die Verwaltung der Zukunft ist digital"
+      },
+      "columns": [
+        {
+          "content": "Die Anforderungen an moderne Verwaltungen und Unternehmen wachsen stetig. Bürger und Kunden erwarten schnelle, digitale Services, während intern die Flut an Dokumenten und E-Mails kaum noch zu bewältigen ist. Veraltete Abläufe, Medienbrüche (Drucken, Unterschreiben, Scannen) und unstrukturierte Datenablagen bremsen die Effizienz und erhöhen die Fehlerquote. Zudem erfordern gesetzliche Vorgaben (wie das eGovernment-Gesetz oder DSG) eine nachvollziehbare, sichere Aktenführung, die mit klassischen Fileservern kaum zu leisten ist."
+        },
+        {
+          "content": "SUEBO begleitet Sie auf dem Weg zur papierlosen Organisation. Wir sind Experten für GEVER (Geschäftsverwaltung) und Prozessdigitalisierung. Wir helfen Ihnen nicht nur bei der Auswahl und Einführung der richtigen Software, sondern optimieren zuerst Ihre Prozesse – denn ein schlechter Prozess bleibt auch digital ein schlechter Prozess. Wir sorgen für eine saubere Datenmigration, schulen Ihre Mitarbeitenden und stellen sicher, dass Ihre digitale Transformation nicht nur technisch, sondern auch organisatorisch gelingt."
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Effizienz & Struktur",
+    "cards": [
+      {
+        "href": "consulting-digitale-geschaeftsverwaltung.html",
+        "title": "Digitale Geschäftsverwaltung",
+        "description": "Der moderne Arbeitsplatz. Wir führen GEVER-Lösungen ein, die eine rechtssichere Aktenführung, effiziente Dossier-Verwaltung und transparente Entscheidungswege garantieren.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-prozessoptimierung.html",
+        "title": "Prozessoptimierung",
+        "description": "Erst vereinfachen, dann digitalisieren. Wir analysieren Ihre Arbeitsabläufe, eliminieren Flaschenhälse und designen schlanke Prozesse, die Zeit und Kosten sparen.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "consulting-datenmigrationen.html",
+        "title": "Datenmigrationen",
+        "description": "Sicherer Umzug für Ihr Wissen. Wir überführen Ihre bestehenden Daten und Dokumente strukturiert und verlustfrei in neue Systeme – inklusive Bereinigung und Klassifizierung.",
+        "linkLabel": "Mehr Erfahren"
+      }
+    ]
+  },
+  "bannerSections": [
+    {
+      "title": "Warum sich Digitalisierung lohnt",
+      "description": "Zahlen lügen nicht. Das Potenzial für Ihr Unternehmen.",
+      "facts": [
+        {
+          "number": "+30%",
+          "title": "Effizienzsteigerung",
+          "description": "Durch automatisierte Workflows und die Eliminierung manueller Schritte."
+        },
+        {
+          "number": "-25%",
+          "title": "Effizienzsteigerung",
+          "description": "Weniger Papier, weniger Archivraum und schnellere Suchzeiten."
+        },
+        {
+          "number": "< 12 Mt.",
+          "title": "Return on Investment",
+          "description": "Die durchschnittliche Amortisationszeit für GEVER-Projekte."
+        }
+      ],
+      "buttons": [
+        {
+          "href": "kontakte.html",
+          "label": "Mein Sparpotenzial analysieren"
+        }
+      ],
+      "footnote": "* Beispielwerte basierend auf Durchschnittswerten vergleichbarer KMU-Projekte."
+    }
+  ],
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Effizienz, Transparenz & Sicherheit",
+    "text003": "Rechtskonformität",
+    "text004": "Unsere Lösungen erfüllen die strengen Vorgaben für die öffentliche Verwaltung (GEVER-Standards) und den Datenschutz.",
+    "text005": "Nachhaltigkeit",
+    "text006": "Weniger Papierverbrauch und effizientere Ressourcennutzung.",
+    "text007": "Transparenz",
+    "text008": "Jederzeit wissen, wer was wann entschieden hat (Nachvollziehbarkeit).",
+    "text009": "Nutzerakzeptanz",
+    "text010": "Wir fokussieren uns nicht nur auf Technik, sondern nehmen Ihre Mitarbeitenden durch Schulungen und Change Management mit."
+  }
+}

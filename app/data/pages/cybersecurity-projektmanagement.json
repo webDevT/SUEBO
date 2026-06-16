@@ -1,0 +1,69 @@
+{
+  "hero": {
+    "title": "Projekt-management",
+    "description": "Sicherheit ist kein Zufall, sondern das Ergebnis professioneller Planung und Dokumentation",
+    "breadcrumbCurrent": "Projekt-Management",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Beratungstermin vereinbaren"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Fundament für nachhaltige Sicherheit schaffen"
+      },
+      "columns": [
+        {
+          "content": "Viele IT-Sicherheitsvorhaben scheitern nicht an der Technologie, sondern an fehlenden Strukturen. Wenn Sicherheitskonzepte nur in den Köpfen der Mitarbeiter existieren, aber nicht dokumentiert sind, entsteht ein enormes Risiko für das Unternehmen (Stichwort «Kopfmonopol»). Ebenso kritisch ist die Beschaffung: Werden neue Soft- oder Hardwarelösungen eingekauft, ohne Sicherheitsanforderungen im Vorfeld zu definieren, holt man sich Schwachstellen direkt ins Haus. Ohne saubere Prozesse und Dokumentation ist Compliance (z.B. nach nDSG) unmöglich."
+        },
+        {
+          "content": "SUEBO unterstützt Sie dabei, Sicherheit formal und prozessual zu verankern. Wir übernehmen die Leitung für Teilprojekte, die oft vernachlässigt werden, aber entscheidend sind. Wir erstellen revisionssichere Dokumentationen, die Auditoren überzeugen, und begleiten Ihre Beschaffungsvorhaben so, dass Sicherheit von Anfang an («Security by Design») Vertragsbestandteil ist. Wir schaffen Ordnung, Transparenz und Rechtssicherheit für Ihre Projekte."
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity.html",
+        "label": "Cybersecurity"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Dokumentation & Beschaffung",
+    "cards": [
+      {
+        "href": "cybersecurity-sicherheits-dokumentation.html",
+        "title": "Prüfung und Erstellung der Sicherheitsdokumentation",
+        "description": "Ordnung im Papierkrieg. Wir prüfen bestehende Konzepte oder erstellen neue, normgerechte Weisungen, Richtlinien und Notfallpläne (z.B. für ISO 27001 oder nDSG).",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-it-beschaffung.html",
+        "title": "Sichere IT-Beschaffung",
+        "description": "Keine Katze im Sack kaufen. Wir definieren Sicherheitsanforderungen für Ausschreibungen und prüfen Lieferanten auf Herz und Nieren, bevor Sie Verträge unterschreiben.",
+        "linkLabel": "Mehr Erfahren"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Warum formale Sicherheit wichtig ist",
+    "text003": "Compliance",
+    "text004": "Nachweisbare Erfüllung gesetzlicher Sorgfaltspflichten (nDSG).",
+    "text005": "Unabhängigkeit",
+    "text006": "Dokumentiertes Wissen macht Sie unabhängig von einzelnen Mitarbeitenden.",
+    "text007": "Kosteneffizienz",
+    "text008": "Sicherheitslücken schon bei der Beschaffung zu vermeiden, ist günstiger als sie später zu fixen.",
+    "text009": "Audit-Fähigkeit",
+    "text010": "Sie sind jederzeit bereit für externe Prüfungen oder Zertifizierungen."
+  }
+}

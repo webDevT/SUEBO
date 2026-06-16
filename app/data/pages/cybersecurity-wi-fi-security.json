@@ -1,0 +1,80 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>«Quick-Wins» identifizieren (geringer Aufwand / grosser Mehrwert)</p>"
+      },
+      {
+        "content": "<p>Einschätzung bereits getroffener Sicherheitsmassnahmen</p>"
+      },
+      {
+        "content": "<p>Identifikation möglicher Schwachstellen</p>"
+      },
+      {
+        "content": "<p>Definieren gezielter Sicherheitsmassnahmen zur Schliessung von Lücken</p>"
+      },
+      {
+        "content": "<p>Sensibilisierung der Beteiligten für Gefährdungen</p>"
+      },
+      {
+        "content": "<p>Umfassendes Branchen-Wissen unserer IT-Spezialisten</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Wi-Fi Security",
+    "description": "Besser sicher drahtlos als unsicher und ratlos",
+    "breadcrumbCurrent": "Wi-Fi Security",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/20_SUEBO_Wi-Fi_Security.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen <br>\nund Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "Praktisch jedes moderne Unternehmen ist betroffen. Die drahtlose Technik bietet uns viel Flexibilität, doch sie birgt auch erhebliche Risiken."
+        },
+        {
+          "content": "\"Secure Wi-Fi is like a seatbelt - it protects you from harm and you don't notice it's there until you need it.\"  <br><br><span class=\"text-muted \">\n\t\nDarren Kitchen, Technologie-Experte und CEO von Hak5 LLC</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<h3 class=\"text-30\">\n\t\t\t\t\tRisikosituation\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tBei allen Vorteilen, welche diese Technologie mit sich bringt, besteht das grosse Problem, dass Angreifer keinen physikalischen Zugang zu einem Netzwerk benötigen, sondern Ihre Organisation unauffällig aus der Ferne angreifen können.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tAngriffstechniken\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tEs gibt zahlreiche verschiedene Arten von Angriffstechniken: Angriffe auf die Verschlüsselung, Rouge-AP, Man-in-the-Middle, DoS, MAC-Spoofing, Evil Twin, Fragmentierung, Karma Attacken, Packet Injection, Deauthentication, Beacon-Flooding, Wi-Fi Phishing, AP Spoofing, Wi-Fi Jamming, Bluetooth-Attacken, etc. Fast täglich gibt es neue Werkzeuge, um solche Angriffe mit wenig Wissen und geringem Aufwand durchführen zu können.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tGegenmassnahmen\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tDie Experten der SUEBO Informatik AG kennen die effizientesten Gegenmassnahmen um Sie optimal beraten und vor Angriffen schützen zu können.\n\t\t\t\t</p>\n\t\t\t\t<p class=\"semi-bold mt-30\">\n\t\t\t\t\tDenken Sie daran: Kriminelle arbeiten international. Cyberangriffe bedrohen unsere kritische Infrastruktur, öffentlichen Verwaltungen, Organisationen und Unternehmen auf aller Welt und jeden Tag. Es ist wichtiger denn je, Ihre IT-Sicherheit zu überprüfen.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tRisikobasierte Gegenmassnahmen\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tWLAN-Netzwerke sind anfälliger für Sicherheitsrisiken wie Datenlecks und unbefugten Zugriff, da sie drahtlos sind und aus der Distanz aus zugänglich bzw. angreifbar sind.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tWir zeigen Ihnen wie Sie effektive Gegenmassnahmen, für Ihre Institution identifizieren, planen und umsetzen können. Hier auszugsweise einige Beispiele aus der Praxis:\n\t\t\t\t</p>\n\t\t\t\t<ul class=\"mt-0\">\n\t\t\t\t\t<li>Einführen eines professionellen Passwortmanagements und Passwortrichtlinien</li>\n\t\t\t\t\t<li>Verwendung sicheren Verschlüsselungsstandards in Kombination mit Virtual Private Networks (VPN)</li>\n\t\t\t\t\t<li>Einführung von Zwei-Faktor-Authentifizierung</li>\n\t\t\t\t\t<li>Patch- und Updatemanagement zur effizienten Aktualisierung Ihrer Firmware und Gerätetreiber</li>\n\t\t\t\t\t<li>Verwendung von Intrusion Detection Systemen und WLAN-Monitoring-Tools zur Erkennung und Abwehr von Angriffen</li>\n\t\t\t\t\t<li>Konfigurationsoptimierungen z. B. Deaktivierung nicht notwendiger Dienste</li>\n\t\t\t\t\t<li>Netzwerksegmentierung und Einschränkung von Remote-Zugriffen</li>\n\t\t\t\t\t<li>Schulung der Benutzer und IT-Fachkräften</li>\n\t\t\t\t</ul>\n\t\t\t\t<p class=\"mt-30\">\n\t\t\t\t\tEs ist wichtig zu beachten, dass die Umsetzung einer einzelnen Massnahme nicht ausreichend ist, um Ihr Netzwerk vollständig zu schützen. Stattdessen sollte risikobasierend eine Kombination verschiedener Massnahmen umgesetzt werden, um realistische Risiken, wirtschaftlich zu minimieren. Die Umsetzung dieser Massnahmen sollte zudem kontinuierlich auf ihre Wirksamkeit geprüft werden. Wir unterstützen Sie gerne bei Ihrer individuellen Umsetzung.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Cybersecurity"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Audits & Assessments"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Leistungsfähiges WLAN – aber sicher"
+  }
+}

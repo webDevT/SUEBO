@@ -1,0 +1,79 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn.</p>"
+      },
+      {
+        "content": "<p>Erreichen des geforderten Sicherheitsstands / der geforderten Zertifizierungen.</p>"
+      },
+      {
+        "content": "<p>Einhaltung der gesetzlichen Vorgaben und Compliance.</p>"
+      },
+      {
+        "content": "<p>Kostenreduktion durch wirtschaftliche Sicherheitsmassnahmen.</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation.</p>"
+      },
+      {
+        "content": "<p>Finden Sie gezielt Ihre grössten Schwachstellen und schliessen Sie diese nachhaltig.</p>"
+      },
+      {
+        "content": "<p>Professionelle und ganzheitliche Steuerung der Informationssicherheit</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "ISMS & ISO 27001",
+    "description": "Ohne Managementsystem ist Informationssicherheit wie ein Haus ohne Fundament",
+    "breadcrumbCurrent": "ISMS & ISO 27001",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/15_SUEBO_Interim ISBO-CISO.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen auch 2026 vor äusserst grosse Herausforderungen"
+      },
+      "columns": [
+        {
+          "content": "Jedes Unternehmen ist ein potenzielles Ziel von Cyberangriffen. Ein Information Security Management System (ISMS) ist ein systematischer Ansatz zur Verwaltung von Informationen, um Vertraulichkeit, Integrität und Verfügbarkeit zu gewährleisten und zu steuern."
+        },
+        {
+          "content": "«Ein ISMS nach ISO 27001 ist nicht nur ein technisches System – es ist eine Denkweise, die Informationssicherheit als Teil der Unternehmenskultur verankert.» Steven Chabinsky, Global Chair of Data, Privacy & Cybersecurity bei White & Case LLP"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\r\n\t\tEine ISMS hilft Ihnen, sich gegen Bedrohungen wie Malware, Phishing-Angriffen, Ransomware, und viele weitere Bedrohungen zu schützen. Wir unterstützen Sie, um auf angepasste oder neue Regulierungen und Vorschriften im Bereich der Informationssicherheit und Datenschutz angemessen reagieren zu können. Ein ISMS nach anerkannten Normen und Standards umzusetzen, ermöglicht Ihrer Organisation zudem, unabhängig von der Grösse, die Informationssicherheit ganzheitlich zu messen, zu steuern und zu verbessern.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tGleichzeitig stärkt ein ISMS das Vertrauen von Kunden und Partnern, da es den verantwortungsvollen Umgang mit sensiblen Daten dokumentiert. Unternehmen verschaffen sich dadurch einen klaren Wettbewerbsvorteil.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tDarüber hinaus trägt ein ISMS zur Reduktion von Ausfallzeiten und Schäden durch Sicherheitsvorfälle bei, verbessert interne Abläufe durch klare Strukturen und Verantwortlichkeiten und fördert durch seinen kontinuierlichen Verbesserungsprozess.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tDenken Sie daran: Kriminelle arbeiten international. Cyberangriffe bedrohen unsere kritische Infrastruktur, öffentlichen Verwaltungen, Organisationen und Unternehmen global und jeden Tag. Es ist wichtiger denn je, Ihre IT-Sicherheit zu überprüfen und professionell zu steuern.\r\n\t</p>\r\n\r\n\t<h3 class=\"h4\">Richtig umgesetzt!</h3>\r\n\r\n\t<p>\r\n\t\tDie Implementierung eines ISMS erfordert eine systematische und strukturierte Herangehensweise. Hier sind einige Schritte, bei welchen Sie die Experten der SUEBO Informatik AG in der Umsetzung unterstützen können:\r\n\t</p>\r\n\r\n\t<ol class=\"steps-list pl-20\">\r\n\t\t<li><span class=\"\">Initiale Vorbereitung & Projektstart</span></li>\r\n\t\t<li><span class=\"\">Ist-Analyse & Gap-Analyse</span></li>\r\n\t\t<li><span class=\"\">Risiko-Management etablieren</span></li>\r\n\t\t<li><span class=\"\">Leitlinien und Richtlinien entwickeln</span></li>\r\n\t\t<li><span class=\"\">Massnahmen definieren und umsetzen</span></li>\r\n\t\t<li><span class=\"\">Schulungen & Awareness</span></li>\r\n\t\t<li><span class=\"\">Verbessern des bestehenden Systems</span></li>\r\n\t</ol>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity.html",
+        "label": "Cybersecurity"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Warum ein ISMS unverzichtbar ist"
+  }
+}

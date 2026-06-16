@@ -1,0 +1,86 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>«Quick-Wins» identifizieren (geringer Aufwand / grosser Mehrwert)</p>"
+      },
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn</p>"
+      },
+      {
+        "content": "<p>Verbessertes Bewusstsein und Kompetenz für IT-Sicherheit innerhalb der Organisation</p>"
+      },
+      {
+        "content": "<p>Schutz der persönlichen Daten Ihrer Mitarbeitenden</p>"
+      },
+      {
+        "content": "<p>Einhaltung der gesetzlichen Vorgaben und Compliance</p>"
+      },
+      {
+        "content": "<p>Sensibilisierung der Beteiligten für Gefährdungen</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation</p>"
+      },
+      {
+        "content": "<p>Verbesserte Arbeitsplatzsicherheit</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Security Awareness & Trainings",
+    "description": "Ihre Cybersicherheit ist nur so stark wie das schwächste Glied der Kette",
+    "breadcrumbCurrent": "Security Awareness & Trainings",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/01_SUEBO_IT-Security_Awareness.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "Ihre Organisation ist nur so sicher wie die schwächste Stelle in ihrem System. Selbst wenn alle anderen Bereiche stark und sicher sind, kann eine einzige Schwachstelle ausreichen, um die komplette Organisation zu gefährden."
+        },
+        {
+          "content": "\"Die beste Firewall der Welt kann einen Benutzer, der sein Passwort auf einem gelben Zettel unter der Tastatur aufbewahrt, nicht schützen.\"<br><br><span class=\"text-muted\">Eugene Spafford, Professor für Informatik und IT-Sicherheitsexperte</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<div class=\"semi-bold\">\n\t\t\t\t\tRisikofaktor Mensch\n\t\t\t\t</div>\n\t\t\t\t<p>\n\t\t\t\t\tDie Mitarbeitende stellt im Kontext der Cybersicherheit ein Risiko dar, weil dieser oft unvorhersehbar handelt.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tMenschliches Fehlverhalten kann jedes Unternehmen teuer zu stehen kommen. Eines der elementaren Probleme ist mangelndes Bewusstsein.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tDaher ist es wichtig, dass Unternehmen und Organisationen nicht nur Ihre technischen Sicherheitsmassnahmen kontinuierlich stärken, sondern auch sicherstellen, dass Ihre Mitarbeitenden regelmässig geschult werden.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tAlle Mitarbeitenden sollten sich bewusst sein, dass ihr eigenes Verhalten massgeblich dazu beiträgt, die Cybersicherheit im Unternehmen zu gewährleisten.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tGegenmassnahmen\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tDie Experten der SUEBO Informatik AG kennen die effizientesten Massnahmen um Sie optimal beraten zu können. Wir helfen Ihnen dabei, das Risiko menschlichen Fehlverhaltens nachhaltig zu minimieren. Wir sind Ihr Partner für Cybersicherheit und unterstützen Sie bei der Vorbereitung zukünftiger Herausforderungen in diesem Umfeld.\n\t\t\t\t</p>\n\t\t\t\t<p class=\"semi-bold mt-30\">\n\t\t\t\t\tDenken Sie daran: Kriminelle arbeiten international. Cyberangriffe bedrohen unsere kritische Infrastruktur, öffentlichen Verwaltungen, Organisationen und Unternehmen auf aller Welt und jeden Tag. Es ist wichtiger denn je, Ihre IT-Sicherheit zu überprüfen.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tUnsere Dienstleistungen im Bereich IT-Security Awareness\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tMassgeschneiderte Schulungen und Sensibilisierungskampagnen für Ihre Organisation:\n\t\t\t\t</p>\n\t\t\t\t<ul class=\"mt-0\">\n\t\t\t\t\t<li>Einführung in die Bedrohungen: Phishing, Ransomware, Social Engineering und andere Angriffe. Z.B. veranschaulicht in einem Live-Hacking-Event.</li>\n\t\t\t\t\t<li>Datensicherheit und Datenschutz: Gesetzliche Aspekte.</li>\n\t\t\t\t\t<li>Verhaltensregeln im Kontext der Organisation.</li>\n\t\t\t\t\t<li>Individuelle Schulungen und Workshops zu unternehmensspezifischen Themen.</li>\n\t\t\t\t\t<li>Testen von Sicherheitsmassnahmen: z.B. Phishing- oder Social Engineering-Tests, um zu überprüfen, wie Mitarbeitende auf potenzielle Bedrohungen reagieren.</li>\n\t\t\t\t\t<li>Gegenmassnahmen und Best Practices zu spezifischen Themenbereichen.</li>\n\t\t\t\t\t<li>Awareness-Training für Führungskräfte.</li>\n\t\t\t\t\t<li>Reaktion auf Sicherheitsvorfälle.</li>\n\t\t\t\t\t<li>Awareness-Materialien: Erstellung von Plakaten, Flyer, Newsletter, Anleitungen, Umfragen oder Webseiten.</li>\n\t\t\t\t\t<li>Multiplikatoren-Schulung: z.B. IT-Administratoren oder Teamleiter.</li>\n\t\t\t\t\t<li>Gäste-Sensibilisierung / Kunden- und Partner-Sensibilisierung z.B.</li>\n\t\t\t\t\t<li>Lieferkettenrisiken.</li>\n\t\t\t\t\t<li>Informationssicherheit im Homeoffice und sicheres mobiles Arbeiten.</li>\n\t\t\t\t</ul>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Cybersecurity"
+      },
+      {
+        "href": "cybersecurity-offensive.html",
+        "label": "Offensive Security"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Ihre Mitarbeitenden als starke Abwehr"
+  }
+}

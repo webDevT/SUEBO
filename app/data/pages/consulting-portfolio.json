@@ -1,0 +1,76 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>«Quick-Wins» identifizieren (geringer Aufwand / grosser Mehrwert)</p>"
+      },
+      {
+        "content": "<p>Transparenzgewinn und gezielte Ressourcensteuerung</p>"
+      },
+      {
+        "content": "<p>Optimierung / Prüfung Zieldefinition &amp; Governance</p>"
+      },
+      {
+        "content": "<p>Einschätzung und Optimierung bereits getroffener Massnahmen</p>"
+      },
+      {
+        "content": "<p>Verbesserung der Effizienz und aktive Risikominimierung</p>"
+      },
+      {
+        "content": "<p>Schaffung einer Basis für fundierte Entscheidungen</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "IT-Portfoliomanagement",
+    "description": "IT-Portfoliomanagement bedeutet nicht, weniger IT zu machen – sondern die richtige IT",
+    "breadcrumbCurrent": "IT-Portfoliomanagement",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/21_SUEBO_IT-Portfoliomanagement.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "Ein wirksames IT-Portfoliomanagement ist für Organisationen essenziell, um ihre IT-Ressourcen strategisch auf die Unternehmensziele auszurichten und Transparenz über laufende Projekte und Programme zu schaffen."
+        },
+        {
+          "content": "«Maximaler Mehrwert zum besten Preis – so lautet das Motto»"
+        }
+      ],
+      "body": [
+        {
+          "content": "<h3 class=\"h4\">Projekt A, B oder doch besser C</h3>\r\n\t<p>\r\n\t\tEs erlaubt eine priorisierte Steuerung von Investitionen, hilft, Redundanzen zu vermeiden und verbessert die Risikokontrolle. Zudem unterstützt es Führungskräfte dabei, Entscheidungen fundiert zu treffen, indem Potenziale sichtbar gemacht und Ressourcen optimal eingesetzt werden. Durch ein systematisches IT-Portfoliomanagement wird sichergestellt, dass IT-Projekte nicht isoliert betrachtet, sondern im Sinne der Gesamtstrategie gezielt umgesetzt werden. Dies trägt mittel- bis langfristig zur Effizienzsteigerung und hilft gezielt Kosten einzusparen.\r\n\t</p>\r\n\r\n\t<h3 class=\"h4\">Kostenkontrolle</h3>\r\n\t<p>\r\n\t\tDie Mittel sind in der Regel limitiert. Ein professionelles IT-Portfoliomanagement trägt zu einer besseren Kostenkontrolle bei. Einsparpotenziale werden identifiziert und IT-Ausgaben können sehr gezielt gesteuert werden.\r\n\t</p>\r\n\t<p>\r\n\t\tUnser IT-Portfoliomanagement ermöglicht es Organisationen, ihre IT-Landschaft strategisch zu steuern, Kosten zu optimieren, Risiken zu reduzieren und die IT-Strategie den Geschäftszielen auszurichten. Es ist kein einmaliges Projekt, sondern ein kontinuierlicher Prozess, welcher ab einer gewissen Unternehmensgrösse und Komplexität unerlässlich ist.\r\n\t</p>\r\n\r\n\t<h3 class=\"h4\">Typische Herausforderungen</h3>\r\n\t<p>\r\n\t\tEin professionelles IT-Portfoliomanagement bietet grossen strategischen Mehrwert, ist in der Praxis jedoch mit typischen Herausforderungen verbunden.\r\n\t</p>\r\n\t<p>\r\n\t\tHäufig fehlt eine vollständige und qualitativ hochwertige Datenbasis über bestehende Systeme und Anwendungen, was fundierte Entscheidungen erschwert. Auch die Einbindung der Fachbereiche stellt eine Hürde dar – sie kennen den Geschäftsnutzen ihrer Anwendungen, sind aber oft wenig bereit, Veränderungen mitzutragen.\r\n\t</p>\r\n\t<p>\r\n\t\tHinzu kommen fehlende Governance-Strukturen, unklare Verantwortlichkeiten und mangelnde Integration in bestehende Steuerungsprozesse wie Projekt- oder Budgetmanagement. Ohne aktives Change Management stösst IT-Portfoliomanagement zudem häufig auf Widerstand.\r\n\t</p>\r\n\t<p>\r\n\t\tEntscheidend für den Erfolg ist daher ein schrittweises, transparentes Vorgehen mit klaren Rollen und spürbarem Nutzen.\r\n\t</p>\r\n\r\n\t<h3 class=\"h4\">Wir kennen und nutzen die nachhaltigen Standards für Ihre IT-Portfolio-Optimierung:</h3>\r\n\t<ul class=\"steps-list\" style=\"list-style: disc; padding-left: 1.5em;\">\r\n\t\t<li>COBIT – IT-Governance mit starkem Fokus auf Wertbeitrag und Steuerung</li>\r\n\t\t<li>TOGAF – für Integration in Unternehmensarchitektur</li>\r\n\t\t<li>ITIL 4 – speziell «Service Portfolio Management»</li>\r\n\t\t<li>SAFe / Portfolio Kanban – für agile Projekte</li>\r\n\t</ul>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Erfolgsfaktoren für Ihre Digitalisierung"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Datenqualität «Day One»: Starten Sie im neuen System mit bereinigten, deduplizierten und validierten Daten.</p>"
+      },
+      {
+        "content": "<p>Kein Datenverlust: Lückenlose Protokollierung und Validierung jedes migrierten Datensatzes (Audit-Trail).</p>"
+      },
+      {
+        "content": "<p>Strukturierte Ablage: Automatische Klassifizierung und Metadatierung (Verschlagwortung) während des Transfers.</p>"
+      },
+      {
+        "content": "<p>Rechtssicherheit: Einhaltung von Aufbewahrungsfristen und Datenschutzvorgaben (DSG) beim Umzug.</p>"
+      },
+      {
+        "content": "<p>Minimale Ausfallzeiten: Unsere optimierten Migrationsskripte sorgen für einen schnellen Wechsel («Cut-over»).</p>"
+      },
+      {
+        "content": "<p>Archivierung: Fachgerechte Auslagerung von Altdaten, die im operativen System nicht mehr benötigt werden.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Datenmigrationen",
+    "description": "Datenverlust ist keine Option. Wir bringen Ihr Wissen strukturiert und sicher ins neue System",
+    "breadcrumbCurrent": "Datenmigrationen",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Datenqualität entscheidet über den Projekterfolg"
+      },
+      "columns": [
+        {
+          "content": "Die Einführung eines neuen GEVER-Systems oder einer Fachapplikation steht und fällt mit der Qualität der Daten. Historisch gewachsene Fileserver-Strukturen («Datenfriedhöfe»), unterschiedliche Formate und Duplikate machen die Migration zu einem der grössten Risiken in IT-Projekten. Werden «schlechte» Daten unbereinigt übernommen («Garbage in, Garbage out»), leidet die Akzeptanz des neuen Systems ab Tag eins. Zudem drohen bei fehlerhaften Migrationen Datenverlust und rechtliche Konsequenzen."
+        },
+        {
+          "content": "Wir machen den Umzug sicher und planbar. SUEBO betrachtet Migration nicht als einfaches Kopieren, sondern als Qualitäts-Upgrade für Ihre Informationen. Wir nutzen bewährte ETL-Methoden (Extract, Transform, Load), um Ihre Daten zu extrahieren, zu bereinigen und korrekt klassifiziert in die neue Struktur zu überführen. Wir stellen sicher, dass Metadaten erhalten bleiben, Altlasten archiviert werden und Ihr neues System mit sauberen Daten startet."
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tDatenmigration ist ein technischer Präzisionsjob, der kein «Trial and Error» erlaubt. Wir arbeiten nach einem strikten Phasenmodell. Im ersten Schritt analysieren wir die Quellen und die Qualität Ihrer Bestandsdaten. Gemeinsam definieren wir, welche Daten («Active Data») ins neue System migriert und welche («Passive Data») rechtssicher archiviert oder gelöscht werden sollen.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tEin zentraler Bestandteil unseres Vorgehens ist das «Mapping» und die Bereinigung. Wir transformieren Ihre Daten so, dass sie perfekt in die Logik und Feldstruktur der neuen Software passen. Durch mehrere Test-Migrationen (Dry Runs) und automatisierte Validierungen simulieren wir den Ernstfall, bevor er eintritt. So stellen wir sicher, dass beim finalen «Go-Live» keine Informationen verloren gehen oder korrupt werden. Das Ergebnis ist ein reibungsloser Start ohne böse Überraschungen.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      },
+      {
+        "href": "consulting-gever.html",
+        "label": "GEVER & Digitalisierung"
+      }
+    ]
+  },
+  "relatedCardSections": [
+    {
+      "title": "Effizienz & Struktur",
+      "cards": [
+        {
+          "href": "consulting-prozessoptimierung.html",
+          "title": "Prozessoptimierung",
+          "description": "Erst vereinfachen, dann digitalisieren. Wir analysieren Ihre Arbeitsabläufe, eliminieren Flaschenhälse und designen schlanke Prozesse, die Zeit und Kosten sparen.",
+          "linkLabel": "Mehr Erfahren"
+        },
+        {
+          "href": "consulting-digitale-geschaeftsverwaltung.html",
+          "title": "Digitale Geschäftsverwaltung",
+          "description": "Der moderne Arbeitsplatz. Wir führen GEVER-Lösungen ein, die eine rechtssichere Aktenführung, effiziente Dossier-Verwaltung und transparente Entscheidungswege garantieren.",
+          "linkLabel": "Mehr Erfahren"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Risikofreier Systemwechsel"
+  }
+}

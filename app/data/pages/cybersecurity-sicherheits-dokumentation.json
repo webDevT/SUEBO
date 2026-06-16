@@ -1,0 +1,88 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p><strong class=\"color-white\">Rechtssicherheit:</strong> Nachweis der Sorgfaltspflicht gegenüber Kunden und Behörden.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Audit-Readiness:</strong> Entspannt in jede Prüfung gehen, da alle Unterlagen griffbereit sind.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Unabhängigkeit:</strong> Wissen wird vom «Kopf des Admins» in das Unternehmen transferiert.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Schnellere Reaktion:</strong> Im Krisenfall greifen klare Ablaufpläne statt Chaos.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Struktur:</strong> Transparente Übersicht über Ihre IT-Landschaft und Risiken.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Qualitätssteigerung:</strong> Standardisierte Prozesse reduzieren Fehlerquellen.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Prüfung und Erstellung der Sicherheits-dokumentation",
+    "description": "Was nicht dokumentiert ist, existiert nicht. Wir schaffen rechtssichere Grundlagen für Ihre IT-Sicherheit",
+    "breadcrumbCurrent": "Sicherheits-Dokumentation",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Ordnung schafft Sicherheit"
+      },
+      "columns": [
+        {
+          "content": "Oft ist IT-Sicherheit in den Köpfen der Administratoren vorhanden, aber nicht niedergeschrieben. Das wird spätestens bei einem Audit, einem Sicherheitsvorfall oder einem Personalwechsel zum Problem. Fehlende Konzepte, veraltete Netzwerkpläne oder lückenhafte Notfallhandbücher führen dazu, dass Zertifizierungen (z.B. ISO 27001) scheitern und im Ernstfall wertvolle Zeit verloren geht, weil niemand weiss, was genau zu tun ist."
+        },
+        {
+          "content": "SUEBO schliesst diese Lücke. Wir prüfen Ihre bestehenden Unterlagen auf Vollständigkeit und Aktualität oder erstellen sie von Grund auf neu. Wir schreiben keine \"Papiertiger\", die im Schrank verstauben, sondern praxisnahe Richtlinien und Konzepte. Unsere Experten übersetzen technische Details in verständliche Vorgaben, die sowohl von der Geschäftsleitung als auch von den IT-Mitarbeitenden verstanden und gelebt werden."
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tEine gute Sicherheitsdokumentation ist das Rückgrat Ihrer Compliance. \n\t\t\t\t\tWir unterstützen Sie bei der Erstellung der drei wesentlichen Ebenen:\n\n\t\t\t\t</p>\n\n\t\t\t\t<p><strong>1. Strategische Ebene:</strong> Sicherheitsleitlinien (Security Policies), die den Rahmen vorgeben.</p>\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Konzeptionelle Ebene:</strong> Backup-Konzepte, Berechtigungskonzepte und Zonenmodelle.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Operative Ebene:</strong> Arbeitsanweisungen, Checklisten und detaillierte Notfallpläne (Disaster Recovery).\n\t\t\t\t</p>\n\n\n\t\t\t\t<p class=\"mt-30\">Wir nutzen bewährte Templates und Best Practices, passen diese aber individuell an Ihre Risikolage an. So stellen wir sicher, dass Sie den Anforderungen des Datenschutzes (DSG/DSGVO) und gängiger Sicherheitsstandards genügen.</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Cybersecurity"
+      },
+      {
+        "href": "cybersecurity-compliance-riskmanagement.html",
+        "label": "Compliance & Riskmanagement"
+      }
+    ]
+  },
+  "relatedCardSections": [
+    {
+      "title": "Dokumentation & Beschaffung",
+      "cards": [
+        {
+          "href": "cybersecurity-it-beschaffung.html",
+          "title": "Sichere IT-Beschaffung",
+          "description": "Keine Katze im Sack kaufen. Wir definieren Sicherheitsanforderungen für Ausschreibungen und prüfen Lieferanten auf Herz und Nieren, bevor Sie Verträge unterschreiben.",
+          "linkLabel": "Mehr Erfahren"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Mehrwert durch saubere Dokumentation"
+  }
+}

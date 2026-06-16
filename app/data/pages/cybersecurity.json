@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title": "Cybersecurity-Strategie: Den Feind ohne Kampf besiegen",
+    "description": "Cyberangriffe kennen keine Grenzen. Wir schützen Ihre Organisation ganzheitlich – von der Strategie bis zur technischen Abwehr.",
+    "breadcrumbCurrent": "Cybersecurity",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Beratungstermin vereinbaren"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Ihre Sicherheit ist nur so stark wie das schwächste Glied"
+      },
+      "columns": [
+        {
+          "content": "Jedes Unternehmen ist ein potenzielles Ziel. Ob Phishing, Ransomware oder Social Engineering – die Bedrohungen werden komplexer. Eine einzelne Firewall reicht längst nicht mehr aus"
+        },
+        {
+          "content": "Ein Mangel an Sicherheit wird Sie teurer zu stehen kommen als die Implementierung einer ordnungsgemässen Strategie. SUEBO unterstützt Sie dabei, Risiken systematisch zu minimieren und gesetzliche Vorgaben (Compliance) sicher einzuhalten."
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Unsere Kompetenzen im Überblick",
+    "cards": [
+      {
+        "href": "cybersecurity-strategie.html",
+        "title": "Cybersecurity-Strategie",
+        "description": "Systematische Bewertung von Risiken und Aufbau einer resilienten Sicherheitskultur. Schützen Sie Ihre Reputation proaktiv.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-isms-iso.html",
+        "title": "ISMS & ISO 27001",
+        "description": "Informationssicherheit messbar steuern. Ein ISMS nach ISO 27001 ist das Fundament für Vertrauen und Wettbewerbsvorteile.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-datenschutz.html",
+        "title": "Datenschutz Consulting",
+        "description": "Ohne Datenschutz keine echte Digitalisierung. Wir begleiten Sie von der Analyse bis zur rechtskonformen Umsetzung des neuen DSG.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "title": "Audits & Assessments",
+        "description": "Kennen Sie Ihren Reifegrad? Compliance-Checks, Firewall-Assessments und GAP-Analysen decken Schwachstellen auf.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-offensive.html",
+        "title": "Offensive Security",
+        "description": "Wie denken Hacker? Wir testen Ihre Abwehr mit Penetrationtests, Phishing-Simulationen und Awareness-Trainings.",
+        "linkLabel": "Mehr Erfahren"
+      },
+      {
+        "href": "cybersecurity-projektmanagement.html",
+        "title": "Projekt-Management",
+        "description": "Sichere IT-Beschaffung und professionelle Sicherheitsdokumentationen. Wir leiten Ihre Security-Projekte zum Erfolg.",
+        "linkLabel": "Mehr Erfahren"
+      }
+    ]
+  }
+}

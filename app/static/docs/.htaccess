@@ -1,0 +1,8 @@
+# Directory Listing aus
+Options -Indexes
+
+# falls FancyIndexing aktiv ist
+FancyIndexing Off
+
+# optional: versteckt trotzdem Dateien, falls Indexes irgendwo erzwungen wird
+IndexIgnore *

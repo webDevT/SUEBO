@@ -23,32 +23,28 @@
 			<nav class="breadcrumb" aria-label="Breadcrumb">
 				<ul class="breadcrumb__list">
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="index.html">Startseite</a>
+						<a class="breadcrumb__link" href="{{pages.consultingProzessoptimierung.breadcrumbs.items.0.href}}">{{pages.consultingProzessoptimierung.breadcrumbs.items.0.label}}</a>
 					</li>
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="it-business-consulting.html">IT & Business Consulting</a>
+						<a class="breadcrumb__link" href="{{pages.consultingProzessoptimierung.breadcrumbs.items.1.href}}">{{pages.consultingProzessoptimierung.breadcrumbs.items.1.label}}</a>
 					</li>
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="consulting-gever.html">GEVER & Digitalisierung</a>
+						<a class="breadcrumb__link" href="{{pages.consultingProzessoptimierung.breadcrumbs.items.2.href}}">{{pages.consultingProzessoptimierung.breadcrumbs.items.2.label}}</a>
 					</li>
-					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Prozessoptimierung</li>
+					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">{{pages.consultingProzessoptimierung.hero.breadcrumbCurrent}}</li>
 				</ul>
 			</nav>
 			<!-- end breadcrumb -->
 
 			<div class="hero__content">
-				<h1 class="hero__title">
-					Prozessoptimierung
-				</h1>
+				<h1 class="hero__title">{{pages.consultingProzessoptimierung.hero.title}}</h1>
 
-				<div class="hero__description">
-					Mehr Zeit für das Wesentliche. Wir verwandeln administrative Hürden in effiziente Workflows
-				</div>
+				<div class="hero__description">{{pages.consultingProzessoptimierung.hero.description}}</div>
 
 				<div class="button-wrapper button-wrapper--2">
-					<a href="kontakte.html" class="btn btn--white">
-						Offerte anfordern
-					</a>
+					<a href="{{pages.consultingProzessoptimierung.hero.buttons.0.href}}" class="btn btn--white">
+					{{pages.consultingProzessoptimierung.hero.buttons.0.label}}
+				</a>
 					
 				
 				</div>
@@ -70,34 +66,19 @@
 		<div class="container">
 
 			<div class="section-header">
-				<h2 class="h3 h3--2">
-					Ineffizienz erkennen – Potenzial freisetzen
-				</h2>
+				<h2 class="h3 h3--2">{{pages.consultingProzessoptimierung.textSections.0.header.title}}</h2>
 			</div>
 
 			<div class="row">
 				<div class="col-6">
-					<div class="text-section__item description color-white">
-						Viele Digitalisierungsprojekte scheitern oder bringen nicht den erhofften Nutzen, weil versucht wird, ineffiziente analoge Prozesse 1:1 in Software abzubilden. Das Ergebnis ist ein «digitalisierter schlechter Prozess». Medienbrüche, unnötige Freigabeschleifen, unklare Zuständigkeiten und Doppelspurigkeiten kosten täglich wertvolle Arbeitszeit und frustrieren die Mitarbeitenden. Software allein löst keine organisatorischen Probleme.
-					</div>
+					<div class="text-section__item description color-white">{{pages.consultingProzessoptimierung.textSections.0.columns.0.content}}</div>
 				</div>
 				<div class="col-6">
-					<div class="text-section__item--2 description color-suebo semi-bold text-italic">
-						Wir stellen Ihre Abläufe auf den Prüfstand. Bevor wir über Tools sprechen, analysieren wir Ihre Prozesse auf Flaschenhälse und Verschwendung (Lean Management). Wir designen schlanke, durchgängige Workflows, die medienbruchfrei funktionieren. Unser Ziel ist nicht Bürokratieabbau um jeden Preis, sondern die Schaffung von Prozessen, die tatsächlich gelebt werden und messbar Zeit sparen.
-					</div>
+					<div class="text-section__item--2 description color-suebo semi-bold text-italic">{{pages.consultingProzessoptimierung.textSections.0.columns.1.content}}</div>
 				</div>
 			</div>
 
-			<div class="text-wrapper">
-
-				<p>
-					Eine nachhaltige Prozessoptimierung erfolgt bei SUEBO in klar definierten Schritten. Zunächst nehmen wir Ihre aktuellen Abläufe (Ist-Prozesse) unter die Lupe und visualisieren diese transparent, beispielsweise nach dem BPMN 2.0 Standard. Dabei decken wir Redundanzen, unnötige Wartezeiten und Medienbrüche schonungslos auf.
-				</p>
-				<p>
-					Darauf aufbauend entwickeln wir gemeinsam mit Ihnen die Soll-Prozesse. Wir fragen nicht: «Wie können wir das heutige Formular digitalisieren?», sondern: «Benötigen wir diesen Schritt überhaupt noch?». Wir legen grossen Wert darauf, dass die neuen Abläufe nicht nur auf dem Papier effizient sind, sondern auch praxistauglich für Ihre Mitarbeitenden. Denn Prozessoptimierung ist immer auch Change Management: Wir begleiten Ihr Team bei der Umstellung, um sicherzustellen, dass die neuen Wege verstanden und akzeptiert werden.
-				</p>
-
-			</div>
+			<div class="text-wrapper">{{pages.consultingProzessoptimierung.textSections.0.body.0.content}}</div>
 
 		</div>
 	</section>
@@ -122,88 +103,26 @@
 				<div class="text-image__item">
 
 					<div class="section-header section-header--left">
-						<div class="save-title">
-							IHRE VORTEILE
-						</div>
-						<h2 class="h2">
-							Mehrwert durch schlanke Abläufe
-						</h2>
+						<div class="save-title">{{pages.consultingProzessoptimierung.pageText.text001}}</div>
+						<h2 class="h2">{{pages.consultingProzessoptimierung.pageText.text002}}</h2>
 					</div>
 		
 		<div class="adv-list">
+						{{#each pages.consultingProzessoptimierung.advantages.items}}
 						<div class="adv-item adv-item--2">
 							<div class="adv-item__title-row">
 								<div class="adv-item__number">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
-										<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
-									</svg>
+									<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
+									<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
+								</svg>
 								</div>
 							</div>
 							<div class="adv-item__content">
-								<p><strong class="color-white">Eliminierung von Medienbrüchen:</strong> Schluss mit Ausdrucken, Unterschreiben und erneutem Einscannen.</p>
+								{{content}}
 							</div>
 						</div>
-						<div class="adv-item adv-item--2">
-							<div class="adv-item__title-row">
-								<div class="adv-item__number">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
-									<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
-								</svg></div>
-							</div>
-							<div class="adv-item__content">
-								<p><strong class="color-white">Zeitersparnis und Effizienz:</strong> Schnellere Durchlaufzeiten für Anträge, Rechnungen und Geschäfte.</p>
-							</div>
-						</div>
-						<div class="adv-item adv-item--2">
-							<div class="adv-item__title-row">
-								<div class="adv-item__number">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
-									<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
-								</svg></div>
-							</div>
-							<div class="adv-item__content">
-								<p><strong class="color-white">Qualitätssteigerung:</strong> Standardisierte Abläufe reduzieren die Fehlerquote massiv.</p>
-							</div>
-						</div>
-						<div class="adv-item adv-item--2">
-							<div class="adv-item__title-row">
-								<div class="adv-item__number">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
-									<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
-								</svg></div>
-							</div>
-							<div class="adv-item__content">
-								<p><strong class="color-white">Kostenreduktion:</strong> Weniger manuelle Eingriffe bedeuten geringere Prozesskosten.</p>
-							</div>
-						</div>
-						<div class="adv-item adv-item--2">
-							<div class="adv-item__title-row">
-								<div class="adv-item__number">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
-									<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
-								</svg></div>
-							</div>
-							<div class="adv-item__content">
-								<p><strong class="color-white">Mitarbeiterzufriedenheit:</strong> Klare Verantwortlichkeiten und weniger repetitive Aufgaben motivieren Ihr Team.</p>
-							</div>
-						</div>
-						<div class="adv-item adv-item--2">
-							<div class="adv-item__title-row">
-								<div class="adv-item__number">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10 0C4.48566 0 0 4.48566 0 10C0 15.5143 4.48566 20 10 20C15.5143 20 20 15.5136 20 10C20 4.48645 15.5143 0 10 0ZM10 18.4508C5.34082 18.4508 1.54918 14.66 1.54918 10C1.54918 5.34004 5.34082 1.54918 10 1.54918C14.66 1.54918 18.4508 5.34004 18.4508 10C18.4508 14.66 14.6592 18.4508 10 18.4508Z" fill="#78ABAD"/>
-									<path d="M14.5879 6.52207C14.2727 6.23547 13.7823 6.25793 13.4942 6.57473L8.76918 11.7777L6.48644 9.45703C6.18512 9.15184 5.69559 9.14719 5.39117 9.44773C5.08598 9.7475 5.08133 10.2378 5.38188 10.543L8.23934 13.4477C8.38574 13.5964 8.58402 13.6793 8.7916 13.6793C8.79625 13.6793 8.80168 13.6793 8.80633 13.6801C9.02012 13.6755 9.22152 13.5841 9.3648 13.4261L14.6405 7.6166C14.928 7.29898 14.9047 6.80945 14.5879 6.52207Z" fill="#78ABAD"/>
-								</svg></div>
-							</div>
-							<div class="adv-item__content">
-								<p><strong class="color-white">Basis für die Digitalisierung:</strong> Nur optimierte Prozesse lassen sich erfolgreich in GEVER-Lösungen abbilden.</p>
-							</div>
-						</div>
+						{{/each}}
 					</div>			
 					
 				</div>
@@ -228,15 +147,14 @@
 	<div class="container">
 		<div class="section-header">
 			<h2 class="h3">
-				Effizienz & Struktur
-
+				{{pages.consultingProzessoptimierung.relatedCardSections.0.title}}
 
 			</h2>
 		</div>
 
 		<div class="row row-2">
 			<div class="col-6">
-				<a href="consulting-datenmigrationen.html" class="card card--secondary card--link">
+				<a href="{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.0.href}}" class="card card--secondary card--link">
 					<div class="card__icon card__icon--contact">
 						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M40 0C32.0888 0 24.3552 2.34596 17.7772 6.74121C11.1992 11.1365 6.07234 17.3836 3.04484 24.6927C0.0173318 32.0017 -0.774802 40.0444 0.768606 47.8036C2.31202 55.5628 6.12164 62.6902 11.7157 68.2843C17.3098 73.8784 24.4372 77.688 32.1964 79.2314C39.9556 80.7748 47.9983 79.9827 55.3073 76.9552C62.6164 73.9277 68.8635 68.8008 73.2588 62.2228C77.654 55.6448 80 47.9112 80 40C79.9871 29.3953 75.7687 19.2286 68.27 11.73C60.7714 4.23134 50.6047 0.0129176 40 0ZM17.7733 16.1867C17.7772 15.4288 18.0809 14.7033 18.618 14.1686C19.1552 13.634 19.8821 13.3337 20.64 13.3333H51.6933C52.0682 13.3326 52.4396 13.406 52.7861 13.5491C53.1326 13.6922 53.4474 13.9024 53.7125 14.1675C53.9776 14.4326 54.1878 14.7474 54.3309 15.0939C54.4741 15.4404 54.5474 15.8118 54.5467 16.1867V22.84C54.5474 23.2149 54.4741 23.5863 54.3309 23.9328C54.1878 24.2793 53.9776 24.5941 53.7125 24.8592C53.4474 25.1243 53.1326 25.3344 52.7861 25.4776C52.4396 25.6207 52.0682 25.694 51.6933 25.6933H20.64C19.8821 25.693 19.1552 25.3927 18.618 24.8581C18.0809 24.3234 17.7772 23.5979 17.7733 22.84V16.1867ZM17.7733 30.1333C17.7772 29.3755 18.0809 28.6499 18.6181 28.1153C19.1552 27.5806 19.8821 27.2803 20.64 27.28H51.6933C52.0682 27.2793 52.4396 27.3526 52.7861 27.4958C53.1326 27.6389 53.4474 27.8491 53.7125 28.1142C53.9776 28.3792 54.1878 28.6941 54.3309 29.0406C54.4741 29.3871 54.5474 29.7584 54.5467 30.1333V36.7867C54.5476 37.1623 54.4746 37.5344 54.3317 37.8817C54.1888 38.2291 53.9789 38.5449 53.7139 38.8111C53.4489 39.0773 53.1341 39.2887 52.7874 39.4332C52.4407 39.5778 52.0689 39.6525 51.6933 39.6533H20.64C19.8808 39.65 19.1536 39.3469 18.6167 38.81C18.0798 38.2731 17.7767 37.5459 17.7733 36.7867V30.1333ZM20.64 53.5867C20.2644 53.5876 19.8923 53.5146 19.5449 53.3717C19.1976 53.2288 18.8818 53.0189 18.6156 52.7539C18.3493 52.4889 18.1379 52.1741 17.9934 51.8274C17.8489 51.4807 17.7741 51.1089 17.7733 50.7333V44.0933C17.7744 43.3334 18.0768 42.6049 18.6142 42.0675C19.1515 41.5301 19.8801 41.2277 20.64 41.2267H51.6933C52.0693 41.2263 52.4415 41.3004 52.7887 41.4445C53.1359 41.5886 53.4512 41.7999 53.7164 42.0664C53.9816 42.3328 54.1915 42.6491 54.334 42.9969C54.4765 43.3448 54.5488 43.7174 54.5467 44.0933V45.7867C54.2618 46.1968 54.0915 46.6755 54.0533 47.1733H42.08C38.6133 47.2933 38.7333 51.4533 40.3333 53.5867H20.64ZM42.08 49.08H55.9467V47.4133C55.9504 47.225 56.0089 47.0418 56.115 46.8862C56.2212 46.7306 56.3704 46.6093 56.5444 46.5372C56.7184 46.465 56.9096 46.4451 57.0947 46.48C57.2799 46.5148 57.4508 46.6029 57.5867 46.7333L61.9333 51.0933C62.0221 51.1816 62.0925 51.2865 62.1405 51.402C62.1886 51.5176 62.2133 51.6415 62.2133 51.7666C62.2133 51.8918 62.1886 52.0157 62.1405 52.1312C62.0925 52.2468 62.0221 52.3517 61.9333 52.4399L57.5867 56.8C57.4513 56.9319 57.2803 57.0211 57.0947 57.0567C56.9091 57.0924 56.7172 57.0728 56.5426 57.0004C56.368 56.928 56.2185 56.806 56.1126 56.6496C56.0067 56.4931 55.949 56.3089 55.9467 56.12V54.4667H45.5733C44.6246 54.4713 43.7011 54.1619 42.9467 53.5867C41.7867 52.9867 39.96 49.3467 42.08 49.08ZM57.7867 64.0533H47.4V65.72C47.3953 65.9063 47.3365 66.0873 47.2307 66.2408C47.125 66.3943 46.9768 66.5136 46.8043 66.5843C46.6318 66.655 46.4425 66.674 46.2594 66.6389C46.0763 66.6038 45.9074 66.5161 45.7733 66.3867L41.4133 62.0267C41.3247 61.9397 41.2543 61.836 41.2062 61.7215C41.1581 61.6071 41.1334 61.4841 41.1334 61.36C41.1334 61.2358 41.1581 61.1129 41.2062 60.9985C41.2543 60.884 41.3247 60.7803 41.4133 60.6933L45.7733 56.32C45.9082 56.1896 46.0783 56.1016 46.2626 56.0668C46.447 56.0321 46.6375 56.0521 46.8105 56.1245C46.9836 56.1968 47.1317 56.3183 47.2365 56.4739C47.3412 56.6295 47.3981 56.8124 47.4 57V58.6533H61.2667C61.5202 58.6568 61.7624 58.759 61.9417 58.9383C62.121 59.1176 62.2232 59.3598 62.2267 59.6133C62.2225 60.7896 61.7534 61.9166 60.9217 62.7483C60.0899 63.5801 58.963 64.0492 57.7867 64.0533Z"></path>
@@ -253,16 +171,16 @@
 							
 					</div>
 					<div class="card-title">
-						Datenmigrationen
-					</div>
+					{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.0.title}}
+				</div>
 					<div class="card-description">
-						Sicherer Umzug für Ihr Wissen. Wir überführen Ihre bestehenden Daten und Dokumente strukturiert und verlustfrei in neue Systeme – inklusive Bereinigung und Klassifizierung.
-					</div>
-					<span class="card-link">Mehr Erfahren</span>
+					{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.0.description}}
+				</div>
+					<span class="card-link">{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.0.linkLabel}}</span>
 				</a>
 			</div>
 			<div class="col-6">
-				<a href="consulting-digitale-geschaeftsverwaltung.html" class="card card--secondary card--link">
+				<a href="{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.1.href}}" class="card card--secondary card--link">
 					<div class="card__icon card__icon--contact">
 						
 						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,12 +189,12 @@
 							
 					</div>
 					<div class="card-title">
-						Digitale Geschäftsverwaltung
-					</div>
+					{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.1.title}}
+				</div>
 					<div class="card-description">
-						Der moderne Arbeitsplatz. Wir führen GEVER-Lösungen ein, die eine rechtssichere Aktenführung, effiziente Dossier-Verwaltung und transparente Entscheidungswege garantieren.
-					</div>
-					<span class="card-link">Mehr Erfahren</span>
+					{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.1.description}}
+				</div>
+					<span class="card-link">{{pages.consultingProzessoptimierung.relatedCardSections.0.cards.1.linkLabel}}</span>
 				</a>
 			</div>
 		</div>

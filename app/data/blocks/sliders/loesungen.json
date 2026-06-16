@@ -1,0 +1,53 @@
+{
+  "title": "Unsere Cyber Security Lösungen",
+  "cards": [
+    {
+      "href": "loesungen-vms.html",
+      "title": "Vulnerability Management Service (VMS)",
+      "description": "Kontinuierliches Scannen Ihrer IT-Infrastruktur. Wir identifizieren und bewerten technische Schwachstellen, bevor Hacker sie ausnutzen können.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-cloud-scanning.html",
+      "title": "Cloud & Web Scanning",
+      "description": "Automatisierte Sicherheitsüberprüfungen für Ihre Cloud-Umgebungen (Azure/AWS) und Webapplikationen. Finden Sie Fehlkonfigurationen sofort.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-data-leak.html",
+      "title": "Data Leak Monitoring",
+      "description": "Überwachung des Dark Webs und öffentlicher Quellen. Wir alarmieren Sie sofort, wenn Ihre Unternehmensdaten oder Passwörter geleakt wurden.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-datenschutz-service.html",
+      "title": "Datenschutz-beratung as a Service",
+      "description": "Ihr externer Datenschutzbeauftragter auf Abruf. Laufende Betreuung und Sicherstellung der DSG-Compliance ohne Fixkosten für Personal.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-ciso-service.html",
+      "title": "CISO as a Service",
+      "description": "Strategische Sicherheitsführung on demand. Wir stellen Ihnen einen erfahrenen Chief Information Security Officer (CISO) zur Seite, der Ihre Sicherheitsstrategie plant und Risiken gezielt minimiert.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-quick-check.html",
+      "title": "Quick-Check IT-Sicherheit",
+      "description": "Eine kompakte Standortbestimmung Ihrer aktuellen Sicherheit. Schnelle Ergebnisse, klare Handlungsempfehlungen und \"Low Hanging Fruits\".",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-awareness.html",
+      "title": "Security Awareness System",
+      "description": "Automatisierte Plattform für Mitarbeiterschulungen. Messbare Sensibilisierung gegen Phishing und Social Engineering Kampagnen.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "loesungen-vorlagen.html",
+      "title": "Security Policy Framework",
+      "description": "Sparen Sie Zeit mit bewährten Templates. Richtlinien, Notfallpläne und Prozessbeschreibungen \"Ready-to-use\" für Ihre Compliance.",
+      "linkLabel": "Mehr Erfahren"
+    }
+  ]
+}

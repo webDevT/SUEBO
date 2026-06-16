@@ -1,0 +1,73 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p><strong class=\"color-white\">Messbare Risikominimierung:</strong> Identifikation von «Quick-Wins» und deutliche Reduktion erfolgreicher Angriffe.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Höheres Sicherheitsniveau:</strong> Transparenz über den Wissensstand und Aufbau echter Kompetenz im Team.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Compliance & Datenschutz:</strong> Nachweisliche Erfüllung gesetzlicher Schulungspflichten und Vorgaben.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Schutz der Reputation:</strong> Vermeidung von Datenlecks und Image-Schäden durch menschliches Versagen.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Persönlicher Schutz:</strong> Mitarbeitende lernen, auch ihre privaten Daten besser zu schützen, was die Akzeptanz erhöht.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Security Awareness & Sensibilisierung",
+    "description": "Machen Sie Ihre Mitarbeitenden zur stärksten Verteidigungslinie",
+    "breadcrumbCurrent": "Security Awareness",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/01_SUEBO_IT-Security_Awareness.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "Technische Sicherheitsmassnahmen allein reichen heute nicht mehr aus. Der Faktor Mensch ist oft das primäre Ziel von Angreifern. Phishing-Mails, Social Engineering und unbedachtes Handeln im Arbeitsalltag öffnen Tür und Tor für Cyberkriminelle. Ein einmaliges Training verpufft schnell – was fehlt, ist ein kontinuierliches System, das Wachsamkeit fest in der Unternehmenskultur verankert."
+        },
+        {
+          "content": "«Ihre Cybersicherheit ist nur so stark wie das schwächste Glied der Kette.»<br><br><span class=\"text-muted\">Grundsatz der IT-Sicherheit</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tUnser Security Awareness System ist mehr als nur eine Schulung – es ist eine ganzheitliche Lösung zur nachhaltigen Verhaltensänderung. Wir kombinieren theoretische Wissensvermittlung mit praktischen Übungen, um Ihre Mitarbeitenden für die Gefahren des digitalen Alltags zu sensibilisieren.\n\t\t\t\t</p>\n\n\t\t\t\t<p>\n\t\t\t\t\tDas System setzt auf Interaktion statt trockener Theorie: Durch massgeschneiderte Workshops, regelmässige Phishing-Simulationen und verständliche Lernmaterialien (wie Newsletter oder Plakate) bleibt das Thema Sicherheit präsent. Wir testen die Reaktionen auf realistische Szenarien und decken Wissenslücken auf, bevor sie von Angreifern ausgenutzt werden. So schaffen wir eine Sicherheitskultur, die von der Führungsebene bis zu den Mitarbeitenden gelebt wird.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "losungen-services.html",
+        "label": "Lösungen & Services"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Warum ein Awareness System unverzichtbar ist"
+  }
+}

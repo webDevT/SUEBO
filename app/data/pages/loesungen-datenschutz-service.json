@@ -1,0 +1,97 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Einsatz befristeter externer Datenschutzbeauftragter</p>"
+      },
+      {
+        "content": "<p>Begleitung von Projekten bei datenschutzrechtlichen Fragestellungen</p>"
+      },
+      {
+        "content": "<p>Schulung und Sensibilisierung der Mitarbeitenden</p>"
+      },
+      {
+        "content": "<p>Professionelle Abwicklung von Datenschutzverletzungen</p>"
+      },
+      {
+        "content": "<p>Beratung zur rechtskonformen Umsetzung des Datenschutzes</p>"
+      },
+      {
+        "content": "<p>Sicherstellung der Erfüllung gesetzlicher Anforderungen</p>"
+      },
+      {
+        "content": "<p>Durchführung von Datenschutz-Audits und Gap-Analysen</p>"
+      },
+      {
+        "content": "<p>Ausarbeitung und Verhandlung datenschutzrelevanter Verträge</p>"
+      },
+      {
+        "content": "<p>Beratung zur Auftragsdatenbearbeitung</p>"
+      },
+      {
+        "content": "<p>Durchführung von Datenschutz-Folgenabschätzungen (DSFA)</p>"
+      },
+      {
+        "content": "<p>Design datenschutzkompatibler Geschäftsprozesse (Privacy by Design)</p>"
+      },
+      {
+        "content": "<p>Individuelle Datenschutzanalysen und Risikobewertungen</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Datenschutzberatung",
+    "description": "Ohne Datenschutz gibt es keine echte Digitalisierung",
+    "breadcrumbCurrent": "Datenschutzberatung",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/05_SUEBO_Datenschutzberatung.pdf?usp=sharing",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?"
+      },
+      "columns": [
+        {
+          "content": "Investieren Sie in Ihre Glaubwürdigkeit und Reputation – und damit in das Fundament Ihrer Datenhaltung. Datenschutz ist kein einmaliger Aufwand, sondern ein kontinuierlicher Prozess, der Transparenz schafft und Sicherheit garantiert."
+        },
+        {
+          "content": "Datenschutz bedeutet mehr als nur Verantwortung im Umgang mit Informationen"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tRichtig verstanden ist es nicht ein Hindernis, sondern ein strategischer Wettbewerbsvorteil, ein wirksames Mittel zur Risikominimierung und ein deutliches Bekenntnis zu gelebten Organisationswerten.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tDatenschutz ist ein komplexes Thema – den Überblick zu behalten und auf unterschiedlichste Fragen die richtigen Antworten zu finden, ist anspruchsvoll. Mit dem revidierten Schweizer Datenschutzgesetz (DSG), kantonalen Datenschutzgesetzen und der Europäischen Datenschutz-Grundverordnung (DSGVO) ist diese Herausforderung nicht einfacher geworden.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tUmso wichtiger ist es, sich auf erfahrene Fachpersonen verlassen zu können: Die Datenschutzspezialistinnen und -spezialisten der SUEBO Informatik AG stehen Ihnen kompetent und vertrauensvoll zur Seite.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase semi-bold\">DATENSCHUTZWISSEN AUF ABRUF</div>\n\t\t\t\t<p>\n\t\t\t\t\tEin Anruf genügt – und ein erfahrener Datenschutzprofi unterstützt Sie bei Ihren Aufgaben rund um das Datenschutzgesetz (DSG) sowie die Datenschutz-Grundverordnung (DSGVO). In der Regel stehen unsere Experten sehr rasch zur Verfügung. Gerade im Hinblick auf die Anforderungen des revidierten Datenschutzgesetzes kann sich rascher Handlungsbedarf ergeben.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase semi-bold\">KOSTENGÜNSTIGE EFFIZIENZ</div>\n\t\t\t\t<p>\n\t\t\t\t\tErfahrung schafft Vorsprung: Unsere spezialisierten Expertinnen und Experten erledigen Ihre Datenschutzaufgaben effizient, zielführend und rechtskonform. Das spart Ihre Zeit und Kosten.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase semi-bold\">MASSGESCHNEIDERTE UNTERSTÜTZUNG AUF IHRE BEDÜRFNISSE</div>\n\t\t\t\t<p>\n\t\t\t\t\tOb grosse Organisation oder kleine Unternehmung, Privatwirtschaft oder im öffentlichen Sektor – Konformität mit den Datenschutzvorgaben ist Pflicht, der Weg dorthin jedoch individuell gestaltbar. Sie erhalten genau die Unterstützung, die Sie benötigen, wobei Angemessenheit und Praxistauglichkeit stets im Vordergrund stehen.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase semi-bold\">ERFAHRUNG UND FACHWISSEN</div>\n\t\t\t\t<p>\n\t\t\t\t\tUnsere Datenschutzberater können jederzeit auf das spezialisierte Know-how der Experten der SUEBO Informatik AG zurückgreifen. Besonders in den Bereichen Informations- und IT-Sicherheit – die eng mit dem Datenschutz verknüpft sind – erweist sich dieser interdisziplinäre Ansatz als entscheidender Vorteil.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "losungen-services.html",
+        "label": "Lösungen & Services"
+      }
+    ]
+  },
+  "infoCard": {
+    "title": "Datenschutz & Rechtliches",
+    "description": "Für Fragen zum Datenschutz sowie juristische Anliegen steht Ihnen unser Spezialist direkt zur Verfügung:  <a href=\"mailto:datenschutz@suebo.ch\">datenschutz@suebo.ch</a>"
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Rechtssicherheit statt Haftungsrisiko"
+  }
+}

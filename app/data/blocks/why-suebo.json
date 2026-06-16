@@ -1,0 +1,27 @@
+{
+  "eyebrow": "SCHWEIZER PRÄZISION",
+  "title": "Warum SUEBO?",
+  "description": "Wir verbinden strategische Weitsicht mit operativer Exzellenz.",
+  "items": [
+    {
+      "number": "01.",
+      "title": "Objektivität & Unabhängigkeit",
+      "description": "Wir sind herstellerneutral. Wir beraten Sie professionell, ehrlich und ausschliesslich in Ihrem Interesse."
+    },
+    {
+      "number": "02.",
+      "title": "Transparenz & Klarheit",
+      "description": "Wir schaffen Fakten. Unsere Analysen zeigen Ihnen schonungslos den IST-Zustand und den konkreten Weg zum SOLL-Zustand."
+    },
+    {
+      "number": "03.",
+      "title": "Wirtschaftlichkeit",
+      "description": "Sicherheit muss bezahlbar sein. Wir identifizieren \"Quick-Wins\" – Massnahmen mit geringem Aufwand, aber grossem Mehrwert."
+    },
+    {
+      "number": "04.",
+      "title": "Schweizer Qualität",
+      "description": "Verlässlichkeit, Präzision und absolute Diskretion sind die unverhandelbare Basis unserer Zusammenarbeit."
+    }
+  ]
+}

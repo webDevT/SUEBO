@@ -1,0 +1,79 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn</p>"
+      },
+      {
+        "content": "<p>Erreichen des geforderten Sicherheitsstands / der geforderten Zertifizierungen</p>"
+      },
+      {
+        "content": "<p>Einhaltung der gesetzlichen Vorgaben und Compliance</p>"
+      },
+      {
+        "content": "<p>Wirtschaftliches Vorgehen, um Sicherheitsdefizite zu identifizieren</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation</p>"
+      },
+      {
+        "content": "<p>Finden Sie gezielt Ihre grössten Schwachstellen und schliessen Sie diese nachhaltig</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Quick-Check Informationssicherheit",
+    "description": "Schnell, kostengünstig und effizient – ein Überblick Ihrer Sicherheitslandschaft Ihrer Organisation",
+    "breadcrumbCurrent": "Quick-Check IT-Sicherheit",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/09_SUEBO_Quick-Check_Informationssicherheit.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?"
+      },
+      "columns": [
+        {
+          "content": "Knappe Ressourcen und keine Zeit – Sie brauchen aber Sicherheit?"
+        },
+        {
+          "content": "«Im Zeitalter der Digitalisierung sollte Cybersicherheit keine Option, sondern eine Priorität sein.»"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tJedes Unternehmen kann zum Ziel eines Cyberangriffs werden. Europa war 2025 weltweit erneut sehr stark von Cyberattacken betroffen. Viele dieser Angriffe hätten durch rechtzeitige Updates und das Schliessen bekannter Sicherheitslücken verhindert werden können. Mit einfachen Massnahmen bewirkt man oft an der richtigen Stelle bereits sehr viel.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"h4\">\n\t\t\t\t\tWas ist ein QI?\n\n\t\t\t\t</h3>\n\n\t\t\t\t<div class=\"row row-rev\">\n\t\t\t\t\t<div class=\"col-6\">\n\n\t\t\t\t\t\t<div class=\"text-wrapper mt-0 pt-0\">\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\tEin Quick-Check Informationssicherheit ist eine schnelle und effiziente Überprüfung der aktuellen Sicherheits-massnahmen und - praktiken einer Organisation im Bereich der Informationssicherheit.\n\n\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\t\t\t\t\t\t\nZiel ist es, rasch einen Überblick über die Stärken und möglichen Schwachstellen in der IT-Sicherheitslandschaft eines Unternehmens zu gewinnen.\n\n\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\t\t\t\t\t\tDieser Check dient als erste Einschätzung und kann helfen, kritische Lücken rasch zu identifizieren, bevor sie zu ernsthaften Bedrohungen führen.\n\n\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\t\t\t\t\t\tZusammenfassend ist dies der erste Schritt zur Identifizierung offensichtlicher Sicherheitsrisiken und zur Priorisierung möglicher weiterführender, detaillierteren Untersuchungen.\n\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\t\t\t\t\t\t\nWir sind Ihr Partner für Cybersicherheit und unterstützen Sie bei der Vorbereitung zukünftiger Herausforderungen in diesem Umfeld.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p>\n\nIn einer Welt, in der digitale Prozesse immer mehr an Bedeutung gewinnen, und Cybersicherheit von grundlegender Wichtigkeit ist, sollte die Cybersicherheit keine optionale Zusatzmassnahme sein. Sondern eine wesentliche Voraussetzung, um Ihre Organisation vor Cyberangriffen zu schützen.\n\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t<figure class=\"schema-figure\">\n\t\t\t\t\t\t\t<img src=\"img/sheme2.png\" alt=\"Ablauf und Phasen der IT-Beschaffung\" width=\"1200\" height=\"auto\" loading=\"lazy\" class=\"schema-image\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</figure>\n\t\t\t\t\t</div>\n\t\t\t\t</div>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "losungen-services.html",
+        "label": "Lösungen & Services"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Finden Sie Ihre Lücken, bevor es andere tun",
+    "text003": "PREISE:",
+    "text004": "Organisationen / Firmen bis 50 Mitarbeitende: CHF 3'500.-",
+    "text005": "Organisationen / Firmen bis 100 Mitarbeitende: CHF 5'500.-",
+    "text006": "Organisationen / Firmen über 100 Mitarbeitende: ab CHF 7'500.-"
+  }
+}

@@ -7,11 +7,11 @@
 
 				<div class="section-header">
 					<div class="save-title save-title--center">
-						Contact & Support
+						{{blocks.navigation.footer.contact.eyebrow}}
 					</div>
 
 					<h2 class="h3">
-						Haben Sie Fragen oder benötigen Sie Unterstützung?
+						{{blocks.navigation.footer.contact.title}}
 					</h2>
 				</div>
 				
@@ -20,30 +20,30 @@
 
 					<div class="footer__contact-item">
 						<div class="body-sm-font">
-							ZENTRALE
+							{{blocks.navigation.footer.contact.items.central}}
 						</div>
-						<a href="tel:+41315896565" class="btn btn--transparent">+41 31 589 65 65</a>
+						<a href="tel:{{contacts.phones.central.href}}" class="btn btn--transparent">{{contacts.phones.central.label}}</a>
 					</div>
 
 					<div class="footer__contact-item">
 						<div class="body-sm-font">
-							CYBER SECURITY
+							{{blocks.navigation.footer.contact.items.cyberSecurity}}
 						</div>
-						<a href="tel:+41315896566" class="btn btn--transparent">+41 31 589 65 66</a>
+						<a href="tel:{{contacts.phones.cyberSecurity.href}}" class="btn btn--transparent">{{contacts.phones.cyberSecurity.label}}</a>
 					</div>
 
 					<div class="footer__contact-item">
 						<div class="body-sm-font">
-							IT & BUSINESS CONSULTING
+							{{blocks.navigation.footer.contact.items.consulting}}
 						</div>
-						<a href="tel:+41315896567" class="btn btn--transparent"> +41 31 589 65 67</a>
+						<a href="tel:{{contacts.phones.consulting.href}}" class="btn btn--transparent"> {{contacts.phones.consulting.label}}</a>
 					</div>
 
 					<div class="footer__contact-item">
 						<div class="body-sm-font">
-							LÖSUNGEN & SERVICES
+							{{blocks.navigation.footer.contact.items.services}}
 						</div>
-						<a href="tel:+41315896568" class="btn btn--transparent">+41 31 589 65 68</a>
+						<a href="tel:{{contacts.phones.services.href}}" class="btn btn--transparent">{{contacts.phones.services.label}}</a>
 					</div>
 
 				</div>
@@ -57,53 +57,53 @@
 					
 					<div class="footer__menu-item">
 						<div class="footer__menu-title">
-							Office Zug (HQ)
+							{{offices.zug.title}}
 						</div>
 						<address class="footer__address">
-							Sinserstrasse 67
-							6330 Cham
-							Schweiz
+							{{offices.zug.street}}
+							{{offices.zug.city}}
+							{{offices.zug.country}}
 						</address>
 					</div>
 
 					<div class="footer__menu-item">
 						<div class="footer__menu-title">
-							Office Bern
+							{{offices.bern.title}}
 						</div>
 						<address class="footer__address">
-							Niesenweg 2
-							3422 Kirchberg BE
-							Schweiz
+							{{offices.bern.street}}
+							{{offices.bern.city}}
+							{{offices.bern.country}}
 						</address>
 					</div>
 
 					<div class="footer__menu-item">
 						<div class="footer__menu-title">
-							Office Solothurn
+							{{offices.solothurn.title}}
 						</div>
 						<address class="footer__address">
-							Azaleenstrasse 2
-							4563 Gerlafingen
-							Schweiz
+							{{offices.solothurn.street}}
+							{{offices.solothurn.city}}
+							{{offices.solothurn.country}}
 						</address>
 					</div>
 
 					<div class="footer__menu-item">
 						<div class="footer__menu-title">
-							Direct Link
+							{{blocks.navigation.footer.direct.title}}
 						</div>
 						<div class="footer__menu-list">
 
-							<a href="" class="footer__menu-link">
-								Kontaktdaten
+							<a href="{{blocks.navigation.header.top.contact.href}}" class="footer__menu-link">
+								{{blocks.navigation.footer.direct.contactLabel}}
 							</a>
 
-							<a href="mailto:security@suebo.ch" class="footer__menu-link footer__menu-link--white">
-								security@suebo.ch
+							<a href="mailto:{{contacts.emails.security}}" class="footer__menu-link footer__menu-link--white">
+								{{contacts.emails.security}}
 							</a>
 
-							<a href="tel:+41315896565" class="footer__menu-link footer__menu-link--white">
-								+41 31 589 65 65
+							<a href="tel:{{contacts.phones.central.href}}" class="footer__menu-link footer__menu-link--white">
+								{{contacts.phones.central.label}}
 							</a>
 
 						</div>
@@ -115,24 +115,24 @@
 				<div class="footer__bottom">
 
 					<a href="index.html" class="footer__bottom-logo">
-						<img src="img/logo_main.svg" alt="SUEBO Informatik AS" width="312" height="48" loading="lazy">
+						<img src="img/logo_main.svg" alt="{{company.name}}" width="312" height="48" loading="lazy">
 					</a>
 
 				
 					<div class="footer-bottom-right">
 						<div class="footer__copyright">
-							© 2026 SUEBO Informatik AG. Swiss Made Security.
+							{{company.copyright}}
 						</div>
 
 					<div class="footer__bottom-links">
-						<a href="impressum.html" class="footer__bottom-link">
-							Impressum
+						<a href="{{blocks.navigation.footer.bottomLinks.0.href}}" class="footer__bottom-link">
+							{{blocks.navigation.footer.bottomLinks.0.label}}
 						</a>
-						<a href="datenschutz.html" class="footer__bottom-link">
-							Datenschutz
+						<a href="{{blocks.navigation.footer.bottomLinks.1.href}}" class="footer__bottom-link">
+							{{blocks.navigation.footer.bottomLinks.1.label}}
 						</a>
-						<a href="rechtliches.html" class="footer__bottom-link">
-							Rechtliches
+						<a href="{{blocks.navigation.footer.bottomLinks.2.href}}" class="footer__bottom-link">
+							{{blocks.navigation.footer.bottomLinks.2.label}}
 						</a>
 					</div>
 					</div>

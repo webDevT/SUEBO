@@ -1,0 +1,41 @@
+{
+  "title": "Unsere Cyber Security Lösungen",
+  "cards": [
+    {
+      "href": "consulting-strategie.html",
+      "title": "IT-Strategie",
+      "description": "Ausrichtung Ihrer IT an den Geschäftszielen. Wir entwickeln zukunftsfähige Roadmaps für Ihre digitale Transformation.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "consulting-portfolio.html",
+      "title": "IT-Portfolio Management",
+      "description": "Priorisierte Steuerung von Investitionen. Identifizieren Sie \"Quick-Wins\" und vermeiden Sie Redundanzen in Ihrer Systemlandschaft.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "consulting-projektleitung.html",
+      "title": "IT-Projektleitung",
+      "description": "Wir bringen gefährdete Projekte zurück auf Kurs (\"Sanierung\"). Professionelles Krisenmanagement und Führung komplexer IT-Vorhaben.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "consulting-interim.html",
+      "title": "Interim Management",
+      "description": "Überbrückung von personellen Engpässen. Wir übernehmen temporär Führungsaufgaben (CIO/CISO-Level) mit sofortiger Wirkung.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "consulting-beschaffung.html",
+      "title": "IT-Beschaffung",
+      "description": "Der Schlüssel zum Projekterfolg. Wir begleiten Sie neutral bei öffentlichen Ausschreibungen (Submissionsrecht) und Vertragsgestaltungen.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "consulting-gever.html",
+      "title": "GEVER & Digitalisierung",
+      "description": "Effiziente digitale Geschäftsverwaltung. Wir optimieren Ihre Prozesse für eine papierlose und rechtskonforme Verwaltung.",
+      "linkLabel": "Mehr Erfahren"
+    }
+  ]
+}

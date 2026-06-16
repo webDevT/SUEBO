@@ -1,0 +1,86 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>«Quick-Wins» identifizieren (geringer Aufwand / grosser Mehrwert)</p>"
+      },
+      {
+        "content": "<p>Erreichen der definierten Ziele</p>"
+      },
+      {
+        "content": "<p>Einschätzung bereits getroffener Massnahmen</p>"
+      },
+      {
+        "content": "<p>Verbesserung der Effizienz und Erhöhung der Wirtschaftlichkeit</p>"
+      },
+      {
+        "content": "<p>Schaffung einer professionellen Basis für fundierte Entscheidungen</p>"
+      },
+      {
+        "content": "<p>Kontinuierliche Verbesserung</p>"
+      },
+      {
+        "content": "<p>Basis für gezielte Kosteneinsparungen</p>"
+      },
+      {
+        "content": "<p>Aktive und nachhaltige Risikominimierung</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "GAP-Analyse",
+    "description": "Die GAP-Analyse hilft Ihnen, Ihre Ziele und die Realität in Einklang zu bringen",
+    "breadcrumbCurrent": "GAP-Analyse",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/14_SUEBO_GAP-Analyse.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Die Digitalisierung betrifft in der Regel nicht nur die Geschäftsprozesse, sondern die komplette Organisation und deren Mitarbeitenden"
+      },
+      "columns": [
+        {
+          "content": "In erster Linie geht es darum die Effizienz zu verbessern, die Kosten zu senken und die Geschäftsprozesse zu optimieren. Die Automatisierung von manuellen Abläufen, die Eliminierung vom Medienbrüchen und die Verwendung neuer Technologien sowie das Partnerund Kundenmanagement stehen hier im Fokus."
+        },
+        {
+          "content": "Unsere GAP-Analysen im IT-Umfeld dienen dazu, den Unterschied zwischen aktuellem Zustand der IT-Systeme und angestrebtem Zustand zu identifizieren."
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\t<strong>Identifizierung von Schwachstellen:</strong>\n\t\t\t\t\tMit unseren GAP-Analysen unterstützen wir Sie dabei, gezielt Schwachstellen und Lücken in Ihrem Unternehmen, in Prozessen oder in Projekten zu identifizieren.\n\t\t\t\t</p>\n\n\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Zielorientierung:</strong>\n\t\t\t\t\tDie GAP-Analyse hilft Ihnen dabei, realistische Ziele zu formulieren und fortlaufend auf dessen Erreichung zu überprüfen.\n\t\t\t\t</p>\n\n\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Effektive Ressourcennutzung:</strong>\n\t\t\t\t\tDurch die Identifizierung von Lücken können Ressourcen gezielter eingesetzt werden, um entsprechende Prioritäten zu setzen.\n\t\t\t\t</p>\n\n\t\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Entscheidungsgrundlage:</strong>\n\t\t\t\t\tDie Analyse liefert eine objektive Entscheidungsgrundlage und unterstützt die Auswahl der besten Optionen zur nachhaltigen Schliessung von Lücken und Erreichung der individuellen Ziele.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tUnser Vorgehen für unsere GAP-Analysen im IT-Umfeld sieht wie folgt aus\n\t\t\t\t</h3>\n\n\t\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Zieldefinition:</strong>\n\t\t\t\t\tWir definieren mit Ihnen das Ziel der GAP-Analyse. Was soll erreicht werden? Welche Bereiche der IT-Systeme sollen analysiert werden?\n\t\t\t\t</p>\n\n\t\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Ist-Analyse:</strong>\n\t\t\t\t\tWir sammeln Informationen über den aktuellen Zustand der IT-Systeme. Hierzu können unterschiedliche Daten zu Software, Hardware, Netzwerken, Datenbanken, Sicherheitsmassnahmen etc. ausgewertet werden. Diese Informationen werden nebst vorliegender Dokumentation durch Gespräche mit IT-Mitarbeitenden, und technischen Audits und anderen Methoden gewonnen.\n\t\t\t\t</p>\n\n\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Soll-Analyse:</strong>\n\t\t\t\t\tWir unterstützen Sie beim Definieren des gewünschten Soll-Zustands. Welche Anforderungen müssen erfüllt werden? Wie soll beispielsweise das System in Zukunft funktionieren? Hierzu können beispielsweise Anforderungsdokumente verwendet, bzw. durch uns erstellt werden.\n\t\t\t\t</p>\n\n\t\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Identifikation von Lücken:</strong>\n\t\t\t\t\tWir vergleichen für Sie die Ergebnisse der Ist-Analyse mit den Anforderungen der Soll-Analyse. Dabei identifizieren wir für Sie, welche Bereiche der IT-Systeme den Anforderungen nicht entsprechen und erstellen eine Liste von Lücken, die zwischen dem aktuellen Zustand und dem angestrebten Zustand zu beheben sind.\n\t\t\t\t</p>\n\n\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Priorisierung von Lücken:</strong>\n\t\t\t\t\tWir priorisieren für Sie die identifizierten Lücken nach ihrer Wichtigkeit und Dringlichkeit. Welche Lücken müssen als erstes behoben werden? Welche haben eine geringere Priorität? Wo erzielen Sie den grössten Mehrwert?\n\t\t\t\t</p>\n\n\t\t\t\t\n\t\t\t\t<p>\n\t\t\t\t\t<strong>Entwicklung von Lösungsstrategien:</strong>\n\t\t\t\t\tWir entwickeln für Sie die Strategien, und auch die dazugehörigen Massnahmen, um die bestehende Lücken nachhaltig zu schliessen.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Cybersecurity"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Audits & Assessments"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Vom Ist-Zustand zum Zielbild"
+  }
+}

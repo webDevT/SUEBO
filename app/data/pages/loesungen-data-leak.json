@@ -1,0 +1,79 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Echtzeit-Überwachung gestohlener Zugangsdaten</p>"
+      },
+      {
+        "content": "<p>Erkennung kompromittierter Geräte und Accounts</p>"
+      },
+      {
+        "content": "<p>Früherkennung von Supply-Chain-Angriffen</p>"
+      },
+      {
+        "content": "<p>Vollständige Übersicht über exponierte Systeme</p>"
+      },
+      {
+        "content": "<p>Überwachung ähnlicher und gefälschter Domains</p>"
+      },
+      {
+        "content": "<p>Frühzeitige Erkennung von Phishing-Angriffen</p>"
+      },
+      {
+        "content": "<p>Schutz Ihrer Markenidentität und Kundendaten</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Data Leak Monitoring",
+    "description": "Unfreiwillig veröffentlichte Informationen werden im Darknet schnell zum Risiko",
+    "breadcrumbCurrent": "Data Leak Monitoring",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/04_SUEBO_Data_Leak_Monitoring.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung."
+      },
+      "columns": [
+        {
+          "content": "Gestohlene oder ungewollt veröffentlichte Informationen tauchen oft im Darknet auf – lange bevor ein Unternehmen den Vorfall bemerkt. Schützen Sie Ihre Organisation vor unbemerkten Datenabflüssen."
+        },
+        {
+          "content": "Unfreiwillig veröffentlichte Daten werden im Darknet rasch zum Risiko. Ein kontinuierliches Monitoring ist daher ein zentraler Bestandteil einer modernen Cyber-Sicherheitsstrategie."
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tGestohlene Daten, kompromittierte Geräte oder Bedrohungen in der Lieferkette gefährden Ihr Unternehmen rund um die Uhr. Unsere Leak-Detection-Lösung überwacht kontinuierlich das Dark Web, Hacker-Foren und verdächtige Quellen. So erkennen Sie in Echtzeit, wenn vertrauliche Informationen abfliessen – und können sofort handeln, bevor der Schaden entsteht.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tUnser Data Leak Monitoring Service bietet Ihnen hier entscheidenden Schutz: Wir überwachen kontinuierlich einschlägige Quellen im offenen Web, im Deep Web und im Darknet, um kompromittierte Daten Ihrer Organisation frühzeitig zu erkennen. So gewinnen Sie wertvolle Zeit, um Gegenmassnahmen einzuleiten und Schäden zu verhindern.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase\">ATTACK SURFACE DISCOVERY – SEHEN SIE IHR NETZWERK MIT DEN AUGEN EINES ANGREIFERS</div>\n\t\t\t\t<p>\n\t\t\t\t\tAngreifer scannen ständig nach Schwachstellen. Mit unserer Attack-Surface-Analyse sehen Sie Ihre IT-Infrastruktur aus der Perspektive eines Hackers: offene Ports, bekannte Schwachstellen und vergessene IT-Systeme werden sichtbar – bevor sie ausgenutzt werden können.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase\">DOMAIN & BRAND PROTECTION – IHRE MARKE ZUVERLÄSSIG SCHÜTZEN</div>\n\t\t\t\t<p>\n\t\t\t\t\tCyberkriminelle nutzen gefälschte Domains und Phishing-Attacken, um Ihre Marke zu missbrauchen und Kunden zu täuschen. Wir überwachen kontinuierlich Typosquatting-Domains, betrügerische Websites und Markenmissbrauch im Internet. So schützen Sie Ihren Ruf und das Vertrauen Ihrer Kunden.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "losungen-services.html",
+        "label": "Lösungen & Services"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Agieren Sie, bevor der Schaden entsteht"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Rechtssicherheit: Vermeidung von Bussen und strafrechtlichen Konsequenzen durch Einhaltung des nDSG/DSGVO.</p>"
+      },
+      {
+        "content": "<p>Reputationsschutz: Stärkung des Kundenvertrauens durch transparenten Umgang mit Daten.</p>"
+      },
+      {
+        "content": "<p>Pragmatische Umsetzung: Lösungen, die funktionieren und den Geschäftsalltag nicht unnötig komplizieren.</p>"
+      },
+      {
+        "content": "<p>Expertenwissen auf Abruf: Zugriff auf zertifizierte Datenschutzspezialisten (CIPP/E, CIPM) ohne Fixkosten für internes Personal.</p>"
+      },
+      {
+        "content": "<p>Risikominimierung: Frühzeitiges Erkennen von datenschutzrechtlichen Lücken in Prozessen und IT-Systemen.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Datenschutz Consulting",
+    "description": "Wir machen Datenschutz für Sie handhabbar – rechtskonform, pragmatisch und sicher",
+    "breadcrumbCurrent": "Datenschutz Consulting",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/05_SUEBO_Datenschutzberatung.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen auch 2026 vor äusserst grosse Herausforderungen"
+      },
+      "columns": [
+        {
+          "content": "Mit der Einführung des neuen Schweizer Datenschutzgesetzes (nDSG) und der allgegenwärtigen DSGVO stehen Unternehmen vor komplexen Herausforderungen. Fehlende Datenschutzerklärungen, unklare Bearbeitungsreglemente oder mangelhafte Auftragsdatenverarbeitungsverträge sind keine Bagatellen mehr."
+        },
+        {
+          "content": "«Datenschutz ist kein lästiges Übel, sondern im digitalen Zeitalter ein entscheidendes Qualitätsmerkmal für Ihr Unternehmen.» SUEBO Grundsatz"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\r\n\t\tNeben empfindlichen Bussen droht vor allem der Vertrauensverlust bei Kunden und Partnern. Viele Organisationen sind unsicher: «Sind wir compliant oder stehen wir mit einem Bein im Risiko?»\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tUnser Datenschutz Consulting bringt Licht in den Paragrafen-Dschungel. Wir verstehen Datenschutz nicht als bürokratische Bremse, sondern als Fundament für vertrauensvolle Geschäftsbeziehungen. SUEBO unterstützt Sie dabei, die gesetzlichen Anforderungen (DSG/DSGVO) pragmatisch und effizient in Ihre Geschäftsprozesse zu integrieren.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tWir analysieren Ihren aktuellen Reifegrad (GAP-Analyse), erstellen die notwendigen Dokumente (wie das Verzeichnis der Bearbeitungstätigkeiten) und schulen Ihre Mitarbeitenden. Egal, ob Sie punktuelle Beratung bei einem Projekt benötigen oder einen externen Datenschutzberater (DPO) suchen, der die Verantwortung übernimmt – unsere zertifizierten Experten sorgen für Rechtssicherheit, ohne Ihren operativen Betrieb zu lähmen.\r\n\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity.html",
+        "label": "Cybersecurity"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Warum Datenschutz unverzichtbar ist"
+  }
+}

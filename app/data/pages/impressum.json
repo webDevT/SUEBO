@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "breadcrumbCurrent": "Impressum"
+  },
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "Impressum",
+    "text002": "Anbieterkennzeichnung:",
+    "text003": "SUEBO Informatik AG",
+    "text004": "Sinserstrasse 67",
+    "text005": "CH-6330 Cham",
+    "text006": "Kontakt:",
+    "text007": "info (at) suebo.ch",
+    "text008": "Vertretungsberechtigte Personen:",
+    "text009": "Verwaltungsrat:",
+    "text010": "Michael Kurmann",
+    "text011": "Zeichnungsberechtigte:",
+    "text012": "Michael Kurmann",
+    "text013": "Handelsregisteramt:",
+    "text014": "Zug",
+    "text015": "UID:",
+    "text016": "CH-170.3.022.492-7",
+    "text017": "MwSt-Nummer:",
+    "text018": "CHE-104.928.048",
+    "text019": "Einer Nutzung unserer im Rahmen der Impressumspflicht bekanntgegebenen Kontaktdaten zu Werbezwecken wird hiermit ausdrücklich widersprochen. Wir behalten uns für den Fall unverlangt zugesandter Werbe- oder Informationsmaterialien - unabhängig vom verwendeten Medium - ausdrücklich rechtliche Schritte vor. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter",
+    "text020": "https://ec.europa.eu/consumers/odr/",
+    "text021": "finden.",
+    "text022": "Wir sind nicht zur Teilnahme daran verpflichtet und nicht bereit an einem eventuellen Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.\" Mit der Nutzung dieser Webseite, anerkennen Sie unsere Haftungsbeschränkungen und Nutzungsbedingungen. Sie finden diese unter diesem",
+    "text023": "Link",
+    "text024": "finden."
+  }
+}

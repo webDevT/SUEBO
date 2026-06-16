@@ -1,0 +1,73 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Business-IT-Alignment: Die IT unterstützt Ihre Geschäftsziele optimal, statt sie zu limitieren.</p>"
+      },
+      {
+        "content": "<p>Investitionssicherheit: Vermeidung von Fehlinvestitionen durch klare Roadmaps und Budgetplanung.</p>"
+      },
+      {
+        "content": "<p>Effizienzsteigerung: Reduktion von Komplexität und Ablösung veralteter Legacy-Systeme.</p>"
+      },
+      {
+        "content": "<p>Integrierte Sicherheit: Risikominimierung, da Cybersecurity fester Bestandteil der Gesamtstrategie ist (siehe Flyer).</p>"
+      },
+      {
+        "content": "<p>Zukunftsfähigkeit: Skalierbare Architekturen, die mit Ihrem Unternehmen wachsen.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "IT-Strategie",
+    "description": "Vom Kostenfaktor zum Wettbewerbsvorteil: Wir richten Ihre IT konsequent an Ihren Geschäftszielen aus",
+    "breadcrumbCurrent": "IT-Strategie",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/12_SUEBO_Cybersecurity-Strategie.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "Viele IT-Umgebungen sind über Jahre «historisch gewachsen». Das Resultat sind oft komplexe Systemlandschaften, ineffiziente Prozesse und teure Schatten-IT. Wenn die IT-Abteilung nur noch damit beschäftigt ist, den Betrieb am Laufen zu halten («Firefighting»), fehlt die Zeit für Innovationen. Ohne eine klare Strategie wird die IT zur Bremse statt zum Motor des Unternehmenserfolgs."
+        },
+        {
+          "content": "«Wer den Hafen nicht kennt, in den er segeln will, für den ist kein Wind der richtige.» Seneca"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\r\n\t\tEine erfolgreiche IT-Strategie ist der Fahrplan für Ihre digitale Zukunft. SUEBO unterstützt Sie dabei, Ihre IT-Infrastruktur vom reinen Unterstützungsprozess zu einem echten Wertschöpfungsfaktor zu transformieren. Wir analysieren Ihren Ist-Zustand, identifizieren technologische Schulden und definieren gemeinsam mit Ihnen ein klares Zielbild (Target Operating Model).\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tDabei beantworten wir die entscheidenden Fragen: Cloud oder On-Premise? Standardsoftware oder Individualentwicklung? Outsourcing oder Inhousing?\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tEin zentraler Pfeiler jeder modernen IT-Strategie ist die Sicherheit. Wir integrieren «Security by Design» direkt in Ihre strategische Planung. Denn nur eine IT-Landschaft, die von Grund auf sicher und resilient konzipiert ist, bietet die nötige Stabilität für künftiges Wachstum. Unser Ansatz stellt sicher, dass Ihre Investitionen dort getätigt werden, wo sie den grössten geschäftlichen Nutzen stiften.\r\n\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Mehrwert durch strategische Weitsicht"
+  }
+}

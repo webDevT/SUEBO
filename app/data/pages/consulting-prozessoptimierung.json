@@ -1,0 +1,94 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p><strong class=\"color-white\">Eliminierung von Medienbrüchen:</strong> Schluss mit Ausdrucken, Unterschreiben und erneutem Einscannen.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Zeitersparnis und Effizienz:</strong> Schnellere Durchlaufzeiten für Anträge, Rechnungen und Geschäfte.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Qualitätssteigerung:</strong> Standardisierte Abläufe reduzieren die Fehlerquote massiv.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Kostenreduktion:</strong> Weniger manuelle Eingriffe bedeuten geringere Prozesskosten.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Mitarbeiterzufriedenheit:</strong> Klare Verantwortlichkeiten und weniger repetitive Aufgaben motivieren Ihr Team.</p>"
+      },
+      {
+        "content": "<p><strong class=\"color-white\">Basis für die Digitalisierung:</strong> Nur optimierte Prozesse lassen sich erfolgreich in GEVER-Lösungen abbilden.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Prozessoptimierung",
+    "description": "Mehr Zeit für das Wesentliche. Wir verwandeln administrative Hürden in effiziente Workflows",
+    "breadcrumbCurrent": "Prozessoptimierung",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Ineffizienz erkennen – Potenzial freisetzen"
+      },
+      "columns": [
+        {
+          "content": "Viele Digitalisierungsprojekte scheitern oder bringen nicht den erhofften Nutzen, weil versucht wird, ineffiziente analoge Prozesse 1:1 in Software abzubilden. Das Ergebnis ist ein «digitalisierter schlechter Prozess». Medienbrüche, unnötige Freigabeschleifen, unklare Zuständigkeiten und Doppelspurigkeiten kosten täglich wertvolle Arbeitszeit und frustrieren die Mitarbeitenden. Software allein löst keine organisatorischen Probleme."
+        },
+        {
+          "content": "Wir stellen Ihre Abläufe auf den Prüfstand. Bevor wir über Tools sprechen, analysieren wir Ihre Prozesse auf Flaschenhälse und Verschwendung (Lean Management). Wir designen schlanke, durchgängige Workflows, die medienbruchfrei funktionieren. Unser Ziel ist nicht Bürokratieabbau um jeden Preis, sondern die Schaffung von Prozessen, die tatsächlich gelebt werden und messbar Zeit sparen."
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tEine nachhaltige Prozessoptimierung erfolgt bei SUEBO in klar definierten Schritten. Zunächst nehmen wir Ihre aktuellen Abläufe (Ist-Prozesse) unter die Lupe und visualisieren diese transparent, beispielsweise nach dem BPMN 2.0 Standard. Dabei decken wir Redundanzen, unnötige Wartezeiten und Medienbrüche schonungslos auf.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tDarauf aufbauend entwickeln wir gemeinsam mit Ihnen die Soll-Prozesse. Wir fragen nicht: «Wie können wir das heutige Formular digitalisieren?», sondern: «Benötigen wir diesen Schritt überhaupt noch?». Wir legen grossen Wert darauf, dass die neuen Abläufe nicht nur auf dem Papier effizient sind, sondern auch praxistauglich für Ihre Mitarbeitenden. Denn Prozessoptimierung ist immer auch Change Management: Wir begleiten Ihr Team bei der Umstellung, um sicherzustellen, dass die neuen Wege verstanden und akzeptiert werden.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      },
+      {
+        "href": "consulting-gever.html",
+        "label": "GEVER & Digitalisierung"
+      }
+    ]
+  },
+  "relatedCardSections": [
+    {
+      "title": "Effizienz & Struktur",
+      "cards": [
+        {
+          "href": "consulting-datenmigrationen.html",
+          "title": "Datenmigrationen",
+          "description": "Sicherer Umzug für Ihr Wissen. Wir überführen Ihre bestehenden Daten und Dokumente strukturiert und verlustfrei in neue Systeme – inklusive Bereinigung und Klassifizierung.",
+          "linkLabel": "Mehr Erfahren"
+        },
+        {
+          "href": "consulting-digitale-geschaeftsverwaltung.html",
+          "title": "Digitale Geschäftsverwaltung",
+          "description": "Der moderne Arbeitsplatz. Wir führen GEVER-Lösungen ein, die eine rechtssichere Aktenführung, effiziente Dossier-Verwaltung und transparente Entscheidungswege garantieren.",
+          "linkLabel": "Mehr Erfahren"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Mehrwert durch schlanke Abläufe"
+  }
+}

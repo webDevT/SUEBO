@@ -25,25 +25,21 @@
 			<nav class="breadcrumb" aria-label="Breadcrumb">
 				<ul class="breadcrumb__list">
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="index.html">Startseite</a>
+						<a class="breadcrumb__link" href="{{pages.unternehmen.breadcrumbs.items.0.href}}">{{pages.unternehmen.breadcrumbs.items.0.label}}</a>
 					</li>
-					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Unternehmen</li>
+					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">{{pages.unternehmen.hero.breadcrumbCurrent}}</li>
 				</ul>
 			</nav>
 			<!-- end breadcrumb -->
 
 			<div class="hero__content">
-				<h1 class="hero__title">
-					Mehr als nur IT. Wir sind Ihr Partner.
-			</h1>
+				<h1 class="hero__title">{{pages.unternehmen.hero.title}}</h1>
 
-			<div class="hero__description">
-				SUEBO steht für Schweizer Qualität, absolute Verlässlichkeit und eine Sicherheitskultur, die den Menschen in den Mittelpunkt stellt.
-			</div>
+			<div class="hero__description">{{pages.unternehmen.hero.description}}</div>
 
-			<a href="ueber-uns.html" class="btn btn--white">
-				Über SUEBO Informatik AG
-			</a>
+			<a href="{{pages.unternehmen.hero.buttons.0.href}}" class="btn btn--white">
+					{{pages.unternehmen.hero.buttons.0.label}}
+				</a>
 
 		
 			
@@ -60,21 +56,15 @@
 		<div class="container">
 
 			<div class="section-header">
-				<h2 class="h3 h3--2">
-					Unsere Mission: Sicherheit schaffen
-				</h2>			
+				<h2 class="h3 h3--2">{{pages.unternehmen.textSections.0.header.title}}</h2>			
 			</div>
 
 			<div class="row">
 				<div class="col-6">
-					<div class="text-section__item description">
-						In einer komplexen digitalen Welt suchen Unternehmen nach Orientierung. Technik allein reicht nicht mehr aus – es braucht Vertrauen und strategischen Weitblick.
-					</div>
+					<div class="text-section__item description">{{pages.unternehmen.textSections.0.columns.0.content}}</div>
 				</div>
 				<div class="col-6">
-					<div class="text-section__item--2 description color-white semi-bold">
-						Wir verbinden technische Exzellenz mit menschlicher Nähe. Als unabhängiger Partner begleiten wir Sie auf Augenhöhe – ehrlich, direkt und transparent.
-					</div>
+					<div class="text-section__item--2 description color-white semi-bold">{{pages.unternehmen.textSections.0.columns.1.content}}</div>
 				</div>
 	</div>
 
@@ -89,7 +79,7 @@
 			<div class="section-header">
 				
 				<h2 class="h3">
-					Unsere Kompetenzen im Überblick
+					{{pages.unternehmen.overview.title}}
 
 				</h2>
 			</div>
@@ -97,7 +87,7 @@
 				<div class="row">
 
 					<div class="col-4">
-						<a href="ueber-uns.html" class="card card--secondary card--link">
+						<a href="{{pages.unternehmen.overview.cards.0.href}}" class="card card--secondary card--link">
 							<div class="card__icon card__icon--contact">
 								
 								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,14 +99,14 @@
 							</div>
 
 							<div class="card-title">
-								Über SUEBO Informatik AG
+								{{pages.unternehmen.overview.cards.0.title}}
 							</div>
 
 							<div class="card-description">
-								Wer wir sind und wofür wir stehen. Unsere Geschichte, unsere Vision und unsere DNA als Schweizer Sicherheitsunternehmen.
+								{{pages.unternehmen.overview.cards.0.description}}
 							</div>
 
-							<span class="card-link">Zum Unternehmensprofil</span>
+							<span class="card-link">{{pages.unternehmen.overview.cards.0.linkLabel}}</span>
 						</a>
 					</div>
 
@@ -146,7 +136,7 @@
 					</div> -->
 
 					<div class="col-4">
-						<a href="karriere.html" class="card card--secondary card--link">
+						<a href="{{pages.unternehmen.overview.cards.1.href}}" class="card card--secondary card--link">
 							<div class="card__icon card__icon--contact">
 								
 
@@ -162,19 +152,19 @@
 							</div>
 
 							<div class="card-title">
-								Karriere & Offene Stellen
+								{{pages.unternehmen.overview.cards.1.title}}
 							</div>
 
 							<div class="card-description">
-								Wollen Sie etwas bewegen? Entdecken Sie offene Stellen und werden Sie Teil unserer Erfolgsgeschichte.
+								{{pages.unternehmen.overview.cards.1.description}}
 							</div>
 
-							<span class="card-link">Zu den Stellenangeboten</span>
+							<span class="card-link">{{pages.unternehmen.overview.cards.1.linkLabel}}</span>
 						</a>
 					</div>
 
 					<div class="col-4">
-						<a href="referenzen.html" class="card card--secondary card--link">
+						<a href="{{pages.unternehmen.overview.cards.2.href}}" class="card card--secondary card--link">
 							<div class="card__icon card__icon--contact">
 
 								<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,14 +178,14 @@
 							</div>
 
 							<div class="card-title">
-								Kunden & Referenzen
+								{{pages.unternehmen.overview.cards.2.title}}
 							</div>
 
 							<div class="card-description">
-								Erfolgsgeschichten unserer Kunden. Sehen Sie, wie wir Unternehmen und Verwaltungen sicherer gemacht haben.
+								{{pages.unternehmen.overview.cards.2.description}}
 							</div>
 
-							<span class="card-link">Zu den Referenzen</span>
+							<span class="card-link">{{pages.unternehmen.overview.cards.2.linkLabel}}</span>
 						</a>
 					</div>
 
@@ -223,15 +213,15 @@
 
 				<div class="banner-content">
 					<h2 class="h2 color--teal">
-					Werden Sie Teil der Lösung
+					{{pages.unternehmen.bannerSections.0.title}}
 				</h2>
 				<div class="description">
-					Suchen Sie einen Partner für Ihr Projekt oder eine neue berufliche Herausforderung?
-				</div>
+				{{pages.unternehmen.bannerSections.0.description}}
+			</div>
 
 				<div class="buttons-wrapper">
-					<a href="kontakte.html" class="btn btn--transparent-white">Kontakt aufnehmen</a>
-					<a href="karriere.html" class="btn btn--white">Karriere</a>
+					<a href="{{pages.unternehmen.bannerSections.0.buttons.0.href}}" class="btn btn--transparent-white">{{pages.unternehmen.bannerSections.0.buttons.0.label}}</a>
+					<a href="{{pages.unternehmen.bannerSections.0.buttons.1.href}}" class="btn btn--white">{{pages.unternehmen.bannerSections.0.buttons.1.label}}</a>
 				</div>	
 
 				</div>

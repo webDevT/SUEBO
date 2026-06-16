@@ -1,0 +1,76 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn.</p>"
+      },
+      {
+        "content": "<p>Erreichen des geforderten Sicherheitsstands / der geforderten Zertifizierungen.</p>"
+      },
+      {
+        "content": "<p>Einhaltung der gesetzlichen Vorgaben und Compliance.</p>"
+      },
+      {
+        "content": "<p>Kostenreduktion durch wirtschaftliche Sicherheitsmassnahmen.</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation.</p>"
+      },
+      {
+        "content": "<p>Finden Sie gezielt Ihre grössten Schwachstellen und schliessen Sie diese nachhaltig.</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Cybersecurity- <br>\r\nStrategie",
+    "description": "Die beste Strategie ist, den Feind ohne Kampf zu besiegen",
+    "breadcrumbCurrent": "Cybersecurity-Strategie",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/12_SUEBO_Cybersecurity-Strategie.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen \r\nund Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "Jedes Unternehmen ist ein potenzielles Ziel von Cyberangriffen. Folglich ist es essenziell, eine Cybersecurity-Strategie zu erarbeiten und danach zu handeln."
+        },
+        {
+          "content": "«Ein Mangel an Sicherheit wird Sie teurer zu stehen kommen als die Implementierung einer ordnungsgemässen IT-Sicherheitsstrategie.» <p>Robert Mueller, \r\n\t\t\t\t\t\tehemaliger Direktor des FBI.</p>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\r\n\t\t<span class=\"color-suebo semi-bold\">Schutz Ihrer Daten:</span> Eine gute Cybersecurity- Strategie hilft Ihnen, sich gegen Bedrohungen wie Malware, Phishing-Angriffen, Ransomware, und viele weitere Bedrohungen zu schützen.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\t<span class=\"color-suebo semi-bold\">Einhaltung von Vorschriften:</span> Wir unterstützen Sie, um auf angepasste oder neue Regulierungen und Vorschriften im Bereich der Informationssicherheit angemessen reagieren zu können.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\t<span class=\"color-suebo semi-bold\">Reputationsmanagement:</span> Definieren Sie die passenden Massnahmen, um Ihre Organisation und Ihre Reputation proaktiv zu schützen.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\t<span class=\"color-suebo semi-bold\">ISMS:</span> Ein Information Security Management System (ISMS) nach anerkannten Normen und Standards umzusetzen, ermöglicht Ihrer Organisation, unabhängig von der Grösse, die Informationssicherheit ganzheitlich zu messen und zu steuern.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\t<span class=\"color-suebo semi-bold\">Wirtschaftlichkeit:</span> Durch eine gut geplante und umgesetzte Cybersecurity-Strategie wird Ihre Organisation längerfristig erhebliche Kosten einsparen.\r\n\t</p>\r\n\r\n\t<p>\r\n\t\tDenken Sie daran: Kriminelle arbeiten international. Cyberangriffe bedrohen unsere kritische Infrastruktur, öffentlichen Verwaltungen, Organisationen und Unternehmen global und jeden Tag. Es ist wichtiger denn je, Ihre IT-Sicherheit zu überprüfen.\r\n\t</p>\r\n\r\n\t<h3 class=\"h4\">Richtig umgesetzt!</h3>\r\n\r\n\t<p>\r\n\t\tDie Umsetzung einer Cybersecurity-Strategie erfordert eine systematische und strukturierte Herangehensweise. Hier sind einige Schritte, bei welchen Sie die Experten der SUEBO Informatik AG in der Umsetzung unterstützen können:\r\n\t</p>\r\n\r\n\t<ol class=\"steps-list\">\r\n\t\t<li><span class=\"color-suebo semi-bold\">Risikobewertung:</span> systematische Bewertung von Risiken, um Bedrohungen und Schwachstellen zu identifizieren.</li>\r\n\t\t<li><span class=\"color-suebo semi-bold\">Sicherheitsrichtlinien:</span> Die Festlegung von Richtlinien und Standards, um sicherzustellen, dass die Informationen und Systeme der Organisation geschützt werden.</li>\r\n\t\t<li><span class=\"color-suebo semi-bold\">Schulungen und Sensibilisierung:</span> Schulung der Mitarbeitenden.</li>\r\n\t\t<li><span class=\"color-suebo semi-bold\">Implementierung von Sicherheitskontrollen:</span> Die Einführung von technischen und physischen Sicherheitskontrollen, um Bedrohungen zu minimieren und die Informationssicherheit zu verbessern.</li>\r\n\t\t<li><span class=\"color-suebo semi-bold\">Überwachung und Bewertung:</span> Die kontinuierliche Überwachung der Sicherheitskontrollen und Überprüfung der Wirksamkeit der Cybersecurity-Strategie.</li>\r\n\t\t<li><span class=\"color-suebo semi-bold\">Reaktion auf Vorfälle:</span> Ein Plan wie angemessen auf Sicherheitsvorfälle reagiert werden sollte, wenn sie auftreten.</li>\r\n\t</ol>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity.html",
+        "label": "Cybersecurity"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Sicherheit, die sich auszahlt"
+  }
+}

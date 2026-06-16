@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "title": "Sicherheit und Strategie für Ihre\n\t\t\t\t<span>digitale Zukunft</span>",
+    "description": "Ihr Schweizer Partner für Informationssicherheit, GEVER und IT-Consulting. Wir schützen kritische Infrastrukturen und optimieren Ihre IT-Beschaffung.",
+    "eyebrow": "CYBERSECURITY <span>•</span> GEVER <span>•</span> CONSULTING",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Sicherheits-Check anfragen"
+      }
+    ]
+  },
+  "factSections": [
+    {
+      "eyebrow": "DIE BEDROHUNGSLAGE",
+      "title": "Sind Sie bereit für die Zukunft?",
+      "description": "Cyberangriffe kennen keine Grenzen – sie treffen öffentliche Verwaltungen und Unternehmen täglich. Ihre Organisation ist nur so sicher wie die schwächste Stelle im System.",
+      "facts": [
+        {
+          "number": "82%",
+          "description": "aller Sicherheitsvorfälle basieren auf menschlichem Versagen (Phishing, schwache Passwörter)."
+        },
+        {
+          "number": "4,3 Mio.",
+          "description": "Franken beträgt der durchschnittliche finanzielle Schaden eines Data Breaches."
+        },
+        {
+          "number": "+61%",
+          "description": "Zunahme von Cyberangriffen auf Schweizer KMU und Organisationen innerhalb eines Jahres."
+        },
+        {
+          "number": "24/7",
+          "description": "finden automatisierte Angriffe auf öffentlich zugängliche Server und Webseiten statt."
+        }
+      ]
+    }
+  ],
+  "targetSection": {
+    "eyebrow": "S • U • E • B • O",
+    "title": "<span>S</span>wiss <span>U</span>nified <span>E</span>nterprise <span>B</span>usiness <span>O</span>perations",
+    "description": "Jede Organisation hat eigene Gesetze und Risiken. Ob strenge Compliance in der Verwaltung oder Agilität im Mittelstand – wir adaptieren unsere Strategien exakt an Ihre Realität.",
+    "cards": [
+      {
+        "title": "Öffentliche Verwaltung",
+        "description": "Massgeschneiderte Lösungen für Bund, Kantone und Gemeinden. Experten für GEVER, digitale Souveränität und rechtskonforme IT-Beschaffung."
+      },
+      {
+        "title": "Kritische Infrastrukturen",
+        "description": "Höchste Sicherheitsstandards für Energie, Transport und Gesundheit (KRITIS). Robuste Abwehr gegen gezielte Angriffe und Ausfälle."
+      },
+      {
+        "title": "KMU & Unternehmen",
+        "description": "Effiziente IT-Sicherheit und pragmatischer Datenschutz (nDSG) für den Mittelstand. Schutz vor Ransomware ohne Betriebsunterbrechung."
+      }
+    ]
+  },
+  "servicesSection": {
+    "eyebrow": "KERNKOMPETENZEN",
+    "title": "Strategie trifft auf Technik",
+    "items": [
+      {
+        "href": "consulting-beschaffung.html",
+        "title": "IT-Beschaffung",
+        "description": "Die Beschaffungsphase ist der Schlüssel für den Erfolg eines IT-Projekts."
+      },
+      {
+        "href": "consulting-interim.html",
+        "title": "Interim Management",
+        "description": "Ähnlich wie die Feuerwehr – sofort da, und geht, wenn die Arbeit erledigt ist."
+      },
+      {
+        "href": "cybersecurity-penetrationtests.html",
+        "title": "Penetrationtests",
+        "description": "IT-Sicherheit stärken – mit professionellen Angriffen vorbeugen."
+      },
+      {
+        "href": "cybersecurity-isms-iso.html",
+        "title": "ISMS & Compliance",
+        "description": "Sicherheit ohne System ist wie ein Haus ohne Fundament."
+      }
+    ],
+    "button": {
+      "href": "losungen-services.html",
+      "label": "Alle Dienstleistungen ansehen"
+    }
+  },
+  "dnaSection": {
+    "eyebrow": "UNSERE DNA",
+    "title": "Architektur statt Flickwerk",
+    "description": "Jede Organisation hat eigene Gesetze und Risiken. Ob strenge Compliance in der Verwaltung oder Agilität im Mittelstand – wir adaptieren unsere Strategien exakt an Ihre Realität.",
+    "advantages": [
+      {
+        "title": "Der Bauplan-Effekt",
+        "description": "Wir planen IT-Projekte so sorgfältig wie Bauvorhaben. Keine Überraschungen, klare Strukturen."
+      },
+      {
+        "title": "Schweizer Qualität",
+        "description": "Verlässlichkeit, Präzision und absolute Diskretion sind die unverhandelbare Basis unserer Zusammenarbeit."
+      },
+      {
+        "title": "Ganzheitlicher Ansatz",
+        "description": "Von der Strategie bis zur technischen Abwehr (Firewall, Cloud, Phishing) – alles aus einer Hand."
+      }
+    ],
+    "button": {
+      "href": "unternehmen.html",
+      "label": "Mehr über Suebo erfahren"
+    }
+  },
+  "clientsSection": {
+    "eyebrow": "Unsere Kunden",
+    "title": "Vertrauen durch Kompetenz"
+  }
+}

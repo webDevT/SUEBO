@@ -1,0 +1,35 @@
+{
+  "title": "Unsere Cyber Security Lösungen",
+  "cards": [
+    {
+      "href": "cybersecurity-compliance-riskmanagement.html",
+      "title": "Compliance & Riskmanagement",
+      "description": "Wir unterstützen Sie dabei, gesetzliche Vorgaben (DSG, ISO) einzuhalten und Risiken systematisch zu steuern, bevor sie zum Haftungsfall werden.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-audit.html",
+      "title": "Cybersecurity-Audit",
+      "description": "Eine 360-Grad-Durchleuchtung Ihrer IT-Sicherheit. Wir prüfen technische Massnahmen und organisatorische Prozesse auf Schwachstellen.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-gap-analyse.html",
+      "title": "GAP-Analyse",
+      "description": "Wo stehen Sie heute und wo müssen Sie hin? Wir identifizieren präzise die Lücken zwischen Ihrem Ist-Zustand und den geforderten Standards (z. B. ISO 27001).",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-firewall-assessment.html",
+      "title": "Firewall Assessment",
+      "description": "Ihre erste Verteidigungslinie im Check. Wir prüfen Regelwerke auf Redundanzen, Sicherheitslücken und gefährliche Fehlkonfigurationen.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-wi-fi-security.html",
+      "title": "Wi-Fi Security",
+      "description": "Sicherstellung, dass Ihr drahtloses Netzwerk leistungsfähig ist, aber kein offenes Tor für Unbefugte oder «Man-in-the-Middle»-Angriffe bietet.",
+      "linkLabel": "Mehr Erfahren"
+    }
+  ]
+}

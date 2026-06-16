@@ -1,0 +1,282 @@
+{
+  "actions": {
+    "mobileMenuOpen": "Menü",
+    "mobileMenuOpenLabel": "Menü öffnen",
+    "mobileMenuCloseLabel": "Menü schliessen",
+    "quickCheck": {
+      "href": "kontakte.html",
+      "label": "Quick-Check"
+    },
+    "searchLabel": "Suche",
+    "searchDialogLabel": "Seiten durchsuchen",
+    "searchCloseLabel": "Suche schliessen",
+    "searchInputLabel": "Suchbegriff",
+    "searchPlaceholder": "Seite suchen…"
+  },
+  "top": {
+    "home": {
+      "href": "index.html",
+      "label": "Startseite"
+    },
+    "cybersecurity": {
+      "label": "Cybersecurity",
+      "href": "cybersecurity.html",
+      "title": "CYBER <br>\n\t\t\t\t\t\t\t\tSECURITY",
+      "mobileTitle": "Direktwahl Security",
+      "description": "Ganzheitlicher Schutz für Ihre digitale Infrastruktur. Von der Strategie bis zur aktiven Abwehr."
+    },
+    "consulting": {
+      "label": "IT & Business Consulting",
+      "href": "it-business-consulting.html",
+      "title": "IT & BUSINESS CONSULTING",
+      "mobileTitle": "Direktwahl consulting",
+      "description": "Optimieren Sie Ihre Prozesse und steuern Sie Ihre IT-Projekte mit strategischer Weitsicht und Effizienz."
+    },
+    "solutions": {
+      "label": "Lösungen & Services",
+      "href": "losungen-services.html",
+      "title": "LÖSUNGEN & SERVICES",
+      "mobileTitle": "Direktwahl solutions",
+      "description": "Managed Security Services und intelligente Tools für kontinuierlichen Schutz und Compliance."
+    },
+    "company": {
+      "label": "Unternehmen",
+      "href": "unternehmen.html",
+      "title": "DAS UNTERNEHMEN",
+      "mobileTitle": "ZENTRALE",
+      "description": "Kompetenz, Vertrauen und Schweizer Qualität seit 1998."
+    },
+    "contact": {
+      "href": "kontakte.html",
+      "label": "Kontakte"
+    }
+  },
+  "mega": {
+    "cybersecurity": {
+      "columns": [
+        {
+          "title": "STRATEGIE & ISO",
+          "items": {
+            "strategy": {
+              "href": "cybersecurity-strategie.html",
+              "label": "Cybersecurity-Strategie"
+            },
+            "offensive": {
+              "href": "cybersecurity-offensive.html",
+              "label": "Offensive Security",
+              "subitems": [
+                {
+                  "href": "cybersecurity-penetrationtests.html",
+                  "label": "Penetrationtests"
+                },
+                {
+                  "href": "cybersecurity-phishing-simulation.html",
+                  "label": "Phishing-Simulation"
+                },
+                {
+                  "href": "cybersecurity-security-awareness-trainings.html",
+                  "label": "Security Awareness & Trainings"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "ANALYSEN & RECHT",
+          "items": {
+            "privacy": {
+              "href": "cybersecurity-datenschutz.html",
+              "label": "Datenschutz Consulting"
+            },
+            "audits": {
+              "href": "cybersecurity-audits.html",
+              "label": "Audits & Assessments"
+            }
+          },
+          "subitems": [
+            {
+              "href": "cybersecurity-audit.html",
+              "label": "Cybersecurity-Audit"
+            },
+            {
+              "href": "cybersecurity-gap-analyse.html",
+              "label": "GAP-Analyse"
+            },
+            {
+              "href": "cybersecurity-firewall-assessment.html",
+              "label": "Firewall Assessment"
+            },
+            {
+              "href": "cybersecurity-wi-fi-security.html",
+              "label": "Wi-Fi Security"
+            },
+            {
+              "href": "cybersecurity-compliance-riskmanagement.html",
+              "label": "Compliance & Riskmanagement"
+            }
+          ]
+        },
+        {
+          "title": "DEFENSE & OPERATIONS",
+          "items": {
+            "isms": {
+              "href": "cybersecurity-isms-iso.html",
+              "label": "ISMS & ISO 27001"
+            },
+            "projectManagement": {
+              "href": "cybersecurity-projektmanagement.html",
+              "label": "Projekt-Management"
+            }
+          },
+          "subitems": [
+            {
+              "href": "cybersecurity-sicherheits-dokumentation.html",
+              "label": "Prüfung und Erstellung der Sicherheits-dokumentation"
+            },
+            {
+              "href": "cybersecurity-it-beschaffung.html",
+              "label": "Sichere IT-Beschaffung"
+            }
+          ]
+        }
+      ]
+    },
+    "consulting": {
+      "columns": [
+        {
+          "title": "STRATEGIE & ASSETS",
+          "items": {
+            "strategy": {
+              "href": "consulting-strategie.html",
+              "label": "IT-Strategie"
+            },
+            "portfolio": {
+              "href": "consulting-portfolio.html",
+              "label": "IT-Portfolio Management"
+            }
+          }
+        },
+        {
+          "title": "FÜHRUNG & PROJEKTE",
+          "items": {
+            "projectManagement": {
+              "href": "consulting-projektleitung.html",
+              "label": "IT-Projektleitung & Projektsanierung"
+            },
+            "interim": {
+              "href": "consulting-interim.html",
+              "label": "Interim Management"
+            }
+          }
+        },
+        {
+          "title": "DIGITALISIERUNG & OPS",
+          "items": {
+            "procurement": {
+              "href": "consulting-beschaffung.html",
+              "label": "IT-Beschaffung"
+            },
+            "gever": {
+              "href": "consulting-gever.html",
+              "label": "GEVER & Digitalisierung"
+            }
+          },
+          "subitems": [
+            {
+              "href": "consulting-digitale-geschaeftsverwaltung.html",
+              "label": "Digitale Geschäftsverwaltung"
+            },
+            {
+              "href": "consulting-prozessoptimierung.html",
+              "label": "Prozessoptimierung"
+            },
+            {
+              "href": "consulting-datenmigrationen.html",
+              "label": "Datenmigrationen"
+            }
+          ]
+        }
+      ]
+    },
+    "solutions": {
+      "columns": [
+        {
+          "title": "SCANNING & MONITORING",
+          "items": {
+            "vms": {
+              "href": "loesungen-vms.html",
+              "label": "Vulnerability Management Service (VMS)"
+            },
+            "cloudScanning": {
+              "href": "loesungen-cloud-scanning.html",
+              "label": "Cloud & Web Scanning"
+            },
+            "dataLeak": {
+              "href": "loesungen-data-leak.html",
+              "label": "Data Leak Monitoring"
+            }
+          }
+        },
+        {
+          "title": "MANAGED EXPERTS",
+          "items": {
+            "privacyService": {
+              "href": "loesungen-datenschutz-service.html",
+              "label": "Datenschutz-beratung as a Service"
+            },
+            "ciso": {
+              "href": "loesungen-ciso-service.html",
+              "label": "CISO as a Service"
+            },
+            "quickCheck": {
+              "href": "loesungen-quick-check.html",
+              "label": "Quick-Check IT-Sicherheit"
+            }
+          }
+        },
+        {
+          "title": "TOOLS & AWARENESS",
+          "items": {
+            "awareness": {
+              "href": "loesungen-awareness.html",
+              "label": "Security Awareness System"
+            },
+            "templates": {
+              "href": "loesungen-vorlagen.html",
+              "label": "Vorlagen-Framework zu Sicherheits-dokumenten"
+            }
+          }
+        }
+      ]
+    },
+    "company": {
+      "columns": [
+        {
+          "title": "GESCHÄFT & TEAM",
+          "items": {
+            "about": {
+              "href": "ueber-uns.html",
+              "label": "Über SUEBO Informatik AG",
+              "description": "Unsere Mission & Werte"
+            },
+            "references": {
+              "href": "referenzen.html",
+              "label": "Kunden & Referenzen",
+              "description": "Unsere Erfolgsgeschichten"
+            }
+          }
+        },
+        {
+          "title": "MACHEN SIE ERFOLG",
+          "items": {
+            "career": {
+              "href": "karriere.html",
+              "label": "Karriere & Offene Stellen",
+              "description": "Werden Sie Teil vom Team!"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

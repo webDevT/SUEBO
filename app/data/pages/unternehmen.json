@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title": "Mehr als nur IT. Wir sind Ihr Partner.",
+    "description": "SUEBO steht für Schweizer Qualität, absolute Verlässlichkeit und eine Sicherheitskultur, die den Menschen in den Mittelpunkt stellt.",
+    "breadcrumbCurrent": "Unternehmen",
+    "buttons": [
+      {
+        "href": "ueber-uns.html",
+        "label": "Über SUEBO Informatik AG"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Unsere Mission: Sicherheit schaffen"
+      },
+      "columns": [
+        {
+          "content": "In einer komplexen digitalen Welt suchen Unternehmen nach Orientierung. Technik allein reicht nicht mehr aus – es braucht Vertrauen und strategischen Weitblick."
+        },
+        {
+          "content": "Wir verbinden technische Exzellenz mit menschlicher Nähe. Als unabhängiger Partner begleiten wir Sie auf Augenhöhe – ehrlich, direkt und transparent."
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      }
+    ]
+  },
+  "overview": {
+    "title": "Unsere Kompetenzen im Überblick",
+    "cards": [
+      {
+        "href": "ueber-uns.html",
+        "title": "Über SUEBO Informatik AG",
+        "description": "Wer wir sind und wofür wir stehen. Unsere Geschichte, unsere Vision und unsere DNA als Schweizer Sicherheitsunternehmen.",
+        "linkLabel": "Zum Unternehmensprofil"
+      },
+      {
+        "href": "karriere.html",
+        "title": "Karriere & Offene Stellen",
+        "description": "Wollen Sie etwas bewegen? Entdecken Sie offene Stellen und werden Sie Teil unserer Erfolgsgeschichte.",
+        "linkLabel": "Zu den Stellenangeboten"
+      },
+      {
+        "href": "referenzen.html",
+        "title": "Kunden & Referenzen",
+        "description": "Erfolgsgeschichten unserer Kunden. Sehen Sie, wie wir Unternehmen und Verwaltungen sicherer gemacht haben.",
+        "linkLabel": "Zu den Referenzen"
+      }
+    ]
+  },
+  "bannerSections": [
+    {
+      "title": "Werden Sie Teil der Lösung",
+      "description": "Suchen Sie einen Partner für Ihr Projekt oder eine neue berufliche Herausforderung?",
+      "buttons": [
+        {
+          "href": "kontakte.html",
+          "label": "Kontakt aufnehmen"
+        },
+        {
+          "href": "karriere.html",
+          "label": "Karriere"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,58 @@ const fs = require('fs');
 const path = require('path');
 
 const SRC_DIR = path.join(__dirname, 'app', 'src');
+const DATA_DIR = path.join(__dirname, 'app', 'data');
 const OUT_FILE = path.join(__dirname, 'app', 'js', 'search-index.json');
+
+function toCamelCase(value) {
+	return value.replace(/-([a-z])/g, (match, letter) => letter.toUpperCase());
+}
+
+function loadContentData() {
+	const sitePath = path.join(DATA_DIR, 'site.json');
+	const data = JSON.parse(fs.readFileSync(sitePath, 'utf8'));
+	const pagesDir = path.join(DATA_DIR, 'pages');
+
+	data.pages = {};
+
+	function loadJsonDirectory(dir, target) {
+		fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
+			const entryPath = path.join(dir, entry.name);
+			const key = toCamelCase(entry.isDirectory() ? entry.name : path.basename(entry.name, '.json'));
+
+			if (entry.isDirectory()) {
+				target[key] = target[key] || {};
+				loadJsonDirectory(entryPath, target[key]);
+				return;
+			}
+
+			if (entry.name.endsWith('.json')) {
+				target[key] = JSON.parse(fs.readFileSync(entryPath, 'utf8'));
+			}
+		});
+	}
+
+	if (fs.existsSync(pagesDir)) loadJsonDirectory(pagesDir, data.pages);
+
+	return data;
+}
+
+function getContentValue(data, key) {
+	return key.split('.').reduce((value, part) => {
+		if (value && Object.prototype.hasOwnProperty.call(value, part)) {
+			return value[part];
+		}
+
+		return null;
+	}, data);
+}
+
+function renderContentTokens(html, data) {
+	return html.replace(/\{\{\s*([a-zA-Z0-9_.-]+)\s*\}\}/g, (match, key) => {
+		const value = getContentValue(data, key);
+		return value === null || value === undefined ? match : value;
+	});
+}
 
 // Human-readable title from filename (fallback when no h1)
 function titleFromFilename(filename) {
@@ -36,9 +87,11 @@ const titlePrefix = {
 	'kontakte.html': 'Kontakte – '
 };
 
+const data = loadContentData();
+
 for (const file of files) {
 	const filePath = path.join(SRC_DIR, file);
-	const html = fs.readFileSync(filePath, 'utf8');
+	const html = renderContentTokens(fs.readFileSync(filePath, 'utf8'), data);
 	let title = extractH1(html) || titleFromFilename(file);
 	if (titlePrefix[file]) title = titlePrefix[file] + title;
 	pages.push({

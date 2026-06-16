@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "Starke Partner. Unabhängige Beratung",
+    "description": "Wir sind technologisch neutral. Wir empfehlen nur Lösungen, die wir selbst getestet haben und denen wir vertrauen.",
+    "breadcrumbCurrent": "Kunden & Referenzen",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Technologie-Beratung anfragen"
+      }
+    ]
+  },
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "./unternehmen.html",
+        "label": "Unternehmen"
+      }
+    ]
+  },
+  "bannerSections": [
+    {
+      "title": "Suchen Sie die passende Technologie?",
+      "description": "Lassen Sie uns gemeinsam evaluieren, was Ihr Unternehmen wirklich braucht.",
+      "buttons": [
+        {
+          "href": "kontakte.html",
+          "label": "Termin vereinbaren"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "Best-of-Breed Strategie",
+    "text002": "Es gibt keine \"Eine-Lösung-für-alles\". Deshalb setzen wir auf ein Netzwerk aus spezialisierten Technologie-Partnern. Ob Firewall, Cloud oder Endpoint-Protection – wir picken die Rosinen für Sie heraus.",
+    "text003": "LOKALE WERTE",
+    "text004": "Schweizer Exzellenz",
+    "text005": "Datensouveränität ist entscheidend. Für Datacenter-Dienstleistungen und sensitive Daten arbeiten wir ausschliesslich mit zertifizierten Schweizer Hostern zusammen."
+  }
+}

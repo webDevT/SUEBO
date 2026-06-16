@@ -1,0 +1,75 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>GAP-Analysen / Reviews / «Quick-Wins»“ identifizieren</p>"
+      },
+      {
+        "content": "<p>Öffentliche Ausschreibungen: Konzeption, Planung und Abwicklung</p>"
+      },
+      {
+        "content": "<p>Beratung für professionelle Vertragsgestaltung</p>"
+      },
+      {
+        "content": "<p>Erstellung IT-Dokumentation: Beratung bei der Erhebung, Erstellung und Abstimmung der IT-Dokumentation\r\n\t\t\t\t\t\t\t\t</p>"
+      },
+      {
+        "content": "<p>Schulungen / Coaching / Mediation\r\n\t\t\t\t\t\t\t\t</p>"
+      },
+      {
+        "content": "<p>Spezialisierte Unterstützung für kritische / sensible Ausschreibungen</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "IT-Beschaffung",
+    "description": "Die Beschaffungsphase ist der Schlüssel für den Erfolg eines IT-Projekts",
+    "breadcrumbCurrent": "IT-Beschaffung",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/18_SUEBO_IT-Beschaffung.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?"
+      },
+      "columns": [
+        {
+          "content": "Verzögerte Termine, überschrittene Budgets, reduzierte Funktionalität – diese Herausforderungen kennen viele Organisationen aus eigener Erfahrung. Besonders öffentlich finanzierte IT-Vorhaben stehen dabei häufig im Fokus der medialen Berichterstattung."
+        },
+        {
+          "content": "«Die Beschaffungsphase ist der Schlüssel für den Erfolg oder \r\nMisserfolg eines IT-Projekts.» <br><br><span class=\"text-muted \">Michael Krigsman, Herausgeber CXOTalk und Industrie-Analyst</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<h3 class=\"h4\">\r\n\t\t\t\t\tWo liegt das Problem?\r\n\r\n\t\t\t\t</h3>\r\n\r\n\t\t\t\t<p>\r\n\t\t\t\t\tDie Ursachen für Projektschwierigkeiten sind vielfältig und oft miteinander verknüpft:\r\n\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tLückenhafte Projektplanung und unklare Anforderungen\r\n\r\n\t\t\t\t\t</li>\r\n\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\tUnzureichende Ressourcen und Kommunikationsdefizite\r\n\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>Technologieentscheidungen ohne strategische Fundierung\r\n\r\n\t\t\t\t\t\t</li>\r\n\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\tFehlendes Change Management\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\r\n\t\t\t\t</ul>\r\n\r\n\t\t\t\t<p>\r\n\r\nDer unterschätzte Erfolgsfaktor: Die Beschaffung <br>\r\nBereits in der Beschaffungsphase entscheidet sich, ob ein IT-Projekt erfolgreich sein wird. Eine professionell aufgesetzte Beschaffung schafft klare Strukturen, definiert realistische Erwartungen und etabliert die Grundlagen für eine erfolgreiche Zusammenarbeit.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<h3 class=\"h4\">\r\n\t\t\t\t\tUnser Beitrag zu Ihrem Erfolg\r\n\r\n\t\t\t\t</h3>\r\n\r\n\t\t\t\t<p>\r\n\t\t\t\t\tDie Spezialisten der SUEBO Informatik AG begleiten Sie durch alle Phasen der IT-Beschaffung. Mit bewährten Methoden und praxiserprobten Ansätzen unterstützen wir Sie dabei, Risiken frühzeitig zu erkennen und Ihr Projekt von Beginn an auf Kurs zu halten.\r\n\t\t\t\t</p>\r\n\r\n\t\t\t\t<h3 class=\"h4\">\r\n\t\t\t\t\tDer Bauplan-Effekt: Was die IT von der Baubranche lernen kann\r\n\r\n\t\t\t\t</h3>\r\n\r\n\t\t\t\t<div class=\"row row-rev\">\r\n\t\t\t\t\t<div class=\"col-6\">\r\n\r\n\t\t\t\t\t\t<div class=\"text-wrapper mt-0 pt-0\">\r\n\t\t\t\t\t\t\t<p>\r\n\t\t\t\t\t\tKein Bauherr beginnt ein Bauprojekt ohne einen detaillierten Plan. Der Architekt definiert Struktur und Design, kalkuliert Kosten und Materialien, plant den Zeitrahmen und stellt die Einhaltung relevanter Normen sicher. Diese methodische Vorgehensweise ist selbstverständlich – und der Schlüssel zum Erfolg.\r\n\r\n\t\t\t\t\t</p>\r\n\r\n\t\t\t\t\t<p>\r\n\t\t\t\t\t\tIn der IT fehlt diese Disziplin oft. Projekte starten ohne klare Planung, Anforderungen bleiben unpräzise und Standards werden vernachlässigt. Die Folgen sind Budgetüberschreitungen, Verzögerungen, funktionale Defizite und unzufriedene Stakeholder.\r\n\r\n\t\t\t\t\t</p>\r\n\r\n\t\t\t\t\t<p>\r\n\t\t\t\t\t\tDie Konsequenz ist klar: IT-Projekte erfordern dieselbe planerische Sorgfalt wie Bauvorhaben – von der Anforderungsdefinition über die Architektur bis hin zur Beschaffung.\r\n\r\n\t\t\t\t\t</p>\r\n\r\n\t\t\t\t\t<p>\r\n\t\t\t\t\t\tGerade die Konzept- und Beschaffungsphase hat entscheidenden Einfluss auf den Projekterfolg. Zentrale Weichen werden hier gestellt und lassen sich später nur mit erheblichem Aufwand oder Schaden korrigieren.\r\n\t\t\t\t\t</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"col-6\">\r\n\t\t\t\t\t\t<figure class=\"schema-figure\">\r\n\t\t\t\t\t\t\t<img src=\"img/shema.png\" alt=\"Ablauf und Phasen der IT-Beschaffung\" width=\"1200\" height=\"auto\" loading=\"lazy\" class=\"schema-image\">\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t</figure>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "Unsere Leistungen",
+    "text002": "Sichere und effiziente Beschaffungs prozesse"
+  }
+}

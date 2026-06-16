@@ -1,0 +1,41 @@
+{
+  "title": "Unsere Cyber Security Lösungen",
+  "cards": [
+    {
+      "href": "cybersecurity-strategie.html",
+      "title": "Cybersecurity-Strategie",
+      "description": "Systematische Bewertung von Risiken und Aufbau einer resilienten Sicherheitskultur. Schützen Sie Ihre Reputation proaktiv.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-isms-iso.html",
+      "title": "ISMS & ISO 27001",
+      "description": "Informationssicherheit messbar steuern. Ein ISMS nach ISO 27001 ist das Fundament für Vertrauen und Wettbewerbsvorteile.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-datenschutz.html",
+      "title": "Datenschutz Consulting",
+      "description": "Ohne Datenschutz keine echte Digitalisierung. Wir begleiten Sie von der Analyse bis zur rechtskonformen Umsetzung des neuen DSG.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-audits.html",
+      "title": "Audits & Assessments",
+      "description": "Kennen Sie Ihren Reifegrad? Compliance-Checks, Firewall-Assessments und GAP-Analysen decken Schwachstellen auf.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-offensive.html",
+      "title": "Offensive Security",
+      "description": "Wie denken Hacker? Wir testen Ihre Abwehr mit Penetrationtests, Phishing-Simulationen und Awareness-Trainings.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-projektmanagement.html",
+      "title": "Projekt-Management",
+      "description": "Sichere IT-Beschaffung und professionelle Sicherheitsdokumentationen. Wir leiten Ihre Security-Projekte zum Erfolg.",
+      "linkLabel": "Mehr Erfahren"
+    }
+  ]
+}

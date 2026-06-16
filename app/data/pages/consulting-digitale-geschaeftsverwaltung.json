@@ -1,0 +1,102 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>«Quick-Wins» identifizieren (geringer Aufwand / grosser Mehrwert)</p>"
+      },
+      {
+        "content": "<p>Steigerung Attraktivität als Arbeitgeber</p>"
+      },
+      {
+        "content": "<p>Kostenreduktion durch Optimierung und Automatisierung</p>"
+      },
+      {
+        "content": "<p>Wettbewerbsvorteil</p>"
+      },
+      {
+        "content": "<p>Qualitätssteigerung</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation</p>"
+      },
+      {
+        "content": "<p>Gewinn von zusätzlichen Ressourcen</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Digitale Geschäftsverwaltung",
+    "description": "Wer nicht digital denkt, wird analog scheitern",
+    "breadcrumbCurrent": "Digitale Geschäftsverwaltung",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/06_SUEBO_Digitale Geschäftsverwaltung.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Was ist digitale Geschäftsverwaltung genau und was sind die Vorteile daraus?"
+      },
+      "columns": [
+        {
+          "content": "Praktisch jedes moderne Unternehmen steht vor der Herausforderung die Chancen der Digitalisierung zu nutzen."
+        },
+        {
+          "content": "Finnland, Schweden und Dänemark haben eines gemeinsam. Alle der drei nordischen Länder haben durch die effektive Nutzung digitaler Technologien ihre Wettbewerbsfähigkeit steigern und signifikante wirtschaftliche Vorteile erzielen können."
+        }
+      ],
+      "body": [
+        {
+          "content": "<h3 class=\"text-30\">\n\t\t\t\t\tVorgehen\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tEine Organisation professionell bei der Digitalisierung zu unterstützen erfordert ein strukturiertes Vorgehen, Wissen und Erfahrung. Es geht nicht nur um Technik, sondern auch um Strategie, Menschen und Prozesse.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tDie Kunst besteht darin bestehende Technologien, analoge Prozesse und das digitale Mindset der Mitarbeitenden mittels IST-Analyse zu erheben. Auf dieser Grundlage folgt die Entwicklung einer Digitalstrategie, die sich eng an den Unternehmenszielen orientiert und konkrete Schwerpunkte für die Digitalisierung definiert.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tWelche Technologie?\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tErst im Anschluss werden passende Technologien ausgewählt – dabei ist wichtig, dass diese zur Strategie passen und zukunftssicher sind. Anschliessend werden Prozesse digitalisiert und wenn möglich automatisiert, wobei nicht nur bestehende Abläufe digital abgebildet, sondern auch kritisch hinterfragt und optimiert werden. Mitarbeitende sind aktiv einzubinden und zu schulen. Die Digitalisierungserfolge werden anhand definierter Kennzahlen regelmässig überprüft und weiterentwickelt, denn Digitalisierung ist kein einmaliges Projekt, sondern ein kontinuierlicher Prozess.\n\t\t\t\t</p>\n\t\t\t\t\n\t\t\t\t<p class=\"mt-30\"><span class=\"semi-bold\">\n\t\t\t\t\tDänemark:\n\t\t\t\t</span>\n\t\t\t\t\tLaut dem IMD World Digital Competitiveness Ranking 2022 belegt Dänemark den dritten Platz weltweit und ist führend in Europa. Dies wird unter anderem auf die hohe Integration von IT in der Gesellschaft und die Anpassungsfähigkeit der Unternehmen zurückgeführt.\n\t\t\t\t</p>\n\t\t\t\t\n\t\t\t\t<p class=\"mt-30\"><span class=\"semi-bold \">\n\t\t\t\t\tSchweden:\n\t\t\t\t</span>\n\t\t\t\t\tDer digitale Sektor trägt über 6 % zum schwedischen Bruttoinlandsprodukt bei, und Prognosen erwarten ein jährliches Wachstum von rund 9 % bis 2027.\n\t\t\t\t</p>\n\t\t\t\n\t\t\t\t<p class=\" mt-30\">\t<span class=\"semi-bold\">\n\t\t\t\t\tFinnland:\n\t\t\t\t</span>\n\t\t\t\t\tIm Digibarometer 2023 erreichte Finnland den ersten Platz, insbesondere aufgrund der fortgeschrittenen Digitalisierung in Unternehmen.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tSpeziell für KMU\n\t\t\t\t</h3>\n\t\t\t\t<p>\n\t\t\t\t\tSpeziell für kleine und mittlere Unternehmen / Organisationen lohnt sich die Nutzung digitaler Chancen, da sie trotz geringerer Ressourcen ihre Wettbewerbsfähigkeit massiv ausbauen bzw. stärken können. Die Nutzung der Möglichkeiten zur Digitalisierung ermöglicht beispielsweise effizientere Arbeitsabläufe, spart Zeit und Kosten und hilft, mit den Erwartungen von Kunden und Partner Schritt zu halten. Zudem eröffnen sich durch digitale Vertriebskanäle und neue Geschäftsmodelle zusätzliche Marktchancen – auch überregional oder international. Digitale Systeme liefern wertvolle Daten für bessere Entscheidungen und steigern zugleich die Attraktivität als moderner Arbeitgeber.\n\t\t\t\t</p>\n\t\t\t\t<p>\n\t\t\t\t\tMit der SUEBO Informatik AG haben Sie einen professionellen und erfahrenen Partner an Ihrer Seite, der Sie zuverlässig bei der Digitalisierung unterstützt.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "it-business-consulting.html",
+        "label": "IT & Business Consulting"
+      },
+      {
+        "href": "consulting-gever.html",
+        "label": "GEVER & Digitalisierung"
+      }
+    ]
+  },
+  "relatedCardSections": [
+    {
+      "title": "Effizienz & Struktur",
+      "cards": [
+        {
+          "href": "consulting-prozessoptimierung.html",
+          "title": "Prozessoptimierung",
+          "description": "Erst vereinfachen, dann digitalisieren. Wir analysieren Ihre Arbeitsabläufe, eliminieren Flaschenhälse und designen schlanke Prozesse, die Zeit und Kosten sparen.",
+          "linkLabel": "Mehr Erfahren"
+        },
+        {
+          "href": "consulting-datenmigrationen.html",
+          "title": "Datenmigrationen",
+          "description": "Sicherer Umzug für Ihr Wissen. Wir überführen Ihre bestehenden Daten und Dokumente strukturiert und verlustfrei in neue Systeme – inklusive Bereinigung und Klassifizierung.",
+          "linkLabel": "Mehr Erfahren"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Zukunftssichern durch digitalen Wandel"
+  }
+}

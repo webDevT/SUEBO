@@ -19,22 +19,15 @@
 			
 
 			<div class="hero__content">
-				<div class="save-title">
-				CYBERSECURITY <span>•</span> GEVER <span>•</span> CONSULTING
-			</div>
+				<div class="save-title">{{pages.index.hero.eyebrow}}</div>
 
-			<h1 class="hero__title">
-				Sicherheit und Strategie für Ihre
-				<span>digitale Zukunft</span>
-			</h1>
+			<h1 class="hero__title">{{pages.index.hero.title}}</h1>
 
-			<div class="hero__description">
-				Ihr Schweizer Partner für Informationssicherheit, GEVER und IT-Consulting. Wir schützen kritische Infrastrukturen und optimieren Ihre IT-Beschaffung.
-			</div>
+			<div class="hero__description">{{pages.index.hero.description}}</div>
 
-			<a href="kontakte.html" class="btn btn--white">
-				Sicherheits-Check anfragen
-			</a>
+			<a href="{{pages.index.hero.buttons.0.href}}" class="btn btn--white">
+					{{pages.index.hero.buttons.0.label}}
+				</a>
 			
 		</div>
 	</section>
@@ -46,16 +39,16 @@
 
 			<div class="section-header">
 				<div class="save-title save-title--center">
-					DIE BEDROHUNGSLAGE
+					{{pages.index.factSections.0.eyebrow}}
 				</div>
 
 				<h2 class="h2">
-					Sind Sie bereit für die Zukunft?
+					{{pages.index.factSections.0.title}}
 				</h2>
 
 				<div class="description">
-					Cyberangriffe kennen keine Grenzen – sie treffen öffentliche Verwaltungen und Unternehmen täglich. Ihre Organisation ist nur so sicher wie die schwächste Stelle im System.
-				</div>
+				{{pages.index.factSections.0.description}}
+			</div>
 		</div>
 
 		<div class="intro__content">
@@ -63,40 +56,40 @@
 			<div class="intro__item">
 
 				<div class="price-number-title">
-					82%
-				</div>
+						{{pages.index.factSections.0.facts.0.number}}
+					</div>
 
-				<p>aller Sicherheitsvorfälle basieren auf menschlichem Versagen (Phishing, schwache Passwörter).</p>
-
-			</div>
-
-			<div class="intro__item">
-
-				<div class="price-number-title">
-					4,3 Mio.
-				</div>
-
-				<p>Franken beträgt der durchschnittliche finanzielle Schaden eines Data Breaches.</p>
+				<p>{{pages.index.factSections.0.facts.0.description}}</p>
 
 			</div>
 
 			<div class="intro__item">
 
 				<div class="price-number-title">
-					+61%
-				</div>
+						{{pages.index.factSections.0.facts.1.number}}
+					</div>
 
-				<p>Zunahme von Cyberangriffen auf Schweizer KMU und Organisationen innerhalb eines Jahres.</p>
+				<p>{{pages.index.factSections.0.facts.1.description}}</p>
 
 			</div>
 
 			<div class="intro__item">
 
 				<div class="price-number-title">
-					24/7
-				</div>
+						{{pages.index.factSections.0.facts.2.number}}
+					</div>
 
-				<p>finden automatisierte Angriffe auf öffentlich zugängliche Server und Webseiten statt.</p>
+				<p>{{pages.index.factSections.0.facts.2.description}}</p>
+
+			</div>
+
+			<div class="intro__item">
+
+				<div class="price-number-title">
+						{{pages.index.factSections.0.facts.3.number}}
+					</div>
+
+				<p>{{pages.index.factSections.0.facts.3.description}}</p>
 
 			</div>
 
@@ -111,14 +104,14 @@
 
 			<div class="section-header">
 				<div class="save-title save-title--center">
-					S • U • E • B • O
+					{{pages.index.targetSection.eyebrow}}
 				</div>
 				<h2 class="h2">
-					<span>S</span>wiss <span>U</span>nified <span>E</span>nterprise <span>B</span>usiness <span>O</span>perations
+					{{pages.index.targetSection.title}}
 				</h2>
 
 				<div class="description">
-					Jede Organisation hat eigene Gesetze und Risiken. Ob strenge Compliance in der Verwaltung oder Agilität im Mittelstand – wir adaptieren unsere Strategien exakt an Ihre Realität.
+					{{pages.index.targetSection.description}}
 				</div>
 			</div>
 
@@ -140,11 +133,11 @@
 							</div>
 
 							<div class="card-title">
-								Öffentliche Verwaltung
+								{{pages.index.targetSection.cards.0.title}}
 							</div>
 
 							<div class="card-description">
-								Massgeschneiderte Lösungen für Bund, Kantone und Gemeinden. Experten für GEVER, digitale Souveränität und rechtskonforme IT-Beschaffung.
+								{{pages.index.targetSection.cards.0.description}}
 							</div>
 								
 						</div>
@@ -161,11 +154,11 @@
 							</div>
 	
 							<div class="card-title">
-								Kritische Infrastrukturen
+								{{pages.index.targetSection.cards.1.title}}
 							</div>
 	
 							<div class="card-description">
-								Höchste Sicherheitsstandards für Energie, Transport und Gesundheit (KRITIS). Robuste Abwehr gegen gezielte Angriffe und Ausfälle.
+								{{pages.index.targetSection.cards.1.description}}
 							</div>
 								
 						</div>
@@ -186,11 +179,11 @@
 							</div>
 	
 							<div class="card-title">
-								KMU & Unternehmen
+								{{pages.index.targetSection.cards.2.title}}
 							</div>
 	
 							<div class="card-description">
-								Effiziente IT-Sicherheit und pragmatischer Datenschutz (nDSG) für den Mittelstand. Schutz vor Ransomware ohne Betriebsunterbrechung.
+								{{pages.index.targetSection.cards.2.description}}
 							</div>
 								
 						</div>
@@ -206,55 +199,55 @@
 		<div class="container">
 			<div class="section-header">
 				<div class="save-title save-title--center">
-					KERNKOMPETENZEN
+					{{pages.index.servicesSection.eyebrow}}
 				</div>
 				<h2 class="h2">
-					Strategie trifft auf Technik
+					{{pages.index.servicesSection.title}}
 				</h2>
 			</div>
 
 
 			<div class="service-content">
-					<a href="consulting-beschaffung.html" class="services__item services__item--1">
+					<a href="{{pages.index.servicesSection.items.0.href}}" class="services__item services__item--1">
 					<div class="services__item-content">
 						<div class="services__item-content-title">
-							IT-Beschaffung
+							{{pages.index.servicesSection.items.0.title}}
 						</div>
 						<div class="services__item-content-description">
-							Die Beschaffungsphase ist der Schlüssel für den Erfolg eines IT-Projekts.
+							{{pages.index.servicesSection.items.0.description}}
 						</div>
 					</div>
 				</a>
 
-				<a href="consulting-interim.html" class="services__item services__item--2">
+				<a href="{{pages.index.servicesSection.items.1.href}}" class="services__item services__item--2">
 					<div class="services__item-content">
 						<div class="services__item-content-title">
-							Interim Management
+							{{pages.index.servicesSection.items.1.title}}
 						</div>
 						<div class="services__item-content-description">
-							Ähnlich wie die Feuerwehr – sofort da, und geht, wenn die Arbeit erledigt ist.
+							{{pages.index.servicesSection.items.1.description}}
 						</div>
 					</div>
 				</a>
 
-				<a href="cybersecurity-penetrationtests.html" class="services__item services__item--3">
+				<a href="{{pages.index.servicesSection.items.2.href}}" class="services__item services__item--3">
 					<div class="services__item-content">
 						<div class="services__item-content-title">
-							Penetrationtests
+							{{pages.index.servicesSection.items.2.title}}
 						</div>
 						<div class="services__item-content-description">
-							IT-Sicherheit stärken – mit professionellen Angriffen vorbeugen.
+							{{pages.index.servicesSection.items.2.description}}
 						</div>
 					</div>
 			</a>
 
-			<a href="cybersecurity-isms-iso.html" class="services__item services__item--4">
+			<a href="{{pages.index.servicesSection.items.3.href}}" class="services__item services__item--4">
 				<div class="services__item-content">
 					<div class="services__item-content-title">
-						ISMS & Compliance
+						{{pages.index.servicesSection.items.3.title}}
 					</div>
 					<div class="services__item-content-description">
-						Sicherheit ohne System ist wie ein Haus ohne Fundament.
+						{{pages.index.servicesSection.items.3.description}}
 					</div>
 				</div>
 		</a>
@@ -350,7 +343,7 @@
 
 			
 			<div class="services__footer">
-				<a href="losungen-services.html" class="btn btn--white">Alle Dienstleistungen ansehen</a>
+				<a href="{{pages.index.servicesSection.button.href}}" class="btn btn--white">{{pages.index.servicesSection.button.label}}</a>
 			</div>
 		
 				
@@ -369,13 +362,13 @@
 
 				<div class="section-header section-header--left">
 					<div class="save-title">
-						UNSERE DNA
+						{{pages.index.dnaSection.eyebrow}}
 					</div>
 					<h2 class="h2">
-						Architektur statt Flickwerk
+						{{pages.index.dnaSection.title}}
 					</h2>
 					<div class="description">
-						Jede Organisation hat eigene Gesetze und Risiken. Ob strenge Compliance in der Verwaltung oder Agilität im Mittelstand – wir adaptieren unsere Strategien exakt an Ihre Realität.
+						{{pages.index.dnaSection.description}}
 					</div>
 				</div>
 
@@ -401,36 +394,36 @@
 
 					<div class="adv-item">
 						<div class="h4">
-							Der Bauplan-Effekt
+							{{pages.index.dnaSection.advantages.0.title}}
 						</div>
 						<p>
-							Wir planen IT-Projekte so sorgfältig wie Bauvorhaben. Keine Überraschungen, klare Strukturen.
+							{{pages.index.dnaSection.advantages.0.description}}
 						</p>
 					</div>
 
 					<div class="adv-item">
 						<div class="h4">
-							Schweizer Qualität
+							{{pages.index.dnaSection.advantages.1.title}}
 						</div>
 						<p>
-							Verlässlichkeit, Präzision und absolute Diskretion sind die unverhandelbare Basis unserer Zusammenarbeit.
+							{{pages.index.dnaSection.advantages.1.description}}
 						</p>
 					</div>
 
 					<div class="adv-item">
 						<div class="h4">
-							Ganzheitlicher Ansatz
+							{{pages.index.dnaSection.advantages.2.title}}
 						</div>
 						<p>
-							Von der Strategie bis zur technischen Abwehr (Firewall, Cloud, Phishing) – alles aus einer Hand.
+							{{pages.index.dnaSection.advantages.2.description}}
 						</p>
 					</div>
 
 				</div>
 
 
-				<a href="unternehmen.html" class="btn btn--white">
-					Mehr über Suebo erfahren
+				<a href="{{pages.index.dnaSection.button.href}}" class="btn btn--white">
+					{{pages.index.dnaSection.button.label}}
 				</a>
 
 			
@@ -446,11 +439,11 @@
 
 			<div class="section-header">
 				<div class="save-title save-title--center">
-					Unsere Kunden
+					{{pages.index.clientsSection.eyebrow}}
 				</div>
 
 				<h2 class="h2">
-					Vertrauen durch Kompetenz
+					{{pages.index.clientsSection.title}}
 				</h2>
 			</div>
 

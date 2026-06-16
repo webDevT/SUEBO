@@ -25,28 +25,24 @@
 			<nav class="breadcrumb" aria-label="Breadcrumb">
 				<ul class="breadcrumb__list">
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="index.html">Startseite</a>
+						<a class="breadcrumb__link" href="{{pages.ueberUns.breadcrumbs.items.0.href}}">{{pages.ueberUns.breadcrumbs.items.0.label}}</a>
 					</li>
 					<li class="breadcrumb__item">
-						<a class="breadcrumb__link" href="./unternehmen.html">Unternehmen</a>
+						<a class="breadcrumb__link" href="{{pages.ueberUns.breadcrumbs.items.1.href}}">{{pages.ueberUns.breadcrumbs.items.1.label}}</a>
 					</li>
-					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Über SUEBO Informatik AG</li>
+					<li class="breadcrumb__item breadcrumb__item--current" aria-current="page">{{pages.ueberUns.hero.breadcrumbCurrent}}</li>
 				</ul>
 			</nav>
 			<!-- end breadcrumb -->
 
 			<div class="hero__content">
-				<h1 class="hero__title">
-					Schweizer Präzision für Ihre IT-Sicherheit
-			</h1>
+				<h1 class="hero__title">{{pages.ueberUns.hero.title}}</h1>
 
-			<div class="hero__description">
-				SUEBO Informatik AG ist Ihr spezialisierter Partner für Cybersecurity, GEVER und strategisches IT-Consulting. Unabhängig, erfahren und persönlich.
-			</div>
+			<div class="hero__description">{{pages.ueberUns.hero.description}}</div>
 
-			<a href="#philosophie" class="btn btn--white">
-				Mehr über uns erfahren
-			</a>
+			<a href="{{pages.ueberUns.hero.buttons.0.href}}" class="btn btn--white">
+					{{pages.ueberUns.hero.buttons.0.label}}
+				</a>
 
 		
 			
@@ -65,34 +61,38 @@
 			<div class="section-header">
 			
 					<h2 class="h2">
-						<span>S</span>wiss <span>U</span>nified <span>E</span>nterprise <span>B</span>usiness <span>O</span>perations
-					</h2>
+					{{pages.ueberUns.factSections.0.title}}
+				</h2>
 				
-				<p class="description">
-					SUEBO steht für operative Exzellenz ohne Kompromisse. Wir sind mehr als nur ein Dienstleister – wir verstehen uns nicht als externer Lieferant, sondern integrieren unsere Enterprise Operations nahtlos in Ihre Struktur. Ein Partner, der Ihre Sprache spricht und Ihre Werte teilt.
-				</p>
+				<p class="description">{{pages.ueberUns.pageText.text001}}</p>
 			</div>
 
 			<div class="row">
 				<div class="col-4">
 					<div class="intro__item intro__item--2">
-						<div class="price-number-title">13</div>
-						<div class="fact-title">EXPERTEN</div>
-						<p>in unserem Team</p>
+						<div class="price-number-title">
+						{{pages.ueberUns.factSections.0.facts.0.number}}
+					</div>
+						<div class="fact-title">{{pages.ueberUns.factSections.0.facts.0.title}}</div>
+						<p>{{pages.ueberUns.factSections.0.facts.0.description}}</p>
 					</div>
 				</div>
 				<div class="col-4">
 					<div class="intro__item intro__item--2">
-						<div class="price-number-title">3</div>
-						<div class="fact-title">STANDORTE</div>
-						<p>Zug, Bern, Solothurn</p>
+						<div class="price-number-title">
+						{{pages.ueberUns.factSections.0.facts.1.number}}
+					</div>
+						<div class="fact-title">{{pages.ueberUns.factSections.0.facts.1.title}}</div>
+						<p>{{pages.ueberUns.factSections.0.facts.1.description}}</p>
 					</div>
 				</div>
 				<div class="col-4">
 					<div class="intro__item intro__item--2">
-						<div class="price-number-title">100%</div>
-						<div class="fact-title">SCHWEIZ</div>
-						<p>Datenhaltung & Know-how</p>
+						<div class="price-number-title">
+						{{pages.ueberUns.factSections.0.facts.2.number}}
+					</div>
+						<div class="fact-title">{{pages.ueberUns.factSections.0.facts.2.title}}</div>
+						<p>{{pages.ueberUns.factSections.0.facts.2.description}}</p>
 					</div>
 				</div>
 			</div>
@@ -127,49 +127,39 @@
 				<div class="text-image__item">
 
 					<div class="section-header section-header--left">
-						<div class="save-title">
-							UNSERE PHILOSOPHIE
-						</div>
-						<h2 class="h2">
-							Werte, die Sicherheit schaffen
-						</h2>
+						<div class="save-title">{{pages.ueberUns.pageText.text002}}</div>
+						<h2 class="h2">{{pages.ueberUns.pageText.text003}}</h2>
 					</div>
 		
 		<div class="adv-list">
 		
 						<div class="adv-item">
 							<div class="adv-item__title-row">
-								<div class="adv-item__number">01.</div>
-								<div class="h4 adv-item__heading">Unabhängigkeit</div>
+								<div class="adv-item__number">{{pages.ueberUns.pageText.text004}}</div>
+								<div class="h4 adv-item__heading">{{pages.ueberUns.pageText.text005}}</div>
 							</div>
 							<div class="adv-item__content">
-								<p>
-									Wir verkaufen keine Lizenzen um der Provision willen. Wir beraten neutral und suchen die beste Lösung für Ihre Situation.
-								</p>
+								<p>{{pages.ueberUns.pageText.text006}}</p>
 							</div>
 						</div>
 		
 						<div class="adv-item">
 							<div class="adv-item__title-row">
-								<div class="adv-item__number">02.</div>
-								<div class="h4 adv-item__heading">Security First</div>
+								<div class="adv-item__number">{{pages.ueberUns.pageText.text007}}</div>
+								<div class="h4 adv-item__heading">{{pages.ueberUns.pageText.text008}}</div>
 							</div>
 							<div class="adv-item__content">
-								<p>
-									Sicherheit ist kein «Add-on», sondern das Fundament. Bei jedem Projekt denken wir Cybersecurity von Anfang an mit.
-								</p>
+								<p>{{pages.ueberUns.pageText.text009}}</p>
 							</div>
 						</div>
 		
 						<div class="adv-item">
 							<div class="adv-item__title-row">
-								<div class="adv-item__number">03.</div>
-								<div class="h4 adv-item__heading">Partnerschaft</div>
+								<div class="adv-item__number">{{pages.ueberUns.pageText.text010}}</div>
+								<div class="h4 adv-item__heading">{{pages.ueberUns.pageText.text011}}</div>
 							</div>
 							<div class="adv-item__content">
-								<p>
-									Wir setzen auf langfristige Beziehungen statt auf schnelle Geschäfte. Ihr Erfolg ist unsere Referenz.
-								</p>
+								<p>{{pages.ueberUns.pageText.text012}}</p>
 							</div>
 						</div>
 		
@@ -206,14 +196,14 @@
 
 				<div class="banner-content">
 					<h2 class="h2 color--teal">
-					Lernen Sie uns persönlich kennen
+					{{pages.ueberUns.bannerSections.0.title}}
 				</h2>
 				<div class="description">
-					Ein Kaffee (oder ein virtuelles Meeting) ist der beste Start für eine sichere Zusammenarbeit.
-				</div>
+				{{pages.ueberUns.bannerSections.0.description}}
+			</div>
 
 				<div class="buttons-wrapper">
-					<a href="kontakte.html" class="btn btn--white">Termin vereinbaren</a>
+					<a href="{{pages.ueberUns.bannerSections.0.buttons.0.href}}" class="btn btn--white">{{pages.ueberUns.bannerSections.0.buttons.0.label}}</a>
 				</div>	
 
 				</div>

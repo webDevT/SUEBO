@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick-Check Informationssicherheit | SUEBO Informatik AG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090e;
+  --bg-card:#0c0f18;
+  --bg-panel:#101420;
+  --bg-header:#0e1221;
+  --border:#181e2e;
+  --border-light:#1f2840;
+  --primary:#c8102e;
+  --primary-dark:#a00d24;
+  --primary-glow:rgba(200,16,46,0.10);
+  --success:#22c55e;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+  --text:#e8edf5;
+  --text-muted:#8a9ab8;
+  --text-dim:#3e4f6a;
+  --cond:'Barlow Condensed',sans-serif;
+  --body:'Barlow',sans-serif;
+  --radius:6px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.6;min-height:100vh}
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex;flex-direction:column}
+.container{max-width:880px;margin:0 auto;padding:0 28px;width:100%}
+
+/* HEADER */
+.site-header{background:rgba(7,9,14,0.97);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(16px)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo img{height:30px;width:auto;display:block}
+.logo-fallback{font-family:var(--cond);font-size:20px;font-weight:800;color:var(--text);letter-spacing:0.06em}
+.header-label{font-family:var(--cond);font-size:12px;font-weight:600;color:var(--text-dim);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap}
+
+/* PROGRESS */
+.progress-wrap{background:var(--bg-card);border-bottom:1px solid var(--border);padding:10px 0}
+.progress-wrap .container{display:flex;align-items:center;gap:16px}
+.progress-label{font-family:var(--cond);font-size:11px;font-weight:700;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap}
+.progress-bar-outer{flex:1;height:3px;background:var(--border);overflow:hidden}
+.progress-bar-inner{height:100%;background:var(--primary);transition:width .4s ease}
+.progress-num{font-family:var(--cond);font-size:13px;font-weight:700;color:var(--text-muted);white-space:nowrap;letter-spacing:0.04em}
+
+/* HERO */
+.hero{flex:1;display:flex;align-items:center;justify-content:center;padding:72px 28px 80px}
+.hero-inner{max-width:700px;width:100%;text-align:center}
+.eyebrow{font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--primary);margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:12px}
+.eyebrow::before{display:none}
+.hero h1{font-family:var(--cond);font-size:clamp(32px,5.2vw,54px);font-weight:800;line-height:1.08;letter-spacing:-0.01em;color:var(--text);margin-bottom:24px}
+.hero p{font-size:16px;color:var(--text-muted);line-height:1.75;max-width:580px;margin:0 auto 40px}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--border)}
+.meta-item{font-family:var(--cond);font-size:13px;font-weight:600;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.meta-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--primary);flex-shrink:0}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:none;transition:all .18s ease;text-decoration:none}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-outline{background:transparent;color:var(--text-muted);border:1px solid var(--border-light)}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary)}
+.btn-sm{padding:9px 20px;font-size:13px}
+
+/* STANDARDS */
+.standards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);margin-top:44px}
+.std-card{background:var(--bg-card);padding:20px}
+.std-label{font-family:var(--cond);font-size:10px;color:var(--text-dim);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:5px}
+.std-name{font-size:13px;color:var(--text-muted);font-weight:500}
+
+/* CATEGORY HEADER */
+.cat-header{background:var(--bg-header);border-bottom:2px solid var(--primary);padding:22px 0}
+.cat-header .container{display:flex;flex-direction:column}
+.cat-eyebrow{font-family:var(--cond);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--primary);margin-bottom:6px}
+.cat-name{font-family:var(--cond);font-size:28px;font-weight:800;letter-spacing:-0.01em;line-height:1;margin-bottom:5px}
+.cat-std{font-family:var(--cond);font-size:11px;color:var(--text-dim);font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
+.cat-desc{font-size:13px;color:var(--text-muted);margin-top:4px}
+
+/* QUIZ */
+.quiz-body{flex:1;padding:32px 0 56px}
+.question-block{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid transparent;padding:24px;margin-bottom:12px;transition:border-color .2s}
+.question-block.answered{border-left-color:var(--primary)}
+.q-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.q-num{font-family:var(--cond);font-size:11px;font-weight:700;color:var(--primary);letter-spacing:0.08em;text-transform:uppercase}
+.q-ref{font-family:var(--cond);font-size:11px;color:var(--text-dim);letter-spacing:0.04em}
+.q-text{font-size:15px;font-weight:500;color:var(--text);margin-bottom:16px;line-height:1.5}
+.options{display:grid;gap:6px}
+.option{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border:1px solid var(--border);cursor:pointer;transition:all .15s}
+.option:hover{border-color:var(--border-light);background:rgba(255,255,255,0.015)}
+.option input[type=radio]{position:absolute;opacity:0;pointer-events:none}
+.option-indicator{width:16px;height:16px;border-radius:50%;border:2px solid var(--border-light);background:transparent;flex-shrink:0;margin-top:2px;transition:all .15s}
+.option-score{font-family:var(--cond);font-size:10px;font-weight:700;padding:2px 8px;flex-shrink:0;margin-top:3px;letter-spacing:0.06em;text-transform:uppercase}
+.score-0{background:rgba(239,68,68,0.10);color:#ef4444}
+.score-1{background:rgba(245,158,11,0.10);color:#f59e0b}
+.score-2{background:rgba(99,102,241,0.10);color:#818cf8}
+.score-3{background:rgba(34,197,94,0.10);color:#22c55e}
+.option-text{font-size:13px;color:var(--text-muted);flex:1;padding-top:2px;line-height:1.4}
+.option.selected{border-color:var(--primary);background:var(--primary-glow)}
+.option.selected .option-indicator{background:var(--primary);border-color:var(--primary)}
+.option.selected .option-text{color:var(--text)}
+
+/* QUIZ NAV */
+.quiz-nav{background:rgba(7,9,14,0.96);border-top:1px solid var(--border);padding:14px 0;position:sticky;bottom:0;z-index:50;backdrop-filter:blur(12px)}
+.quiz-nav .container{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.nav-left,.nav-right{display:flex;gap:8px;align-items:center}
+.unanswered-warn{font-family:var(--cond);font-size:11px;color:var(--warning);letter-spacing:0.08em;text-transform:uppercase;font-weight:700}
+
+/* DOTS */
+.cat-dots{display:flex;gap:3px;flex-wrap:wrap}
+.cat-dot{width:22px;height:3px;background:var(--border-light);transition:all .3s}
+.cat-dot.done{background:var(--primary);opacity:0.45}
+.cat-dot.current{background:var(--primary)}
+
+/* RESULTS */
+.results-screen{padding:48px 0 64px;flex:1}
+.results-hero{background:var(--bg-panel);border:1px solid var(--border);border-top:3px solid var(--primary);padding:40px;margin-bottom:40px}
+.results-eyebrow{font-family:var(--cond);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--primary);margin-bottom:18px}
+.score-display{display:flex;align-items:center;gap:32px;margin-bottom:24px;flex-wrap:wrap}
+.score-circle{width:100px;height:100px;border-radius:50%;position:relative;flex-shrink:0}
+.score-number{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--cond);font-size:30px;font-weight:800;line-height:1}
+.score-sublabel{font-family:var(--cond);font-size:10px;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase}
+.maturity-label{font-family:var(--cond);font-size:24px;font-weight:800;letter-spacing:-0.01em;margin-bottom:8px}
+.results-desc{font-size:14px;color:var(--text-muted);max-width:460px;line-height:1.6}
+
+/* SECTION */
+.section-title{font-family:var(--cond);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-dim);display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* CAT RESULTS */
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-bottom:40px}
+@media(max-width:560px){.results-grid{grid-template-columns:1fr}}
+.cat-result-card{background:var(--bg-card);padding:18px}
+.cat-result-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.cat-result-name{font-family:var(--cond);font-size:13px;font-weight:700;letter-spacing:0.04em;flex:1;text-transform:uppercase}
+.cat-result-pct{font-family:var(--cond);font-size:16px;font-weight:800}
+.cat-bar-outer{height:3px;background:var(--border);overflow:hidden}
+.cat-bar-inner{height:100%;transition:width .6s ease}
+.cat-level{font-family:var(--cond);font-size:11px;margin-top:6px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
+
+/* CHART */
+.chart-section{background:var(--bg-card);border:1px solid var(--border);padding:32px;margin-bottom:32px}
+.chart-wrap{max-width:380px;margin:0 auto}
+
+/* RECS */
+.recommendations{background:var(--bg-card);border:1px solid var(--border);padding:32px;margin-bottom:32px}
+.rec-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)}
+.rec-item:last-child{border-bottom:none;padding-bottom:0}
+.rec-prio-bar{width:3px;flex-shrink:0;border-radius:2px;align-self:stretch}
+.prio-high .rec-prio-bar{background:var(--danger)}
+.prio-mid .rec-prio-bar{background:var(--warning)}
+.prio-low .rec-prio-bar{background:#818cf8}
+.rec-cat{font-family:var(--cond);font-size:11px;color:var(--text-dim);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px}
+.prio-tag{font-family:var(--cond);font-size:10px;font-weight:700;padding:2px 8px;letter-spacing:0.08em;text-transform:uppercase;display:inline-block;margin-bottom:10px}
+.prio-tag-high{background:rgba(239,68,68,0.10);color:#ef4444}
+.prio-tag-mid{background:rgba(245,158,11,0.10);color:#f59e0b}
+.prio-tag-low{background:rgba(129,140,248,0.10);color:#818cf8}
+.rec-measures{list-style:none;display:grid;gap:8px}
+.rec-measures li{display:flex;gap:10px;font-size:13px;color:var(--text-muted);line-height:1.5}
+.rec-measures li::before{content:'→';color:var(--primary);flex-shrink:0;font-family:var(--cond);font-weight:700;font-size:12px;margin-top:1px}
+.rec-measures li strong{color:var(--text);font-weight:600}
+.rec-measure-text{display:block;line-height:1.5}
+.rec-iso{display:block;font-family:var(--cond);font-size:10px;color:var(--text-dim);letter-spacing:0.05em;margin-top:4px}
+
+/* FOOTER */
+.site-footer{border-top:1px solid var(--border);padding:22px 0}
+.site-footer .container{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-logo img{height:20px;opacity:0.5}
+.footer-text{font-size:12px;color:var(--text-dim)}
+.footer-links{display:flex;gap:16px}
+.footer-links a{font-size:12px;color:var(--text-dim);text-decoration:none}
+.footer-links a:hover{color:var(--text-muted)}
+
+/* ACTIONS */
+.results-actions{display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+.disclaimer{background:var(--bg-panel);border:1px solid var(--border);border-left:3px solid var(--border-light);padding:16px 20px;font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:32px}
+.disclaimer a{color:var(--primary);text-decoration:none}
+
+/* ANIM */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.animate{animation:fadeUp .35s ease both}
+.delay-1{animation-delay:.08s}
+.delay-2{animation-delay:.16s}
+.delay-3{animation-delay:.24s}
+
+@media print{
+  /* ── PAGE SETUP ──────────────────────────────────── */
+  @page{margin:18mm 16mm 18mm 16mm;size:A4}
+
+  /* ── ANIMATIONS AUS ──────────────────────────────── */
+  *{animation:none!important;transition:none!important}
+
+  /* ── NUR RESULTS ANZEIGEN ────────────────────────── */
+  #screen-intro,#screen-quiz{display:none!important}
+  #screen-results{display:block!important;min-height:unset}
+
+  /* ── GRUNDRESET ──────────────────────────────────── */
+  *,*::before,*::after{
+    background:transparent!important;
+    box-shadow:none!important;
+    text-shadow:none!important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  body{
+    background:#fff!important;
+    color:#111!important;
+    font-family:'Barlow',Arial,sans-serif!important;
+    font-size:11pt!important;
+    line-height:1.5!important;
+  }
+
+  /* ── VERSTECKTE ELEMENTE ─────────────────────────── */
+  .site-header,
+  .progress-wrap,
+  .quiz-nav,
+  .results-actions,
+  .btn,
+  .chart-section,
+  .animate{display:none!important}
+
+  /* ── LINKS: KEINE UNTERSTREICHUNG ────────────────── */
+  a,a:visited,a:link{
+    text-decoration:none!important;
+    color:#111!important;
+  }
+  .disclaimer a{color:#c8102e!important;text-decoration:none!important}
+
+  /* ── CONTAINER ───────────────────────────────────── */
+  .container{max-width:100%!important;padding:0!important}
+  .results-screen{padding:0!important}
+
+  /* ── PRINT-HEADER ────────────────────────────────── */
+  .results-hero{
+    border:1.5pt solid #ddd!important;
+    border-top:3pt solid #c8102e!important;
+    padding:20pt!important;
+    margin-bottom:18pt!important;
+    page-break-inside:avoid;
+  }
+  .results-eyebrow{
+    color:#c8102e!important;
+    font-size:8pt!important;
+    letter-spacing:0.12em;
+    margin-bottom:12pt!important;
+  }
+  .score-display{
+    display:flex!important;
+    align-items:center!important;
+    gap:20pt!important;
+    margin-bottom:0!important;
+  }
+  .score-circle{
+    width:80pt!important;
+    height:80pt!important;
+    border:2pt solid #ddd!important;
+    border-radius:50%!important;
+    position:relative!important;
+    flex-shrink:0!important;
+  }
+  .score-number{
+    position:absolute!important;
+    inset:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    font-size:22pt!important;
+    font-weight:800!important;
+    color:#111!important;
+  }
+  #score-donut{display:none!important}
+  .score-sublabel{font-size:7pt!important;color:#666!important}
+  .maturity-label{font-size:16pt!important;font-weight:800!important;color:#111!important;margin-bottom:6pt!important}
+  .results-desc{font-size:10pt!important;color:#444!important;line-height:1.5!important}
+
+  /* ── SECTION TITLES ──────────────────────────────── */
+  .section-title{
+    color:#555!important;
+    font-size:7.5pt!important;
+    letter-spacing:0.14em!important;
+    margin-bottom:10pt!important;
+    border-bottom:1pt solid #ccc!important;
+    padding-bottom:4pt!important;
+  }
+  .section-title::after{display:none!important}
+
+  /* ── KATEGORIE-RASTER ────────────────────────────── */
+  .results-grid{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:6pt!important;
+    background:transparent!important;
+    margin-bottom:18pt!important;
+    page-break-inside:avoid;
+  }
+  .cat-result-card{
+    border:1pt solid #ddd!important;
+    padding:10pt!important;
+    page-break-inside:avoid!important;
+  }
+  .cat-result-header{
+    display:flex!important;
+    align-items:center!important;
+    gap:6pt!important;
+    margin-bottom:6pt!important;
+  }
+  .cat-result-name{
+    font-size:9pt!important;
+    font-weight:700!important;
+    color:#111!important;
+    text-transform:uppercase!important;
+    letter-spacing:0.03em!important;
+  }
+  .cat-result-pct{
+    font-size:12pt!important;
+    font-weight:800!important;
+    /* inline color from JS stays */
+  }
+  .cat-bar-outer{
+    height:4pt!important;
+    background:#eee!important;
+    border:none!important;
+    overflow:hidden!important;
+  }
+  .cat-bar-inner{
+    height:4pt!important;
+    /* inline width+background from JS stays */
+    print-color-adjust:exact!important;
+    -webkit-print-color-adjust:exact!important;
+  }
+  .cat-level{
+    font-size:7.5pt!important;
+    font-weight:600!important;
+    margin-top:4pt!important;
+    letter-spacing:0.05em!important;
+    text-transform:uppercase!important;
+    /* inline color from JS stays */
+  }
+
+  /* ── EMPFEHLUNGEN ────────────────────────────────── */
+  .recommendations{
+    border:1pt solid #ddd!important;
+    padding:16pt!important;
+    margin-bottom:18pt!important;
+  }
+  .rec-item{
+    display:flex!important;
+    gap:10pt!important;
+    padding:12pt 0!important;
+    border-bottom:1pt solid #eee!important;
+    page-break-inside:avoid!important;
+  }
+  .rec-item:last-child{border-bottom:none!important;padding-bottom:0!important}
+  .rec-prio-bar{
+    width:3pt!important;
+    flex-shrink:0!important;
+    border-radius:1pt!important;
+    align-self:stretch!important;
+    print-color-adjust:exact!important;
+    -webkit-print-color-adjust:exact!important;
+  }
+  .prio-high .rec-prio-bar{background:#c8102e!important}
+  .prio-mid  .rec-prio-bar{background:#d97706!important}
+  .prio-low  .rec-prio-bar{background:#6366f1!important}
+
+  .rec-content{flex:1!important}
+  .rec-cat{
+    font-size:7.5pt!important;
+    font-weight:700!important;
+    color:#888!important;
+    text-transform:uppercase!important;
+    letter-spacing:0.1em!important;
+    margin-bottom:3pt!important;
+  }
+  .prio-tag{
+    font-size:7pt!important;
+    font-weight:700!important;
+    padding:1pt 6pt!important;
+    letter-spacing:0.07em!important;
+    text-transform:uppercase!important;
+    display:inline-block!important;
+    margin-bottom:6pt!important;
+    border:1pt solid currentColor!important;
+    border-radius:2pt!important;
+  }
+  .prio-tag-high{color:#c8102e!important;background:transparent!important}
+  .prio-tag-mid {color:#d97706!important;background:transparent!important}
+  .prio-tag-low {color:#6366f1!important;background:transparent!important}
+
+  .rec-measures{
+    list-style:none!important;
+    display:grid!important;
+    gap:5pt!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .rec-measures li{
+    display:flex!important;
+    gap:7pt!important;
+    font-size:9.5pt!important;
+    color:#222!important;
+    line-height:1.45!important;
+  }
+  .rec-measures li::before{
+    content:'→'!important;
+    color:#c8102e!important;
+    flex-shrink:0!important;
+    font-weight:700!important;
+    font-size:9pt!important;
+    margin-top:0!important;
+  }
+  .rec-measures li strong{color:#111!important;font-weight:600!important}
+  .rec-measure-text{display:block!important;line-height:1.45!important;color:#222!important}
+  .rec-iso{
+    display:block!important;
+    font-size:7.5pt!important;
+    color:#999!important;
+    letter-spacing:0.04em!important;
+    margin-top:2pt!important;
+    border:none!important;
+    padding:0!important;
+  }
+
+  /* ── DISCLAIMER ──────────────────────────────────── */
+  .disclaimer{
+    border:1pt solid #ddd!important;
+    border-left:3pt solid #ccc!important;
+    padding:10pt 14pt!important;
+    font-size:8.5pt!important;
+    color:#555!important;
+    line-height:1.5!important;
+    margin-bottom:16pt!important;
+    page-break-inside:avoid!important;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  .site-footer{
+    border-top:1pt solid #ddd!important;
+    padding:10pt 0 0!important;
+    margin-top:8pt!important;
+  }
+  .site-footer .container{
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    flex-wrap:wrap!important;
+    gap:6pt!important;
+  }
+  .footer-logo img{height:16pt!important;opacity:0.7!important}
+  .footer-text{font-size:7.5pt!important;color:#888!important}
+  .footer-links{display:flex!important;gap:12pt!important}
+  .footer-links a{font-size:7.5pt!important;color:#888!important;text-decoration:none!important}
+
+  /* ── SEITENUMBRÜCHE ──────────────────────────────── */
+  .results-hero{page-break-after:avoid}
+  .results-grid{page-break-after:avoid}
+  .rec-item{page-break-inside:avoid}
+  h2,h3,.section-title{page-break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="screen-intro" class="screen active">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://suebo.ch/img/logo_main.svg" alt="SUEBO Informatik AG" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'logo-fallback\'>SUEBO</span>'">
+      </div>
+      <div class="header-label">Quick-Check Informationssicherheit</div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow animate">Cybersecurity &middot; ISO 27001 &middot; CIS Controls &middot; neues DSG Schweiz</div>
+      <h1 class="animate delay-1">Quick Check Informationssicherheit SUEBO Informatik AG</h1>
+      <p class="animate delay-2">
+        Der Quick-Check ermittelt Ihren Sicherheits-Reifegrad in 10 Bereichen mit je 10 Fragen –
+        ausgerichtet an <strong>ISO/IEC 27001:2022</strong> und den <strong>CIS Controls v8</strong> und den verbindlichen rechtlichen Vorgaben.
+        In ca. 30–45 Minuten erhalten Sie eine umfassende Standortanalyse und priorisierte Handlungsempfehlungen.
+      </p>
+      <div class="hero-meta animate delay-2">
+        <div class="meta-item">10 Kategorien / 100 Fragen</div>
+		<div class="meta-item">basierend auf erprobten Standards</div>
+        <div class="meta-item">Schwachpunkte rasch aufzeigen</div>
+        <div class="meta-item">30–45 Minuten</div>
+		<div class="meta-item">kostengünstig und effizient</div>
+        <div class="meta-item">Auswertung als PDF</div>
+      </div>
+      <div class="animate delay-3">
+        <button class="btn btn-primary" onclick="startQuiz()">Quick-Check starten</button>
+      </div>
+      <div class="standards-grid animate delay-3">
+        <div class="std-card"><div class="std-label">Standard</div><div class="std-name">ISO/IEC 27001:2022</div></div>
+        <div class="std-card"><div class="std-label">Framework</div><div class="std-name">CIS Controls v8</div></div>
+        <div class="std-card"><div class="std-label">Datenschutz</div><div class="std-name">neues DSG Schweiz</div></div>
+        <div class="std-card"><div class="std-label">Zielgruppe</div><div class="std-name">KMU Schweiz (bis 250 MA)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo"><img src="https://suebo.ch/img/logo_main.svg" alt="SUEBO"></div>
+      <div class="footer-text">Dieser Quick-Check ersetzt keine professionelle Sicherheitsberatung.</div>
+      <div class="footer-links">
+        <a href="https://suebo.ch/datenschutz.html" target="_blank">Datenschutz</a>
+        <a href="https://suebo.ch/impressum.html" target="_blank">Impressum</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- QUIZ -->
+<div id="screen-quiz" class="screen">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://suebo.ch/img/logo_main.svg" alt="SUEBO Informatik AG" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'logo-fallback\'>SUEBO</span>'">
+      </div>
+      <div id="header-cat-dots" class="cat-dots"></div>
+    </div>
+  </header>
+  <div class="progress-wrap">
+    <div class="container">
+      <span class="progress-label">Fortschritt</span>
+      <div class="progress-bar-outer"><div class="progress-bar-inner" id="progress-bar" style="width:0%"></div></div>
+      <span class="progress-num" id="progress-num">0 / 10</span>
+    </div>
+  </div>
+  <div class="cat-header">
+    <div class="container">
+      <div class="cat-eyebrow" id="cat-eyebrow">Kategorie</div>
+      <div class="cat-name" id="cat-name">–</div>
+      <div class="cat-std" id="cat-std">–</div>
+      <div class="cat-desc" id="cat-desc"></div>
+    </div>
+  </div>
+  <div class="quiz-body">
+    <div class="container" id="questions-container"></div>
+  </div>
+  <div class="quiz-nav">
+    <div class="container">
+      <div class="nav-left"><button class="btn btn-outline btn-sm" id="btn-prev" onclick="prevCat()">Zurück</button></div>
+      <div id="unanswered-warn" class="unanswered-warn" style="display:none">Bitte alle Fragen beantworten</div>
+      <div class="nav-right"><button class="btn btn-primary btn-sm" id="btn-next" onclick="nextCat()">Weiter</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="screen-results" class="screen">
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://suebo.ch/img/logo_main.svg" alt="SUEBO Informatik AG" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'logo-fallback\'>SUEBO</span>'">
+      </div>
+      <div class="header-label">Auswertung</div>
+    </div>
+  </header>
+  <div class="results-screen">
+    <div class="container">
+      <div class="results-hero animate">
+        <div class="results-eyebrow">Quick-Check EXT Informationssicherheit &middot; SUEBO Informatik AG</div>
+        <div class="score-display">
+          <div class="score-circle">
+            <canvas id="score-donut" width="100" height="100"></canvas>
+            <div class="score-number">
+              <span id="overall-score">0%</span>
+              <span class="score-sublabel">Gesamt</span>
+            </div>
+          </div>
+          <div>
+            <div class="maturity-label" id="maturity-label">–</div>
+            <div class="results-desc" id="results-desc"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">Ergebnisse je Kategorie</div>
+      <div class="results-grid" id="results-grid"></div>
+
+      <div class="chart-section animate">
+        <div class="section-title">Reifegrad-Profil</div>
+        <div class="chart-wrap"><canvas id="radar-chart"></canvas></div>
+      </div>
+
+      <div class="recommendations animate">
+        <div class="section-title">Handlungsempfehlungen</div>
+        <div id="recommendations-list"></div>
+      </div>
+
+      <div class="results-actions">
+        <button class="btn btn-primary" onclick="generatePDF()">Als PDF speichern</button>
+        <button class="btn btn-outline" onclick="generateMarkdown()">Als Markdown laden</button>
+        <button class="btn btn-outline" onclick="restartQuiz()">Neu starten</button>
+        <a class="btn btn-outline" href="https://suebo.ch/kontakte.html" target="_blank">Beratung anfragen</a>
+      </div>
+
+      <div class="disclaimer">
+        Dieser Quick-Check dient der Ersteinschätzung und ersetzt keine professionelle Sicherheitsberatung oder ein formelles ISMS-Audit nach ISO/IEC 27001.
+        Für weiterführende Unterstützung: <a href="https://suebo.ch" target="_blank">suebo.ch</a> &middot; +41 31 589 65 65 &middot; <a href="/cdn-cgi/l/email-protection#5221373127203b262b12212737303d7c313a"><span class="__cf_email__" data-cfemail="e99a8c8a9c9b809d90a99a9c8c8b86c78a81">[email&#160;protected]</span></a>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo"><img src="https://suebo.ch/img/logo_main.svg" alt="SUEBO"></div>
+      <div class="footer-text">&copy; 2026 SUEBO Informatik AG &middot; Swiss Made Security</div>
+      <div class="footer-links">
+        <a href="https://suebo.ch/datenschutz.html" target="_blank">Datenschutz</a>
+        <a href="https://suebo.ch/impressum.html" target="_blank">Impressum</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+const CATEGORIES=[{"num":"01","name":"Verantwortlichkeiten","std":"ISO 27001: A.5, A.6 · CIS Controls 1, 17","desc":"Governance, Rollen, Risikomanagement und Sicherheitsorganisation","recs":[{"m":"Benennen Sie eine verantwortliche Person für Informationssicherheit (IS-Beauftragte/r oder CISO) mit klarem Auftrag und Budget.","iso":"ISO 27001: A.6.1.1"},{"m":"Verabschieden Sie eine formale Informationssicherheitsrichtlinie (IS-Policy) durch die Geschäftsleitung und kommunizieren Sie diese an alle Mitarbeitenden.","iso":"ISO 27001: A.5.1"},{"m":"Führen Sie ein vollständiges IT-Asset-Inventar (Hard- und Software, Cloud-Dienste, Daten) mit zugewiesenen Verantwortlichen und Klassifizierung.","iso":"ISO 27001: A.8.1, CIS Control 1+2"},{"m":"Richten Sie einen strukturierten Prozess zur Meldung, Dokumentation und Auswertung von Sicherheitsvorfällen ein.","iso":"ISO 27001: A.6.1.3"},{"m":"Verankern Sie Sicherheitsverantwortlichkeiten in Stellenbeschreibungen, Arbeitsverträgen und Lieferantenverträgen schriftlich.","iso":"ISO 27001: A.6.2, A.5.20"},{"m":"Implementieren Sie einen formalen Risikomanagementprozess: Risiken identifizieren, bewerten, behandeln und regelmässig überprüfen.","iso":"ISO 27001: A.6.1.2, A.8.2"},{"m":"Prüfen und verpflichten Sie alle externen Dienstleister und Lieferanten vertraglich auf Informationssicherheitsanforderungen.","iso":"ISO 27001: A.5.19, A.5.20"}],"questions":[{"text":"Gibt es eine definierte Person oder Funktion, die für Informationssicherheit verantwortlich ist?","ref":"ISO 27001: A.6.1.1","options":[{"text":"Nein, niemand ist explizit zuständig","score":0},{"text":"IT oder Geschäftsführung kümmert sich gelegentlich darum","score":1},{"text":"Eine Person ist informell zuständig, ohne formalen Auftrag","score":2},{"text":"Eine Person/Funktion ist offiziell benannt und mit Kompetenzen ausgestattet","score":3}]},{"text":"Existiert eine Informationssicherheitsrichtlinie (Policy), die von der Geschäftsleitung genehmigt wurde?","ref":"ISO 27001: A.5.1","options":[{"text":"Nein, keine Richtlinie vorhanden","score":0},{"text":"In Erarbeitung oder mündlich kommuniziert","score":1},{"text":"Schriftlich vorhanden, aber nicht aktuell oder genehmigt","score":2},{"text":"Schriftlich, genehmigt, kommuniziert und regelmässig überprüft","score":3}]},{"text":"Werden Sicherheitsvorfälle (z.B. Datenpannen, Phishing) intern gemeldet und dokumentiert?","ref":"ISO 27001: A.6.1.3","options":[{"text":"Nein, kein Meldeprozess vorhanden","score":0},{"text":"Vorfälle werden informell und unstrukturiert kommuniziert","score":1},{"text":"Meldeprozess existiert, wird aber selten genutzt","score":2},{"text":"Strukturierter Meldeprozess mit regelmässiger Auswertung","score":3}]},{"text":"Gibt es ein Inventar der wichtigsten IT-Assets (Geräte, Software, Daten) mit zugewiesenen Verantwortlichen?","ref":"ISO 27001: A.8.1 · CIS Control 1","options":[{"text":"Nein, kein Inventar vorhanden","score":0},{"text":"Informelle, unvollständige Liste","score":1},{"text":"Inventar vorhanden, aber nicht regelmässig aktualisiert","score":2},{"text":"Vollständiges, aktuelles Inventar mit Verantwortlichen","score":3}]},{"text":"Werden sicherheitsrelevante Verantwortlichkeiten in Stellenbeschreibungen und Verträgen festgehalten?","ref":"ISO 27001: A.6.2","options":[{"text":"Nein, keine Erwähnung in Verträgen/Stellen","score":0},{"text":"Bei wenigen Schlüsselpositionen","score":1},{"text":"Bei den meisten IT-nahen Rollen","score":2},{"text":"Bei allen relevanten Mitarbeitenden und Rollen schriftlich festgehalten","score":3}]},{"text":"Gibt es einen formalen Risikomanagementprozess für Informationssicherheitsrisiken?","ref":"ISO 27001: A.6.1.2, A.8.2","options":[{"text":"Nein, Risiken werden nicht systematisch erfasst","score":0},{"text":"Risiken werden ad hoc und informell besprochen","score":1},{"text":"Risiken werden identifiziert, aber nicht regelmässig bewertet","score":2},{"text":"Formaler Prozess: Risiken identifiziert, bewertet, behandelt und dokumentiert","score":3}]},{"text":"Werden externe Dienstleister und Cloud-Anbieter auf Informationssicherheitsanforderungen geprüft?","ref":"ISO 27001: A.5.19, A.5.20","options":[{"text":"Nein, keine Prüfung oder vertragliche Verpflichtung","score":0},{"text":"Informelle Absprachen, keine schriftlichen Anforderungen","score":1},{"text":"Vertragliche Anforderungen bei Schlüssellieferanten","score":2},{"text":"Systematische Prüfung und vertragliche Verpflichtung aller relevanten Dienstleister","score":3}]},{"text":"Werden interne Sicherheitsaudits oder -assessments regelmässig durchgeführt?","ref":"ISO 27001: A.9.2 · CIS Control 18","options":[{"text":"Nein, keine Audits","score":0},{"text":"Gelegentlich, ohne definierten Prozess oder Rhythmus","score":1},{"text":"Jährlich, aber ohne formalisiertes Verfahren","score":2},{"text":"Regelmässige, strukturierte Audits mit Findings-Tracking und Massnahmenplänen","score":3}]},{"text":"Ist die Informationssicherheit in die Unternehmensplanung und Geschäftsstrategie eingebettet?","ref":"ISO 27001: A.5.1","options":[{"text":"Nein, Sicherheit ist kein strategisches Thema","score":0},{"text":"Wird bei Bedarf erwähnt, aber nicht strategisch verankert","score":1},{"text":"Teilweise berücksichtigt (z.B. Budget, aber keine IS-Strategie)","score":2},{"text":"IS-Strategie definiert, von GL getragen und mit Unternehmenszielen verknüpft","score":3}]},{"text":"Gibt es eine definierte Klassifizierung für Informationen (z.B. öffentlich, intern, vertraulich, streng vertraulich)?","ref":"ISO 27001: A.5.12, A.5.13","options":[{"text":"Nein, keine Klassifizierung","score":0},{"text":"Informell bekannt, aber nicht dokumentiert","score":1},{"text":"Klassifizierungsschema vorhanden, aber nicht konsequent angewendet","score":2},{"text":"Dokumentiertes Schema, konsequent angewendet und in Prozessen verankert","score":3}]}]},{"num":"02","name":"Websysteme","std":"CIS Controls 7, 18 · ISO 27001: A.12","desc":"Webserver, CMS, Web-Applikationen, APIs und Online-Dienste","recs":[{"m":"Etablieren Sie einen monatlichen Patch-Prozess für Webserver, CMS und alle Plugins – mit Verantwortlichem und Dokumentation.","iso":"ISO 27001: A.12.6.1, CIS Control 7"},{"m":"Aktivieren Sie HTTPS auf allen Web-Präsenzen, richten Sie automatische Zertifikatserneuerung ein und überwachen Sie Ablaufdaten.","iso":"ISO 27001: A.10.1"},{"m":"Schützen Sie alle Backend-Zugänge mit starken Passwörtern und Zwei-Faktor-Authentifizierung.","iso":"ISO 27001: A.9.4, CIS Control 5"},{"m":"Implementieren Sie eine Web Application Firewall (WAF) und führen Sie jährliche Penetrationstests durch.","iso":"CIS Control 18, OWASP Top 10"},{"m":"Deaktivieren Sie nicht benötigte Dienste, Ports und Plugins. Führen Sie quartalsweise Reviews durch.","iso":"ISO 27001: A.9.2, CIS Control 4"},{"m":"Überwachen Sie Web-Systeme kontinuierlich und inventarisieren Sie alle öffentlich erreichbaren Assets (Subdomains, APIs).","iso":"ISO 27001: A.12.4, CIS Control 1"},{"m":"Trennen Sie Test- und Entwicklungsumgebungen von Produktivsystemen. Verwenden Sie in Tests keine echten Produktivdaten.","iso":"ISO 27001: A.12.1.4, CIS Control 18"}],"questions":[{"text":"Werden Webserver, CMS-Systeme und Web-Applikationen regelmässig mit Sicherheitsupdates versorgt?","ref":"CIS Control 7 · ISO 27001: A.12.6.1","options":[{"text":"Nein, Updates werden selten oder nie eingespielt","score":0},{"text":"Updates werden unregelmässig und ohne Prozess eingespielt","score":1},{"text":"Updates bei kritischen Schwachstellen, kein fester Rhythmus","score":2},{"text":"Regelmässiger, dokumentierter Patch-Prozess vorhanden","score":3}]},{"text":"Ist die Unternehmenswebsite durchgehend mit HTTPS geschützt (gültiges SSL/TLS-Zertifikat)?","ref":"CIS Control 3 · ISO 27001: A.10.1","options":[{"text":"Nein, kein HTTPS vorhanden","score":0},{"text":"HTTPS teilweise (nicht alle Seiten/Dienste)","score":1},{"text":"HTTPS vorhanden, Zertifikate nicht aktiv überwacht","score":2},{"text":"Vollständiges HTTPS, Zertifikate aktiv überwacht und automatisch erneuert","score":3}]},{"text":"Verwenden alle Web-Backend-Zugänge starke Passwörter und/oder Zwei-Faktor-Authentifizierung?","ref":"CIS Control 5 · ISO 27001: A.9.4","options":[{"text":"Nein, Standard- oder schwache Passwörter im Einsatz","score":0},{"text":"Passwortrichtlinie vorhanden, aber nicht durchgesetzt","score":1},{"text":"Starke Passwörter, aber keine 2FA","score":2},{"text":"Starke Passwörter und 2FA für alle Admin-Zugänge","score":3}]},{"text":"Werden Web-Applikationen gegen gängige Angriffe (SQL-Injection, XSS, CSRF) aktiv geschützt?","ref":"CIS Control 18 · OWASP Top 10","options":[{"text":"Nein, kein aktiver Schutz vorhanden","score":0},{"text":"Standard-Schutz des Hosters, nichts Spezifisches","score":1},{"text":"Web Application Firewall oder ähnliche Massnahmen teilweise vorhanden","score":2},{"text":"WAF aktiv und regelmässige Sicherheitstests (Penetrationstests)","score":3}]},{"text":"Gibt es einen Prozess zur Überprüfung und Deaktivierung ungenutzter Web-Dienste, Plugins und Konten?","ref":"CIS Control 4 · ISO 27001: A.9.2","options":[{"text":"Nein, ungenutzte Dienste und Konten bleiben aktiv","score":0},{"text":"Gelegentliche manuelle Überprüfung ohne festen Prozess","score":1},{"text":"Jährliche Überprüfung","score":2},{"text":"Regelmässige (quartalsweise) Überprüfung und Bereinigung dokumentiert","score":3}]},{"text":"Werden Webserver-Logs und Zugriffsaufzeichnungen auf Angriffe und Anomalien ausgewertet?","ref":"ISO 27001: A.12.4 · CIS Control 8","options":[{"text":"Nein, Logs werden nicht analysiert","score":0},{"text":"Logs vorhanden, aber nur bei Problemen manuell eingesehen","score":1},{"text":"Regelmässige manuelle Auswertung","score":2},{"text":"Automatisierte Log-Analyse mit Alarmierung bei verdächtigen Mustern","score":3}]},{"text":"Werden externe Bibliotheken, Frameworks und Abhängigkeiten (Dependencies) auf bekannte Schwachstellen überprüft?","ref":"CIS Control 7 · ISO 27001: A.12.6.1","options":[{"text":"Nein, keine Prüfung externer Abhängigkeiten","score":0},{"text":"Gelegentlich manuell bei bekannten kritischen Schwachstellen","score":1},{"text":"Tools vorhanden (z.B. npm audit), aber nicht systematisch eingesetzt","score":2},{"text":"Automatisierte Dependency-Checks in der CI/CD-Pipeline, regelmässige Aktualisierung","score":3}]},{"text":"Sind Test- und Entwicklungsumgebungen von Produktivsystemen technisch getrennt?","ref":"ISO 27001: A.12.1.4 · CIS Control 18","options":[{"text":"Nein, Entwicklung findet direkt auf Produktivsystemen statt","score":0},{"text":"Teilweise getrennt, aber Datenaustausch ohne Kontrollen","score":1},{"text":"Getrennte Umgebungen, gelegentlich Produktivdaten in Tests verwendet","score":2},{"text":"Vollständig getrennt, Produktivdaten nie in Test/Entwicklung, dokumentiert","score":3}]},{"text":"Werden APIs und Schnittstellen (intern/extern) gegen unbefugten Zugriff gesichert und dokumentiert?","ref":"ISO 27001: A.9.4 · CIS Control 18","options":[{"text":"Nein, APIs sind ungeschützt oder undokumentiert","score":0},{"text":"Basisauthentifizierung (API-Key), keine vollständige Dokumentation","score":1},{"text":"Authentifizierung vorhanden, API-Inventar teilweise gepflegt","score":2},{"text":"Alle APIs authentifiziert, dokumentiert, versioniert und regelmässig überprüft","score":3}]},{"text":"Gibt es einen Prozess zur regelmässigen Inventarisierung aller öffentlich erreichbaren Web-Assets (Subdomains, APIs, Test-Systeme)?","ref":"CIS Control 1 · ISO 27001: A.8.1","options":[{"text":"Nein, keine Übersicht über externe Assets","score":0},{"text":"Ungefähr bekannt, aber nicht dokumentiert","score":1},{"text":"Manuelles Inventar, selten aktualisiert","score":2},{"text":"Automatisierte Asset-Discovery, regelmässig geprüft, veraltete Assets entfernt","score":3}]}]},{"num":"03","name":"Mobile Geräte","std":"ISO 27001: A.6.2 · CIS Controls 1, 2","desc":"Smartphones, Tablets, Laptops, BYOD und mobile Sicherheitsrichtlinien","recs":[{"m":"Erarbeiten Sie eine schriftliche Mobile-Device-Policy inkl. BYOD-Regelung, lassen Sie diese von Mitarbeitenden unterzeichnen.","iso":"ISO 27001: A.6.2.1"},{"m":"Erzwingen Sie technisch eine PIN/Passwort-Sperre (min. 6-stellig) und Bildschirm-Timeout auf allen Geräten.","iso":"ISO 27001: A.6.2.2, CIS Control 1"},{"m":"Stellen Sie sicher, dass alle Geräte mit Unternehmensdaten vollständig verschlüsselt sind.","iso":"ISO 27001: A.10.1, CIS Control 3"},{"m":"Führen Sie eine MDM/EMM-Lösung ein für Remote-Wipe, Richtlinien-Durchsetzung und Geräte-Inventar.","iso":"CIS Control 1, ISO 27001: A.6.2"},{"m":"Trennen Sie private und geschäftliche Daten auf BYOD-Geräten technisch durch Work-Profile.","iso":"ISO 27001: A.6.2, CIS Control 3"},{"m":"Richten Sie automatische OS-Updates ein und schliessen Sie Jailbreak/Root-Geräte vom Unternehmensnetzwerk aus.","iso":"ISO 27001: A.12.6.1, CIS Control 7"},{"m":"Schulen Sie Mitarbeitende im sicheren Umgang mit mobilen Geräten: öffentliche WLANs meiden, Verlustmeldung innerhalb 2h.","iso":"ISO 27001: A.7.2.2"}],"questions":[{"text":"Gibt es eine schriftliche Richtlinie für die geschäftliche Nutzung von mobilen Geräten (BYOD oder firmeneigene Geräte)?","ref":"ISO 27001: A.6.2.1","options":[{"text":"Nein, keine Regelung vorhanden","score":0},{"text":"Mündliche Abmachungen, nichts Schriftliches","score":1},{"text":"Schriftliche Richtlinie vorhanden, aber veraltet oder nicht kommuniziert","score":2},{"text":"Aktuelle, schriftliche Mobile-Device-Policy kommuniziert und bestätigt","score":3}]},{"text":"Sind alle mobilen Geräte mit PIN, Passwort oder biometrischer Authentifizierung technisch gesichert?","ref":"CIS Control 1 · ISO 27001: A.6.2.2","options":[{"text":"Nein, Geräte sind ungesichert","score":0},{"text":"Bei einigen Geräten, aber nicht systematisch","score":1},{"text":"Bei den meisten Geräten, aber nicht technisch erzwungen","score":2},{"text":"Bei allen Geräten technisch erzwungen (MDM oder Policy)","score":3}]},{"text":"Werden Unternehmensdaten auf mobilen Geräten verschlüsselt gespeichert?","ref":"ISO 27001: A.10.1 · CIS Control 3","options":[{"text":"Nein, keine Verschlüsselung","score":0},{"text":"Unbekannt / nicht geprüft","score":1},{"text":"Teilweise (z.B. nur firmeneigene Geräte)","score":2},{"text":"Vollständig, bei allen Geräten mit Unternehmensdaten sichergestellt","score":3}]},{"text":"Besteht die Möglichkeit, Unternehmensdaten auf verlorenen Geräten aus der Ferne zu löschen (Remote Wipe)?","ref":"CIS Control 1 · ISO 27001: A.6.2","options":[{"text":"Nein, keine Möglichkeit vorhanden","score":0},{"text":"Theoretisch möglich, aber nicht eingerichtet","score":1},{"text":"Für firmeneigene Geräte eingerichtet","score":2},{"text":"Für alle Geräte mit Unternehmensdaten eingerichtet und getestet","score":3}]},{"text":"Werden Betriebssystem und Apps auf mobilen Geräten regelmässig aktualisiert?","ref":"CIS Control 7 · ISO 27001: A.12.6.1","options":[{"text":"Nein, Updates werden ignoriert oder verzögert","score":0},{"text":"Updates werden gelegentlich und unstrukturiert eingespielt","score":1},{"text":"Updates bei kritischen Schwachstellen eingespielt","score":2},{"text":"Automatische Updates oder regelmässige, dokumentierte Überprüfung","score":3}]},{"text":"Werden private und geschäftliche Daten auf BYOD-Geräten technisch getrennt (z.B. Work-Profile, MAM)?","ref":"ISO 27001: A.6.2 · CIS Control 3","options":[{"text":"Nein, private und geschäftliche Daten sind vermischt","score":0},{"text":"Mitarbeitende trennen selbst, ohne technische Unterstützung","score":1},{"text":"Empfohlen, aber nicht technisch erzwungen","score":2},{"text":"Technische Datentrennung via MDM/MAM auf allen BYOD-Geräten durchgesetzt","score":3}]},{"text":"Sind Jailbreak- oder Root-Geräte vom Unternehmensnetzwerk und Unternehmensdaten ausgeschlossen?","ref":"CIS Control 1 · ISO 27001: A.6.2","options":[{"text":"Nein, keine Prüfung auf Jailbreak/Root","score":0},{"text":"Policy verbietet es, aber keine technische Überprüfung","score":1},{"text":"Manuelle Prüfung bei Verdacht","score":2},{"text":"Automatische Erkennung via MDM, sofortiger Netzwerkausschluss von kompromittierten Geräten","score":3}]},{"text":"Gibt es einen definierten Prozess für das Onboarding und Offboarding mobiler Geräte?","ref":"CIS Control 1 · ISO 27001: A.9.2.6","options":[{"text":"Nein, keine strukturierten Prozesse","score":0},{"text":"Informeller Prozess, nicht dokumentiert","score":1},{"text":"Prozess definiert, aber nicht konsequent umgesetzt","score":2},{"text":"Dokumentierter Prozess: Registrierung bei Eintritt, Remote-Wipe und Deregistrierung bei Austritt","score":3}]},{"text":"Gibt es Richtlinien zur sicheren Nutzung öffentlicher WLAN-Netzwerke mit mobilen Geräten?","ref":"ISO 27001: A.6.2 · CIS Control 12","options":[{"text":"Nein, keine Richtlinien für öffentliche WLANs","score":0},{"text":"Mitarbeitende werden mündlich darauf hingewiesen","score":1},{"text":"Schriftliche Richtlinie vorhanden, VPN empfohlen aber nicht erzwungen","score":2},{"text":"VPN-Pflicht bei öffentlichen WLANs technisch durchgesetzt oder Hotspot-Lösung","score":3}]},{"text":"Werden App-Berechtigungen auf mobilen Geräten geprüft und auf das Notwendige beschränkt?","ref":"CIS Control 4 · ISO 27001: A.6.2","options":[{"text":"Nein, Apps erhalten alle angeforderten Berechtigungen","score":0},{"text":"Mitarbeitende entscheiden selbst über App-Berechtigungen","score":1},{"text":"Empfehlungen vorhanden, aber keine technische Durchsetzung","score":2},{"text":"Whitelisting genehmigter Apps via MDM, nicht genehmigte Apps blockiert","score":3}]}]},{"num":"04","name":"Versicherung","std":"ISO 27001: A.5.29 · Risikomanagement","desc":"Cyberversicherung, Deckungsumfang, Schadenprozesse und Risikotransfer","recs":[{"m":"Schliessen Sie eine dedizierte Cyberversicherung ab: Datenwiederherstellung, Betriebsunterbrechung, Krisenmanagement, Haftpflicht und Ransomware.","iso":"ISO 27001: A.5.29"},{"m":"Überprüfen Sie Deckungssummen und Selbstbehalte jährlich und passen Sie diese an Ihr Risikoprofil an.","iso":"Risikomanagement"},{"m":"Ermitteln Sie mit Ihrem Versicherer, welche TOMs als Bedingung gelten, und implementieren Sie diese vollständig.","iso":"ISO 27001: A.5.29"},{"m":"Dokumentieren Sie einen klaren Schadensmeldeprozess: Wer informiert wen, in welcher Reihenfolge, innerhalb welcher Fristen?","iso":"ISO 27001: A.5.26"},{"m":"Üben Sie den Versicherungsfall jährlich in einer Tabletop-Übung und dokumentieren Sie die Ergebnisse.","iso":"ISO 27001: A.17.1.3"},{"m":"Prüfen Sie ob Ihre Haftpflichtversicherung Cyberrisiken ausschliesst – bei vielen Standardpolicen der Fall.","iso":"Risikoanalyse"},{"m":"Stellen Sie sicher, dass Subunternehmer und Cloud-Dienste in der Cyberversicherung miteingeschlossen oder separat versichert sind.","iso":"ISO 27001: A.5.22"}],"questions":[{"text":"Verfügt Ihr Unternehmen über eine spezifische Cyberversicherung?","ref":"ISO 27001: A.5.29","options":[{"text":"Nein, keine Cyberversicherung","score":0},{"text":"In Prüfung oder Abschluss geplant","score":1},{"text":"Allgemeine Haftpflicht mit begrenzten Cyber-Klauseln","score":2},{"text":"Dedizierte Cyberversicherung abgeschlossen","score":3}]},{"text":"Deckt Ihre Versicherung Kosten für Datenwiederherstellung, Betriebsunterbrechung und Krisenmanagement ab?","ref":"Risikofinanzierung","options":[{"text":"Nein / keine Versicherung vorhanden","score":0},{"text":"Unbekannt, wurde nicht geprüft","score":1},{"text":"Teilweise abgedeckt","score":2},{"text":"Vollständig abgedeckt, Umfang bekannt und dokumentiert","score":3}]},{"text":"Wurden die Versicherungskonditionen und Deckungssummen in den letzten 12 Monaten überprüft?","ref":"Risikomanagement · ISO 27001: A.5.19","options":[{"text":"Nein / keine Versicherung","score":0},{"text":"Nicht in den letzten 12 Monaten","score":1},{"text":"Überprüft, aber nicht angepasst","score":2},{"text":"Überprüft und dem aktuellen Risikoprofil angepasst","score":3}]},{"text":"Gibt es einen definierten internen Prozess für den Eintritt eines Versicherungsfalls?","ref":"ISO 27001: A.5.26","options":[{"text":"Nein, kein Prozess definiert","score":0},{"text":"Informell bekannt, wer kontaktiert werden muss","score":1},{"text":"Schriftlich festgehalten, aber nicht kommuniziert","score":2},{"text":"Dokumentierter, kommunizierter und geübter Schadensprozess","score":3}]},{"text":"Wurden technische und organisatorische Massnahmen implementiert, die vom Versicherer gefordert werden?","ref":"Versicherungsanforderungen","options":[{"text":"Nein / Anforderungen nicht bekannt","score":0},{"text":"Anforderungen bekannt, aber noch nicht umgesetzt","score":1},{"text":"Teilweise umgesetzt","score":2},{"text":"Vollständig umgesetzt und gegenüber dem Versicherer dokumentiert","score":3}]},{"text":"Kennen die relevanten Mitarbeitenden (GL, IT, Rechtsabteilung) den Versicherungsumfang und die Selbstbehalte?","ref":"ISO 27001: A.5.29","options":[{"text":"Nein, kaum jemand kennt die Versicherungsdetails","score":0},{"text":"Nur die versicherungsverantwortliche Person","score":1},{"text":"Schlüsselpersonen sind informiert","score":2},{"text":"Alle relevanten Stellen kennen Umfang, Limits und Meldepflichten","score":3}]},{"text":"Gibt es einen definierten Ansprechpartner beim Versicherungsunternehmen für den Ernstfall?","ref":"ISO 27001: A.5.26","options":[{"text":"Nein, kein direkter Kontakt bekannt","score":0},{"text":"Name des Versicherers bekannt, kein spezifischer Ansprechpartner","score":1},{"text":"Ansprechpartner bekannt, aber nicht in Notfallplänen hinterlegt","score":2},{"text":"Dedizierter Ansprechpartner mit Direktnummer, in allen Notfallplänen hinterlegt","score":3}]},{"text":"Sind Cyberrisiken durch Dritte (Subunternehmer, Cloud-Dienste) in der Versicherung berücksichtigt?","ref":"ISO 27001: A.5.22","options":[{"text":"Nein, Drittparteien sind nicht berücksichtigt","score":0},{"text":"Unklar, wurde nicht geprüft","score":1},{"text":"Teilweise (z.B. nur direkte Schäden, keine Supply-Chain-Risiken)","score":2},{"text":"Vollständig berücksichtigt, inkl. Supply-Chain-Schäden und Lieferantenausfall","score":3}]},{"text":"Deckt die Versicherung auch Reputationsschäden, PR-Kosten und Krisenmanagement-Beratung ab?","ref":"Risikofinanzierung","options":[{"text":"Nein, nur direkte technische Schäden","score":0},{"text":"Unbekannt","score":1},{"text":"Teilweise (z.B. nur Krisenmanagement oder nur PR)","score":2},{"text":"Ja, inkl. professionelle Krisen-PR, Reputationsmanagement und Forensik","score":3}]},{"text":"Wurden die Haftpflicht- und Betriebsversicherungen auf Cyber-Ausschlüsse geprüft?","ref":"Risikoanalyse","options":[{"text":"Nein, nie geprüft","score":0},{"text":"Versicherungspolice vorhanden, Ausschlüsse aber nicht analysiert","score":1},{"text":"Ausschlüsse bekannt, aber noch keine Massnahmen ergriffen","score":2},{"text":"Alle Policen geprüft, Lücken identifiziert und durch Cyber-Police geschlossen","score":3}]}]},{"num":"05","name":"Notfallplan","std":"ISO 27001: A.5.29, A.17 · CIS Controls 11, 17","desc":"Business Continuity, IT-Notfallplanung, Krisenmanagement und Incident Response","recs":[{"m":"Erstellen Sie einen vollständigen IT-Notfallplan mit klaren Rollen, Eskalationswegen, Wiederherstellungsschritten und Kontaktlisten.","iso":"ISO 27001: A.17.1, CIS Control 11"},{"m":"Definieren und validieren Sie RTO und RPO für alle kritischen Systeme durch regelmässige Wiederherstellungstests.","iso":"ISO 27001: A.17.2"},{"m":"Üben Sie den Notfallplan jährlich in einer Tabletop-Übung und beheben Sie identifizierte Lücken.","iso":"ISO 27001: A.17.1.3"},{"m":"Erstellen Sie eine priorisierte Liste kritischer Geschäftsprozesse und stellen Sie deren IT-Grundlage im Notfall zuerst wieder her.","iso":"ISO 27001: A.17.1.1"},{"m":"Erarbeiten Sie eine Kommunikationsstrategie inkl. revDSG-Meldepflicht innert 72h an den EDÖB.","iso":"ISO 27001: A.5.26, revDSG Art. 24"},{"m":"Etablieren Sie einen Prozess zur Beweissicherung (forensische Datensicherung) nach Sicherheitsvorfällen.","iso":"ISO 27001: A.5.28"},{"m":"Leiten Sie aus jedem Sicherheitsvorfall Lessons Learned ab und passen Sie Notfallpläne entsprechend an.","iso":"ISO 27001: A.5.27"}],"questions":[{"text":"Gibt es einen dokumentierten Notfallplan (Business Continuity / IT-Notfallplan) für Cyberangriffe oder IT-Ausfälle?","ref":"ISO 27001: A.17.1 · CIS Control 11","options":[{"text":"Nein, kein Plan vorhanden","score":0},{"text":"Informelle Abmachungen, nichts Schriftliches","score":1},{"text":"Schriftlicher Plan vorhanden, aber veraltet","score":2},{"text":"Aktueller, genehmigter und kommunizierter Notfallplan","score":3}]},{"text":"Wurde der Notfallplan in den letzten 12 Monaten getestet oder geübt?","ref":"ISO 27001: A.17.1.3","options":[{"text":"Nein, nie getestet","score":0},{"text":"Vor mehr als 12 Monaten getestet","score":1},{"text":"Intern besprochen, aber kein echter Übungstest","score":2},{"text":"Regelmässige Übungen mit dokumentierten Ergebnissen und Verbesserungen","score":3}]},{"text":"Sind Wiederherstellungszeit (RTO) und maximaler Datenverlust (RPO) für kritische Systeme definiert?","ref":"ISO 27001: A.17.2 · CIS Control 11","options":[{"text":"Nein, nicht definiert","score":0},{"text":"Informelle Erwartungen, nicht dokumentiert","score":1},{"text":"Definiert, aber noch nicht durch Tests validiert","score":2},{"text":"Definiert, dokumentiert und durch Wiederherstellungstests validiert","score":3}]},{"text":"Sind alle relevanten Ansprechpersonen, Behörden und Dienstleister im Notfall bekannt und erreichbar?","ref":"ISO 27001: A.5.26","options":[{"text":"Nein, keine Kontaktliste vorhanden","score":0},{"text":"Teilweise bekannt, aber nicht aktuell dokumentiert","score":1},{"text":"Liste vorhanden, aber selten aktualisiert","score":2},{"text":"Vollständige, aktuelle Kontaktliste – auch offline verfügbar","score":3}]},{"text":"Gibt es eine Kommunikationsstrategie für den Fall eines Sicherheitsvorfalls (intern, extern, Behörden)?","ref":"ISO 27001: A.5.26 · revDSG Art. 24","options":[{"text":"Nein, keine Kommunikationsstrategie","score":0},{"text":"Wird ad hoc und unstrukturiert entschieden","score":1},{"text":"Grundlegendes Konzept vorhanden","score":2},{"text":"Klarer Kommunikationsplan mit Verantwortlichen, Vorlagen und Meldepflichten (NCSC)","score":3}]},{"text":"Gibt es einen separaten Plan für den Ausfall kritischer Cloud-Dienste oder SaaS-Anwendungen?","ref":"ISO 27001: A.17.1 · CIS Control 11","options":[{"text":"Nein, Cloud-Ausfälle sind nicht geplant","score":0},{"text":"Informell bekannt, was im Ausfall zu tun ist","score":1},{"text":"Teilweise dokumentiert für einzelne kritische Dienste","score":2},{"text":"Vollständiger Plan: Ausweichlösungen definiert, getestet und kommuniziert","score":3}]},{"text":"Sind Ausweich-Arbeitsplätze oder die Möglichkeit zur Fernarbeit im Notfall vorbereitet und getestet?","ref":"ISO 27001: A.17.1 · CIS Control 11","options":[{"text":"Nein, keine Ausweichmöglichkeiten","score":0},{"text":"Remote-Arbeit grundsätzlich möglich, aber ohne Notfallplanung","score":1},{"text":"Teilweise vorbereitet, nicht getestet","score":2},{"text":"Ausweicharbeitsplätze oder Homeoffice-Infrastruktur getestet und einsatzbereit","score":3}]},{"text":"Gibt es einen definierten Prozess zur digitalen Beweissicherung (Forensik) nach einem Sicherheitsvorfall?","ref":"ISO 27001: A.5.28","options":[{"text":"Nein, keine Beweissicherung geplant","score":0},{"text":"Informell: IT sichert im Einzelfall Daten","score":1},{"text":"Grundprozess definiert, aber ohne forensische Standards","score":2},{"text":"Dokumentierter Forensikprozess mit klarer Verantwortlichkeit und Integritätssicherung","score":3}]},{"text":"Werden aus Sicherheitsvorfällen systematisch Lessons Learned abgeleitet und Verbesserungen umgesetzt?","ref":"ISO 27001: A.5.27","options":[{"text":"Nein, Vorfälle werden nicht nachbereitet","score":0},{"text":"Informelle Nachbesprechung im Team","score":1},{"text":"Dokumentation vorhanden, Verbesserungen werden empfohlen aber selten umgesetzt","score":2},{"text":"Strukturierter Post-Incident-Review, Massnahmen verfolgt und in Notfallpläne eingearbeitet","score":3}]},{"text":"Gibt es einen definierten Prozess für die geordnete Rückkehr zur Normaloperation nach einem Vorfall (Recovery)?","ref":"ISO 27001: A.17.1 · CIS Control 11","options":[{"text":"Nein, keine strukturierte Wiederherstellung","score":0},{"text":"Informell: IT stellt Systeme nach bestem Wissen wieder her","score":1},{"text":"Grober Plan vorhanden, nicht detailliert oder getestet","score":2},{"text":"Detaillierter Recovery-Plan mit Validierungsschritten und Freigabeprotokoll","score":3}]}]},{"num":"06","name":"Daten","std":"ISO 27001: A.8 · revDSG · CIS Controls 3, 11","desc":"Datenschutz, Datensicherung, Verschlüsselung, Klassifizierung und Datenhaltung","recs":[{"m":"Erstellen Sie ein vollständiges Bearbeitungsverzeichnis gemäss revDSG (Art. 12): alle Datenarten, Zwecke, Empfänger, Speicherorte und Fristen.","iso":"revDSG Art. 12, ISO 27001: A.8.1"},{"m":"Klassifizieren Sie Ihre Daten und definieren Sie je Klasse zulässige Speicherorte, Zugriffe und Schutzmassnahmen.","iso":"ISO 27001: A.8.2"},{"m":"Führen Sie die 3-2-1-Backup-Regel ein und testen Sie die Wiederherstellung mindestens vierteljährlich.","iso":"ISO 27001: A.12.3, CIS Control 11"},{"m":"Verschlüsseln Sie sensible Daten at rest (AES-256) und in transit (TLS 1.2+). Keine Unternehmensdaten auf unverschlüsselten USB-Sticks.","iso":"ISO 27001: A.10.1, CIS Control 3"},{"m":"Implementieren Sie einen Prozess zur sicheren Datenlöschung mit zertifiziertem Nachweis.","iso":"ISO 27001: A.8.3, CIS Control 3"},{"m":"Schulen Sie Mitarbeitende jährlich zu revDSG-Pflichten: Auskunftsrecht, Meldepflicht, Datensparsamkeit.","iso":"revDSG, ISO 27001: A.7.2.2"},{"m":"Prüfen Sie Cloud-Dienste auf Datenspeicherort (CH/EU), Vertragsbedingungen und Datenschutz-Konformität.","iso":"ISO 27001: A.5.23, revDSG"}],"questions":[{"text":"Wissen Sie, welche Personendaten Ihr Unternehmen verarbeitet und wo diese gespeichert werden?","ref":"revDSG Art. 12 · ISO 27001: A.8.1","options":[{"text":"Nein, keine Übersicht vorhanden","score":0},{"text":"Informelle Kenntnis, nicht dokumentiert","score":1},{"text":"Teilweise dokumentiert (unvollständiges Bearbeitungsverzeichnis)","score":2},{"text":"Vollständiges Bearbeitungsverzeichnis gemäss revDSG gepflegt","score":3}]},{"text":"Werden regelmässige Datensicherungen (Backups) durchgeführt und auf Wiederherstellbarkeit geprüft?","ref":"ISO 27001: A.12.3 · CIS Control 11","options":[{"text":"Nein, keine regelmässigen Backups","score":0},{"text":"Backups vorhanden, aber nie auf Wiederherstellbarkeit getestet","score":1},{"text":"Regelmässige Backups, Wiederherstellung selten geprüft, kein Off-site","score":2},{"text":"Regelmässige Backups, getestete Wiederherstellung, offline/off-site Kopie","score":3}]},{"text":"Werden sensible Daten bei der Übertragung und Speicherung verschlüsselt?","ref":"ISO 27001: A.10.1 · CIS Control 3","options":[{"text":"Nein, keine Verschlüsselung vorhanden","score":0},{"text":"Teilweise (z.B. nur E-Mail oder nur Transport-Verschlüsselung)","score":1},{"text":"Übertragung verschlüsselt, Speicherung nicht durchgehend","score":2},{"text":"Vollständige Verschlüsselung bei Übertragung und Speicherung sensibler Daten","score":3}]},{"text":"Gibt es einen definierten Prozess für die sichere Löschung und Entsorgung von Daten und Datenträgern?","ref":"ISO 27001: A.8.3 · CIS Control 3","options":[{"text":"Nein, Daten werden einfach gelöscht oder Träger entsorgt","score":0},{"text":"Informelle Praxis (z.B. Festplatten formatieren)","score":1},{"text":"Prozess definiert, aber nicht konsequent umgesetzt","score":2},{"text":"Dokumentierter Prozess mit zertifizierter Datenlöschung/-vernichtung","score":3}]},{"text":"Sind Mitarbeitende über Datenschutzpflichten gemäss revDSG informiert und entsprechend geschult?","ref":"revDSG · ISO 27001: A.7.2.2","options":[{"text":"Nein, keine Schulung oder Information","score":0},{"text":"Allgemeine Kommunikation, keine strukturierte Schulung","score":1},{"text":"Schulung einmal durchgeführt, aber nicht aktuell","score":2},{"text":"Regelmässige, aktuelle Schulung zu Datenschutzpflichten","score":3}]},{"text":"Gibt es definierte Aufbewahrungsfristen für verschiedene Datenkategorien und werden diese eingehalten?","ref":"revDSG · ISO 27001: A.8.3","options":[{"text":"Nein, keine definierten Aufbewahrungsfristen","score":0},{"text":"Informell bekannt, aber nicht dokumentiert oder durchgesetzt","score":1},{"text":"Fristen dokumentiert, Löschung erfolgt aber manuell und unregelmässig","score":2},{"text":"Dokumentierte Fristen mit automatisierten Löschprozessen und Nachweis","score":3}]},{"text":"Werden Zugriffe auf besonders sensible Daten protokolliert und auf Auffälligkeiten ausgewertet?","ref":"ISO 27001: A.8.15 · CIS Control 8","options":[{"text":"Nein, keine Protokollierung von Datenzugriffen","score":0},{"text":"Protokollierung vorhanden, wird nicht ausgewertet","score":1},{"text":"Manuelle Auswertung bei Verdacht","score":2},{"text":"Automatisierte Überwachung mit Alarmierung bei ungewöhnlichen Zugriffsmustern","score":3}]},{"text":"Gibt es einen Prozess für den Umgang mit Auskunftsbegehren von Betroffenen gemäss revDSG?","ref":"revDSG Art. 25","options":[{"text":"Nein, kein Prozess vorhanden","score":0},{"text":"Anfragen werden ad hoc bearbeitet","score":1},{"text":"Prozess definiert, aber nicht vollständig umgesetzt","score":2},{"text":"Dokumentierter Prozess: Begehren innerhalb 30 Tagen beantwortet, Nachweise vorhanden","score":3}]},{"text":"Werden Daten bei der Auslagerung an Cloud-Dienste vor der Übertragung verschlüsselt (Client-Side Encryption)?","ref":"ISO 27001: A.10.1 · CIS Control 3","options":[{"text":"Nein, Daten werden unverschlüsselt in die Cloud übertragen","score":0},{"text":"Nur Transport-Verschlüsselung (TLS), keine End-to-End-Verschlüsselung","score":1},{"text":"Teilweise verschlüsselt (nur besonders sensible Daten)","score":2},{"text":"Alle sensiblen Daten clientseitig verschlüsselt vor Cloud-Upload","score":3}]},{"text":"Sind alle Cloud-Dienste und SaaS-Anwendungen auf Datenspeicherort, Vertragsbedingungen und revDSG-Konformität geprüft?","ref":"ISO 27001: A.5.23 · revDSG","options":[{"text":"Nein, Cloud-Dienste werden ohne Prüfung eingesetzt","score":0},{"text":"Bekannte grosse Dienste genutzt, ohne formale Prüfung","score":1},{"text":"Wichtigste Dienste geprüft, kein vollständiges Inventar","score":2},{"text":"Vollständiges Inventar aller Cloud-Dienste, jeder geprüft und freigegeben","score":3}]}]},{"num":"07","name":"Netzwerk / WLAN","std":"CIS Controls 12, 13 · ISO 27001: A.13","desc":"Firewall, Netzwerksegmentierung, WLAN-Sicherheit, Monitoring und Remote Access","recs":[{"m":"Implementieren Sie eine NGFW mit aktivem Regelwerk, IDS/IPS-Funktion und quartalsweiser Überprüfung durch eine Fachperson.","iso":"ISO 27001: A.13.1, CIS Control 12"},{"m":"Segmentieren Sie Ihr Netzwerk in mindestens 3 Zonen: Clients, Server/Daten, Gäste/BYOD via VLANs.","iso":"ISO 27001: A.13.1.3, CIS Control 12"},{"m":"Aktualisieren Sie WLAN auf WPA3 oder WPA2-Enterprise mit individuellen Zugangsdaten pro Person.","iso":"ISO 27001: A.10.1, CIS Control 12"},{"m":"Führen Sie zentrales Log-Management ein: Netzwerkzugriffe, Firewall-Events, mind. 90 Tage aufbewahrt.","iso":"ISO 27001: A.12.4, CIS Control 13"},{"m":"Schützen Sie Remote-Zugänge ausschliesslich über VPN mit 2FA. Deaktivieren Sie RDP direkt ins Internet.","iso":"ISO 27001: A.13.2, CIS Control 12"},{"m":"Führen Sie jährliche Netzwerk-Audits (Vulnerability Scan + Firewall-Assessment) durch.","iso":"ISO 27001: A.18.2, CIS Control 7"},{"m":"Filtern Sie DNS-Abfragen um bekannte Schad-Domains zu blockieren und richten Sie IDS/IPS ein.","iso":"CIS Control 13, ISO 27001: A.13.1"}],"questions":[{"text":"Ist Ihr Netzwerk durch eine konfigurierte Firewall von externen Netzwerken geschützt?","ref":"CIS Control 12 · ISO 27001: A.13.1","options":[{"text":"Nein, keine Firewall vorhanden","score":0},{"text":"Standard-Router-Firewall, nicht konfiguriert","score":1},{"text":"Firewall vorhanden, grundlegend konfiguriert","score":2},{"text":"Firewall aktiv verwaltet, Regeln werden regelmässig überprüft und dokumentiert","score":3}]},{"text":"Gibt es ein separates WLAN-Netzwerk für Gäste und private Geräte der Mitarbeitenden?","ref":"CIS Control 12 · ISO 27001: A.13.1.3","options":[{"text":"Nein, alle nutzen dasselbe WLAN","score":0},{"text":"Trennung geplant, aber noch nicht umgesetzt","score":1},{"text":"Gäste-WLAN vorhanden, private Mitarbeitergeräte nicht getrennt","score":2},{"text":"Vollständige Segmentierung: Gäste, Mitarbeiter-privat und Unternehmensgeräte getrennt","score":3}]},{"text":"Ist das Unternehmens-WLAN mit einem starken Passwort und modernem Standard (WPA2/WPA3) geschützt?","ref":"CIS Control 12 · ISO 27001: A.10.1","options":[{"text":"Nein, offenes WLAN oder veralteter Standard (WEP/WPA)","score":0},{"text":"WPA2, aber schwaches oder lang unverändertes Passwort","score":1},{"text":"WPA2 mit starkem Passwort","score":2},{"text":"WPA3 oder WPA2-Enterprise mit individuellen Zugangsdaten pro Person","score":3}]},{"text":"Werden Netzwerkzugriffe protokolliert und auf auffällige Aktivitäten überwacht?","ref":"CIS Control 13 · ISO 27001: A.12.4","options":[{"text":"Nein, keine Protokollierung","score":0},{"text":"Grundlegende Logs vorhanden, werden nicht ausgewertet","score":1},{"text":"Logs vorhanden, gelegentliche manuelle Auswertung","score":2},{"text":"Automatisierte Überwachung mit Alarmierung bei Anomalien","score":3}]},{"text":"Werden Netzwerkgeräte (Router, Switches, Access Points) regelmässig mit Firmware-Updates versorgt?","ref":"CIS Control 7 · ISO 27001: A.12.6.1","options":[{"text":"Nein, Geräte werden nie oder sehr selten aktualisiert","score":0},{"text":"Nur bei bekannten schwerwiegenden Sicherheitslücken","score":1},{"text":"Jährliche Überprüfung und Aktualisierung","score":2},{"text":"Regelmässige Aktualisierung, mindestens quartalsweise oder automatisch","score":3}]},{"text":"Werden Remote-Zugänge (VPN, Homeoffice) ausschliesslich mit starker Authentifizierung (2FA) geschützt?","ref":"ISO 27001: A.13.2 · CIS Control 12","options":[{"text":"Nein, Remote-Zugänge ohne 2FA oder direkte RDP-Verbindungen aktiv","score":0},{"text":"VPN vorhanden, aber ohne 2FA","score":1},{"text":"VPN mit 2FA für IT-Mitarbeitende, nicht für alle","score":2},{"text":"VPN mit 2FA für alle Remote-Zugriffe, direkte Fernzugriffe ins Internet deaktiviert","score":3}]},{"text":"Sind DNS-Abfragen gefiltert, um bekannte Schad-Domains (Malware, Phishing, C2) zu blockieren?","ref":"CIS Control 9 · ISO 27001: A.13.1","options":[{"text":"Nein, kein DNS-Filtering","score":0},{"text":"Standard-ISP-DNS ohne Filtering","score":1},{"text":"DNS-Filtering für bekannte Kategorien (z.B. OpenDNS)","score":2},{"text":"Unternehmensspezifisches DNS-Filtering mit Threat-Intelligence-Feeds und Protokollierung","score":3}]},{"text":"Gibt es Intrusion Detection/Prevention Systeme (IDS/IPS) im Netzwerk?","ref":"CIS Control 13 · ISO 27001: A.13.1","options":[{"text":"Nein, kein IDS/IPS","score":0},{"text":"Basis-IPS in der Firewall, nicht aktiv konfiguriert","score":1},{"text":"IDS/IPS vorhanden, regelmässig aber manuell ausgewertet","score":2},{"text":"IDS/IPS aktiv, automatische Alarmierung und Blockierung, regelmässige Signaturen-Updates","score":3}]},{"text":"Ist die Netzwerkdokumentation (Topologie, IP-Adressen, VLANs, Firewall-Regeln) aktuell und verfügbar?","ref":"ISO 27001: A.8.1 · CIS Control 12","options":[{"text":"Nein, keine Netzwerkdokumentation","score":0},{"text":"Informelle Kenntnis, nichts Dokumentiertes","score":1},{"text":"Teilweise dokumentiert, nicht regelmässig aktualisiert","score":2},{"text":"Vollständige, aktuelle Netzwerkdokumentation, bei Änderungen sofort aktualisiert","score":3}]},{"text":"Gibt es eine Network Access Control (NAC) Lösung, um nicht autorisierte Geräte zu erkennen und zu blockieren?","ref":"CIS Control 1 · ISO 27001: A.13.1","options":[{"text":"Nein, alle Geräte erhalten automatisch Netzwerkzugang","score":0},{"text":"Keine NAC, aber WLAN-Passwort als Zugangsbarriere","score":1},{"text":"MAC-Adressen-Filterung (einfache, umgehbare Kontrolle)","score":2},{"text":"Vollständige NAC-Lösung: Geräte müssen sich authentifizieren und werden auf Compliance geprüft","score":3}]}]},{"num":"08","name":"Zugriffsrechte","std":"ISO 27001: A.9 · CIS Controls 5, 6","desc":"Benutzerkonten, Passwortsicherheit, MFA, Rechtevergabe und Identitätsmanagement","recs":[{"m":"Setzen Sie Least Privilege konsequent um: Jede Person erhält nur die Rechte die für ihre aktuelle Aufgabe notwendig sind.","iso":"ISO 27001: A.9.2, CIS Control 6"},{"m":"Führen Sie halbjährliche Access-Reviews durch: alle Benutzerrechte, Gruppen und Admin-Konten prüfen.","iso":"ISO 27001: A.9.2.5, CIS Control 5"},{"m":"Erzwingen Sie 2FA/MFA für alle Mitarbeitenden, insbesondere E-Mail, VPN, Cloud-Dienste und privilegierte Konten.","iso":"ISO 27001: A.9.4.2, CIS Control 6"},{"m":"Führen Sie einen unternehmensweiten Passwort-Manager ein und verbieten Sie Passwort-Wiederverwendung schriftlich.","iso":"ISO 27001: A.9.3, CIS Control 5"},{"m":"Trennen Sie Admin-Konten konsequent von Benutzerkonten: privilegierte Konten nie für Browser oder E-Mail.","iso":"ISO 27001: A.9.2.3, CIS Control 5"},{"m":"Definieren Sie einen verbindlichen Offboarding-Prozess: sofortige Sperrung aller Zugänge am letzten Arbeitstag.","iso":"ISO 27001: A.9.2.6, CIS Control 5"},{"m":"Überwachen Sie privilegierte Aktionen via SIEM/Audit-Log mit automatischer Alarmierung bei Anomalien.","iso":"ISO 27001: A.9.4.2, CIS Control 8"}],"questions":[{"text":"Gilt das Prinzip der minimalen Rechtevergabe – erhalten Mitarbeitende nur die Rechte die sie für ihre Arbeit benötigen?","ref":"ISO 27001: A.9.2 · CIS Control 6","options":[{"text":"Nein, viele Mitarbeitende haben Admin-Rechte oder zu breite Zugänge","score":0},{"text":"Bei einigen Bereichen, nicht systematisch umgesetzt","score":1},{"text":"Grundsätzlich umgesetzt, aber nicht regelmässig überprüft","score":2},{"text":"Systematisch umgesetzt, dokumentiert und regelmässig überprüft (Access Reviews)","score":3}]},{"text":"Werden Benutzerkonten und Zugriffsrechte bei Austritt oder Rollenwechsel sofort angepasst?","ref":"ISO 27001: A.9.2.6 · CIS Control 5","options":[{"text":"Nein, Konten bleiben oft aktiv","score":0},{"text":"Wird manchmal vergessen oder verzögert","score":1},{"text":"Manueller Prozess, meistens zeitnah umgesetzt","score":2},{"text":"Definierter Prozess, sofortige Deaktivierung am letzten Arbeitstag garantiert","score":3}]},{"text":"Ist eine Zwei-Faktor-Authentifizierung (2FA/MFA) für E-Mail, Cloud-Dienste und kritische Systeme aktiviert?","ref":"CIS Control 6 · ISO 27001: A.9.4.2","options":[{"text":"Nein, keine 2FA vorhanden","score":0},{"text":"Bei einzelnen Systemen oder Benutzern","score":1},{"text":"Bei den meisten kritischen Systemen aktiviert","score":2},{"text":"Für alle Mitarbeitenden und alle relevanten Systeme erzwungen","score":3}]},{"text":"Werden Passwörter über einen Passwort-Manager verwaltet und sind sie einzigartig pro Dienst?","ref":"CIS Control 5 · ISO 27001: A.9.3","options":[{"text":"Nein, Passwörter werden wiederverwendet oder notiert","score":0},{"text":"Einige nutzen einen Passwort-Manager, ohne Vorgabe","score":1},{"text":"Empfohlen, aber nicht durchgesetzt","score":2},{"text":"Unternehmensweiter Passwort-Manager eingeführt und vorgeschrieben","score":3}]},{"text":"Werden administrative Konten (Admin, Root) von normalen Benutzerkonten getrennt geführt?","ref":"CIS Control 5 · ISO 27001: A.9.2.3","options":[{"text":"Nein, Admins nutzen auch für Alltagsaufgaben Admin-Konten","score":0},{"text":"Bei einigen Systemen getrennt","score":1},{"text":"Grundsätzlich getrennt, aber nicht konsequent","score":2},{"text":"Konsequente Trennung: Admin-Konten nur für Admin-Aufgaben, nie für Browser/Mail","score":3}]},{"text":"Werden Service-Konten und technische Benutzer regelmässig überprüft und mit minimalen Rechten versehen?","ref":"ISO 27001: A.9.2.3 · CIS Control 5","options":[{"text":"Nein, Service-Konten haben oft zu breite Rechte und werden nicht überprüft","score":0},{"text":"Gelegentlich überprüft, keine systematische Minimierung","score":1},{"text":"Inventar vorhanden, Rechte reduziert, aber nicht regelmässig reviewed","score":2},{"text":"Vollständiges Inventar, minimale Rechte, regelmässiger Review und keine geteilten Service-Passwörter","score":3}]},{"text":"Werden fehlgeschlagene Anmeldeversuche protokolliert und Konten nach mehrfachen Fehlversuchen gesperrt?","ref":"ISO 27001: A.9.4.2 · CIS Control 6","options":[{"text":"Nein, keine Protokollierung oder Sperrung","score":0},{"text":"Protokollierung vorhanden, aber keine automatische Sperrung","score":1},{"text":"Automatische Sperrung nach mehreren Fehlversuchen, Logs nicht ausgewertet","score":2},{"text":"Sperrung nach Fehlversuchen, Logs automatisch ausgewertet, Alarmierung bei Brute-Force-Mustern","score":3}]},{"text":"Wird der Einsatz von Shared Accounts (ein Konto für mehrere Personen) aktiv verhindert?","ref":"ISO 27001: A.9.2 · CIS Control 5","options":[{"text":"Nein, Shared Accounts werden regelmässig genutzt","score":0},{"text":"Policy verbietet es, aber keine technische Durchsetzung","score":1},{"text":"Weitgehend verhindert, Ausnahmen nur mit Genehmigung","score":2},{"text":"Technisch verhindert: Alle Zugänge sind personalisiert, keine Shared Accounts ausser dokumentierte Ausnahmen","score":3}]},{"text":"Ist Single Sign-On (SSO) in Kombination mit MFA für zentrale Dienste implementiert?","ref":"ISO 27001: A.9.4 · CIS Control 6","options":[{"text":"Nein, SSO ist nicht vorhanden","score":0},{"text":"Einzelne Dienste mit SSO, ohne konsistentes Konzept","score":1},{"text":"SSO für die meisten Dienste, aber ohne MFA","score":2},{"text":"SSO mit MFA für alle zentralen Dienste, zentralisiertes Identitätsmanagement","score":3}]},{"text":"Gibt es einen definierten Prozess für die Vergabe von Notfallzugängen (Break-Glass-Accounts)?","ref":"ISO 27001: A.9.2.3 · CIS Control 5","options":[{"text":"Nein, keine Regelung für Notfallzugänge","score":0},{"text":"Notfallzugänge existieren, aber ohne Prozess oder Protokollierung","score":1},{"text":"Prozess definiert, Nutzung wird protokolliert","score":2},{"text":"Gesicherter Break-Glass-Prozess: Zugang versiegelt, automatische Alarmierung bei Nutzung, vollständige Protokollierung","score":3}]}]},{"num":"09","name":"Benutzerrichtlinien","std":"ISO 27001: A.6.3, A.7 · CIS Controls 14, 17","desc":"Schulungen, Sensibilisierung, Richtlinien, Homeoffice und Sicherheitskultur","recs":[{"m":"Erarbeiten Sie eine Acceptable-Use-Policy inkl. Regelungen zu Cloud-Diensten, Social Media und mobilen Geräten.","iso":"ISO 27001: A.5.10, CIS Control 14"},{"m":"Führen Sie ein Security-Awareness-Programm mit mind. zwei Schulungseinheiten pro Jahr durch.","iso":"ISO 27001: A.6.3, CIS Control 14"},{"m":"Führen Sie simulierte Phishing-Kampagnen (mind. 2x jährlich) mit gezieltem Nachschulungsangebot durch.","iso":"ISO 27001: A.6.3, CIS Control 14"},{"m":"Sensibilisieren Sie für CEO-Fraud, Vishing, Pretexting und etablieren Sie einen Rückruf-Prozess.","iso":"ISO 27001: A.6.3"},{"m":"Schulen Sie alle neuen Mitarbeitenden bereits im Onboarding zu allen relevanten Sicherheitsrichtlinien.","iso":"ISO 27001: A.7.2"},{"m":"Informieren Sie Mitarbeitende über Risiken von KI-Tools (ChatGPT, Copilot) mit Unternehmensdaten.","iso":"ISO 27001: A.5.10"},{"m":"Messen Sie die Sicherheitskultur jährlich und leiten Sie daraus gezielte Verbesserungsmassnahmen ab.","iso":"ISO 27001: A.5.1, CIS Control 14"}],"questions":[{"text":"Gibt es schriftliche Richtlinien zur akzeptablen Nutzung von IT-Systemen (Acceptable Use Policy)?","ref":"ISO 27001: A.5.10 · CIS Control 14","options":[{"text":"Nein, keine Richtlinie vorhanden","score":0},{"text":"Mündliche Regeln, nichts Schriftliches","score":1},{"text":"Schriftlich vorhanden, aber nicht aktiv kommuniziert","score":2},{"text":"Schriftlich, kommuniziert und von Mitarbeitenden bestätigt/unterschrieben","score":3}]},{"text":"Werden Mitarbeitende regelmässig zu Phishing, Social Engineering und sicherem Arbeiten sensibilisiert?","ref":"ISO 27001: A.6.3 · CIS Control 14","options":[{"text":"Nein, keine Schulungen","score":0},{"text":"Einmalige Einführung bei Stellenantritt","score":1},{"text":"Jährliche Schulung ohne praktische Tests","score":2},{"text":"Regelmässige Schulungen inkl. simulierter Phishing-Tests","score":3}]},{"text":"Gibt es klare Regeln für die Nutzung privater Cloud-Dienste und nicht genehmigter Software (Shadow IT)?","ref":"ISO 27001: A.5.10 · CIS Control 4","options":[{"text":"Nein, keine Regelung zur Shadow IT","score":0},{"text":"Mündlich geregelt, aber nicht dokumentiert","score":1},{"text":"Schriftlich geregelt, aber nicht technisch überwacht","score":2},{"text":"Schriftlich geregelt, kommuniziert und technisch soweit möglich durchgesetzt","score":3}]},{"text":"Wissen Mitarbeitende, wie und wo sie einen Sicherheitsvorfall melden können?","ref":"ISO 27001: A.6.1.3","options":[{"text":"Nein, kein Meldeprozess bekannt","score":0},{"text":"Informell: Mitarbeitende wenden sich an IT oder Vorgesetzte","score":1},{"text":"Meldeprozess vorhanden, aber wenig bekannt","score":2},{"text":"Klarer, niederschwelliger Meldeprozess regelmässig kommuniziert","score":3}]},{"text":"Ist eine Sicherheitskultur im Unternehmen spürbar – wird Informationssicherheit als gemeinsame Aufgabe gelebt?","ref":"ISO 27001: A.5.1 · CIS Control 14","options":[{"text":"Nein, Sicherheit ist kein Thema im Alltag","score":0},{"text":"Nur bei wenigen Mitarbeitenden oder der IT ein Thema","score":1},{"text":"Auf der Agenda, aber nicht tief in der Unternehmenskultur verankert","score":2},{"text":"Aktiv gefördert, Geschäftsleitung lebt Sicherheitskultur vor","score":3}]},{"text":"Gibt es definierte Sicherheitsregeln für die Arbeit im Homeoffice (Bildschirmschutz, Besucher, Netzwerk)?","ref":"ISO 27001: A.6.2 · CIS Control 14","options":[{"text":"Nein, keine Homeoffice-Sicherheitsregeln","score":0},{"text":"Informelle Empfehlungen, nichts Schriftliches","score":1},{"text":"Schriftliche Richtlinie vorhanden, aber selten kommuniziert","score":2},{"text":"Klare Homeoffice-Policy: VPN-Pflicht, Bildschirmsperre, keine Einsicht durch Dritte, jährlich bestätigt","score":3}]},{"text":"Werden neue Mitarbeitende bereits im Onboarding zu Sicherheitsrichtlinien geschult und verpflichtet?","ref":"ISO 27001: A.7.2","options":[{"text":"Nein, kein sicherheitsbezogenes Onboarding","score":0},{"text":"Übergabe von IT-Mitteln, aber keine Schulung","score":1},{"text":"Kurzeinführung zu wichtigsten Regeln","score":2},{"text":"Strukturiertes Onboarding: Schulung, Richtlinienunterzeichnung, dokumentierter Abschluss","score":3}]},{"text":"Sind Mitarbeitende über Risiken bei der Nutzung von KI-Tools (z.B. ChatGPT, Copilot) mit Unternehmensdaten informiert?","ref":"ISO 27001: A.5.10","options":[{"text":"Nein, keine Regelung oder Information zu KI-Tools","score":0},{"text":"Allgemein bekannt, keine spezifische Schulung","score":1},{"text":"Informell kommuniziert, keine schriftliche Richtlinie","score":2},{"text":"Schriftliche KI-Nutzungsrichtlinie, Schulung durchgeführt, technische Kontrollen vorhanden","score":3}]},{"text":"Gibt es Konsequenzen bei Verstössen gegen Sicherheitsrichtlinien und werden diese konsequent durchgesetzt?","ref":"ISO 27001: A.6.4","options":[{"text":"Nein, keine Konsequenzen definiert","score":0},{"text":"Verstösse werden mündlich thematisiert, ohne formale Konsequenzen","score":1},{"text":"Konsequenzen in Policy definiert, aber selten durchgesetzt","score":2},{"text":"Klarer Disziplinarprozess, konsequente Anwendung, dokumentierte Fälle","score":3}]},{"text":"Gibt es eine Regelung für den sicheren Umgang mit E-Mails (Anhänge, Links, externe Absender, Weiterleitungen)?","ref":"ISO 27001: A.6.3 · CIS Control 14","options":[{"text":"Nein, keine E-Mail-Sicherheitsregeln","score":0},{"text":"Allgemeine Hinweise, keine schriftliche Richtlinie","score":1},{"text":"Schriftliche Regeln vorhanden, aber ohne Schulung","score":2},{"text":"E-Mail-Sicherheitsrichtlinie, geschult, technische Schutzmassnahmen (Spam-Filter, Link-Scanner) aktiv","score":3}]}]},{"num":"10","name":"Physische Sicherheit","std":"ISO 27001: A.7 · CIS Controls 10, 17","desc":"Gebäude, Serverräume, Clean Desk, physische Datenentsorgung und Besuchermanagement","recs":[{"m":"Sichern Sie Serverräume mit elektronischer Zutrittskontrolle (Chipkarte/PIN), Protokollierung und regelmässiger Überprüfung.","iso":"ISO 27001: A.7.1"},{"m":"Etablieren Sie Clean-Desk-Policy: keine vertraulichen Unterlagen sichtbar, Bildschirme sperren, Schredder verfügbar.","iso":"ISO 27001: A.7.7"},{"m":"Erzwingen Sie automatische Bildschirmsperren nach max. 5 Minuten (GPO/MDM).","iso":"ISO 27001: A.7.7, CIS Control 4"},{"m":"Vernichten Sie Datenträger und vertrauliche Ausdrucke zertifiziert mit dokumentiertem Nachweis.","iso":"ISO 27001: A.7.10, CIS Control 3"},{"m":"Implementieren Sie Schutz gegen physische Risiken: Brandschutz, Klimaanlage, Einbruchschutz, USV.","iso":"ISO 27001: A.7.5, CIS Control 10"},{"m":"Erstellen Sie eine Besucherrichtlinie: Registrierung, Begleitung, Zugang nur für notwendige Bereiche.","iso":"ISO 27001: A.7.2"},{"m":"Überprüfen Sie Schlüssel, Zugangskarten und Codes regelmässig – bei Verlust oder Austritt sofort sperren.","iso":"ISO 27001: A.7.1"}],"questions":[{"text":"Sind Serverräume, Netzwerkschränke und IT-Infrastruktur gegen unbefugten Zugang gesichert?","ref":"ISO 27001: A.7.1","options":[{"text":"Nein, für alle Mitarbeitenden frei zugänglich","score":0},{"text":"Abgeschlossen, Schlüssel aber weit verteilt","score":1},{"text":"Zugang kontrolliert, aber nicht protokolliert","score":2},{"text":"Gesicherter Zugang, Protokollierung, nur autorisierte Personen","score":3}]},{"text":"Gibt es eine Clean-Desk-Policy (keine sensiblen Unterlagen auf unbeaufsichtigten Arbeitsplätzen)?","ref":"ISO 27001: A.7.7","options":[{"text":"Nein, keine Policy vorhanden","score":0},{"text":"Informelle Erwartung, nichts Schriftliches","score":1},{"text":"Schriftlich festgelegt, aber nicht konsequent umgesetzt","score":2},{"text":"Policy kommuniziert, regelmässig überprüft und eingehalten","score":3}]},{"text":"Sperren Mitarbeitende ihre Bildschirme automatisch oder manuell beim Verlassen des Arbeitsplatzes?","ref":"ISO 27001: A.7.7 · CIS Control 4","options":[{"text":"Nein, Bildschirme bleiben offen","score":0},{"text":"Manche tun es, aber keine Regel oder Technik","score":1},{"text":"Policy vorhanden, aber nicht technisch erzwungen","score":2},{"text":"Automatische Bildschirmsperre (max. 5 Min.) technisch erzwungen","score":3}]},{"text":"Werden alte Datenträger (Festplatten, USB-Sticks) und vertrauliche Dokumente sicher vernichtet?","ref":"ISO 27001: A.7.10 · CIS Control 3","options":[{"text":"Nein, werden im normalen Müll entsorgt","score":0},{"text":"Festplatten werden gelöscht, Dokumente geschreddert ohne Standard","score":1},{"text":"Teilweise zertifizierte Vernichtung","score":2},{"text":"Konsequent zertifizierte Vernichtung für alle Träger und Dokumente, dokumentiert","score":3}]},{"text":"Gibt es Schutzmassnahmen gegen physische Risiken wie Feuer, Wasser, Diebstahl oder Stromausfall?","ref":"ISO 27001: A.7.5 · CIS Control 10","options":[{"text":"Keine speziellen Massnahmen","score":0},{"text":"Grundlegende Massnahmen (z.B. nur Rauchmelder)","score":1},{"text":"Mehrere Massnahmen vorhanden (z.B. Rauchmelder, Klimaanlage)","score":2},{"text":"Umfassende Massnahmen: Brandschutz, Klimatisierung, Einbruchschutz, USV","score":3}]},{"text":"Werden Schlüssel, Zugangskarten und Zutrittscodes regelmässig überprüft und bei Verlust sofort gesperrt?","ref":"ISO 27001: A.7.1","options":[{"text":"Nein, kein Verwaltungsprozess für Zugangsmittel","score":0},{"text":"Schlüsselliste vorhanden, selten aktualisiert","score":1},{"text":"Regelmässige Überprüfung, Sperrung bei Verlust nicht immer sofort","score":2},{"text":"Vollständiges Schlüsselregister, sofortige Sperrung bei Verlust/Austritt, jährliche Überprüfung","score":3}]},{"text":"Gibt es Schutzmassnahmen gegen Tailgating/Piggybacking (unbefugtes Hinterherlaufen durch gesicherte Türen)?","ref":"ISO 27001: A.7.2","options":[{"text":"Nein, keine Massnahmen","score":0},{"text":"Mitarbeitende sind darauf hingewiesen, aber keine technischen Kontrollen","score":1},{"text":"Teilweise durch Schleusen oder Kontrollen an sensitiven Bereichen","score":2},{"text":"Technische Massnahmen (Personenschleuse, Kameraüberwachung) und regelmässige Schulung","score":3}]},{"text":"Gibt es eine Besucherrichtlinie mit Registrierung und Begleitung von externen Personen?","ref":"ISO 27001: A.7.2","options":[{"text":"Nein, Besucher können sich frei im Gebäude bewegen","score":0},{"text":"Besucher werden beim Empfang angemeldet, aber nicht begleitet","score":1},{"text":"Registrierung und Begleitung zu sensitiven Bereichen","score":2},{"text":"Vollständige Besucherrichtlinie: Registrierung, Ausweis, Begleitung, Badge, Protokoll","score":3}]},{"text":"Werden externe Hardware-Lieferungen und neue Geräte auf Manipulation geprüft vor der Inbetriebnahme?","ref":"ISO 27001: A.7.8 · CIS Control 1","options":[{"text":"Nein, Hardware wird ohne Prüfung direkt eingesetzt","score":0},{"text":"Sichtprüfung der Verpackung","score":1},{"text":"Systematische Sichtprüfung, keine technische Überprüfung","score":2},{"text":"Lieferkettenkontrolle: Verpackungsintegrität, Seriennummernabgleich, technische Prüfung vor Inbetriebnahme","score":3}]},{"text":"Sind Drucksachen mit vertraulichem Inhalt durch Secure Printing (PIN-Freigabe am Drucker) geschützt?","ref":"ISO 27001: A.7.7","options":[{"text":"Nein, Druckaufträge werden ohne Kontrolle ausgegeben","score":0},{"text":"Mitarbeitende werden gebeten, Ausdrucke sofort abzuholen","score":1},{"text":"Secure Printing bei besonders sensitiven Dokumenten empfohlen","score":2},{"text":"Secure Printing technisch erzwungen: Alle Druckaufträge erfordern PIN-Eingabe am Gerät","score":3}]}]}];
+
+const MAX_SCORE=3;let currentCat=0,answers={},radarChart=null,donutChart=null;
+const MATURITY=[{max:20,label:"Stufe 1 – Initial",color:"#ef4444"},{max:40,label:"Stufe 2 – Grundlegend",color:"#f59e0b"},{max:60,label:"Stufe 3 – Definiert",color:"#eab308"},{max:80,label:"Stufe 4 – Etabliert",color:"#3b82f6"},{max:100,label:"Stufe 5 – Optimiert",color:"#22c55e"}];
+const MATURITY_DESC=["Grundlegende Sicherheitsmassnahmen fehlen weitgehend. Sofortiger Handlungsbedarf in mehreren Bereichen.","Einige Sicherheitsmassnahmen sind vorhanden, aber noch nicht systematisch umgesetzt. Wichtige Lücken bestehen.","Sicherheitsprozesse sind dokumentiert und grundlegend umgesetzt. Konsistenz und Regelmässigkeit fehlen noch.","Sicherheitsmassnahmen sind etabliert und werden regelmässig überprüft. Optimierungspotenzial in einzelnen Bereichen.","Informationssicherheit ist systematisch, dokumentiert und wird kontinuierlich verbessert. Vorbildliches Niveau."];
+function getMaturity(p){return MATURITY.find(m=>p<=m.max)||MATURITY[4]}
+function getCatScore(ci){let t=0,m=CATEGORIES[ci].questions.length*MAX_SCORE;CATEGORIES[ci].questions.forEach((_,qi)=>{const k=`${ci}_${qi}`;if(answers[k]!==undefined)t+=answers[k];});return{total:t,max:m,pct:m>0?Math.round((t/m)*100):0}}
+function getOverallScore(){let t=0,m=0;CATEGORIES.forEach((_,ci)=>{const s=getCatScore(ci);t+=s.total;m+=s.max;});return m>0?Math.round((t/m)*100):0}
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
+function startQuiz(){showScreen('screen-quiz');renderCategory(0)}
+function restartQuiz(){answers={};currentCat=0;if(radarChart){radarChart.destroy();radarChart=null}if(donutChart){donutChart.destroy();donutChart=null}showScreen('screen-intro')}
+function prevCat(){if(currentCat>0){currentCat--;renderCategory(currentCat)}else showScreen('screen-intro')}
+function nextCat(){const ua=CATEGORIES[currentCat].questions.filter((_,qi)=>answers[`${currentCat}_${qi}`]===undefined).length;if(ua>0){document.getElementById('unanswered-warn').style.display='flex';setTimeout(()=>document.getElementById('unanswered-warn').style.display='none',2500);return}if(currentCat<CATEGORIES.length-1){currentCat++;renderCategory(currentCat)}else{showScreen('screen-results');renderResults()}}
+function renderCategory(idx){const cat=CATEGORIES[idx];document.getElementById('cat-eyebrow').textContent=`Kategorie ${cat.num} von ${CATEGORIES.length}`;document.getElementById('cat-name').textContent=cat.name;document.getElementById('cat-std').textContent=cat.std;document.getElementById('cat-desc').textContent=cat.desc;document.getElementById('progress-bar').style.width=Math.round((idx/CATEGORIES.length)*100)+'%';document.getElementById('progress-num').textContent=`${idx} / ${CATEGORIES.length}`;document.getElementById('btn-prev').textContent=idx===0?'Intro':'Zurück';document.getElementById('btn-next').textContent=idx===CATEGORIES.length-1?'Auswertung':'Weiter';document.getElementById('header-cat-dots').innerHTML=CATEGORIES.map((_,i)=>`<div class="cat-dot ${i<idx?'done':i===idx?'current':''}" title="${CATEGORIES[i].name}"></div>`).join('');document.getElementById('questions-container').innerHTML=cat.questions.map((q,qi)=>{const key=`${idx}_${qi}`,selected=answers[key];return`<div class="question-block ${selected!==undefined?'answered':''}" id="qblock-${qi}"><div class="q-meta"><span class="q-num">Frage ${qi+1} / ${cat.questions.length}</span><span class="q-ref">${q.ref}</span></div><div class="q-text">${q.text}</div><div class="options">${q.options.map((opt,oi)=>`<label class="option ${selected===opt.score?'selected':''}" onclick="selectAnswer(${idx},${qi},${opt.score},this)"><input type="radio" name="q${qi}" value="${opt.score}" ${selected===opt.score?'checked':''}><div class="option-indicator"></div><span class="option-score score-${oi}">${['Nicht umgesetzt','Teilweise','Überwiegend','Vollständig'][oi]}</span><span class="option-text">${opt.text}</span></label>`).join('')}</div></div>`}).join('');window.scrollTo(0,0)}
+function selectAnswer(ci,qi,score,el){answers[`${ci}_${qi}`]=score;const b=el.closest('.question-block');b.classList.add('answered');b.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected')}
+function renderResults(){const overall=getOverallScore(),mat=getMaturity(overall),matIdx=MATURITY.indexOf(mat);document.getElementById('overall-score').textContent=overall+'%';document.getElementById('overall-score').style.color=mat.color;document.getElementById('maturity-label').textContent=mat.label;document.getElementById('maturity-label').style.color=mat.color;document.getElementById('results-desc').textContent=MATURITY_DESC[matIdx];if(donutChart)donutChart.destroy();const dCtx=document.getElementById('score-donut').getContext('2d');donutChart=new Chart(dCtx,{type:'doughnut',data:{datasets:[{data:[overall,100-overall],backgroundColor:[mat.color,'rgba(24,30,46,0.9)'],borderWidth:0,cutout:'82%'}]},options:{plugins:{legend:{display:false},tooltip:{enabled:false}},animation:{duration:900}}});document.getElementById('results-grid').innerHTML=CATEGORIES.map((cat,ci)=>{const s=getCatScore(ci),m=getMaturity(s.pct);return`<div class="cat-result-card"><div class="cat-result-header"><span class="cat-result-name">${cat.name}</span><span class="cat-result-pct" style="color:${m.color}">${s.pct}%</span></div><div class="cat-bar-outer"><div class="cat-bar-inner" style="width:${s.pct}%;background:${m.color}"></div></div><div class="cat-level" style="color:${m.color}">${m.label}</div></div>`}).join('');if(radarChart)radarChart.destroy();const rCtx=document.getElementById('radar-chart').getContext('2d');radarChart=new Chart(rCtx,{type:'radar',data:{labels:CATEGORIES.map(c=>c.name),datasets:[{label:'Reifegrad (%)',data:CATEGORIES.map((_,ci)=>getCatScore(ci).pct),backgroundColor:'rgba(200,16,46,0.08)',borderColor:'rgba(200,16,46,0.7)',pointBackgroundColor:'#c8102e',pointBorderColor:'#07090e',pointRadius:4,borderWidth:2}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw}%`}}},scales:{r:{min:0,max:100,ticks:{stepSize:25,color:'rgba(62,79,106,0.8)',font:{size:9},backdropColor:'transparent',callback:v=>v+'%'},grid:{color:'rgba(24,30,46,0.9)'},pointLabels:{color:'#8a9ab8',font:{size:10,family:"'Barlow',sans-serif"}},angleLines:{color:'rgba(24,30,46,0.8)'}}},animation:{duration:1100}}});const sorted=CATEGORIES.map((cat,ci)=>({cat,ci,pct:getCatScore(ci).pct})).sort((a,b)=>a.pct-b.pct);const prioC=['prio-high','prio-high','prio-high','prio-mid','prio-mid','prio-mid','prio-low','prio-low','prio-low','prio-low'],prioT=['prio-tag-high','prio-tag-high','prio-tag-high','prio-tag-mid','prio-tag-mid','prio-tag-mid','prio-tag-low','prio-tag-low','prio-tag-low','prio-tag-low'],prioL=['Hoch','Hoch','Hoch','Mittel','Mittel','Mittel','Tief','Tief','Tief','Tief'];document.getElementById('recommendations-list').innerHTML=sorted.map((item,i)=>`<div class="rec-item ${prioC[i]}"><div class="rec-prio-bar"></div><div class="rec-content"><div class="rec-cat">${item.cat.name} &middot; Reifegrad: ${item.pct}%</div><span class="prio-tag ${prioT[i]}">Priorität ${prioL[i]}</span><ul class="rec-measures">${item.cat.recs.map(r=>`<li><span class="rec-measure-text">${r.m}<span class="rec-iso">${r.iso}</span></span></li>`).join('')}</ul></div></div>`).join('')}
+
+function generatePDF(){
+  const overall=getOverallScore();
+  const mat=getMaturity(overall);
+  const matIdx=MATURITY.indexOf(mat);
+  const date=new Date().toLocaleDateString('de-CH',{day:'2-digit',month:'2-digit',year:'numeric'});
+
+  // Kategorie-Ergebnisse
+  const catRows=CATEGORIES.map((cat,ci)=>{
+    const s=getCatScore(ci),m=getMaturity(s.pct);
+    const barW=s.pct;
+    return `<div class="cat-card">
+      <div class="cat-head">
+        <span class="cat-name">${cat.name}</span>
+        <span class="cat-pct" style="color:${m.color}">${s.pct}%</span>
+      </div>
+      <div class="bar-outer"><div class="bar-inner" style="width:${barW}%;background:${m.color};-webkit-print-color-adjust:exact;print-color-adjust:exact"></div></div>
+      <div class="cat-lvl" style="color:${m.color}">${m.label}</div>
+    </div>`;
+  }).join('');
+
+  // Massnahmen – alle 10 Kategorien, sortiert nach Reifegrad
+  const sorted=CATEGORIES.map((cat,ci)=>({cat,ci,pct:getCatScore(ci).pct})).sort((a,b)=>a.pct-b.pct);
+  const prioColors=['#c8102e','#c8102e','#c8102e','#d97706','#d97706','#d97706','#4f46e5','#4f46e5','#4f46e5','#4f46e5'];
+  const prioLabels=['Priorität Hoch','Priorität Hoch','Priorität Hoch','Priorität Mittel','Priorität Mittel','Priorität Mittel','Priorität Tief','Priorität Tief','Priorität Tief','Priorität Tief'];
+
+  const recBlocks=sorted.map((item,i)=>{
+    const measures=item.cat.recs.map(r=>`
+      <li>
+        <span class="arr">→</span>
+        <span class="mtext">${r.m} <span class="miso">${r.iso}</span></span>
+      </li>`).join('');
+    return `<div class="rec-block" style="border-left:3pt solid ${prioColors[i]}">
+      <div class="rec-header">
+        <span class="rec-cat-name">${item.cat.name}</span>
+        <span class="rec-score" style="color:${prioColors[i]}">${item.pct}%</span>
+        <span class="rec-prio-badge" style="color:${prioColors[i]};border-color:${prioColors[i]}">${prioLabels[i]}</span>
+      </div>
+      <ul class="mlist">${measures}</ul>
+    </div>`;
+  }).join('');
+
+  const html=`<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Quick-Check EXT Informationssicherheit – SUEBO Informatik AG – ${date}</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page{margin:16mm 15mm 16mm 15mm;size:A4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow',Arial,sans-serif;font-size:10pt;line-height:1.5;color:#111;background:#fff}
+a{text-decoration:none;color:#111}
+
+/* ─ TITELBEREICH ──────────────────────────────────────── */
+.cover{border-top:4pt solid #c8102e;padding:18pt 0 14pt;margin-bottom:20pt;display:flex;align-items:flex-start;justify-content:space-between;gap:20pt;border-bottom:1pt solid #ddd}
+.cover-logo img{height:24pt}
+.cover-meta{text-align:right}
+.cover-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:8pt;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#c8102e;margin-bottom:4pt}
+.cover-title{font-family:'Barlow Condensed',sans-serif;font-size:20pt;font-weight:800;line-height:1.05;color:#111;margin-bottom:4pt}
+.cover-date{font-family:'Barlow Condensed',sans-serif;font-size:8pt;color:#888;letter-spacing:0.08em}
+
+/* ─ GESAMTERGEBNIS ────────────────────────────────────── */
+.summary-box{display:flex;align-items:center;gap:20pt;padding:14pt 16pt;border:1pt solid #ddd;border-left:4pt solid ${mat.color};margin-bottom:20pt;page-break-inside:avoid}
+.score-big{font-family:'Barlow Condensed',sans-serif;font-size:36pt;font-weight:800;color:${mat.color};line-height:1;flex-shrink:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.maturity-name{font-family:'Barlow Condensed',sans-serif;font-size:16pt;font-weight:800;color:${mat.color};margin-bottom:4pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.maturity-desc{font-size:9.5pt;color:#444;line-height:1.5;max-width:380pt}
+
+/* ─ ABSCHNITTITEL ─────────────────────────────────────── */
+.section-h{font-family:'Barlow Condensed',sans-serif;font-size:8pt;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#888;border-bottom:1pt solid #ddd;padding-bottom:4pt;margin-bottom:12pt;margin-top:20pt}
+.section-h:first-of-type{margin-top:0}
+
+/* ─ KATEGORIEN-GRID ───────────────────────────────────── */
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:6pt;margin-bottom:6pt}
+.cat-card{border:1pt solid #e0e0e0;padding:9pt 11pt}
+.cat-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6pt}
+.cat-name{font-family:'Barlow Condensed',sans-serif;font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:#222}
+.cat-pct{font-family:'Barlow Condensed',sans-serif;font-size:13pt;font-weight:800;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.bar-outer{height:4pt;background:#eee;overflow:hidden}
+.bar-inner{height:4pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cat-lvl{font-family:'Barlow Condensed',sans-serif;font-size:7.5pt;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-top:4pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* ─ MASSNAHMEN ────────────────────────────────────────── */
+.rec-block{padding:10pt 12pt 10pt 14pt;margin-bottom:8pt;border:1pt solid #e0e0e0;page-break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.rec-header{display:flex;align-items:center;gap:8pt;margin-bottom:7pt;flex-wrap:wrap}
+.rec-cat-name{font-family:'Barlow Condensed',sans-serif;font-size:11pt;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;color:#111}
+.rec-score{font-family:'Barlow Condensed',sans-serif;font-size:11pt;font-weight:800;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.rec-prio-badge{font-family:'Barlow Condensed',sans-serif;font-size:7pt;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:1pt 5pt;border:1pt solid;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.mlist{list-style:none;display:grid;gap:5pt}
+.mlist li{display:flex;gap:7pt;align-items:flex-start}
+.arr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:9pt;color:#c8102e;flex-shrink:0;margin-top:1pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.mtext{font-size:9pt;color:#222;line-height:1.45}
+.miso{display:inline;font-family:'Barlow Condensed',sans-serif;font-size:7pt;color:#999;letter-spacing:0.04em;margin-left:4pt}
+
+/* ─ DISCLAIMER ────────────────────────────────────────── */
+.disc{margin-top:20pt;padding:9pt 12pt;border:1pt solid #ddd;border-left:3pt solid #ccc;font-size:8pt;color:#666;line-height:1.5}
+.disc a{color:#c8102e}
+
+/* ─ FOOTER ────────────────────────────────────────────── */
+.footer{margin-top:14pt;padding-top:8pt;border-top:1pt solid #ddd;display:flex;justify-content:space-between;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:7.5pt;color:#aaa}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div>
+    <div class="cover-eyebrow">Quick-Check Informationssicherheit</div>
+    <div class="cover-title">Auswertung EXT Informationssicherheit<br>SUEBO Informatik AG</div>
+    <div class="cover-date">Erstellt am ${date} &nbsp;·&nbsp; ISO/IEC 27001:2022 &nbsp;·&nbsp; CIS Controls v8 &nbsp;·&nbsp; revDSG</div>
+  </div>
+  <div class="cover-meta">
+    <img src="https://suebo.ch/img/logo_main.svg" alt="SUEBO Informatik AG" style="height:28pt;display:block;margin-left:auto">
+  </div>
+</div>
+
+<div class="summary-box">
+  <div class="score-big">${overall}%</div>
+  <div>
+    <div class="maturity-name">${mat.label}</div>
+    <div class="maturity-desc">${MATURITY_DESC[matIdx]}</div>
+  </div>
+</div>
+
+<div class="section-h">Ergebnisse je Kategorie</div>
+<div class="cat-grid">${catRows}</div>
+
+<div class="section-h">Handlungsempfehlungen – alle 10 Bereiche (nach Priorität sortiert)</div>
+${recBlocks}
+
+<div class="disc">
+  Dieser Quick-Check dient der Ersteinschätzung und ersetzt keine professionelle Sicherheitsberatung oder ein formelles ISMS-Audit nach ISO/IEC 27001.
+  Für weiterführende Unterstützung: <a href="https://suebo.ch">suebo.ch</a> &nbsp;·&nbsp; +41 31 589 65 65 &nbsp;·&nbsp; <a href="mailto:security@suebo.ch">security@suebo.ch</a>
+</div>
+
+<div class="footer">
+  <span>SUEBO Informatik AG &nbsp;·&nbsp; Swiss Made Security &nbsp;·&nbsp; suebo.ch</span>
+  <span>Quick-Check Informationssicherheit &nbsp;·&nbsp; ${date}</span>
+</div>
+
+</body>
+</html>`;
+
+  const w=window.open('','_blank','width=900,height=700');
+  w.document.write(html);
+  w.document.close();
+  w.onload=function(){w.focus();w.print()};
+}
+function generateMarkdown(){
+  const overall=getOverallScore();
+  const mat=getMaturity(overall);
+  const matIdx=MATURITY.indexOf(mat);
+  const date=new Date().toLocaleDateString('de-CH',{day:'2-digit',month:'2-digit',year:'numeric'});
+
+  const sorted=CATEGORIES.map((cat,ci)=>({cat,ci,pct:getCatScore(ci).pct})).sort((a,b)=>a.pct-b.pct);
+  const prioLabels=['🔴 Priorität Hoch','🔴 Priorität Hoch','🔴 Priorität Hoch','🟡 Priorität Mittel','🟡 Priorität Mittel','🟡 Priorität Mittel','🔵 Priorität Tief','🔵 Priorität Tief','🔵 Priorität Tief','🔵 Priorität Tief'];
+
+  // Header
+  let md='';
+  md+=`# Quick-Check Informationssicherheit\n`;
+  md+=`## SUEBO Informatik AG\n\n`;
+  md+=`**Erstellt am:** ${date}  \n`;
+  md+=`**Standards:** ISO/IEC 27001:2022 · CIS Controls v8 · revDSG  \n\n`;
+  md+=`---\n\n`;
+
+  // Gesamtergebnis
+  md+=`## Gesamtergebnis\n\n`;
+  md+=`| | |\n|---|---|\n`;
+  md+=`| **Gesamtpunktzahl** | **${overall}%** |\n`;
+  md+=`| **Reifegrad** | **${mat.label}** |\n\n`;
+  md+=`> ${MATURITY_DESC[matIdx]}\n\n`;
+  md+=`---\n\n`;
+
+  // Ergebnisse je Kategorie
+  md+=`## Ergebnisse je Kategorie\n\n`;
+  md+=`| Kategorie | Punkte | Reifegrad |\n`;
+  md+=`|---|---|---|\n`;
+  CATEGORIES.forEach((_,ci)=>{
+    const s=getCatScore(ci);
+    const m=getMaturity(s.pct);
+    md+=`| ${CATEGORIES[ci].name} | ${s.pct}% | ${m.label} |\n`;
+  });
+  md+=`\n---\n\n`;
+
+  // Massnahmen
+  md+=`## Handlungsempfehlungen (nach Priorität sortiert)\n\n`;
+  sorted.forEach((item,i)=>{
+    const s=getCatScore(item.ci);
+    md+=`### ${String(i+1).padStart(2,'0')} · ${item.cat.name} — ${item.pct}%\n\n`;
+    md+=`**${prioLabels[i]}**  \n`;
+    md+=`*${item.cat.std}*  \n`;
+    md+=`*${item.cat.desc}*\n\n`;
+    item.cat.recs.forEach((r,ri)=>{
+      md+=`${ri+1}. ${r.m}  \n`;
+      md+=`   *Referenz: ${r.iso}*\n\n`;
+    });
+    if(i<sorted.length-1) md+=`---\n\n`;
+  });
+
+  // Antworten-Detail
+  md+=`\n---\n\n## Detailauswertung – Alle Antworten\n\n`;
+  CATEGORIES.forEach((cat,ci)=>{
+    const s=getCatScore(ci);
+    md+=`### ${cat.num} · ${cat.name} (${s.pct}%)\n\n`;
+    cat.questions.forEach((q,qi)=>{
+      const key=`${ci}_${qi}`;
+      const ans=answers[key];
+      const chosenOpt=ans!==undefined?q.options.find(o=>o.score===ans):null;
+      const scoreLabels=['Nicht umgesetzt','Teilweise','Überwiegend','Vollständig'];
+      md+=`**F${qi+1}:** ${q.text}  \n`;
+      if(chosenOpt){
+        md+=`**Antwort:** ${chosenOpt.text} *(${scoreLabels[ans]}, ${ans}/${MAX_SCORE} Punkte)*  \n`;
+      } else {
+        md+=`**Antwort:** *(nicht beantwortet)*  \n`;
+      }
+      md+=`*${q.ref}*\n\n`;
+    });
+  });
+
+  // Footer
+  md+=`---\n\n`;
+  md+=`*Dieser Quick-Check dient der Ersteinschätzung und ersetzt keine professionelle Sicherheitsberatung oder ein formelles ISMS-Audit nach ISO/IEC 27001.*  \n`;
+  md+=`*Für weiterführende Unterstützung: [suebo.ch](https://suebo.ch) · +41 31 589 65 65 · security@suebo.ch*  \n`;
+  md+=`*© 2026 SUEBO Informatik AG · Swiss Made Security*\n`;
+
+  // Download
+  const blob=new Blob([md],{type:'text/markdown;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  const safeDateStr=date.replace(/\./g,'-');
+  a.href=`Quick-Check-EXT-SUEBO-${safeDateStr}.md`;
+  a.href=url;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},100);
+}
+</script>
+</body>
+</html>

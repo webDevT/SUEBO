@@ -1,0 +1,76 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn</p>"
+      },
+      {
+        "content": "<p>Erreichen des geforderten Sicherheitsstands / der geforderten Zertifizierungen</p>"
+      },
+      {
+        "content": "<p>Einhaltung der gesetzlichen Vorgaben und Compliance</p>"
+      },
+      {
+        "content": "<p>Kostenreduktion durch wirtschaftliche Sicherheitsmassnahmen</p>"
+      },
+      {
+        "content": "<p>Stärkung von Vertrauen und Verbesserung Ihrer Reputation</p>"
+      },
+      {
+        "content": "<p>Finden Sie gezielt Ihre grössten Schwachstellen und schliessen Sie diese nachhaltig</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Cloud & Schwachstellen Scan Service",
+    "description": "Damit die Wolken nicht vom Himmel fallen",
+    "breadcrumbCurrent": "Cloud & Web Scanning",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/02_SUEBO_Cloud_Schwachstellen_Scan_Service.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen und Unternehmen vor eine ernsthafte Herausforderung."
+      },
+      "columns": [
+        {
+          "content": "Schwachstellen in Ihrer Cloud-Infrastruktur, Ihren Cloud-Workloads und Applikationen bieten Angreifern ein leichtes Einfallstor. Unser Cloud Vulnerability Scan Service identifiziert Sicherheitslücken automatisiert, schnell und wirtschaftlich – bevor sie zu einem echten Sicherheitsvorfall werden."
+        },
+        {
+          "content": "Cloud-Systeme sind sehr praktisch, aber leider auch exponiert für Cyberangriffe. Viele Unternehmen und Organisationen wissen nicht, wo ihre grössten Sicherheitslücken liegen – bis es zu spät ist. Datenpannen, Systemausfälle und Reputationsschäden sind die Folge."
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tWährend herkömmliche Sicherheitsprüfungen oft nur oberflächlich bleiben, geht unser Service deutlich weiter: Wir analysieren nicht nur die zugrunde liegende Cloud-Infrastruktur, sondern prüfen auch Ihre Cloud-Applikationen, Services und Konfigurationen umfassend und automatisiert auf bekannte und potenzielle Schwachstellen.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase\">Cloud-Schwachstellen: Unsichtbare Risiken frühzeitig erkennen</div>\n\t\t\t\t<p>\n\t\t\t\t\tSie erhalten einen klaren Überblick darüber, welche Bereiche Ihrer Cloud-Infrastruktur und -Applikationen die grössten Sicherheitsrisiken aufweisen und wo unmittelbarer Handlungsbedarf besteht. So können Sie Ihre Ressourcen gezielt einsetzen und Ihre kritischsten Cloud-Systeme priorisiert absichern.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase\">UNSERE LÖSUNG: CLOUD SCHWACHSTELLEN SCAN SERVICE</div>\n\t\t\t\t<p>\n\t\t\t\t\tMit unserem automatisierten Scan-Service erhalten Sie in kürzester Zeit Klarheit über den Sicherheitsstatus Ihrer Cloud-Infrastruktur und -Applikationen.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase\">TIEFGEHEND STATT OBERFLÄCHLICH:</div>\n\t\t\t\t<p>\n\t\t\t\t\tWährend viele Lösungen nur die Infrastruktur prüfen, analysieren wir Ihre Cloud-Systeme auf Code-Ebene. SQL-Injection, XSS, unsichere APIs, Authentifizierungsfehler – wir finden die Schwachstellen, die reale Angreifer ausnutzen würden.\n\t\t\t\t</p>\n\n\t\t\t\t<div class=\"color-suebo text-uppercase\">WIRTSCHAFTLICH UND PRAXISNAH:</div>\n\t\t\t\t<p>\n\t\t\t\t\tAutomatisierte Scans liefern schnelle Ergebnisse zu einem Bruchteil der Kosten manueller Tests. Sie erhalten priorisierte Handlungsempfehlungen und wissen sofort, wo Sie ansetzen müssen.\n\t\t\t\t</p>\n\n\t\t\t\t<h3 class=\"h4\">COMPLIANCE-UNTERSTÜTZUNG:</h3>\n\t\t\t\t<p>\n\t\t\t\t\tErfüllen Sie regulatorische Anforderungen und dokumentieren Sie Ihre Sicherheitsmassnahmen.\n\t\t\t\t</p>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "losungen-services.html",
+        "label": "Lösungen & Services"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Minimieren Sie Ihr Angriffsrisiko"
+  }
+}

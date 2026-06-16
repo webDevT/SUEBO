@@ -1,0 +1,56 @@
+{
+  "vacancies": [
+    {
+      "title": "Information Security Manager / Consultant (60–100%)",
+      "location": "Bern / Hybrid (Remote & Kunde)",
+      "category": "Information Security / Consulting",
+      "description": "Übernehmen Sie Verantwortung für das ISMS (ISO 27001) und komplexe Security-Audits. Sie arbeiten nah am Kunden, führen Risikoanalysen durch und gestalten echte Sicherheitsstrukturen – von der Strategie bis zur Umsetzung.",
+      "apply": {
+        "href": "mailto:hr@suebo.ch",
+        "label": "Jetzt bewerben →"
+      },
+      "details": {
+        "href": "img/SUEBO_Information%20Security%20Manager-Consultant.pdf",
+        "label": "DETAILS (PDF)"
+      }
+    }
+  ],
+  "hero": {
+    "title": "Gestalten Sie die digitale Sicherheit von morgen",
+    "description": "Keine Nummer im System, sondern Experte im Team. Wir suchen Persönlichkeiten, die Verantwortung übernehmen und mit uns wachsen wollen.",
+    "breadcrumbCurrent": "Karriere & Offene Stellen",
+    "buttons": [
+      {
+        "href": "#offene-stellen",
+        "label": "Zu den offenen Stellen"
+      }
+    ]
+  },
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "./unternehmen.html",
+        "label": "Unternehmen"
+      }
+    ]
+  },
+  "bannerSections": [
+    {
+      "title": "Kein passender Job dabei?",
+      "description": "Gute Leute erfinden ihren Job oft selbst. Wir sind immer auf der Suche nach Talenten. Schicken Sie uns Ihren CV und sagen Sie uns, warum Sie zu uns passen.",
+      "buttons": [
+        {
+          "href": "mailto:hr@suebo.ch",
+          "label": "Initiativ bewerben →"
+        }
+      ]
+    }
+  ],
+  "pageText": {
+    "text001": "Offene Stellen"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Unsere Cyber Security Lösungen",
+  "cards": [
+    {
+      "href": "cybersecurity-penetrationtests.html",
+      "title": "Penetrationtests",
+      "description": "Der technische Härtetest. Unsere Ethical Hacker prüfen Ihre Netzwerke, Web-Applikationen und Systeme mit den Methoden echter Angreifer auf Sicherheitslücken.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-phishing-simulation.html",
+      "title": "Phishing-Simulation",
+      "description": "Der Test für den «Faktor Mensch». Wir versenden realistische Fake-Mails an Ihr Team, um zu messen, wie viele auf Anhänge klicken oder Daten preisgeben.",
+      "linkLabel": "Mehr Erfahren"
+    },
+    {
+      "href": "cybersecurity-security-awareness-trainings.html",
+      "title": "Awareness & Trainings",
+      "description": "Die nachhaltige Lösung. Basierend auf den Testergebnissen schulen wir Ihre Mitarbeitenden, um Sicherheitsrisiken im Alltag sicher zu erkennen und abzuwehren.",
+      "linkLabel": "Mehr Erfahren"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "company": {
+    "name": "SUEBO Informatik AG",
+    "copyright": "© 2026 SUEBO Informatik AG. Swiss Made Security."
+  },
+  "seo": {
+    "description": "SUEBO Informatik AG — IT and software solutions. Contact: +41 31 589 65 65, info@suebo.ch"
+  },
+  "contacts": {
+    "emails": {
+      "info": "info@suebo.ch",
+      "security": "security@suebo.ch"
+    },
+    "phones": {
+      "central": {
+        "label": "+41 31 589 65 65",
+        "href": "+41315896565"
+      },
+      "cyberSecurity": {
+        "label": "+41 31 589 65 66",
+        "href": "+41315896566"
+      },
+      "consulting": {
+        "label": "+41 31 589 65 67",
+        "href": "+41315896567"
+      },
+      "services": {
+        "label": "+41 31 589 65 68",
+        "href": "+41315896568"
+      },
+      "company": {
+        "label": "+41 31 998 85 65",
+        "href": "+41319988565"
+      }
+    }
+  },
+  "offices": {
+    "zug": {
+      "title": "Office Zug (HQ)",
+      "street": "Sinserstrasse 67",
+      "city": "6330 Cham",
+      "country": "Schweiz"
+    },
+    "bern": {
+      "title": "Office Bern",
+      "street": "Niesenweg 2",
+      "city": "3422 Kirchberg BE",
+      "country": "Schweiz"
+    },
+    "solothurn": {
+      "title": "Office Solothurn",
+      "street": "Azaleenstrasse 2",
+      "city": "4563 Gerlafingen",
+      "country": "Schweiz"
+    }
+  }
+}

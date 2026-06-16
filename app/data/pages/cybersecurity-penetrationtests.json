@@ -1,0 +1,80 @@
+{
+  "advantages": {
+    "items": [
+      {
+        "content": "<p>Höheres Sicherheitsniveau und Transparenzgewinn</p>"
+      },
+      {
+        "content": "<p>Erreichen des geforderten Sicherheitsstands / der geforderten Zertifizierungen</p>"
+      },
+      {
+        "content": "<p>Einschätzung bereits getroffener Sicherheitsmassnahmen</p>"
+      },
+      {
+        "content": "<p>Schutz der Geschäftsdaten und Schutz des Systems</p>"
+      },
+      {
+        "content": "<p>Sensibilisierung der Beteiligten für Gefährdungen</p>"
+      },
+      {
+        "content": "<p>Beheben von unbekannten Sicherheitslücken</p>"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Penetrationtests",
+    "description": "IT-Sicherheit stärken – mit professionellen Angriffen vorbeugen",
+    "breadcrumbCurrent": "Penetrationtests",
+    "buttons": [
+      {
+        "href": "kontakte.html",
+        "label": "Offerte anfordern"
+      },
+      {
+        "href": "https://www.suebo.ch/docs/07_SUEBO_Penetrationtests.pdf",
+        "label": "Download Flyer"
+      }
+    ]
+  },
+  "textSections": [
+    {
+      "header": {
+        "title": "Sind Sie bereit für die Zukunft?",
+        "description": "Cyberangriffe stellen die öffentliche Verwaltung, Organisationen  <br>\nund Unternehmen vor eine ernsthafte Herausforderung"
+      },
+      "columns": [
+        {
+          "content": "IT-Infrastrukturen werden immer komplexer, und damit wächst die Angriffsfläche. Viele Unternehmen verlassen sich auf Firewalls und Virenscanner und wiegen sich in falscher Sicherheit. Doch automatisierte Abwehrmassnahmen erkennen oft keine logischen Fehler oder komplexen Angriffsketten."
+        },
+        {
+          "content": "«Wer den Feind kennt und sich selbst, wird auch in hundert Schlachten nicht besiegt.» <br><br><span class=\"text-muted \">\n\t\n\t\t\t\t\t\t\tSun Tzu</span>"
+        }
+      ],
+      "body": [
+        {
+          "content": "<p>\n\t\t\t\t\tVon Datendiebstahl über Erpressungen bis hin zu Systemausfällen - die Liste der möglichen Schäden ist lang. Hacker werden immer raffinierter\nund Sie können nicht davon ausgehen, dass Ihre IT-Sicherheit ausreicht.\n\n\t\t\t\t</p>\n\n\t\t\t\t<p>\n\t\t\t\t\tMögliche Bedrohungen aus dem Internet für Organisationen und Unternehmen können beispielsweise sein:\n\n\t\t\t\t</p>\n\n\t\t\t\t<ul class=\"mt-0\">\n\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<strong>Hackergriffe:</strong> Hacker versuchen, in das Netzwerk einer Organisation\neinzudringen, um vertrauliche Informationen zu stehlen oder zu manipulieren.\n\t\t\t\t\t</li>\n\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<strong>Datendiebstahl / Erpressung:</strong>  Hacker können Zugang zu sensiblen Daten wie Kundeninformationen, Finanzdaten oder geistigem Eigentum erlangen. Meist wird Lösegeld gefordert.\n\n\t\t\t\t\t</li>\n\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<strong>Malware-Angriffe:</strong> Schadsoftware wie Viren, Würmer oder Trojaner infizieren Systeme und führen zu Datenverlust oder -manipulation.\n\t\t\t\t\t</li>\n\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<strong>Phishing-Angriffe: </strong>Angreifer versuchen, vertrauliche Informationen durch die Verwendung von gefälschten E-Mails oder Websites zu erlangen.\n\t\t\t\t\t</li>\n\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<strong>DDoS-Angriffe:  </strong>Distributed Denial of Service (DDoS) Angriffe können dazu führen, dass ein Netzwerk oder ein System überlastet wird und nicht mehr verfügbar ist. Wir sind Ihr Partner für Cybersicherheit und machen Ihr Unternehmen fit im Kampf gegen Cyberangriffe.\n\t\t\t\t\t</li>\n\n\t\t\t\t</ul>\n\n\t\t\t\t<h3 class=\"text-30 mt-30\">\n\t\t\t\t\tAusprägungen:\n\t\t\t\t</h3>\n\t\t\t\t\n\t\t\t\t<div class=\"text-item\">\n\t\t\t\t\t<div class=\"row\">\n\n\t\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t\t<div class=\"itm\">\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<strong>Penetration-Test «Kleine Webanwendung»</strong>\n\t\t\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t\t\t<div class=\"color-suebo semi-bold text-uppercase\">Merkmale:</div>\n\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>5-20 Seiten/Funktionen</li>\n\t\t\t\t\t\t\t\t\t<li>1-2 Benutzerrollen</li>\n\t\t\t\t\t\t\t\t\t<li>Einfache Authentifizierung</li>\n\t\t\t\t\t\t\t\t\t<li>Basis-Formulare und Dateneingaben</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t\t<div class=\"itm\">\n\t\t\t\t\t\t\t\t<div class=\"color-suebo semi-bold text-uppercase\">Aufwand:</div>\n\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Zeitaufwand: 3-6 Personentage</li>\n\t\t\t\t\t\t\t\t\t<li>Kosten: CHF 5'000 - 8'000</li>\n\t\t\t\t\t\t\t\t\t<li>Umfang: OWASP Top 10 Basis-Tests</li>\n\t\t\t\t\t\t\t\t\t<li>Manuelle und automatisierte Tests</li>\n\t\t\t\t\t\t\t\t\t<li>Kurzer Bericht (10-20 Seiten)</li>\n\t\t\t\t\t\t\t\t\t<li>Management-Summary</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"text-item\">\n\t\t\t\t\t<div class=\"row\">\n\n\t\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t\t<div class=\"itm\">\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<strong>Penetration-Test «Mittlere Webanwendung»</strong>\n\t\t\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t\t\t<div class=\"color-suebo semi-bold text-uppercase\">Merkmale:</div>\n\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>20-50 Seiten/Funktionen</li>\n\t\t\t\t\t\t\t\t\t<li>3-5 Benutzerrollen</li>\n\t\t\t\t\t\t\t\t\t<li>Komplexere Geschäftslogik</li>\n\t\t\t\t\t\t\t\t\t<li>API-Schnittstellen</li>\n\t\t\t\t\t\t\t\t\t<li>Zahlungsfunktionen oder sensible Daten</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t\t<div class=\"itm\">\n\t\t\t\t\t\t\t\t<div class=\"color-suebo semi-bold text-uppercase\">Aufwand:</div>\n\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Zeitaufwand: 6-12 Personentage</li>\n\t\t\t\t\t\t\t\t\t<li>Kosten: CHF 8'000 - 20'000</li>\n\t\t\t\t\t\t\t\t\t<li>Umfang: Vollständige OWASP-Prüfung</li>\n\t\t\t\t\t\t\t\t\t<li>API-Security-Tests</li>\n\t\t\t\t\t\t\t\t\t<li>Rollenbasierte Zugriffstests</li>\n\t\t\t\t\t\t\t\t\t<li>Detaillierter Bericht (30-70 Seiten)</li>\n\t\t\t\t\t\t\t\t\t<li>Management-Summary</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class=\"text-item\">\n\t\t\t\t\t<div class=\"row\">\n\n\t\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t\t<div class=\"itm\">\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<strong>Penetration-Test «Grosse Webanwendung/Portal/Vernetzte Systeme»</strong>\n\t\t\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t\t\t<div class=\"color-suebo semi-bold text-uppercase\">Merkmale:</div>\n\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>50+ Seiten/Funktionen</li>\n\t\t\t\t\t\t\t\t\t<li>Mehrere Module/Subsysteme/Datenbanken</li>\n\t\t\t\t\t\t\t\t\t<li>Komplexe Benutzerrechteverwaltung</li>\n\t\t\t\t\t\t\t\t\t<li>Multiple APIs und Integrationen</li>\n\t\t\t\t\t\t\t\t\t<li>Kritische Infrastruktur</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"col-6\">\n\t\t\t\t\t\t\t<div class=\"itm\">\n\t\t\t\t\t\t\t\t<div class=\"color-suebo semi-bold text-uppercase\">Aufwand:</div>\n\n\t\t\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t\t\t\t<li>Zeitaufwand: 12-30+ Personentage</li>\n\t\t\t\t\t\t\t\t\t<li>Kosten: CHF 20'000 - 50'000+</li>\n\t\t\t\t\t\t\t\t\t<li>Umfang: Umfassende Sicherheitsanalyse</li>\n\t\t\t\t\t\t\t\t\t<li>Komplexe Zugriffstests</li>\n\t\t\t\t\t\t\t\t\t<li>Prüfung div. Sicherheitsstandards</li>\n\t\t\t\t\t\t\t\t\t<li>Einsatz mehrerer Schwachstellen-Scanner</li>\n\t\t\t\t\t\t\t\t\t<li>Entwicklung eigener Skripts/Programme</li>\n\t\t\t\t\t\t\t\t\t<li>Architektur-Review</li>\n\t\t\t\t\t\t\t\t\t<li>Code-Review</li>\n\t\t\t\t\t\t\t\t\t<li>Ausführlicher Bericht (70-100+ Seiten)</li>\n\t\t\t\t\t\t\t\t\t<li>Management-Summary</li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": {
+    "items": [
+      {
+        "href": "index.html",
+        "label": "Startseite"
+      },
+      {
+        "href": "cybersecurity-audits.html",
+        "label": "Cybersecurity"
+      },
+      {
+        "href": "cybersecurity-offensive.html",
+        "label": "Offensive Security"
+      }
+    ]
+  },
+  "pageText": {
+    "text001": "IHRE VORTEILE",
+    "text002": "Schwachstellen erkennen – Risiken eliminieren"
+  }
+}
