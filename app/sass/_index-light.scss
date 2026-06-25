@@ -1,0 +1,341 @@
+@use "vars" as *;
+
+// Index page – light theme (Figma: node 2292:57347)
+
+[data-theme="light"] {
+	.btn--white {
+		background-color: $color-accent;
+		color: #fff;
+		border-color: $color-accent;
+
+		&:hover {
+			background-color: $color-teal-suebo;
+			border-color: $color-teal-suebo;
+			color: $color-btn-on-primary;
+			box-shadow: 0 0 22px rgba(120, 171, 173, 0.45);
+		}
+	}
+
+	// Hero
+	.hero {
+		background-color: var(--color-bg-surface);
+
+		.hero__title {
+			color: $color-accent;
+
+			span {
+				color: $color-teal-suebo;
+				text-transform: uppercase;
+			}
+		}
+
+		.save-title {
+			color: $color-teal-suebo;
+
+			span {
+				color: $color-text-muted;
+			}
+		}
+
+		.hero__description {
+			color: $color-text-muted;
+		}
+	}
+
+	// Hero image — desktop only (Figma 2292:57468: 648×648 circle, right-aligned)
+	@media (min-width: $bp-desktop) {
+		.hero .hero__bg-wrapper {
+			left: auto;
+			// Sass strips calc() inside max() — pass as unquoted CSS string
+			right: #{"max(3.5vw, calc((100vw - 1320px) / 2))"};
+			top: 67px;
+			width: 570px;
+			height: 570px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			picture {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: calc(100% + 44px) center;
+			}
+		}
+	}
+
+	@media (min-width: 1381px) {
+		.hero .hero__bg-wrapper {
+			width: 648px;
+			height: 648px;
+		}
+	}
+
+	// Stats / intro
+	.intro.ellipse-glow {
+		background-color: var(--color-bg-page);
+
+		&::before,
+		&::after {
+			opacity: 0.12;
+		}
+	}
+
+	.intro__item p {
+		color: $color-text-muted;
+	}
+
+	.price-number-title {
+		color: $color-teal-suebo;
+	}
+
+	// Target audience – dark section on light page (Figma 2294:68569)
+	.target {
+		background-image: url(../img/target-light.webp);
+		color: var(--color-header-cta-text);
+
+		.save-title {
+			color: var(--color-header-cta-text);
+		}
+
+		.h2 {
+			color: var(--color-header-cta-text);
+
+			span {
+				color: $color-teal-suebo;
+			}
+		}
+
+		.description {
+			color: var(--color-header-cta-text);
+		}
+
+		.card {
+			background: rgba(11, 17, 32, 0.8);
+			border-color: #354662;
+
+			.card-title {
+				color: $color-teal-suebo;
+			}
+
+			.card-description {
+				color: var(--color-header-cta-text);
+			}
+
+			.card__icon svg {
+				fill: $color-btn-on-primary;
+			}
+		}
+
+		.card:hover {
+			background: $color-teal-suebo;
+			border-color: #fff;
+			box-shadow: 0 0 8px #10b6c1;
+
+			.card-title {
+				color: #fff;
+			}
+
+			.card-description {
+				color: var(--color-bg-inverted);
+
+				span {
+					color: #fff;
+				}
+			}
+
+			.card__icon {
+				background: #0b1120;
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+
+		@include bp-mobile {
+			background-color: #2d5265;
+		}
+	}
+
+	// Services (Figma 2292:57391)
+	.services {
+		background-color: var(--color-bg-surface);
+
+		.section-header {
+			.save-title {
+				color: $color-teal-suebo;
+			}
+
+			.h2 {
+				color: $color-accent;
+			}
+		}
+
+		.services__item-content-title {
+			color: $color-teal-suebo;
+		}
+
+		.services__item-content-description {
+			color: var(--color-bg-inverted);
+		}
+
+		.services__item:hover .services__item-content-title,
+		.services:has(.service-icon-circle-1:hover) .services__item--1 .services__item-content-title,
+		.services:has(.service-icon-circle-2:hover) .services__item--2 .services__item-content-title,
+		.services:has(.service-icon-circle-3:hover) .services__item--3 .services__item-content-title,
+		.services:has(.service-icon-circle-4:hover) .services__item--4 .services__item-content-title {
+			color: $color-accent;
+		}
+
+		.service-icon-circle-1,
+		.service-icon-circle-2,
+		.service-icon-circle-3,
+		.service-icon-circle-4 {
+			fill: $color-teal-suebo;
+
+			&:hover {
+				fill: $color-accent;
+			}
+		}
+
+		// Tablet: paths include the circle — hide duplicate <circle>, compound path on page bg
+		.services-diagram--tablet {
+			g:has(> .service-icon-circle-1) > circle.service-icon-circle-1,
+			g:has(> .service-icon-circle-2) > circle.service-icon-circle-2,
+			g:has(> .service-icon-circle-3) > circle.service-icon-circle-3 {
+				fill: transparent;
+			}
+
+			g:has(> .service-icon-circle-1) > path,
+			g:has(> .service-icon-circle-2) > path,
+			g:has(> .service-icon-circle-3) > path,
+			.service-icon-circle-1 + path,
+			.service-icon-circle-2 + path,
+			.service-icon-circle-3 + path {
+				fill: $color-teal-suebo;
+			}
+		}
+
+		// Mobile: white backing circle (holes must not show illustration behind SVG)
+		.services-diagram--mobile {
+			.service-icon-bg {
+				fill: var(--color-bg-surface);
+			}
+
+			g:has(> .service-icon-circle-1) > circle.service-icon-circle-1,
+			g:has(> .service-icon-circle-2) > circle.service-icon-circle-2,
+			g:has(> .service-icon-circle-3) > circle.service-icon-circle-3 {
+				fill: transparent;
+			}
+
+			g:has(> .service-icon-circle-1) > path,
+			g:has(> .service-icon-circle-2) > path,
+			g:has(> .service-icon-circle-3) > path {
+				fill: $color-teal-suebo;
+			}
+		}
+	}
+
+	// Connector dots only — keep icon glyphs #0B1120
+	.services-diagram {
+		circle[stroke="#0B1120"] {
+			stroke: var(--color-bg-page);
+		}
+	}
+
+	// USP banner – stays dark
+	.usp {
+		color: var(--color-text-on-dark);
+
+		.h2,
+		.h2 span,
+		.usp__title,
+		.description {
+			color: var(--color-text-on-dark);
+		}
+
+		.save-title--yellow {
+			color: $color-btn-yellow;
+		}
+	}
+
+	// DNA / text-image (Figma 2292:57356)
+	.text-image {
+		background-color: var(--color-bg-surface);
+
+		.section-header {
+			.save-title {
+				color: $color-teal-suebo;
+			}
+
+			.h2 {
+				color: $color-accent;
+			}
+
+			.description {
+				color: $color-text-muted;
+			}
+		}
+
+		.adv-item {
+			.h4 {
+				color: $color-teal-suebo;
+			}
+
+			p {
+				color: $color-bg-inverted;
+			}
+		}
+
+		&:not(.text-image--2) .ilustration-wrapper {
+			background-image: url('../img/dna-light.svg');
+		}
+	}
+
+	.ilustration-item-wrapper {
+		border-color: #fff;
+	}
+
+	// Partners (Figma 2292:57349)
+	.clients {
+		background-color: var(--color-bg-clients);
+
+		.section-header {
+			.save-title {
+				color: #fff;
+			}
+
+			.h2 {
+				color: $color-accent;
+			}
+		}
+
+		.clients__item {
+			background: #fff;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	// Below desktop: reset circle layout (tablet + mobile)
+	@media (max-width: #{$bp-desktop - 1px}) {
+		.hero .hero__bg-wrapper {
+			left: 0;
+			right: auto;
+			top: auto;
+			width: 100%;
+			height: auto;
+			border-radius: 0;
+			overflow: visible;
+
+			img {
+				//object-position: center;
+			}
+		}
+	}
+}

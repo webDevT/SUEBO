@@ -1,3 +1,4 @@
+@use "tokens";
 @use "fonts";
 @use "vars" as *;
 @use "buttons";
@@ -5,6 +6,9 @@
 @use "footer";
 @use "usp";
 @use "breadcrumb";
+@use "theme-toggle";
+@use "themes";
+@use "index-light";
 
 // Reset / Normalize (complements libs.min.css with normalize.css)
 html {
@@ -183,7 +187,7 @@ body {
 //start card style
 .card {
 	text-align: center;
-	background: rgba($color-dark-navy, 0.8);
+	background: rgba(var(--color-bg-page-rgb), 0.8);
 	border-radius: 10px;
 	padding: 30px 13px;
 	display: flex;
@@ -753,7 +757,7 @@ color: $color-btn-yellow;
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;
-	background: rgba($color-accent, 0.2);
+	background: rgba(var(--color-accent-rgb), 0.2);
 	color: $color-accent;
 	display: flex;
 	align-items: center;
@@ -1216,7 +1220,7 @@ color: $color-btn-yellow;
 		
 	}
 	.ilustration-item-wrapper {
-		border-color: #161F32;
+		border-color: var(--color-bg-surface);
 		border-radius: 18px;
 	}
 	.adv-item {
@@ -1259,7 +1263,7 @@ color: $color-btn-yellow;
 	object-position: center;
 }
 .intro__item--2 {
-	background: rgba($color-dark-navy, 0.9);
+	background: rgba(var(--color-bg-page-rgb), 0.9);
 	width: 100%;
 	padding: 32px 20px;
 	border: 1px solid $color-teal-suebo;
@@ -1462,7 +1466,7 @@ color: $color-btn-yellow;
 .best-strategie {
 	.clients__item {
 		background: transparent;
-		border: 1px solid rgba($color-off-white, 0.3);
+		border: 1px solid rgba(var(--color-text-primary-rgb), 0.3);
 	}
 }
 
@@ -1520,11 +1524,11 @@ color: $color-btn-yellow;
 				border: none;
 				padding: 0;
 				font-size: 0;
-				background: rgba($color-off-white, 0.4);
+				background: rgba(var(--color-text-primary-rgb), 0.4);
 				cursor: pointer;
 				transition: background 0.2s ease;
 				&:hover {
-					background: rgba($color-off-white, 0.6);
+					background: rgba(var(--color-text-primary-rgb), 0.6);
 				}
 			}
 			&.slick-active button {
@@ -1599,7 +1603,7 @@ color: $color-btn-yellow;
 	display: none;
 }
 .text-item {
-	border-bottom: 1px solid rgba($color-off-white, 1);
+	border-bottom: 1px solid rgba(var(--color-text-primary-rgb), 1);
 	margin-bottom: 30px;
 	p {
 		margin-top: 0;
@@ -1718,18 +1722,19 @@ color: $color-steel;
 		cursor: pointer;
 		&:hover {
 			fill: $color-accent;
-			filter: drop-shadow(0 0px 4px rgba($color-accent, 0.65));
+			filter: drop-shadow(0 0px 4px rgba(var(--color-accent-rgb), 0.65));
 		}
 	}
 	.services:has(.services__item--#{$i}:hover) .service-icon-circle-#{$i} {
 		fill: $color-accent;
-		filter: drop-shadow(0 0px 4px rgba($color-accent, 0.65));
+		filter: drop-shadow(0 0px 4px rgba(var(--color-accent-rgb), 0.65));
 	}
 	.services:has(.service-icon-circle-#{$i}:hover) .services__item--#{$i} {
 		color: $color-accent;
 	}
-	
+
 }
+
 .services__item-content-title {
 	font-size: 30px;
 	font-weight: 500;
@@ -1930,13 +1935,48 @@ color: $color-steel;
 	.services__item-content {
 		width: 220px;
 	}
+
+	// Tablet: compound paths include circle — hide duplicate <circle>
+	.services-diagram--tablet {
+		g:has(> .service-icon-circle-1) > circle.service-icon-circle-1,
+		g:has(> .service-icon-circle-2) > circle.service-icon-circle-2,
+		g:has(> .service-icon-circle-3) > circle.service-icon-circle-3 {
+			fill: transparent;
+		}
+
+		g:has(> .service-icon-circle-1) > path,
+		g:has(> .service-icon-circle-2) > path,
+		g:has(> .service-icon-circle-3) > path {
+			fill: $color-teal-suebo;
+		}
+	}
+
+	// Mobile dark: dark circle + teal glyph (original layout)
+	.services-diagram--mobile {
+		.service-icon-bg {
+			fill: transparent;
+		}
+
+		g:has(> .service-icon-circle-1) > circle.service-icon-circle-1,
+		g:has(> .service-icon-circle-2) > circle.service-icon-circle-2,
+		g:has(> .service-icon-circle-3) > circle.service-icon-circle-3 {
+			fill: #0b1120;
+		}
+
+		g:has(> .service-icon-circle-1) > path,
+		g:has(> .service-icon-circle-2) > path,
+		g:has(> .service-icon-circle-3) > path {
+			fill: $color-teal-suebo;
+		}
+	}
+
 	.service-icon-circle-1,
 	.service-icon-circle-2,
 	.service-icon-circle-3 {
 		fill: $color-dark-navy;
 		&:hover {
 			fill: $color-accent;
-			filter: drop-shadow(0 0px 4px rgba($color-accent, 0.65));
+			filter: drop-shadow(0 0px 4px rgba(var(--color-accent-rgb), 0.65));
 		}
 	}
 	.service-icon-circle-1 + path,
@@ -1947,15 +1987,19 @@ color: $color-steel;
 	@each $i in 1, 2, 3 {
 		.services:has(.service-icon-circle-#{$i}:hover) .service-icon-circle-#{$i} {
 			fill: $color-dark-navy;
-			filter: drop-shadow(0 0px 4px rgba($color-accent, 0.65));
+			filter: drop-shadow(0 0px 4px rgba(var(--color-accent-rgb), 0.65));
 		}
 		.services:has(.service-icon-circle-#{$i}:hover) .service-icon-circle-#{$i} + path,
-		.services:has(.services__item--#{$i}:hover) .service-icon-circle-#{$i} + path {
+		.services:has(.services__item--#{$i}:hover) .service-icon-circle-#{$i} + path,
+		.services:has(.service-icon-circle-#{$i}:hover) .services-diagram--tablet g:has(> .service-icon-circle-#{$i}) > path,
+		.services:has(.service-icon-circle-#{$i}:hover) .services-diagram--mobile g:has(> .service-icon-circle-#{$i}) > path,
+		.services:has(.services__item--#{$i}:hover) .services-diagram--tablet g:has(> .service-icon-circle-#{$i}) > path,
+		.services:has(.services__item--#{$i}:hover) .services-diagram--mobile g:has(> .service-icon-circle-#{$i}) > path {
 			fill: $color-accent;
 		}
 		.services:has(.services__item--#{$i}:hover) .service-icon-circle-#{$i} {
 			fill: $color-dark-navy;
-			filter: drop-shadow(0 0px 4px rgba($color-accent, 0.65));
+			filter: drop-shadow(0 0px 4px rgba(var(--color-accent-rgb), 0.65));
 		}
 	}
 

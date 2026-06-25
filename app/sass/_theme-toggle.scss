@@ -1,0 +1,283 @@
+@use "vars" as *;
+
+$theme-toggle-expanded-width: 84px;
+$theme-toggle-label-width: 44px;
+
+.theme-toggle {
+	position: relative;
+	display: inline-flex;
+	flex-shrink: 0;
+}
+
+.theme-toggle__trigger {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 46px;
+	width: 32px;
+	min-width: 32px;
+	padding: 4px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	color: $color-gray-suebo;
+	background-color: var(--color-theme-toggle-bg);
+	box-sizing: border-box;
+	transition:
+		width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		justify-content 0.2s ease,
+		background-color 0.2s ease,
+		color 0.2s ease;
+
+	&:focus-visible {
+		outline: 2px solid var(--color-gray-suebo);
+		outline-offset: 2px;
+	}
+}
+
+.theme-toggle__content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+	width: 100%;
+}
+
+.theme-toggle__label,
+.theme-toggle__option > span {
+	flex-shrink: 0;
+	width: $theme-toggle-label-width;
+	font-size: 13px;
+	font-weight: $weight-medium;
+	line-height: 1.3;
+	text-align: center;
+	color: $color-gray-suebo;
+	white-space: pre-line;
+}
+
+.theme-toggle__label {
+	opacity: 0;
+	max-width: 0;
+	overflow: hidden;
+	font-family: $font-heading;
+	transform: translateX(8px);
+	transition:
+		opacity 0.15s ease,
+		max-width 0.3s ease,
+		transform 0.3s ease;
+}
+
+.theme-toggle:hover .theme-toggle__trigger,
+.theme-toggle:focus-within .theme-toggle__trigger,
+.theme-toggle__trigger[aria-expanded="true"] {
+	justify-content: flex-end;
+	width: $theme-toggle-expanded-width;
+	min-width: $theme-toggle-expanded-width;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.theme-toggle:hover .theme-toggle__label,
+.theme-toggle:focus-within .theme-toggle__label,
+.theme-toggle__trigger[aria-expanded="true"] .theme-toggle__label {
+	opacity: 1;
+	max-width: $theme-toggle-label-width;
+	transform: translateX(0);
+}
+
+.theme-toggle__icon {
+	flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	color: $color-gray-suebo;
+}
+
+.theme-toggle__icon--sun {
+	display: none;
+}
+
+[data-theme="light"] .theme-toggle__icon--sun {
+	display: block;
+}
+
+[data-theme="light"] .theme-toggle__icon--moon {
+	display: none;
+}
+
+.theme-toggle__menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+	flex-direction: column;
+	gap: 0;
+	padding: 0;
+	width: $theme-toggle-expanded-width;
+	min-width: $theme-toggle-expanded-width;
+	border-radius: 0;
+	z-index: 10001;
+	box-sizing: border-box;
+	background: transparent;
+	box-shadow: none;
+}
+
+.theme-toggle__menu.is-open {
+	display: flex;
+}
+
+.theme-toggle__option {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+	width: 100%;
+	height: 46px;
+	padding: 4px;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: $font-heading;
+	box-sizing: border-box;
+	background: transparent;
+	transition: background-color 0.2s ease, color 0.2s ease;
+
+	svg {
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		color: $color-gray-suebo;
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--color-gray-suebo);
+		outline-offset: 1px;
+	}
+
+	&.is-active {
+		display: none;
+	}
+}
+
+.theme-toggle__option--dark {
+	background-color: #2C5265;
+	color: $color-gray-suebo;
+}
+
+.theme-toggle__option--light {
+	background-color: #F5F7FA;
+	color: $color-gray-suebo;
+}
+
+@media (min-width: $bp-tablet) and (max-width: $bp-tablet-max) {
+	// Tablet closed state: compact 32px (Figma 4014:83973)
+	.theme-toggle__trigger {
+		width: 32px;
+		min-width: 32px;
+		padding: 4px;
+	}
+
+	// No hover preview on touch-first layouts
+	.theme-toggle:hover .theme-toggle__trigger:not([aria-expanded="true"]),
+	.theme-toggle:focus-within .theme-toggle__trigger:not([aria-expanded="true"]) {
+		width: 32px;
+		min-width: 32px;
+		padding-left: 4px;
+		padding-right: 4px;
+		justify-content: center;
+	}
+
+	.theme-toggle:hover .theme-toggle__trigger:not([aria-expanded="true"]) .theme-toggle__label,
+	.theme-toggle:focus-within .theme-toggle__trigger:not([aria-expanded="true"]) .theme-toggle__label {
+		opacity: 0;
+		max-width: 0;
+		transform: translateX(8px);
+	}
+
+	// Open state: expand trigger to match dropdown (Figma 2301:69154)
+	.theme-toggle__trigger[aria-expanded="true"] {
+		justify-content: flex-end;
+		width: $theme-toggle-expanded-width;
+		min-width: $theme-toggle-expanded-width;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+	.theme-toggle__trigger[aria-expanded="true"] .theme-toggle__label {
+		opacity: 1;
+		max-width: $theme-toggle-label-width;
+		transform: translateX(0);
+	}
+}
+
+// Mobile — Figma 4016:60086
+@include bp-mobile {
+	.theme-toggle__trigger {
+		height: 31px;
+		width: auto;
+		min-width: 0;
+		padding: 4px 8px;
+		justify-content: flex-end;
+	}
+
+	.theme-toggle__content {
+		gap: 8px;
+	}
+
+	.theme-toggle__label {
+		opacity: 1;
+		max-width: none;
+		width: auto;
+		transform: none;
+		font-size: 12px;
+		line-height: 1.3;
+		white-space: nowrap;
+		pointer-events: none;
+	}
+
+	.theme-toggle:hover .theme-toggle__trigger .theme-toggle__label,
+	.theme-toggle:focus-within .theme-toggle__trigger .theme-toggle__label,
+	.theme-toggle__trigger[aria-expanded="true"] .theme-toggle__label,
+	.theme-toggle__trigger[aria-expanded="false"] .theme-toggle__label {
+		opacity: 1;
+		max-width: none;
+		transform: none;
+	}
+
+	.theme-toggle__icon {
+		width: 16px;
+		height: 16px;
+	}
+
+	.theme-toggle:hover .theme-toggle__trigger,
+	.theme-toggle:focus-within .theme-toggle__trigger,
+	.theme-toggle__trigger[aria-expanded="true"] {
+		width: auto;
+		min-width: 0;
+		padding: 4px 8px;
+		justify-content: flex-end;
+	}
+
+	.theme-toggle__menu {
+		width: 100%;
+		min-width: 100%;
+	}
+
+	.theme-toggle__option {
+		height: 31px;
+		padding: 4px 8px;
+
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+
+		> span {
+			font-size: 12px;
+			width: auto;
+			white-space: nowrap;
+		}
+	}
+}

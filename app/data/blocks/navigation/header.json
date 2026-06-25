@@ -11,7 +11,10 @@
     "searchDialogLabel": "Seiten durchsuchen",
     "searchCloseLabel": "Suche schliessen",
     "searchInputLabel": "Suchbegriff",
-    "searchPlaceholder": "Seite suchen…"
+    "searchPlaceholder": "Seite suchen…",
+    "themeToggleLabel": "Design wechseln",
+    "themeDark": "Dark Mode",
+    "themeLight": "Light Mode"
   },
   "top": {
     "home": {

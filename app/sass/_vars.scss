@@ -1,22 +1,26 @@
 // =====================
-// Colors – Dark Scheme
+// Colors – theme-aware (see _tokens.scss)
 // =====================
 
-// Base palette
-$color-dark-navy:    #0B1120; // Background
-$color-gunmetal:     #161F32; // Cards, menu
-$color-off-white:    #F1F5F9; // Main text
-$color-steel:        #94A3B8; // Secondary text
-$color-teal-suebo:   #78ABAD; // Icons, buttons, charts
-$color-electric-blue:#38BDF8; // Active state, links
-$color-btn-yellow:   #F59E0B;  // Yellow button variant
+$color-dark-navy:     var(--color-bg-page);
+$color-gunmetal:      var(--color-bg-surface);
+$color-off-white:     var(--color-text-primary);
+$color-steel:         var(--color-text-secondary);
+$color-teal-suebo:    var(--color-teal);
+$color-btn-on-primary: var(--color-btn-on-primary);
+$color-gray-suebo:    var(--color-gray-suebo);
+$color-electric-blue: var(--color-accent);
+$color-btn-yellow:    #F59E0B;
 
-// Shortcuts
-$color-bg:           $color-dark-navy;
-$color-text-main:    $color-off-white;
-$color-text-muted:   $color-steel;
-$color-accent:       $color-electric-blue;
-$color-accent-soft:  $color-teal-suebo;
+$color-bg:            var(--color-bg-page);
+$color-text-main:     var(--color-text-primary);
+$color-text-muted:    var(--color-text-secondary);
+$color-accent:        var(--color-accent);
+$color-accent-soft:   var(--color-teal);
+$color-bg-inverted:   var(--color-bg-inverted);
+$color-text-on-inverted: var(--color-text-on-inverted);
+$color-border:        var(--color-border);
+$color-border-subtle: var(--color-border-subtle);
 
 
 // =====================

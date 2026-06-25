@@ -1,0 +1,86 @@
+// =====================
+// Theme tokens (CSS custom properties)
+// Default: dark. Override on [data-theme="light"].
+// =====================
+
+:root,
+[data-theme="dark"] {
+	--color-bg-page: #0B1120;
+	--color-bg-page-rgb: 11, 17, 32;
+	--color-bg-surface: #161F32;
+	--color-bg-surface-rgb: 22, 31, 50;
+	--color-bg-inverted: #1E293B;
+	--color-bg-inverted-rgb: 30, 41, 59;
+	--color-text-primary: #F1F5F9;
+	--color-text-primary-rgb: 241, 245, 249;
+	--color-text-secondary: #94A3B8;
+	--color-text-secondary-rgb: 148, 163, 184;
+	--color-text-on-inverted: #F1F5F9;
+	--color-accent: #38BDF8;
+	--color-accent-rgb: 56, 189, 248;
+	--color-teal: #78ABAD;
+	--color-teal-rgb: 120, 171, 173;
+	--color-gray-suebo: #A8BFD6;
+	--color-border: rgba(241, 245, 249, 0.12);
+	--color-border-subtle: rgba(255, 255, 255, 0.08);
+	--color-btn-on-primary: #0B1120;
+	--color-theme-toggle-bg: #2C5265;
+	--color-theme-toggle-text: #A8BFD6;
+	--color-theme-menu-bg: #2C5265;
+	--color-theme-menu-shadow: rgba(0, 0, 0, 0.3);
+	--color-meta-theme: #0B1120;
+}
+
+[data-theme="light"] {
+	--color-bg-page: #F5F7FA;
+	--color-bg-page-rgb: 245, 247, 250;
+	--color-bg-surface: #FFFFFF;
+	--color-bg-surface-rgb: 255, 255, 255;
+	--color-bg-inverted: #1E293B;
+	--color-bg-inverted-rgb: 30, 41, 59;
+	--color-text-primary: #1E293B;
+	--color-text-primary-rgb: 30, 41, 59;
+	--color-text-secondary: #64748B;
+	--color-text-secondary-rgb: 100, 116, 139;
+	--color-text-on-inverted: #F1F5F9;
+	--color-accent: #2C5265;
+	--color-accent-rgb: 44, 82, 101;
+	--color-teal: #78ABAD;
+	--color-teal-rgb: 120, 171, 173;
+	--color-gray-suebo: #A8BFD6;
+	--color-border: #A8BFD6;
+	--color-border-subtle: rgba(30, 41, 59, 0.08);
+	--color-btn-on-primary: #0B1120;
+	--color-theme-toggle-bg: #F5F7FA;
+	--color-theme-toggle-text: #2C5265;
+	--color-theme-menu-bg: #F5F7FA;
+	--color-theme-menu-shadow: rgba(0, 0, 0, 0.08);
+	--color-meta-theme: #F5F7FA;
+	--color-bg-clients: #A8BFD6;
+	--color-text-on-dark: #F1F5F9;
+	--color-text-muted-on-dark: #94A3B8;
+	--color-card-on-dark: rgba(11, 17, 32, 0.65);
+	--color-card-border-on-dark: rgba(168, 191, 214, 0.35);
+	// Header (Figma 4022:60087)
+	--color-header-bar: #A8BFD6;
+	--color-header-cta-bg: #2C5265;
+	--color-header-cta-text: #F5F7FA;
+	--color-header-icon-btn-bg: #2C5265;
+	--color-header-icon-on-btn: #F5F7FA;
+	--color-header-outline: #1E293B;
+	// Mega menu (Figma 2372:71959)
+	--color-mega-left-bg: #A8BFD6;
+	--color-mega-right-bg: #FFFFFF;
+	--color-mega-border: #A8BFD6;
+	--color-mega-title: #2C5265;
+	--color-mega-desc: #1E293B;
+	--color-mega-link: #78ABAD;
+	--color-mega-sublist: #2C5265;
+	// Tablet menu open (Figma 2400:72502)
+	--color-tablet-menu-item-bg: #A8BFD6;
+	--color-tablet-menu-item-text: #2C5265;
+	--color-tablet-menu-open-bg: #2C5265;
+	--color-tablet-menu-open-text: #A8BFD6;
+	--color-tablet-menu-open-link: #F5F7FA;
+	--color-tablet-menu-open-sublist: #A8BFD6;
+}
