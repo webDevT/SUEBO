@@ -215,23 +215,23 @@ body {
 	}
 }
 .contact-section .card.card--secondary.card--active {
-	background: $color-accent;
+	background: #38BDF8;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	box-shadow: 0px 0px 6px rgba(56, 189, 248, 0.9);
 	.card__icon.card__icon--contact svg {
-		fill: $color-dark-navy;
+		fill: #0B1120;
 	}
 	.card-title {
-		color: $color-off-white;
+		color: #F1F5F9;
 	}
 	.card-description {
-		color: $color-dark-navy;
+		color: #0B1120;
 		span {
-			color: $color-off-white;
+			color: #F1F5F9;
 		}
 	}
 	.card-link {
-		color: $color-off-white;
+		color: #F1F5F9;
 	}
 }
 .card--link {
@@ -596,6 +596,43 @@ color: $color-btn-yellow;
 	transform: translateY(25%);
 	opacity: 1;
 	z-index: 0;
+}
+
+// Opaque hero asset + CSS left fade in dark (pilot: cybersecurity-strategie)
+.hero--secondary.hero--opaque-bg {
+	.hero__bg-wrapper img {
+		-webkit-mask-image: linear-gradient(
+			to right,
+			transparent 0%,
+			rgba(0, 0, 0, 0.2) 6%,
+			rgba(0, 0, 0, 0.65) 12%,
+			#000 22%,
+			#000 100%
+		);
+		mask-image: linear-gradient(
+			to right,
+			transparent 0%,
+			rgba(0, 0, 0, 0.2) 6%,
+			rgba(0, 0, 0, 0.65) 12%,
+			#000 22%,
+			#000 100%
+		);
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+	}
+}
+
+[data-theme="light"] .hero--secondary.hero--opaque-bg .hero__bg-wrapper img {
+	-webkit-mask-image: none;
+	mask-image: none;
+}
+
+@include bp-tablet {
+	.hero--secondary.hero--opaque-bg .hero__bg-wrapper img {
+		width: 100%;
+		margin-left: 0;
+		object-position: center;
+	}
 }
 //end hero style
 
@@ -1268,6 +1305,9 @@ color: $color-btn-yellow;
 	padding: 32px 20px;
 	border: 1px solid $color-teal-suebo;
 	border-radius: 20px;
+}
+.banner-section .intro__item--2 {
+	border-color: #354662;
 }
 .fact-title {
 	font-size: 16px;
@@ -2170,6 +2210,11 @@ color: $color-steel;
 		}
 		.description {
 			width: 100%;
+		}
+		.section-header,
+		.text-section__item,
+		.text-section__item--2 {
+			text-align: center;
 		}
 		.text-section__item {
 			margin-top: 0;
