@@ -1,159 +1,116 @@
-# 🎉 Top Glow - Modular Header/Footer System
+# SUEBO Informatik AG — Website
 
-## ✅ Problem Solved! System Works Stable
+Static marketing website for [SUEBO Informatik AG](https://www.suebo.ch). Built with Gulp, HTML includes, JSON-driven content, and Sass.
 
-This project uses a **modular header and footer system** that allows you to edit them in one place and automatically update on all pages **WITHOUT infinite loops**.
+---
 
-## 🏗️ Project Structure
+## Quick start
+
+```bash
+npm install
+npm run dev
+```
+
+Open **http://localhost:3000** — the dev server serves `app/temp/`.
+
+```bash
+npm run build   # Production output → docs/
+```
+
+---
+
+## Documentation
+
+| Guide | Audience | Description |
+|-------|----------|-------------|
+| [**CONTENT-EDITING-GUIDE.md**](app/data/CONTENT-EDITING-GUIDE.md) | Client / content editors | How to change texts, contacts, and menus via JSON |
+| [**DEVELOPER-GUIDE.md**](DEVELOPER-GUIDE.md) | Developers | Build pipeline, includes, JSON tokens, themes, adding pages |
+
+---
+
+## Project structure
 
 ```
 app/
-├── includes/              ← 🎯 EDIT HERE
-│   ├── header.html        ← Common header for all pages
-│   └── footer.html        ← Common footer for all pages
-├── src/                   ← 📝 SOURCE FILES (with @@include)
-│   ├── index.html
-│   ├── about.html
-│   ├── services.html
-│   └── contact.html
-├── temp/                  ← 🚫 PROCESSED FILES (DON'T EDIT!)
-│   ├── index.html
-│   ├── about.html
-│   └── ...
-├── css/                   ← CSS files
-├── js/                    ← JavaScript files
-├── img/                   ← Images
-└── fonts/                 ← Fonts
+├── src/           # Page HTML sources (46 pages) — edit layout here
+├── includes/      # Shared fragments: header, footer, sliders, USP
+├── data/          # JSON content — client-safe text editing
+│   ├── site.json
+│   ├── pages/     # One JSON per page (e.g. karriere.json)
+│   └── blocks/    # Header, footer, sliders, USP, …
+├── sass/          # SCSS → app/css/*.min.css
+├── js/            # main.js (nav, theme, search)
+├── img/           # Images
+├── static/        # PDFs and other static assets (copied as-is)
+└── temp/          # Generated dev output — do not edit
+
+docs/              # Generated production output — deploy this
 ```
 
-## 🎯 How It Works
+---
 
-1. **You edit** `app/includes/header.html` or `app/includes/footer.html`
-2. **You edit** `app/src/index.html`, `app/src/about.html`, etc.
-3. **Gulp automatically** processes files from `app/src/` and saves result in `app/temp/`
-4. **Browser-sync** shows updates from `app/temp/` folder
-5. **Changes appear** on all pages automatically!
+## How it works
 
-## 🚀 Commands
+1. **Includes** — each page in `app/src/` wraps content with `@@include('includes/header.html')` and `footer.html`.
+2. **Content** — `{{pages.karriere.hero.title}}` tokens are replaced from `app/data/` JSON at build time.
+3. **Output** — Gulp writes processed HTML to `app/temp/` (dev) or `docs/` (production).
 
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-# or
-npm start
-# or
-gulp
-
-# Build for production
-npm run build
-# or
-gulp build
-
-# Process HTML only
-gulp html
-
-# Copy static files
-gulp copy-assets
+```
+app/src/*.html  +  app/includes/  +  app/data/*.json
+        ↓ Gulp (fileinclude + token replacement)
+app/temp/  (dev)  |  docs/  (production)
 ```
 
-## 📝 How to Edit
+---
 
-### ✅ CORRECT - Edit these files:
+## Commands
 
-**To change header:**
-- Open `app/includes/header.html`
-- Make changes (navigation, logo, meta tags)
-- Changes automatically appear on all pages
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Dev server + watch (port 3000) |
+| `npm run build` | Production build → `docs/` |
+| `npm run clean` | Delete `docs/` |
+| `gulp html` | Rebuild HTML only → `app/temp/` |
+| `gulp sass` | Compile SCSS only |
 
-**To change footer:**
-- Open `app/includes/footer.html`
-- Make changes (contacts, social links, copyright)
-- Changes automatically appear on all pages
+---
 
-**To change page content:**
-- Open `app/src/index.html`, `app/src/about.html`, etc.
-- Add your content between `@@include()` tags
+## What to edit
 
-### ❌ DON'T EDIT:
-- Files in `app/temp/` folder - they are generated automatically!
+### Developers
 
-## 📄 Adding New Pages
+- Layout & structure: `app/src/`, `app/includes/`
+- Styles: `app/sass/`
+- Behaviour: `app/js/main.js`
+- Build: `gulpfile.js`
 
-1. Create new file in `app/src/` folder, e.g. `app/src/new-page.html`
-2. Add at the beginning: `@@include('includes/header.html')`
-3. Add at the end: `@@include('includes/footer.html')`
-4. Add your page content between them
+### Clients (text only)
 
-**Example:**
-```html
-@@include('includes/header.html')
+- All content: `app/data/**/*.json`
+- See [CONTENT-EDITING-GUIDE.md](app/data/CONTENT-EDITING-GUIDE.md)
 
-<!-- Your content here -->
-<h1>New Page</h1>
-<p>Your page content</p>
+### Never edit
 
-@@include('includes/footer.html')
-```
+- `app/temp/` — regenerated on every build
+- `docs/` — regenerated by `npm run build`
+- `app/css/*.min.css` — compile from Sass instead
 
-5. Run `npm run dev` or `gulp`
-6. File will appear in `app/temp/new-page.html`
+---
 
-## 🔧 Technical Details
+## Tech stack
 
-### Technologies used:
-- **Gulp 4** - for build automation
-- **gulp-file-include** - for module inclusion
-- **Browser-sync** - for automatic browser refresh
-- **Bootstrap 5** - for styling
-- **Sass** - for CSS preprocessing
+- Gulp 4, gulp-file-include, Sass
+- jQuery, Slick Carousel
+- Fonts: Inter, Manrope, Poppins
+- Dark / light theme (`data-theme` + CSS variables)
 
-### Gulp Configuration:
-- **Source files:** `app/src/*.html`
-- **Processed files:** `app/temp/*.html`
-- **Header/Footer:** `app/includes/*.html`
-- **Static files:** copied to `app/temp/`
+---
 
-## 🎉 Benefits of Fixed System
+## Adding a new page (summary)
 
-- ✅ **No infinite loops** - problem completely solved
-- ✅ **Fast work** - files processed only on changes
-- ✅ **Safety** - source files are not overwritten
-- ✅ **Convenience** - change header/footer once → all pages updated
-- ✅ **Automatic** - browser-sync shows changes instantly
-- ✅ **Modular** - easy to add new pages
-- ✅ **Consistent** - same header and footer on all pages
+1. Create `app/src/my-page.html` with header/footer includes and `{{tokens}}`
+2. Create `app/data/pages/my-page.json` with matching content
+3. Add nav link in `app/data/blocks/navigation/header.json`
+4. Run `npm run dev`
 
-## 🐛 Solved Problems
-
-### Problem: Infinite Loop
-**Cause:** fileinclude plugin with `basepath: '@file'` setting was overwriting source files
-
-**Solution:** 
-- Created separate `app/src/` folder for source files
-- Changed `basepath` to `'app/'` instead of `'@file'`
-- Gulp now processes files from `app/src/` and saves result in `app/temp/`
-
-## 📚 Additional Resources
-
-- [Gulp Documentation](https://gulpjs.com/docs/en/getting-started/quick-start)
-- [gulp-file-include](https://www.npmjs.com/package/gulp-file-include)
-- [Browser-sync](https://browsersync.io/docs)
-
-## 🎯 Quick Start
-
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start project
-npm run dev
-
-# 3. Open browser at http://localhost:3000
-# 4. Edit app/includes/header.html or app/includes/footer.html
-# 5. See changes automatically in browser!
-```
-
-**Ready to use!** 🚀
+Full details: [DEVELOPER-GUIDE.md](DEVELOPER-GUIDE.md)
