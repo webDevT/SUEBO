@@ -81,6 +81,58 @@
 		border-right-color: var(--color-mega-border);
 	}
 
+	// Mega menu left bg — Cybersecurity (Figma 2372:71999)
+	.header-mega__left--1 {
+		background-image: url("../img/sheield-light.svg");
+		background-repeat: no-repeat;
+		background-position: top 22px right 27px;
+
+		&:hover {
+			background-image: url("../img/sheield-light-hover.svg");
+			background-repeat: no-repeat;
+			background-position: top 22px right 27px;
+		}
+	}
+
+	// IT & Business Consulting (Figma 2372:72084)
+	.header-mega__left--2 {
+		background-image: url("../img/menu-bg-2-light.svg");
+		background-repeat: no-repeat;
+		background-position: top 22px right 27px;
+
+		&:hover {
+			background-image: url("../img/menu-bg-2-light-hover.svg");
+			background-repeat: no-repeat;
+			background-position: top 22px right 27px;
+		}
+	}
+
+	// Lösungen & Services (Figma 2372:72178)
+	.header-mega__left--3 {
+		background-image: url("../img/menu-bg-3-light.svg");
+		background-repeat: no-repeat;
+		background-position: top 22px right 27px;
+
+		&:hover {
+			background-image: url("../img/menu-bg-3-light-hover.svg");
+			background-repeat: no-repeat;
+			background-position: top 22px right 27px;
+		}
+	}
+
+	// Unternehmen (Figma 2372:72230)
+	.header-mega__left--4 {
+		background-image: url("../img/menu-bg-4-light.svg");
+		background-repeat: no-repeat;
+		background-position: top 22px right 27px;
+
+		&:hover {
+			background-image: url("../img/menu-bg-4-light-hover.svg");
+			background-repeat: no-repeat;
+			background-position: top 22px right 27px;
+		}
+	}
+
 	.header-mega__right {
 		background-color: var(--color-mega-right-bg);
 	}

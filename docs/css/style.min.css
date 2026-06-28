@@ -1046,54 +1046,58 @@
 }
 
 .header-mega__left--1 {
-  background: url("../img/sheield.svg") no-repeat;
+  background-image: url("../img/sheield.svg");
+  background-repeat: no-repeat;
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .header-mega__left--2 {
-  background: url("../img/menu-bg-2.svg") no-repeat;
+  background-image: url("../img/menu-bg-2.svg");
+  background-repeat: no-repeat;
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .header-mega__left--3 {
-  background: url("../img/menu-bg-3.svg") no-repeat;
+  background-image: url("../img/menu-bg-3.svg");
+  background-repeat: no-repeat;
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .header-mega__left--4 {
-  background: url("../img/menu-bg-4.svg") no-repeat;
+  background-image: url("../img/menu-bg-4.svg");
+  background-repeat: no-repeat;
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .header-mega__left--1:hover {
-  background: url("../img/sheield-hover.svg") no-repeat;
+  background-image: url("../img/sheield-hover.svg");
   background-position: top 22px right 27px;
 }
 
 .header-mega__left--2:hover {
-  background: url("../img/menu-bg-2-hover.svg") no-repeat;
+  background-image: url("../img/menu-bg-2-hover.svg");
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .header-mega__left--3:hover {
-  background: url("../img/menu-bg-3-hover.svg") no-repeat;
+  background-image: url("../img/menu-bg-3-hover.svg");
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .header-mega__left--4:hover {
-  background: url("../img/menu-bg-4-hover.svg") no-repeat;
+  background-image: url("../img/menu-bg-4-hover.svg");
   background-position: top 22px right 27px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -2974,6 +2978,46 @@
 [data-theme=light] .header-mega__left {
   background-color: var(--color-mega-left-bg);
   border-right-color: var(--color-mega-border);
+}
+[data-theme=light] .header-mega__left--1 {
+  background-image: url("../img/sheield-light.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--1:hover {
+  background-image: url("../img/sheield-light-hover.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--2 {
+  background-image: url("../img/menu-bg-2-light.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--2:hover {
+  background-image: url("../img/menu-bg-2-light-hover.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--3 {
+  background-image: url("../img/menu-bg-3-light.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--3:hover {
+  background-image: url("../img/menu-bg-3-light-hover.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--4 {
+  background-image: url("../img/menu-bg-4-light.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
+}
+[data-theme=light] .header-mega__left--4:hover {
+  background-image: url("../img/menu-bg-4-light-hover.svg");
+  background-repeat: no-repeat;
+  background-position: top 22px right 27px;
 }
 [data-theme=light] .header-mega__right {
   background-color: var(--color-mega-right-bg);
