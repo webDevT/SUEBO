@@ -1533,6 +1533,22 @@ $header-mobile-action-height: 46px;
 	}
 }
 
+// Narrow desktop: tighter nav spacing (1280–1380px)
+@media (min-width: $bp-desktop) and (max-width: 1380px) {
+	.header-nav {
+		gap: 15px;
+	}
+
+	.header-nav__utils {
+		width: 275px;
+	}
+
+	.header-nav__link {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+}
+
 @media (min-width: $bp-desktop) {
 	.header-nav__link:hover {
 		color: $color-accent;

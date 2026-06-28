@@ -40,6 +40,51 @@
 		.hero__description {
 			color: $color-text-muted;
 		}
+
+		.breadcrumb {
+			max-width: 594px;
+			width: 100%;
+			min-width: 0;
+		}
+
+		.breadcrumb__list {
+			flex-wrap: nowrap;
+			overflow: hidden;
+			max-width: 100%;
+			min-width: 0;
+		}
+
+		.breadcrumb__item {
+			flex-shrink: 0;
+
+			&::after {
+				flex-shrink: 0;
+			}
+
+			.breadcrumb__link {
+				white-space: nowrap;
+			}
+
+			&:last-child {
+				display: block;
+				flex: 1 1 auto;
+				min-width: 0;
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				position: relative;
+				padding-right: 22px;
+				box-sizing: border-box;
+
+				&::after {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(calc(-50% - 2px));
+				}
+			}
+		}
 	}
 
 	.hero--secondary {
@@ -136,65 +181,6 @@
 				height: 100%;
 				object-fit: cover;
 				object-position: calc(100% + 44px) center;
-			}
-		}
-
-		// Inner pages — right half (Figma 2444:13544)
-		.hero--secondary .hero__bg-wrapper {
-			border-radius: 0;
-			top: 0;
-			left: 50%;
-			right: auto;
-			width: 50%;
-			height: 100%;
-			overflow: hidden;
-
-			picture {
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-			}
-
-			img {
-				width: 100%;
-				height: 100%;
-				max-width: none;
-				max-height: none;
-				object-fit: cover;
-				object-position: right center;
-				display: block;
-			}
-		}
-
-		@media (max-width: 1800px) {
-			.hero--secondary .hero__bg-wrapper picture {
-				right: 0;
-				left: 0;
-			}
-		}
-
-		@media (max-width: 1600px) {
-			.hero--secondary .hero__bg-wrapper picture {
-				right: 0;
-				left: 0;
-			}
-		}
-
-		@media (max-width: 1500px) {
-			.hero--secondary .hero__bg-wrapper picture {
-				right: 0;
-				left: 0;
-			}
-		}
-
-		@media (max-width: 1400px) {
-			.hero--secondary .hero__bg-wrapper picture {
-				right: 0;
-				left: 0;
 			}
 		}
 	}

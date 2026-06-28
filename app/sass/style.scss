@@ -555,6 +555,12 @@ color: $color-btn-yellow;
 		max-width: 100%;
 	}
 
+	.breadcrumb {
+		max-width: 650px;
+		width: 100%;
+		min-width: 0;
+	}
+
 	.hero__title {
 		font-size: 48px;
 		font-weight: 600;
@@ -572,6 +578,49 @@ color: $color-btn-yellow;
 		width: auto;
 		img {
 		width: auto;
+		}
+	}
+}
+
+// Desktop: text stays left, image clipped to right half (both themes)
+@media (min-width: $bp-desktop) {
+	.hero:not(.hero--secondary) {
+		.hero__content {
+			max-width: min(594px, calc(50vw - 3.5vw));
+		}
+	}
+
+	.hero--secondary {
+		.breadcrumb,
+		.hero__content {
+			max-width: min(645px, 46.5vw);
+		}
+
+		.hero__bg-wrapper {
+			left: 50%;
+			right: auto;
+			width: 50%;
+			height: 100%;
+			overflow: hidden;
+
+			picture {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				max-width: none;
+				margin-left: 0;
+				object-fit: cover;
+				object-position: right center;
+			}
 		}
 	}
 }
@@ -1048,6 +1097,12 @@ color: $color-btn-yellow;
 		&::before,
 		&::after {
 			display: none;
+		}
+	}
+
+	&.slider-section.ellipse-glow {
+		.card.card--secondary:not(:hover):not(.card--active) {
+			background-color: inherit;
 		}
 	}
 }
@@ -1538,7 +1593,8 @@ color: $color-btn-yellow;
 	justify-content: center;
 	transition: background 0.2s, color 0.2s, border-color 0.2s;
 	img {
-		max-width: 100%;
+		width: 21px;
+		height: 21px;
 	}
 }
 .lokale-werte__dots {
@@ -1701,38 +1757,13 @@ color: $color-steel;
 .contact-section .card {
 	cursor: pointer;
 }
-@include bp-1800 {
-	.hero--secondary .hero__bg-wrapper {
-		right: -10vw;
-	}
-}
-
-@include bp-1700 {
-	.hero--secondary .hero__bg-wrapper {
-	
-	}
-}
-
-@include bp-1600 {
-	.hero--secondary .hero__bg-wrapper {
-		right: -12vw;
-	}
-}
-
-@include bp-1500 {
-	.hero--secondary .hero__bg-wrapper {
-		right: -15vw;
-	}
-}
 
 @include bp-1400 {
-	.hero--secondary .hero__bg-wrapper {
-		right: -25vw;
-	}
 	.text-image--2 .ilustration-item-wrapper {
 		left: 130px;
 	}
 }
+
 .map__btn {
 	display: none;
 }
